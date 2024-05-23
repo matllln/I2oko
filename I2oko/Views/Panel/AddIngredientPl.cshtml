@@ -1,0 +1,347 @@
+﻿@model I2oko.Models.FoodSpecifiacationModel
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fixed Header Table</title>
+    <style>
+        .rotate-45 {
+            --transform-rotate: 45deg;
+            transform: rotate(45deg);
+        }
+
+        .group:hover .group-hover\:flex {
+            display: flex;
+        }
+
+        .fixed-header {
+            position: sticky;
+            top: 0;
+            background-color: inherit;
+            z-index: 1;
+        }
+
+        .scrollable-table {
+            overflow-y: auto;
+            height: 580px;
+        }
+
+        div {
+            scrollbar-color: #2a6fdb #122c91;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.5/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <div class="flex justify-center items-end fixed bottom-0 w-full mb-10 z-10">
+        <div class="flex space-x-4">
+            <!-- Added this div to contain both buttons -->
+            <a href="#_" id="addButton" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group">
+                <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </span>
+                <span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">add field</span>
+                <span class="relative invisible">add field</span>
+            </a>
+            <a href="#_" id="" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group">
+                <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </span>
+                <span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">submit</span>
+                <span class="relative invisible">submit</span>
+            </a>
+        </div>
+    </div>
+
+
+
+    <div class="grid-cols-1">
+        <div class="relative shadow-md sm:rounded-lg scrollable-table ">
+            <table id="TableGT" class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 fixed-header">
+                    <tr>
+                        <th scope="col" class="p-4">
+                            <div class="flex items-center">
+                                <input id="checkbox-all-search" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                <label for="checkbox-all-search" class="sr-only">checkbox</label>
+                            </div>
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-center">name</th>
+                        <th scope="col" class="px-6 py-3 text-center">Calories</th>
+                        <th scope="col" class="px-6 py-3 text-center">Carbohydrates</th>
+                        <th scope="col" class="px-6 py-3 text-center">Protein</th>
+                        <th scope="col" class="px-6 py-3 text-center">Fat</th>
+                        <th scope="col" class="px-6 py-3 text-center">Water</th>
+                        <th scope="col" class="px-6 py-3 text-center">Fiber</th>
+                        <th scope="col" class="px-6 py-3 text-center">Sugar</th>
+                        <th scope="col" class="px-6 py-3 text-center">Cholesterol</th>
+                        <th scope="col" class="px-6 py-3 text-center">Vitamin A</th>
+                        <th scope="col" class="px-6 py-3 text-center">Vitamin D</th>
+                        <th scope="col" class="px-6 py-3 text-center">Vitamin E</th>
+                        <th scope="col" class="px-6 py-3 text-center">Vitamin K</th>
+                        <th scope="col" class="px-6 py-3 text-center">Vitamin C</th>
+                        <th scope="col" class="px-6 py-3 text-center">Thiamine (Vitamin B1)</th>
+                        <th scope="col" class="px-6 py-3 text-center">Riboflavin (Vitamin B2)</th>
+                        <th scope="col" class="px-6 py-3 text-center">Niacin (Vitamin B3)</th>
+                        <th scope="col" class="px-6 py-3 text-center">Choline (Vitamin B4)</th>
+                        <th scope="col" class="px-6 py-3 text-center">Pantothenic Acid (Vitamin B5)</th>
+                        <th scope="col" class="px-6 py-3 text-center">Vitamin B6</th>
+                        <th scope="col" class="px-6 py-3 text-center">Folate (Vitamin B9)</th>
+                        <th scope="col" class="px-6 py-3 text-center">Vitamin B12</th>
+                        <th scope="col" class="px-6 py-3 text-center">Calcium</th>
+                        <th scope="col" class="px-6 py-3 text-center">Iron</th>
+                        <th scope="col" class="px-6 py-3 text-center">Magnesium</th>
+                        <th scope="col" class="px-6 py-3 text-center">Phosphorus</th>
+                        <th scope="col" class="px-6 py-3 text-center">Potassium</th>
+                        <th scope="col" class="px-6 py-3 text-center">Sodium</th>
+                        <th scope="col" class="px-6 py-3 text-center">Zinc</th>
+                        <th scope="col" class="px-6 py-3 text-center">Copper</th>
+                        <th scope="col" class="px-6 py-3 text-center">Manganese</th>
+                        <th scope="col" class="px-6 py-3 text-center">Selenium</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td class="w-4 p-4">
+                            <div class="flex items-center">
+                                <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                            </div>
+                        </td>
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            @Html.TextBoxFor(x => x.IngredientName, new { @class = "input input-bordered input-info w-24 max-w-xs h-10" })
+                        </th>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.Caloris, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.Carbohydrate, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.Protein, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.Fat, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.Water, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.Fiber, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.SugarLoaf, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.Cholesterol, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.VitaminA, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.VitaminD, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.VitaminE, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.VitaminK, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.VitaminC, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.ThiamineB1, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.RiboflavinB2, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.NiacinB3, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.ColleenB4, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.PantothenicAcidB5, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.VitaminB6, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.FolateB9, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.VitaminB12, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.Calcium, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.Iron, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.Magnesium, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.Phosphorus, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.Potassium, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.Sodium, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.Zinc, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.Copper, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.Manganese, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                        <td class="px-6 py-4">
+                            @Html.TextBoxFor(x => x.Selenium, new { @class = "input input-bordered input-info w-16 max-w-xs h-6" })
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const addButton = document.getElementById("addButton");
+            addButton.addEventListener("click", function () {
+                const newRow = document.createElement("tr");
+                newRow.innerHTML = `
+                    <td class="w-4 p-4">
+                                <div class="flex items-center">
+                                    <input id="checkbox-table-search-1" type="checkbox"
+                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                                </div>
+                            </td>
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                <input type="text" class="input input-bordered input-info w-24 max-w-xs h-10" />
+                            </th>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                            <td class="px-6 py-4">
+                                <input type="text" class="input input-bordered input-info w-16 max-w-xs h-6" />
+                            </td>
+                    `;
+                const tableBody = document.querySelector("#TableGT tbody");
+                const lastRow = tableBody.lastElementChild;
+                tableBody.insertBefore(newRow, lastRow.nextSibling);
+
+                // اسکرول به آخرین ردیف
+                newRow.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+
+

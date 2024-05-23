@@ -1,0 +1,161 @@
+﻿@model I2oko.Models.MngUserModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../Content/img/Idoko/favicon.ico">
+    <script nomodule src="~/Content/recomand/ionicons.js"></script>
+    <link rel="stylesheet" href="~/Content/recomand/normalize.min.css">
+    <link rel='stylesheet'
+          href='~/Content/recomand/fontgoogle.css'>
+    <link href='~/Content/recomand/parsinee.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="~/Content/Panelstyle/index.css">
+
+</head>
+<body>
+
+    <div class="rectangle r1"></div>
+    <img class="logo" src="../Content/img/Idoko/1.pngArtboard 1@4x.png">
+
+    @using (Html.BeginForm())
+    {
+        <div class=" UserName">
+            <label class="UserNameLabel" for="email">نام کاربری</label>
+            <div class="user ">
+                @Html.TextBoxFor(x => x.MngUserName)
+            </div>
+        </div>
+        <div class="Password">
+            <label class="PasswordLabel">گذرواژه  </label>
+            <div class=" Pass ">
+                @Html.PasswordFor(x => x.MngPassword)
+            </div>
+        </div>
+        <a href="~/Panel/NewPostRecipePl">
+            <input class="login btn-secondary hover-grow"  value="resورود" />
+        </a>
+        <a href="~/Panel/AddIngredientPl">
+            <input class="loginIN btn-secondary hover-grow"  value="inورود" />
+
+        </a>
+
+        <label class="RememberMe" for="rememberMe">منو یادت باشه</label>
+        @Html.CheckBoxFor(x => x.MngRememberMe, new { @class = "Checkbox" })
+    }
+    <label class="Valid"> @ViewBag.Login </label>
+    <script src='~/Content/recomand/profile/jquery.min.js'></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var rememberMeCheckbox = document.getElementById("RememberMe");
+            var usernameInput = document.getElementById("UserName");
+
+            // در صورتی که گزینه "مرا به خاطر بسپار" در کوکی ذخیره شده باشد، نام کاربری را پر کنید
+            if (getCookie("rememberedUsername")) {
+                usernameInput.value = getCookie("rememberedUsername");
+                rememberMeCheckbox.checked = true;
+            }
+
+            // تابع تنظیم کوکی
+            function setCookie(name, value, days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                var expires = "expires=" + date.toUTCString();
+                document.cookie = name + "=" + value + ";" + expires + ";path=/";
+            }
+
+            // تابع بازیابی مقدار کوکی
+            function getCookie(name) {
+                var cookieName = name + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+                var cookieArray = decodedCookie.split(';');
+                for (var i = 0; i < cookieArray.length; i++) {
+                    var cookie = cookieArray[i];
+                    while (cookie.charAt(0) == ' ') {
+                        cookie = cookie.substring(1);
+                    }
+                    if (cookie.indexOf(cookieName) == 0) {
+                        return cookie.substring(cookieName.length, cookie.length);
+                    }
+                }
+                return "";
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            loadDarkModeState();
+        });
+
+        // تعریف توابع مربوط به ذخیره و بازیابی وضعیت دارک مود
+        function saveDarkModeState() {
+            var darkModeState = {
+                "dark-mode": document.body.classList.contains("dark-mode"),
+                "dark-buttons": document.querySelector(".hover-grow").classList.contains("dark-button"),
+                "dark-profile": document.querySelector(".Profile").classList.contains("dark-profile"),
+                "dark-rectangles": document.querySelector(".rectangle").classList.contains("dark-rectangle"),
+                "label-darklabel": document.querySelector("label").classList.contains("darklabel"),
+                "a-darklabel": document.querySelector("a").classList.contains("darklabel")
+            };
+
+            localStorage.setItem("dark-mode-state", JSON.stringify(darkModeState));
+        }
+
+        function loadDarkModeState() {
+            var darkModeState = JSON.parse(localStorage.getItem("dark-mode-state")) || {};
+
+            if (darkModeState["dark-mode"]) {
+                document.body.classList.add("dark-mode");
+            }
+
+            var buttons = document.querySelectorAll(".hover-grow");
+            buttons.forEach(button => {
+                if (darkModeState["dark-buttons"]) {
+                    button.classList.add("dark-button");
+                }
+            });
+
+            //if (darkModeState["dark-profile"]) {
+            //    document.querySelector(".Profile").classList.add("dark-profile");
+            //}
+
+            var rectangles = document.querySelectorAll(".rectangle");
+            rectangles.forEach(rectangle => {
+                if (darkModeState["dark-rectangles"]) {
+                    rectangle.classList.add("dark-rectangle");
+                }
+            });
+
+            // تغییر بک‌گراند .darkimg در حالت دارک مود
+            var darkMode = document.body.classList.contains("dark-mode");
+            var darkImg = document.querySelector(".darkimg");
+            // بازنشانی کلاس darklabel به لیبل و تگ a در حالت دارک مود
+            var labels = document.querySelectorAll("label,a");
+            labels.forEach(label => {
+                if (darkModeState["label-darklabel"] || darkModeState["a-darklabel"]) {
+                    label.classList.add("darklabel");
+                } else {
+                    label.classList.remove("darklabel");
+                }
+            });
+
+        }
+    </script>
+
+
+</body>
+</html>
+
+

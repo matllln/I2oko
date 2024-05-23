@@ -1,0 +1,570 @@
+﻿
+  
+ @font-face {
+  font-family: yekan;
+  src: url("../font/Yekan.ttf") format("truetype"), url("../font/Yekan.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+    font-size: 14px !important;
+}
+  body{
+  background: url("../img/Idoko/Untitled-4.png")top center no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100%; 
+    font-family: "yekan" !important;
+  }
+label.labeldark {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 15px 10px 10px -350px;
+}
+.darklabel {
+    color: #5cedfb !important;
+}
+.darkimg {
+    position: absolute;
+    width: 60px;
+}
+
+.dark-button {
+    background: black !important;
+    background: black !important;
+    border: 0.25em solid transparent !important;
+    background-image: linear-gradient(#000, #000), linear-gradient(120deg, #f09 0%, #0ff 50%, #9f0 100%) !important;
+    background-origin: border-box !important;
+    background-clip: padding-box, border-box !important;
+    background-size: 200% 100% !important;
+    transition: background-position 0.8s ease-out;
+    color: #5cedfb !important;
+}
+
+
+.dark-rectangle {
+    background-color: #364d6f !important; /* تغییر رنگ rectangle ها در حالت دارک‌مود */
+}
+.dark-mode {
+    background-color: #2d1d1d !important;
+    color: darkblue;
+    background: url("../img/Idoko/1.png") center top / 100% 100% no-repeat;
+}
+  button,input,text,a,div{
+    font-family: "yekan" !important;
+}
+  .BackIcon{
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    position: absolute;
+    width: 40px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 45px 0px 0px -275px;
+}
+  .Search{
+    position: absolute;
+    width: 500px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0 0 0) 0px 0px 10px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 47px 10px 10px 10px;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+  }
+.Windo {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 285px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    text-wrap: nowrap;
+    color: #013237;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Page {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 330px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    text-wrap: nowrap;
+    color: #013237;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Food {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 375px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    text-wrap: nowrap;
+    color: #013237;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Invite {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 420px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    text-wrap: nowrap;
+    color: #013237;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Pet {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 465px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    text-wrap: nowrap;
+    color: #013237;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  .Foods{
+    position: absolute;
+    width: 450px;
+    height: 250px;
+    background: transparent;
+    box-shadow: rgb(1 50 55) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 120px 10px 10px 10px;
+  }
+  .Maintenances{
+    position: absolute;
+    width: 450px;
+    height: 250px;
+    background: transparent;
+    box-shadow: rgb(1 50 55) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 390px 10px 10px 10px;
+  }
+
+  .Pet-image img {
+    width: 450px;
+    vertical-align: top;
+    height: 250px;
+    border-radius: 15px;
+    border: solid black;
+  }
+  
+  .Pet-overlay {
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center; 
+    color: white;
+    text-align: center;
+    font-weight: bold;
+  }
+  .Pet:hover .Pet-overlay {
+    display: flex;
+  }
+  div, button, input,a {
+    border-radius: 15px !important;
+    box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+}
+
+  @media screen and (max-width: 1279px){
+    * {
+        font-size: 12px !important;
+    }
+    .Background {display: none;}
+    body{
+   background: url(../img/Idoko/Untitled-2.png)top center no-repeat;
+      width: 100%;
+      height: 100vh;
+      background-size: 100% 100%; 
+      font-family: "yekan" !important;
+    }
+    .dark-mode {
+        background-color: #2d1d1d !important;
+        color: darkblue;
+        background: url("../img/Idoko/2.png") center top / 100% 100% no-repeat;
+    }
+    .Search{
+      position: absolute;
+      width: 500px;
+      height: 35px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0 0 0) 0px 0px 10px;
+      border-radius: 10px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 18px 10px 10px 0px;
+      text-align: center;
+      border: none;
+      font-size: 14px;
+    }
+    .BackIcon{
+      border: none;
+      background: transparent;
+      font-size: 30px;
+      position: absolute;
+      width: 40px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 15px 10px 10px -275px;
+  }
+  .Windo{
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0 0 0) 0px 0px 10px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 0px 10px 10px 110px;
+    border: none;
+    font-size: 14px;
+    bottom: 5px;
+  }
+  .Page{
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0 0 0) 0px 0px 10px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 0px 10px 10px 220px;
+    border: none;
+    font-size: 14px;
+    bottom: 5px;
+  }
+  .Food{
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0 0 0) 0px 0px 10px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 0px 10px 10px 0px;
+    border: none;
+    font-size: 14px;
+    bottom: 5px;
+  }
+  .Invite {
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0 0 0) 0px 0px 10px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 0px 10px 10px -220px;
+    border: none;
+    font-size: 14px;
+    bottom: 5px;
+  }
+
+  .Pet {
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0 0 0) 0px 0px 10px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 0px 10px 10px -110px;
+    border: none;
+    font-size: 14px;
+    bottom: 5px;
+  }
+    .Foods{
+      position: absolute;
+      width: 400px;
+      height: 250px;
+      background: transparent;
+      box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+      border-radius: 20px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 225px 10px 10px 0px;
+    }
+    .Maintenances{
+      position: absolute;
+      width: 400px;
+      height: 250px;
+      background: transparent;
+      box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+      border-radius: 20px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 495px 10px 10px 0px;
+    }
+
+    .Pet-image img {
+      width: 400px;
+      vertical-align: top;
+      height: 250px;
+      border-radius: 15px;
+    }
+    
+    .Pet-overlay {
+      background: rgba(0, 0, 0, .4);
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      display: none;
+      align-items: center;
+      justify-content: center; 
+      color: white;
+      text-align: center;
+    }
+    .Pet:hover .Pet-overlay {
+      display: flex;
+    }
+    div, button, input,a {
+      border-radius: 15px !important;
+      box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+  }
+  }
+  @media screen and (max-width: 600px){
+    * {
+        font-size: 10px !important;
+    }
+    .Background {display: none;}
+    body{
+   background: url(../img/Idoko/Untitled-1.png)top center no-repeat;
+      width: 100%;
+      height: 100vh;
+      background-size: 100% 100%; 
+      font-family: "yekan" !important;
+    }
+    .dark-mode {
+        background-color: #2d1d1d !important;
+        color: darkblue;
+        background: url("../img/Idoko/3.png") center top / 100% 100% no-repeat;
+    }
+    .Search{
+      position: absolute;
+      width: 280px;
+      height: 30px;
+      font-size: 9px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0 0 0) 0px 0px 10px;
+      border-radius: 5px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 10px 10px 10px 0px;
+      text-align: center;
+      border: none;
+    }
+    .BackIcon{
+      border: none;
+      background: transparent;
+      font-size: 30px;
+      position: absolute;
+      width: 30px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 10px 10px 10px -160px;
+  }
+  .Windo{
+    position: absolute;
+    width: 60px;
+    height: 25px;
+    font-size: 9px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0 0 0) 0px 0px 10px;
+    border-radius: 5px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 0px 10px 10px 65px;
+    bottom: 5px;
+    border: none;
+  }
+  .Page{
+    position: absolute;
+    width: 60px;
+    height: 25px;
+    font-size: 9px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0 0 0) 0px 0px 10px;
+    border-radius: 5px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 0px 10px 10px 130px;
+    border: none;
+    bottom: 5px;
+  }
+  .Food{
+    position: absolute;
+    width: 60px;
+    height: 25px;
+    font-size: 9px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0 0 0) 0px 0px 10px;
+    border-radius: 5px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 0px 10px 10px 0px;
+    border: none;
+    bottom: 5px;
+  }
+  .Invite{
+    position: absolute;
+    width: 60px;
+    height: 25px;
+    font-size: 9px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0 0 0) 0px 0px 10px;
+    border-radius: 5px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 0px 10px 10px -130px;
+    border: none;
+    bottom: 5px;
+  }
+  .Pet{ 
+    position: absolute;
+    width: 60px;
+    height: 25px;
+    font-size: 9px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0 0 0) 0px 0px 10px;
+    border-radius: 5px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 0px 10px 10px -65px;
+    border: none;
+    bottom: 5px;
+  }
+    .Foods{
+      position: absolute;
+      width: 300px;
+      height: 180px;
+      background: transparent;
+      box-shadow: rgb(1 50 55) 0px 0px 10px;
+      border-radius: 10px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 125px 10px 10px 0px;
+      font-size: large;
+    }
+    .Maintenances{
+      position: absolute;
+      width: 300px;
+      height: 180px;
+      background: transparent;
+      box-shadow: rgb(1 50 55) 0px 0px 10px;
+      border-radius: 10px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 320px 10px 10px 0px;
+      font-size: large;
+    }
+
+    .Pet-image img {
+      width: 300px;
+      vertical-align: top;
+      height: 180px;
+      border-radius: 15px;
+    }
+    
+    .Pet-overlay {
+      background: rgba(0, 0, 0, .4);
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      display: none;
+      align-items: center;
+      justify-content: center; 
+      color: white;
+      text-align: center;
+    }
+    .Pet:hover .Pet-overlay {
+      display: flex;
+    }
+    div, button, input,a {
+      border-radius: 15px !important;
+      box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+  }
+  }

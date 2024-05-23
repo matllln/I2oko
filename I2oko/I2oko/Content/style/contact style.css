@@ -1,0 +1,938 @@
+@font-face {
+  font-family: yekan;
+  src: url("../font/Yekan.ttf") format("truetype"), url("../font/Yekan.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: url("../img/Idoko/Untitled-4.png") center top / 100% 100% no-repeat;
+  width: 100%;
+  height: 100vh;
+  font-family: yekan !important;
+}
+
+.BackIcon {
+  border: none;
+  background: transparent;
+  font-size: 30px;
+  position: absolute;
+  width: 40px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: 45px 0px 0px -275px;
+}
+
+.Search {
+  position: absolute;
+  width: 500px;
+  height: 35px;
+  background: rgb(255, 246, 164);
+  box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+  border-radius: 15px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: 47px 10px 10px;
+  text-align: center;
+  border: none;
+  font-size: 16px;
+  font-family: yekan;
+}
+
+.Windo {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 285px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    color: #013237;
+    text-wrap: nowrap;
+}
+
+.Page {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 330px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    color: #013237;
+    text-wrap: nowrap;
+}
+
+.Food {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 375px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    color: #013237;
+    text-wrap: nowrap;
+}
+
+.Invite {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 420px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    color: #013237;
+    text-wrap: nowrap;
+}
+
+.Pet {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 465px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    color: #013237;
+    text-wrap: nowrap;
+}
+
+.r1 {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: transparent;
+  border: solid;
+  box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+  border-radius: 15px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: -192px 10px 10px 175px;
+}
+
+.r2 {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: transparent;
+  border: solid;
+  box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+  border-radius: 15px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: 260px 10px 10px 200px;
+}
+
+.Username {
+  position: absolute;
+  font-size: 16px;
+  color: rgb(1, 50, 55);
+  width: 65px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: -220px 10px 10px 185px;
+}
+
+.Username2 {
+  position: absolute;
+  font-size: 16px;
+  color: rgb(1, 50, 55);
+  width: 65px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: 300px 10px 10px 100px;
+}
+
+.SendPM {
+  position: absolute;
+  width: 120px;
+  height: 35px;
+  background: rgb(255, 246, 164);
+  box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+  border-radius: 15px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: -175px 10px 10px -25px;
+  border: none;
+}
+
+.Remove {
+  position: absolute;
+  width: 120px;
+  height: 35px;
+  background: rgb(255, 246, 164);
+  box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+  border-radius: 15px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: -175px 10px 10px -170px;
+  border: none;
+}
+
+.Block {
+  position: absolute;
+  width: 120px;
+  height: 35px;
+  background: rgb(255, 246, 164);
+  box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+  border-radius: 15px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: -130px 10px 10px -170px;
+  border: none;
+}
+
+.SendPM2 {
+  position: absolute;
+  width: 120px;
+  height: 35px;
+  background: rgb(255, 246, 164);
+  box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+  border-radius: 15px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: 260px 10px 10px -35px;
+  border: none;
+}
+
+.Remove2 {
+  position: absolute;
+  width: 120px;
+  height: 35px;
+  background: rgb(255, 246, 164);
+  box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+  border-radius: 15px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: 310px 10px 10px -170px;
+  border: none;
+}
+
+.Block2 {
+  position: absolute;
+  width: 120px;
+  height: 35px;
+  background: rgb(255, 246, 164);
+  box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+  border-radius: 15px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: 262px 10px 10px -170px;
+  border: none;
+}
+
+.Addfriend {
+  position: absolute;
+  width: 120px;
+  height: 35px;
+  background: rgb(255, 246, 164);
+  box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+  border-radius: 15px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: -130px 10px 10px -25px;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.Addfriend2 {
+  position: absolute;
+  width: 120px;
+  height: 35px;
+  background: rgb(255, 246, 164);
+  box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+  border-radius: 15px;
+  left: 50%;
+  font-size: 15px;
+  transform: translate(-50%, 0%);
+  margin: 310px 10px 10px -35px;
+  border: none;
+  font-weight: bold;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(1, 0fr);
+  gap: 10px;
+  overflow-y: auto;
+  position: absolute;
+  left: 50%;
+  width: 500px;
+  margin: 96px 10px 10px;
+  transform: translate(-50%, 0%);
+  justify-content: center;
+  height: 74%;
+  max-height: 77%;
+}
+.contact-list {
+  display: grid;
+  justify-content: center;
+  grid-gap: 30px 3px;
+  padding-top: 230px;
+  padding-right: 0;
+  padding-left: 7px;
+  width: 16px;
+}
+
+
+
+a,div, button, input,a {
+  border-radius: 15px !important;
+  box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+}
+
+@media screen and (max-width: 1279px) {
+  .Background {
+      display: none;
+  }
+
+  body {
+      background: url("../img/Idoko/Untitled-2.png") center top / 100% 100% no-repeat;
+      width: 100%;
+      height: 100vh;
+      font-family: yekan !important;
+  }
+
+  .BackIcon {
+      border: none;
+      background: transparent;
+      font-size: 30px;
+      position: absolute;
+      width: 40px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 15px 10px 10px -275px;
+  }
+
+  .Search {
+      position: absolute;
+      width: 500px;
+      height: 35px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 10px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 18px 10px 10px 0px;
+      text-align: center;
+      border: none;
+      font-size: 14px;
+  }
+
+  .Windo {
+      position: absolute;
+      width: 100px;
+      height: 35px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 10px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 0px 10px 10px 110px;
+      border: none;
+      font-size: 14px;
+      bottom: 5px;
+  }
+
+  .Page {
+      position: absolute;
+      width: 100px;
+      height: 35px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 10px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 0px 10px 10px 220px;
+      border: none;
+      font-size: 14px;
+      bottom: 5px;
+  }
+
+  .Food {
+      position: absolute;
+      width: 100px;
+      height: 35px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 10px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 0px 10px 10px 0px;
+      border: none;
+      font-size: 14px;
+      bottom: 5px;
+  }
+
+  .Invite {
+      position: absolute;
+      width: 100px;
+      height: 35px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 10px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 0px 10px 10px -220px;
+      border: none;
+      font-size: 14px;
+      bottom: 5px;
+  }
+
+  .Pet {
+      position: absolute;
+      width: 100px;
+      height: 35px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 10px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 0px 10px 10px -110px;
+      border: none;
+      font-size: 14px;
+      bottom: 5px;
+  }
+
+  .r1 {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: transparent;
+      border: solid;
+      box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+      border-radius: 10px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: -554px 10px 10px 185px;
+  }
+
+  .r2 {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: transparent;
+      border: solid;
+      box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+      border-radius: 10px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 260px 10px 10px 210px;
+  }
+
+  .Username {
+      position: absolute;
+      color: rgb(1, 50, 55);
+      width: 65px;
+      text-align: center;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: -520px 10px 10px 80px;
+      font-size: 14px;
+  }
+
+  .Username2 {
+      position: absolute;
+      color: rgb(1, 50, 55);
+      width: 65px;
+      text-align: center;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 300px 10px 10px 120px;
+      font-size: 14px;
+  }
+
+  .SendPM {
+      position: absolute;
+      width: 120px;
+      height: 35px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 10px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: -550px 10px 10px -60px;
+      border: none;
+      font-size: 14px;
+  }
+
+  .Remove {
+      position: absolute;
+      width: 120px;
+      height: 35px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 10px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: -550px 10px 10px -190px;
+      border: none;
+      font-size: 14px;
+  }
+
+  .Block {
+      position: absolute;
+      width: 120px;
+      height: 35px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 10px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: -505px 10px 10px -190px;
+      border: none;
+      font-size: 14px;
+  }
+
+  .SendPM2 {
+      position: absolute;
+      width: 120px;
+      height: 35px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 10px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 260px 10px 10px -60px;
+      border: none;
+      font-size: 14px;
+  }
+
+  .Remove2 {
+      position: absolute;
+      width: 120px;
+      height: 35px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 10px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 260px 10px 10px -190px;
+      border: none;
+      font-size: 14px;
+  }
+
+  .Block2 {
+      position: absolute;
+      width: 120px;
+      height: 35px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 10px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 310px 10px 10px -190px;
+      border: none;
+      font-size: 14px;
+  }
+
+  .Addfriend {
+      position: absolute;
+      width: 120px;
+      height: 35px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 10px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: -505px 10px 10px -60px;
+      border: none;
+      font-size: 14px;
+      font-weight: unset;
+  }
+
+  .Addfriend2 {
+      position: absolute;
+      width: 120px;
+      height: 35px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 10px;
+      left: 50%;
+      font-size: 14px;
+      transform: translate(-50%, 0%);
+      margin: 310px 10px 10px -60px;
+      border: none;
+      font-weight: unset;
+  }
+
+
+
+  .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 0fr);
+      gap: 10px;
+      overflow-y: auto;
+      position: absolute;
+      left: 50%;
+      width: 526px;
+      margin: 75px 10px 10px 0px;
+      transform: translate(-50%, 0%);
+      justify-content: center;
+      height: 85%;
+      max-height: 87%;
+  }
+  .contact-list {
+    display: grid;
+    justify-content: center;
+    grid-gap: 0px 3px;
+    padding-top: 570px;
+    padding-right: 14px;
+    padding-left: 5px;
+    width: 100px;
+    top: 10px;
+  }
+
+  a,div, button, input,a {
+    border-radius: 15px !important;
+    box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+}
+}
+
+@media screen and (max-width: 600px) {
+  .Background {
+      display: none;
+  }
+
+  body {
+      background: url("../img/Idoko/Untitled-1.png") center top / 100% 100% no-repeat;
+      width: 100%;
+      height: 100vh;
+      font-family: yekan !important;
+  }
+
+  .BackIcon {
+      border: none;
+      background: transparent;
+      font-size: 30px;
+      position: absolute;
+      width: 30px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 10px 10px 10px -160px;
+  }
+
+  .Search {
+      position: absolute;
+      width: 280px;
+      height: 30px;
+      font-size: 9px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 5px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 10px 10px 10px 0px;
+      text-align: center;
+      border: none;
+  }
+
+  .Windo {
+      position: absolute;
+      width: 60px;
+      height: 25px;
+      font-size: 9px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 5px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 0px 10px 10px 65px;
+      bottom: 5px;
+      border: none;
+  }
+
+  .Page {
+      position: absolute;
+      width: 60px;
+      height: 25px;
+      font-size: 9px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 5px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 0px 10px 10px 130px;
+      border: none;
+      bottom: 5px;
+  }
+
+  .Food {
+      position: absolute;
+      width: 60px;
+      height: 25px;
+      font-size: 9px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 5px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 0px 10px 10px 0px;
+      border: none;
+      bottom: 5px;
+  }
+
+  .Invite {
+      position: absolute;
+      width: 60px;
+      height: 25px;
+      font-size: 9px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 5px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 0px 10px 10px -130px;
+      border: none;
+      bottom: 5px;
+  }
+
+  .Pet {
+      position: absolute;
+      width: 60px;
+      height: 25px;
+      font-size: 9px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 5px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 0px 10px 10px -65px;
+      border: none;
+      bottom: 5px;
+  }
+
+  .r1 {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      background: transparent;
+      border: solid;
+      box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+      border-radius: 5px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: -270px 10px 10px 125px;
+  }
+
+  .r2 {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      background: transparent;
+      border: solid;
+      box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+      border-radius: 5px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 225px 10px 10px 120px;
+  }
+
+  .Username {
+      position: absolute;
+      color: rgb(1, 50, 55);
+      width: 65px;
+      text-align: center;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: -295px 10px 10px 125px;
+      font-size: 12px;
+  }
+
+  .Username2 {
+      position: absolute;
+      color: rgb(1, 50, 55);
+      width: 65px;
+      text-align: center;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 200px 10px 10px 120px;
+      font-size: 12px;
+  }
+
+  .SendPM {
+      position: absolute;
+      width: 110px;
+      height: 30px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 5px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: -270px 10px 10px 20px;
+      border: none;
+      font-size: 12px;
+  }
+
+  .Remove {
+      position: absolute;
+      width: 110px;
+      height: 30px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 5px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: -230px 10px 10px -100px;
+      border: none;
+      font-size: 12px;
+  }
+
+  .Block {
+      position: absolute;
+      width: 110px;
+      height: 30px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 5px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: -270px 10px 10px -100px;
+      border: none;
+      font-size: 12px;
+  }
+
+  .SendPM2 {
+      position: absolute;
+      width: 110px;
+      height: 30px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 5px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 225px 10px 10px 20px;
+      border: none;
+      font-size: 12px;
+  }
+
+  .Remove2 {
+      position: absolute;
+      width: 110px;
+      height: 30px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 5px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 265px 10px 10px -100px;
+      border: none;
+      font-size: 12px;
+  }
+
+  .Block2 {
+      position: absolute;
+      width: 110px;
+      height: 30px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 5px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: 225px 10px 10px -100px;
+      border: none;
+      font-size: 12px;
+  }
+
+  .Addfriend {
+      position: absolute;
+      width: 110px;
+      height: 30px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 5px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      margin: -230px 10px 10px 20px;
+      border: none;
+      font-size: 12px;
+      font-weight: unset;
+  }
+
+  .Addfriend2 {
+      position: absolute;
+      width: 110px;
+      height: 30px;
+      background: rgb(255, 246, 164);
+      box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+      border-radius: 5px;
+      left: 50%;
+      font-size: 12px;
+      transform: translate(-50%, 0%);
+      margin: 265px 10px 10px 20px;
+      border: none;
+      font-weight: unset;
+  }
+
+
+  .grid-container {
+      display: grid;
+      grid-template-columns: repeat(1, 0fr);
+      gap: 10px;
+      overflow-y: auto;
+      position: absolute;
+      left: 50%;
+      width: 344px;
+      margin: 55px 10px 10px 0px;
+      transform: translate(-50%, 0%);
+      justify-content: center;
+      height: 83%;
+      max-height: 85%;
+  }
+  .contact-list {
+    display: grid;
+    justify-content: center;
+    grid-gap: 0px 3px;
+    padding-top: 303px;
+    padding-right: 14px;
+    padding-left: 5px;
+    width: 100px;
+  }
+  a,div, button, input,a {
+    border-radius: 15px !important;
+    box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+}
+}

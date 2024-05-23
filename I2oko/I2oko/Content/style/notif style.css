@@ -1,0 +1,248 @@
+@font-face {
+  font-family: yekan;
+  src: url("../font/Yekan.ttf") format("truetype"), url("../font/Yekan.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+ background: url("../img/Idoko/Untitled-4.png")top center no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: 100% 100%; 
+  font-family: "yekan" !important;
+}
+button,input,text,a,div{
+    font-family: "yekan" !important;
+}
+.BackIcon{
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  position: absolute;
+  width: 40px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: 45px 0px 0px -275px;
+}
+.follow{
+
+position: absolute;
+
+width: 523px;
+
+height: 60px;
+
+border-right: 6px solid #0355d0;
+
+left: 50%;
+
+transform: translate(-50%, 0%);
+
+margin: 45px 0px 0px 15px;
+}
+.P1{
+
+width: 50px;
+
+position: absolute;
+
+left: 50%;
+
+transform: translate(-50%, 0%);
+
+margin: 14px 0px 0px 219px;
+}
+.TextFollow{
+
+font-weight: bold;
+
+position: absolute;
+
+left: 50%;
+
+transform: translate(-50%, 0%);
+
+margin: 18px 0px 0px 37px;
+}
+.Back{
+
+/* padding: 1em; */
+
+background: #bfd9ff;
+
+color: rgb(2, 72, 30);
+
+border: none;
+
+font-weight: 600;
+
+position: absolute;
+
+margin: 19px 10px 10px -195px;
+
+width: 78px;
+
+left: 50%;
+
+transform: translate(-50%, 0%);
+
+font-family: 'yekan';
+}
+.coment{
+  
+position: absolute;
+
+width: 523px;
+
+height: 60px;
+
+border-right: 6px solid #0355d0;
+
+left: 50%;
+
+transform: translate(-50%, 0%);
+
+margin: 45px 0px 0px 15px;
+}
+.Pp1{
+  width: 50px;
+
+  position: absolute;
+  
+  left: 50%;
+  
+  transform: translate(-50%, 0%);
+  
+  margin: 14px 0px 0px 219px;
+}
+.Pp2{
+  width: 50px;
+
+  position: absolute;
+  
+  left: 50%;
+  
+  transform: translate(-50%, 0%);
+  
+  margin: 14px 0px 0px 219px;
+}
+.TextCom{
+  font-weight: bold;
+
+  position: absolute;
+  
+  left: 50%;
+  
+  transform: translate(-50%, 0%);
+  
+  margin: 18px 0px 0px 37px;
+}
+.Like{
+  
+  position: absolute;
+  
+  width: 523px;
+  
+  height: 60px;
+  
+  border-right: 6px solid #0355d0;
+  
+  left: 50%;
+  
+  transform: translate(-50%, 0%);
+  
+  margin: 45px 0px 0px 15px;
+  }
+  .Ppp1{
+    width: 50px;
+  
+    position: absolute;
+    
+    left: 50%;
+    
+    transform: translate(-50%, 0%);
+    
+    margin: 14px 0px 0px 219px;
+  }
+  .Ppp2{
+    width: 50px;
+  
+    position: absolute;
+    
+    left: 50%;
+    
+    transform: translate(-50%, 0%);
+    
+    margin: 14px 0px 0px 219px;
+  }
+  .LikeCom{
+    font-weight: bold;
+  
+    position: absolute;
+    
+    left: 50%;
+    
+    transform: translate(-50%, 0%);
+    
+    margin: 18px 0px 0px 37px;
+  }
+div,button,input{
+  border-radius: 15px !important;
+  box-shadow: rgb(1 50 55) 0px 0px 5px !important;
+}
+@media screen and (max-width: 1279px){
+  body {
+     background: url("../img/Idoko/Untitled-2.png")top center no-repeat;
+      width: 100%;
+      height: 100vh;
+      background-size: 100% 100%; 
+      font-family: "yekan" !important;
+
+  }
+.Background{display: none;}
+.BackIcon {
+  border: none;
+  background: transparent;
+  font-size: 30px;
+  position: absolute;
+  width: 40px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: 15px 10px 10px -275px;
+}
+
+div,button,input{
+  border-radius: 10px !important;
+  box-shadow: rgb(1 50 55) 0px 0px 5px !important;
+}
+}
+@media screen and (max-width: 600px){
+  body {
+      background: url("../img/Idoko/Untitled-2.png")top center no-repeat;
+      width: 100%;
+      height: 100vh;
+      background-size: 100% 100%; 
+      font-family: "yekan" !important;
+
+  }
+.Background{display: none;}
+
+.BackIcon {
+  border: none;
+  background: transparent;
+  font-size: 30px;
+  position: absolute;
+  width: 30px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: 10px 10px 10px -160px;
+}
+
+div,button,input{
+  border-radius: 5px !important;
+  box-shadow: rgb(1 50 55) 0px 0px 5px !important;
+}
+}
+
+

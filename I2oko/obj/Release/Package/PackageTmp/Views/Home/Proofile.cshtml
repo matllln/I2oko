@@ -1,0 +1,375 @@
+﻿@model I2oko.Models.UserModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../Content/img/Idoko/favicon.ico">
+
+    <link rel="stylesheet" href="../Content/style/profile style.css">
+    <link rel="stylesheet" href="../Content/style/profile style2.css">
+
+    <link rel="stylesheet" href="~/Content/recomand/all.css">
+    <link rel="stylesheet" href="~/Content/recomand/reset.min.css">
+
+    <link rel="stylesheet" href="~/Content/recomand/bootstrap.rtl.min.css"
+          integrity="sha384-beJoAY4VI2Q+5IPXjI207/ntOuaz06QYCdpWfWRv4lSFDyUSqsM0W+wiAMr2I185" crossorigin="anonymous">
+    <script src="~/Content/recomand/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"></script>
+    <script defer src="~/Content/recomand/cdn.min.js"></script>
+    <link href='~/Content/recomand/parsinee.css' rel='stylesheet'>
+    <link rel='stylesheet' href='~/Content/recomand/profile/bootstrap.min.css'>
+    <link rel='stylesheet' href='~/Content/recomand/profile/cropper.css'>
+</head>
+<body>
+    <div class="rectangle Headr"></div>
+    <div class="rectangle HeadrRight"></div>
+    <div class="rectangle HeadrLeft "></div>
+    <img class=" Profile " src="@Session["userpic"]" />
+    <button class="Search  hover-grow">جستجو کن</button>
+    <img class="logo" src="../Content/img/Idoko/1.pngArtboard 1@4x.png">
+    <!--  ------------------------------------------------------- -->
+    @Html.ActionLink("رویداد جدید", "Newpost", "Idoko", new { @class = "Newpost hover-grow" })
+    @Html.ActionLink("علاقه مندی ها", "Favorite", "Idoko", new { @class = "Favorite hover-grow" })
+    @Html.ActionLink("برنامه غذایی", "Diet", "Idoko", new { @class = "Diet hover-grow" })
+    @Html.ActionLink("لیست خرید", "ShopingList", "Idoko", new { @class = "List hover-grow" })
+    @Html.ActionLink("ویرایش", "EditProfile", "Idoko", new { @class = "Edit hover-grow" })
+    <!-- ------------------------------------------------------------------------- -->
+
+    @Html.ActionLink("پنجره باز", "Window", "Idoko", new { @class = "Windo hover-grow darkbutton" })
+    @Html.ActionLink("صفحه من", "Proofile", "Idoko", new { @class = "Page hover-grow" })
+    @Html.ActionLink("خوشمزه ها", "Delicious", "Idoko", new { @class = "Food hover-grow" })
+    @Html.ActionLink("چه خبرا؟", "News", "Idoko", new { @class = "Invite hover-grow" })
+    @Html.ActionLink("حیوانات خانگی", "Pet", "Idoko", new { @class = "Pet hover-grow" })
+    <label for="dark" class="labeldark">
+        <img src="~/Content/img/Idoko/dark.svg" class="darkimg" />
+    </label>
+    <button onclick="myFunction()" style="display:none;" id="dark"></button>
+
+    <!-- -------------------------------------------------------------------------------- -->
+    @using (Html.BeginForm("Proofile", "Home", FormMethod.Post))
+    {
+        <div>
+            <img src="~/Content/img/Idoko/exit.svg" class="Exit hover-grow" />
+            <input class="Exit hover-grow" type="submit" />
+
+        </div>
+    }
+
+    @using (Html.BeginForm("Proofile", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+        if (ViewBag.NotifIcon != "True")
+        {
+            <a href="~/Home/Notif">
+                <img class="Notif" src="~/Content/img/Idoko/OffNotif.svg" alt="">
+            </a>
+        }
+        else
+        {
+            <a href="~/Home/Notif">
+                <img class="Notif" src="~/Content/img/Idoko/OnNotif.svg" alt="">
+            </a>
+        }
+
+        <a href="/Home/Friend"><label class="Friends" for="">دوستان</label></a>
+        <a href="/Home/contact"><label class="Audiences" for="">مخاطبان</label></a>
+        <label class="Post" for="">رویداد ها</label>
+        <!-- -------------------------------------------------------------------------------- -->
+        <div class="grid-container" id="grid">
+            <section class="post-list">
+                @if (ViewBag.Posts != null)
+                {
+                    foreach (var post in ViewBag.Posts)
+                    {
+                        if (!string.IsNullOrEmpty(post.PictureURL) || !string.IsNullOrEmpty(post.MediaURL))
+                        {
+                            string actionName;
+                            object routeValues;
+
+                            if (!string.IsNullOrEmpty(post.MediaURL))
+                            {
+                                actionName = "ShowPost";
+                                routeValues = new
+                                {
+                                    PostID = post.PostID,
+                                };
+                            }
+                            else if (!string.IsNullOrEmpty(post.Subject))
+                            {
+                                actionName = "ShowPostRecipe";
+                                routeValues = new
+                                {
+                                    FoodID = post.FoodID,
+                                };
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                            <a href='@Url.Action(actionName, "Home", routeValues)' class="post">
+                                @if (!string.IsNullOrEmpty(post.PictureURL) && (post.PictureURL.EndsWith(".jpg") || post.PictureURL.EndsWith(".jpeg") || post.PictureURL.EndsWith(".png")))
+                                {
+                                    <figure class="post-image">
+                                        <div class="Pot-icon">
+                                            <img class="Poticon" src="~/Content/img/Idoko/pot.svg" />
+                                        </div>
+                                        <img class="r1" src="@post.PictureURL" alt="User Post Image">
+
+                                    </figure>
+                                }
+                                else if (!string.IsNullOrEmpty(post.MediaURL) && post.MediaURL.EndsWith(".mp4"))
+                                {
+                                    <figure class="">
+                                        <div class="video-icon">
+                                            <img class="VideoIcon" src="~/Content/img/Idoko/video.svg" />
+                                        </div>
+                                        <video class="VideoStyle">
+                                            <source src="@post.MediaURL" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </figure>
+                                }
+                                else if (!string.IsNullOrEmpty(post.MediaURL) && post.MediaURL.EndsWith(".jpg") || post.MediaURL.EndsWith(".jpeg") || post.MediaURL.EndsWith(".png"))
+                                {
+                                    <figure class="post-image">
+                                        <img class="r1" src="@post.MediaURL" alt="User Post Image">
+                                    </figure>
+                                }
+                                <div class="post-overlay">
+                                    <p>
+                                        <span class="post-likes"><i class="fa fa-heart" aria-hidden="true"></i> 150</span>
+                                        <span class="post-comments"><i class="fa fa-comment" aria-hidden="true"></i> 10</span>
+                                    </p>
+                                </div>
+                            </a>
+                        }
+                    }
+                }
+                else
+                {
+                    <p>No images found.</p>
+                }
+
+
+            </section>
+        </div>
+
+        <div class="rectangle FriendsPanel">@ViewBag.FollowersCount</div>
+        <div class="rectangle AudiencesPanel">@ViewBag.FollowingsCount</div>
+        <div class="rectangle PostPanel">@ViewBag.NumberOfPosts</div>
+        <div class="rectangle Username"> <label> @Session["UserName"] </label> </div>
+        <div class="rectangle Bio"> <label class="BioLabel"> @Html.Raw(Session["Biography"]) </label> </div>
+        <div class="rectangle TextDay"></div>
+        <div class="rectangle Catgory"> <label class="CateguriLabel"> @Session["Categuri"] </label> </div>
+
+
+    }
+
+    <img class="rounded" id="profile-img" src="" alt="avatar">
+
+    <input type="file" class="d-none" id="file-input" name="image" accept="image/*" style="display:none;">
+    <label for="file-input">
+        <img class="upload" src="~/Content/img/Idoko/upload.svg" alt="آیکون انتخاب عکس">
+    </label>
+
+    <div class="modal fade" id="cropAvatarModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <div class="img-container">
+                        <img id="uploadedAvatar" src="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="cancelButton" data-dismiss="modal" style="display:none;">Cancel</button>
+                    <label for="cancelButton">
+                        <img class="cancel" src="~/Content/img/Idoko/delete.svg" />
+                    </label>
+                    <button type="button" class="btn btn-primary" id="crop" style="display:none;">Crop </button>
+                    <label for="crop">
+                        <img class="cut" src="~/Content/img/Idoko/cut.svg" />
+
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form id="cropForm" action="/Home/Proofile" method="POST">
+        <input type="hidden" id="croppedImage" name="croppedImage">
+        <button type="submit" id="submitForm" style="display: none;">Submit</button>
+    </form>
+
+    <script src='~/Content/recomand/profile/jquery.min.js'></script>
+    <script src='~/Content/recomand/profile/cropper.js'></script>
+    <script src='~/Content/recomand/profile/jquery.min.js'></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            var avatar = document.getElementById('profile-img');
+            var image = document.getElementById('uploadedAvatar');
+            var input = document.getElementById('file-input');
+            var cropBtn = document.getElementById('crop');
+            var submitBtn = document.getElementById('submitForm');
+            var cancelButton = document.getElementById('cancelButton');
+
+            var $modal = $('#cropAvatarModal');
+            var cropper;
+
+            $('[data-toggle="tooltip"]').tooltip();
+
+            input.addEventListener('change', function (e) {
+                var files = e.target.files;
+
+                if (files && files.length > 0) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        image.src = e.target.result;
+                        $modal.modal('show');
+                    };
+                    reader.readAsDataURL(files[0]);
+                }
+            });
+
+            $modal.on('shown.bs.modal', function () {
+                cropper = new Cropper(image, {
+                    aspectRatio: 1,
+                    viewMode: 3,
+                });
+            }).on('hidden.bs.modal', function () {
+                cropper.destroy();
+                cropper = null;
+                image.src = '';
+            });
+
+            cancelButton.addEventListener('click', function () {
+                $modal.modal('hide');
+            });
+
+            cropBtn.addEventListener('click', function () {
+                var canvas;
+
+                $modal.modal('hide');
+
+                if (cropper) {
+                    canvas = cropper.getCroppedCanvas({
+                        width: 160,
+                        height: 160,
+                    });
+
+                    var croppedImageURL = canvas.toDataURL();
+                    document.getElementById('croppedImage').value = croppedImageURL;
+
+                    submitBtn.click();
+                }
+            });
+        });
+    </script>
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+
+            // تغییر رنگ باتن‌ها
+            var buttons = document.querySelectorAll(".hover-grow");
+            buttons.forEach(button => button.classList.toggle("dark-button"));
+
+            // تغییر رنگ تصویر پروفایل
+            var profileImg = document.querySelector(".Profile");
+            profileImg.classList.toggle("dark-profile");
+
+            // تغییر رنگ rectangle ها
+            var rectangles = document.querySelectorAll(".rectangle");
+            rectangles.forEach(rectangle => rectangle.classList.toggle("dark-rectangle"));
+
+            // افزودن کلاس darklabel به لیبل و تگ a در حالت دارک مود
+            var labels = document.querySelectorAll("label,a");
+            labels.forEach(label => label.classList.toggle("darklabel"));
+
+            // ذخیره تمام تغییرات در Local Storage
+            saveDarkModeState();
+        }
+
+        // درخواست اطلاعات از Local Storage در هنگام بارگذاری صفحه
+        document.addEventListener('DOMContentLoaded', function () {
+            loadDarkModeState();
+        });
+
+        // تعریف توابع مربوط به ذخیره و بازیابی وضعیت دارک مود
+        function saveDarkModeState() {
+            var darkModeState = {
+                "dark-mode": document.body.classList.contains("dark-mode"),
+                "dark-buttons": document.querySelector(".hover-grow").classList.contains("dark-button"),
+                "dark-profile": document.querySelector(".Profile").classList.contains("dark-profile"),
+                "dark-rectangles": document.querySelector(".rectangle").classList.contains("dark-rectangle"),
+                "label-darklabel": document.querySelector("label").classList.contains("darklabel"),
+                "a-darklabel": document.querySelector("a").classList.contains("darklabel")
+
+
+            };
+
+            localStorage.setItem("dark-mode-state", JSON.stringify(darkModeState));
+        }
+
+        function loadDarkModeState() {
+            var darkModeState = JSON.parse(localStorage.getItem("dark-mode-state")) || {};
+
+            if (darkModeState["dark-mode"]) {
+                document.body.classList.add("dark-mode");
+            }
+
+            var buttons = document.querySelectorAll(".hover-grow");
+            buttons.forEach(button => {
+                if (darkModeState["dark-buttons"]) {
+                    button.classList.add("dark-button");
+                }
+            });
+
+            if (darkModeState["dark-profile"]) {
+                document.querySelector(".Profile").classList.add("dark-profile");
+            }
+
+            var rectangles = document.querySelectorAll(".rectangle");
+            rectangles.forEach(rectangle => {
+                if (darkModeState["dark-rectangles"]) {
+                    rectangle.classList.add("dark-rectangle");
+                }
+            });
+
+            // تغییر بک‌گراند .darkimg در حالت دارک مود
+            var darkMode = document.body.classList.contains("dark-mode");
+            var darkImg = document.querySelector(".darkimg");
+
+            darkImg.style.background = darkMode ? "teal" : "";
+
+            // بازنشانی کلاس darklabel به لیبل و تگ a در حالت دارک مود
+            var labels = document.querySelectorAll("label,a");
+            labels.forEach(label => {
+                if (darkModeState["label-darklabel"] || darkModeState["a-darklabel"]) {
+                    label.classList.add("darklabel");
+                } else {
+                    label.classList.remove("darklabel");
+                }
+            });
+        }
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
+

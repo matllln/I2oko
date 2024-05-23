@@ -1,0 +1,741 @@
+
+@font-face {
+    font-family: yekan;
+    src: url("../font/Yekan.ttf") format("truetype"), url("../font/Yekan.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body {
+    background: url("../img/Idoko/Untitled-4.png") center top / 100% 100% no-repeat;
+    width: 100%;
+    height: 100vh;
+    font-family: yekan !important;
+}
+button,input,text,a,div{
+    font-family: "yekan" !important;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    gap: 10px;
+    overflow-y: auto;
+    position: absolute;
+    left: 50%;
+    width: 529px;
+    margin: 100px 10px 10px;
+    transform: translate(-50%, 0%);
+    justify-content: center;
+    height: 75%;
+    max-height: 78%;
+}
+
+.BackIcon {
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    position: absolute;
+    width: 40px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 45px 0px 0px -275px;
+}
+
+.Search {
+    position: absolute;
+    width: 500px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 47px 10px 10px;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+}
+
+.Windo {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 285px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    color: #013237;
+    text-wrap: nowrap;
+}
+
+.Page {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 330px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    color: #013237;
+    text-wrap: nowrap;
+}
+
+.Food {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 375px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    color: #013237;
+    text-wrap: nowrap;
+}
+
+.Invite {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 420px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    color: #013237;
+    text-wrap: nowrap;
+}
+
+.Pet {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 465px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    color: #013237;
+    text-wrap: nowrap;
+}
+
+.r1 {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: transparent;
+    box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+    border-radius: 30px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 15px 10px 0px 0px;
+    border: solid;
+}
+
+.r2 {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: transparent;
+    box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+    border-radius: 30px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 15px 10px 10px 170px;
+    border: solid;
+}
+
+.r3 {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: transparent;
+    box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+    border-radius: 30px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 15px 10px 10px -169px;
+    border: solid;
+}
+
+.r4 {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: transparent;
+    box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+    border-radius: 30px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 185px 10px 10px 0px;
+    border: solid;
+}
+
+.r5 {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: transparent;
+    box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+    border-radius: 30px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 185px 10px 10px 170px;
+    border: solid;
+}
+
+.r6 {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: transparent;
+    box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+    border-radius: 30px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 185px 10px 10px -170px;
+    border: solid;
+}
+
+div, button, input {
+    border-radius: 15px !important;
+    box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+}
+
+@media screen and (max-width: 1279px) {
+    .Background {
+        display: none;
+    }
+
+    body {
+        background: url("../img/Idoko/Untitled-2.png") center top / 100% 100% no-repeat;
+        width: 100%;
+        height: 100vh;
+        font-family: yekan !important;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1.15fr);
+        gap: 10px;
+        max-height: 89%;
+        width: 560px;
+        height: 85%;
+        overflow-y: auto;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 75px 10px 10px 0px;
+    }
+
+    .Search {
+        position: absolute;
+        width: 500px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 18px 10px 10px 0px;
+        text-align: center;
+        border: none;
+        font-size: 14px;
+    }
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        font-size: 30px;
+        position: absolute;
+        width: 40px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 15px 10px 10px -275px;
+    }
+
+    .Windo {
+        position: absolute;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+        border-radius: 15px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 110px;
+        border: none;
+        font-size: 14px;
+        bottom: 5px;
+    }
+
+    .Page {
+        position: absolute;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+        border-radius: 15px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 220px;
+        border: none;
+        font-size: 14px;
+        bottom: 5px;
+    }
+
+    .Food {
+        position: absolute;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+        border-radius: 15px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 0px;
+        border: none;
+        font-size: 14px;
+        bottom: 5px;
+    }
+
+    .Invite {
+        position: absolute;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+        border-radius: 15px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px -220px;
+        border: none;
+        font-size: 14px;
+        bottom: 5px;
+    }
+
+    .Pet {
+        position: absolute;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+        border-radius: 15px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px -110px;
+        border: none;
+        font-size: 14px;
+        bottom: 5px;
+    }
+
+    .r1 {
+        position: absolute;
+        width: 175px;
+        height: 175px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 20px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -155px 10px 10px 20px;
+        border: solid;
+    }
+
+    .r2 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 20px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 15px 10px 10px 170px;
+        border: solid;
+    }
+
+    .r3 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 20px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 15px 10px 10px -170px;
+        border: solid;
+    }
+
+    .r4 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 20px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 185px 10px 10px 0px;
+        border: solid;
+    }
+
+    .r5 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 20px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 185px 10px 10px 170px;
+        border: solid;
+    }
+
+    .r6 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 20px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 185px 10px 10px -170px;
+        border: solid;
+    }
+
+    .r7 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 20px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 440px 10px 10px 0px;
+        border: solid;
+    }
+
+    .r8 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 20px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 440px 10px 10px 170px;
+        border: solid;
+    }
+
+    .r9 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 20px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 440px 10px 10px -170px;
+        border: solid;
+    }
+
+    div, button, input {
+        border-radius: 15px !important;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Background {
+        display: none;
+    }
+
+    body {
+        background: url("../img/Idoko/Untitled-1.png") center top / 100% 100% no-repeat;
+        width: 100%;
+        height: 100vh;
+        font-family: yekan !important;
+    }
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        font-size: 30px;
+        position: absolute;
+        width: 30px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px -160px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 0.15fr);
+        gap: 10px;
+        max-height: 85%;
+        width: 345px;
+        height: 83%;
+        overflow-y: auto;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 55px 10px 10px 0px;
+    }
+
+    .Search {
+        position: absolute;
+        width: 280px;
+        height: 30px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px 0px;
+        text-align: center;
+        border: none;
+    }
+
+    .Windo {
+        position: absolute;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+        border-radius: 15px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 65px;
+        bottom: 5px;
+        border: none;
+    }
+
+    .Page {
+        position: absolute;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+        border-radius: 15px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 130px;
+        border: none;
+        bottom: 5px;
+    }
+
+    .Food {
+        position: absolute;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+        border-radius: 15px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 0px;
+        border: none;
+        bottom: 5px;
+    }
+
+    .Invite {
+        position: absolute;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+        border-radius: 15px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px -130px;
+        border: none;
+        bottom: 5px;
+    }
+
+    .Pet {
+        position: absolute;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+        border-radius: 15px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px -65px;
+        border: none;
+        bottom: 5px;
+    }
+
+    .r1 {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px 0px;
+        border: solid;
+        border-radius: 15px;
+    }
+
+    .r2 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px 110px;
+        border: solid;
+    }
+
+    .r3 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px -110px;
+        border: solid;
+    }
+
+    .r4 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 120px 10px 10px 0px;
+        border: solid;
+    }
+
+    .r5 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 120px 10px 10px 110px;
+        border: solid;
+    }
+
+    .r6 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 120px 10px 10px -110px;
+        border: solid;
+    }
+
+    .r7 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 285px 10px 10px 0px;
+        border: solid;
+    }
+
+    .r8 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 285px 10px 10px 110px;
+        border: solid;
+    }
+
+    .r9 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 285px 10px 10px -110px;
+        border: solid;
+    }
+    div, button, input {
+        border-radius: 15px !important;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+    }
+}

@@ -1,0 +1,58 @@
+D:\c# 2019\I2oko\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\c# 2019\I2oko\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\c# 2019\I2oko\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\c# 2019\I2oko\UnitTest\bin\Debug\UnitTest.dll.config
+D:\c# 2019\I2oko\UnitTest\bin\Debug\UnitTest.dll
+D:\c# 2019\I2oko\UnitTest\bin\Debug\UnitTest.pdb
+D:\c# 2019\I2oko\UnitTest\bin\Debug\EntityFramework.dll
+D:\c# 2019\I2oko\UnitTest\bin\Debug\EntityFramework.SqlServer.dll
+D:\c# 2019\I2oko\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\c# 2019\I2oko\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\c# 2019\I2oko\UnitTest\bin\Debug\EntityFramework.xml
+D:\c# 2019\I2oko\UnitTest\bin\Debug\EntityFramework.SqlServer.xml
+D:\c# 2019\I2oko\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\c# 2019\I2oko\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\c# 2019\I2oko\UnitTest\obj\Debug\UnitTest.csproj.AssemblyReference.cache
+D:\c# 2019\I2oko\UnitTest\obj\Debug\UnitTest.csproj.CoreCompileInputs.cache
+D:\c# 2019\I2oko\UnitTest\obj\Debug\UnitTest.csproj.CopyComplete
+D:\c# 2019\I2oko\UnitTest\obj\Debug\UnitTest.dll
+D:\c# 2019\I2oko\UnitTest\obj\Debug\UnitTest.pdb
+C:\Users\matllln\Desktop\I2oko\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\matllln\Desktop\I2oko\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\matllln\Desktop\I2oko\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\matllln\Desktop\I2oko\UnitTest\bin\Debug\UnitTest.dll.config
+C:\Users\matllln\Desktop\I2oko\UnitTest\bin\Debug\UnitTest.dll
+C:\Users\matllln\Desktop\I2oko\UnitTest\bin\Debug\UnitTest.pdb
+C:\Users\matllln\Desktop\I2oko\UnitTest\bin\Debug\EntityFramework.dll
+C:\Users\matllln\Desktop\I2oko\UnitTest\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\matllln\Desktop\I2oko\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\matllln\Desktop\I2oko\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\matllln\Desktop\I2oko\UnitTest\bin\Debug\EntityFramework.xml
+C:\Users\matllln\Desktop\I2oko\UnitTest\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\matllln\Desktop\I2oko\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\matllln\Desktop\I2oko\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\matllln\Desktop\I2oko\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\matllln\Desktop\I2oko\UnitTest\obj\Debug\UnitTest.dll
+C:\Users\matllln\Desktop\I2oko\UnitTest\obj\Debug\UnitTest.pdb
+D:\c# 2019\i2oko\UnitTest\bin\Debug\Newtonsoft.Json.dll
+D:\c# 2019\i2oko\UnitTest\bin\Debug\NuGet.Client.dll
+D:\c# 2019\i2oko\UnitTest\bin\Debug\NuGet.Common.dll
+D:\c# 2019\i2oko\UnitTest\bin\Debug\NuGet.ContentModel.dll
+D:\c# 2019\i2oko\UnitTest\bin\Debug\NuGet.Frameworks.dll
+D:\c# 2019\i2oko\UnitTest\bin\Debug\NuGet.Packaging.Core.dll
+D:\c# 2019\i2oko\UnitTest\bin\Debug\NuGet.Packaging.Core.Types.dll
+D:\c# 2019\i2oko\UnitTest\bin\Debug\NuGet.Packaging.dll
+D:\c# 2019\i2oko\UnitTest\bin\Debug\NuGet.Repositories.dll
+D:\c# 2019\i2oko\UnitTest\bin\Debug\NuGet.RuntimeModel.dll
+D:\c# 2019\i2oko\UnitTest\bin\Debug\NuGet.Versioning.dll
+D:\c# 2019\i2oko\UnitTest\bin\Debug\Newtonsoft.Json.xml
+D:\c# 2019\i2oko\UnitTest\bin\Debug\NuGet.Client.xml
+D:\c# 2019\i2oko\UnitTest\bin\Debug\NuGet.Common.xml
+D:\c# 2019\i2oko\UnitTest\bin\Debug\NuGet.ContentModel.xml
+D:\c# 2019\i2oko\UnitTest\bin\Debug\NuGet.Frameworks.xml
+D:\c# 2019\i2oko\UnitTest\bin\Debug\NuGet.Packaging.xml
+D:\c# 2019\i2oko\UnitTest\bin\Debug\NuGet.Packaging.Core.xml
+D:\c# 2019\i2oko\UnitTest\bin\Debug\NuGet.Packaging.Core.Types.xml
+D:\c# 2019\i2oko\UnitTest\bin\Debug\NuGet.Repositories.xml
+D:\c# 2019\i2oko\UnitTest\bin\Debug\NuGet.RuntimeModel.xml
+D:\c# 2019\i2oko\UnitTest\bin\Debug\NuGet.Versioning.xml

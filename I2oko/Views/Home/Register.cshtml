@@ -1,0 +1,162 @@
+﻿@model I2oko.Models.UserModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ورود به سرزمین ایدوکو</title>
+    <script nomodule src="~/Content/recomand/ionicons.js"></script>
+    <link rel="stylesheet" href="~/Content/recomand/normalize.min.css">
+    <link rel='stylesheet'
+          href='~/Content/recomand/fontgoogle.css'>
+    <link href='~/Content/recomand/parsinee.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../Content/style/register style.css">
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="icon" href="../Content/img/Idoko/favicon.ico">
+
+</head>
+
+<body>
+    <div class="rectangle r1"></div>
+    <img class="logo" src="../Content/img/Idoko/1.pngArtboard 1@4x.png">
+
+    <h2 class="Welcome">به سرزمین ایدوکو خوش امدید</h2>
+
+    <div class="Number">
+        <label class="NumberLabel" for="number">لطفا شماره تلفن خود را وارد نمایید </label>
+    </div>
+    @using (Html.BeginForm())
+    {
+        <div class="phone">
+            @Html.TextBoxFor(x => x.Phone, new { maxlength = 11, type = "text", oninput = "validateNumber(this)" })
+        </div>
+        <div class="btnn" id="btnn" style="pointer-events: none;">
+            <input class="Send " type="submit" value="ارسال کد فعال سازی" id="submitBtn" />
+        </div>
+    }
+    <label class="Valid" id="Valid"> @ViewBag.Phone </label>
+    <div onclick="history.back()">
+        <img class="BackIcon" src="../Content/img/Idoko/back.png" alt="">
+    </div>
+    <script>
+
+        function validateNumber(input) {
+            var pattern = /^[0-9]+$/;
+            var value = input.value;
+
+            if (!pattern.test(value)) {
+                input.value = value.replace(/\D/g, '');
+            }
+        }
+
+
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var phoneInput = document.getElementById("Phone");
+            var btnn = document.getElementById("btnn");
+            var errorMessage = document.getElementById("Valid");
+
+            phoneInput.addEventListener("input", function () {
+                var inputValue = phoneInput.value;
+                var desiredLength = 11;
+
+                // اضافه کردن شرط برای بررسی شروع با 09
+                var startsWith09 = /^09/.test(inputValue);
+
+                if (inputValue.length === desiredLength && startsWith09) {
+                    btnn.style.pointerEvents = "auto";
+                    errorMessage.innerText = ""; // پاک کردن خطا
+                } else {
+                    btnn.style.pointerEvents = "none";
+                    if (inputValue.length !== desiredLength) {
+                        errorMessage.innerText = "شماره تلفن باید 11 رقم باشد"; // نمایش خطا
+                    } else if (!startsWith09) {
+                        errorMessage.innerText = "شماره تلفن باید با 09 شروع شود"; // نمایش خطا
+                    }
+                }
+            });
+
+            btnn.addEventListener("click", function () {
+                // تغییر ویژگی pointer-events به none برای فرم
+                btnn.style.pointerEvents = "none";
+                // ارسال فرم
+                document.forms[0].submit();
+            });
+        });
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            loadDarkModeState();
+        });
+
+        // تعریف توابع مربوط به ذخیره و بازیابی وضعیت دارک مود
+        function saveDarkModeState() {
+            var darkModeState = {
+                "dark-mode": document.body.classList.contains("dark-mode"),
+                "dark-buttons": document.querySelector(".hover-grow").classList.contains("dark-button"),
+                "dark-profile": document.querySelector(".Profile").classList.contains("dark-profile"),
+                "dark-rectangles": document.querySelector(".rectangle").classList.contains("dark-rectangle"),
+                "label-darklabel": document.querySelector("label").classList.contains("darklabel"),
+                "a-darklabel": document.querySelector("a").classList.contains("darklabel")
+            };
+
+            localStorage.setItem("dark-mode-state", JSON.stringify(darkModeState));
+        }
+
+        function loadDarkModeState() {
+            var darkModeState = JSON.parse(localStorage.getItem("dark-mode-state")) || {};
+
+            if (darkModeState["dark-mode"]) {
+                document.body.classList.add("dark-mode");
+            }
+
+            var buttons = document.querySelectorAll(".hover-grow");
+            buttons.forEach(button => {
+                if (darkModeState["dark-buttons"]) {
+                    button.classList.add("dark-button");
+                }
+            });
+
+            //if (darkModeState["dark-profile"]) {
+            //    document.querySelector(".Profile").classList.add("dark-profile");
+            //}
+
+            var rectangles = document.querySelectorAll(".rectangle");
+            rectangles.forEach(rectangle => {
+                if (darkModeState["dark-rectangles"]) {
+                    rectangle.classList.add("dark-rectangle");
+                }
+            });
+
+            // تغییر بک‌گراند .darkimg در حالت دارک مود
+            var darkMode = document.body.classList.contains("dark-mode");
+            var darkImg = document.querySelector(".darkimg");
+            // بازنشانی کلاس darklabel به لیبل و تگ a در حالت دارک مود
+            var labels = document.querySelectorAll("label,a");
+            labels.forEach(label => {
+                if (darkModeState["label-darklabel"] || darkModeState["a-darklabel"]) {
+                    label.classList.add("darklabel");
+                } else {
+                    label.classList.remove("darklabel");
+                }
+            });
+
+        }
+    </script>
+
+</body>
+
+</html>

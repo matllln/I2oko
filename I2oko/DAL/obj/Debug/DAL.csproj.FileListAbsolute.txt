@@ -1,0 +1,44 @@
+D:\c# 2019\I2oko\DAL\bin\Debug\DAL.dll.config
+D:\c# 2019\I2oko\DAL\bin\Debug\DAL.dll
+D:\c# 2019\I2oko\DAL\bin\Debug\DAL.pdb
+D:\c# 2019\I2oko\DAL\bin\Debug\EntityFramework.dll
+D:\c# 2019\I2oko\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\c# 2019\I2oko\DAL\bin\Debug\EntityFramework.xml
+D:\c# 2019\I2oko\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\c# 2019\I2oko\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\c# 2019\I2oko\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\c# 2019\I2oko\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\c# 2019\I2oko\DAL\obj\Debug\DAL.dll
+D:\c# 2019\I2oko\DAL\obj\Debug\DAL.pdb
+C:\Users\matllln\Desktop\I2oko\DAL\bin\Debug\DAL.dll.config
+C:\Users\matllln\Desktop\I2oko\DAL\bin\Debug\DAL.dll
+C:\Users\matllln\Desktop\I2oko\DAL\bin\Debug\DAL.pdb
+C:\Users\matllln\Desktop\I2oko\DAL\bin\Debug\EntityFramework.dll
+C:\Users\matllln\Desktop\I2oko\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\matllln\Desktop\I2oko\DAL\bin\Debug\EntityFramework.xml
+C:\Users\matllln\Desktop\I2oko\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\matllln\Desktop\I2oko\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\matllln\Desktop\I2oko\DAL\obj\Debug\DAL.dll
+C:\Users\matllln\Desktop\I2oko\DAL\obj\Debug\DAL.pdb
+D:\c# 2019\i2oko\DAL\bin\Debug\Newtonsoft.Json.dll
+D:\c# 2019\i2oko\DAL\bin\Debug\NuGet.Client.dll
+D:\c# 2019\i2oko\DAL\bin\Debug\NuGet.Common.dll
+D:\c# 2019\i2oko\DAL\bin\Debug\NuGet.ContentModel.dll
+D:\c# 2019\i2oko\DAL\bin\Debug\NuGet.Frameworks.dll
+D:\c# 2019\i2oko\DAL\bin\Debug\NuGet.Packaging.Core.dll
+D:\c# 2019\i2oko\DAL\bin\Debug\NuGet.Packaging.Core.Types.dll
+D:\c# 2019\i2oko\DAL\bin\Debug\NuGet.Packaging.dll
+D:\c# 2019\i2oko\DAL\bin\Debug\NuGet.Repositories.dll
+D:\c# 2019\i2oko\DAL\bin\Debug\NuGet.RuntimeModel.dll
+D:\c# 2019\i2oko\DAL\bin\Debug\NuGet.Versioning.dll
+D:\c# 2019\i2oko\DAL\bin\Debug\Newtonsoft.Json.xml
+D:\c# 2019\i2oko\DAL\bin\Debug\NuGet.Client.xml
+D:\c# 2019\i2oko\DAL\bin\Debug\NuGet.Common.xml
+D:\c# 2019\i2oko\DAL\bin\Debug\NuGet.ContentModel.xml
+D:\c# 2019\i2oko\DAL\bin\Debug\NuGet.Frameworks.xml
+D:\c# 2019\i2oko\DAL\bin\Debug\NuGet.Packaging.xml
+D:\c# 2019\i2oko\DAL\bin\Debug\NuGet.Packaging.Core.xml
+D:\c# 2019\i2oko\DAL\bin\Debug\NuGet.Packaging.Core.Types.xml
+D:\c# 2019\i2oko\DAL\bin\Debug\NuGet.Repositories.xml
+D:\c# 2019\i2oko\DAL\bin\Debug\NuGet.RuntimeModel.xml
+D:\c# 2019\i2oko\DAL\bin\Debug\NuGet.Versioning.xml

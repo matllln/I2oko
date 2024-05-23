@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{837F2E1E-BD3D-4684-BB86-13A4EB1CF3D5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>I2oko</RootNamespace>
+    <AssemblyName>I2oko</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44317</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="IPE.SmsIrClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IPE.SmsIr.NetFramework.1.0.1\lib\net451\IPE.SmsIrClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\img\Appetizers and salads\ashha.jpg" />
+    <Content Include="Content\img\Appetizers and salads\booraniha.jpg" />
+    <Content Include="Content\img\Appetizers and salads\esnakha.jpg" />
+    <Content Include="Content\img\Appetizers and salads\ordovha.jpg" />
+    <Content Include="Content\img\Appetizers and salads\pooreha.jpg" />
+    <Content Include="Content\img\Appetizers and salads\saladha.jpg" />
+    <Content Include="Content\img\Appetizers and salads\sayer saladha.jpg" />
+    <Content Include="Content\img\Appetizers and salads\soopha.jpg" />
+    <Content Include="Content\img\Beautiful tables\sofreye farangi.jpg" />
+    <Content Include="Content\img\Beautiful tables\sofreye irani.jpg" />
+    <Content Include="Content\img\Beverages\daghhaye irani.jpg" />
+    <Content Include="Content\img\Beverages\esmootiha.jpg" />
+    <Content Include="Content\img\Beverages\kafe noosh.jpg" />
+    <Content Include="Content\img\Beverages\sayere nooshidaniha.jpg" />
+    <Content Include="Content\img\Beverages\sharbatha.jpg" />
+    <Content Include="Content\img\Beverages\tarkibiha.jpg" />
+    <Content Include="Content\img\DelisiousList\deser va shirini.jpg" />
+    <Content Include="Content\img\DelisiousList\ghazaha.jpg" />
+    <Content Include="Content\img\DelisiousList\nooshidaniha.jpg" />
+    <Content Include="Content\img\DelisiousList\pishghaza va salad.jpg" />
+    <Content Include="Content\img\DelisiousList\sofre arayi.jpg" />
+    <Content Include="Content\img\DelisiousList\tam va rang.jpg" />
+    <Content Include="Content\img\DelisiousList\torshi va moraba.jpg" />
+    <Content Include="Content\img\Desserts and sweets\bastaniha.jpg" />
+    <Content Include="Content\img\Desserts and sweets\desere farangi.jpg" />
+    <Content Include="Content\img\Desserts and sweets\desere irani.jpg" />
+    <Content Include="Content\img\Desserts and sweets\keykha.jpg" />
+    <Content Include="Content\img\Desserts and sweets\sayere deserha.jpg" />
+    <Content Include="Content\img\Desserts and sweets\shiriniha.jpg" />
+    <Content Include="Content\img\Desserts and sweets\zheleha.jpg" />
+    <Content Include="Content\img\Diet\bar asase mavade ghazayi.jpg" />
+    <Content Include="Content\img\Diet\bar asase meghdar hazine.jpg" />
+    <Content Include="Content\img\Diet\bar asase menoye delkhah.jpg" />
+    <Content Include="Content\img\Diet\bar asase noe rezhim.jpg" />
+    <Content Include="Content\img\Fav\dokhtarane.jpg" />
+    <Content Include="Content\img\Fav\hamsarane.jpg" />
+    <Content Include="Content\img\Fav\khaneye ziba.jpg" />
+    <Content Include="Content\img\Fav\madarane.jpg" />
+    <Content Include="Content\img\Fav\pedarane.jpg" />
+    <Content Include="Content\img\Fav\pesarane.jpg" />
+    <Content Include="Content\img\Fav\sayer.jpg" />
+    <Content Include="Content\img\FoodList\bergerha.jpg" />
+    <Content Include="Content\img\FoodList\beryanha.jpg" />
+    <Content Include="Content\img\FoodList\daryayiha.jpg" />
+    <Content Include="Content\img\FoodList\dolmeha.jpg" />
+    <Content Include="Content\img\FoodList\espagetiha.jpg" />
+    <Content Include="Content\img\FoodList\esteikha.jpg" />
+    <Content Include="Content\img\FoodList\ghazahaye fori.jpg" />
+    <Content Include="Content\img\FoodList\ghazahaye koodak.jpg" />
+    <Content Include="Content\img\FoodList\kababha.jpg" />
+    <Content Include="Content\img\FoodList\khoreshha.jpg" />
+    <Content Include="Content\img\FoodList\koofteha.jpg" />
+    <Content Include="Content\img\FoodList\kookooha.jpg" />
+    <Content Include="Content\img\FoodList\kotletha.jpg" />
+    <Content Include="Content\img\FoodList\lazaniyaha.jpg" />
+    <Content Include="Content\img\FoodList\pitzaha.jpg" />
+    <Content Include="Content\img\FoodList\poloha.jpg" />
+    <Content Include="Content\img\FoodList\sandevichha.jpg" />
+    <Content Include="Content\img\FoodList\sayere ghazaha.jpg" />
+    <Content Include="Content\img\FoodList\sokhariha.jpg" />
+    <Content Include="Content\img\FoodList\tah chinha.jpg" />
+    <Content Include="Content\img\FoodList\tilitha.jpg" />
+    <Content Include="Content\img\Idoko\1.png" />
+    <Content Include="Content\img\Idoko\1.pngArtboard 1%404x.png" />
+    <Content Include="Content\img\Idoko\2.png" />
+    <Content Include="Content\img\Idoko\3.png" />
+    <Content Include="Content\img\Idoko\add.svg" />
+    <Content Include="Content\img\Idoko\azar.jpg" />
+    <Content Include="Content\img\Idoko\back.png" />
+    <Content Include="Content\img\Idoko\camera.svg" />
+    <Content Include="Content\img\Idoko\comment.svg" />
+    <Content Include="Content\img\Idoko\Commentlike.svg" />
+    <Content Include="Content\img\Idoko\Commentunlike.svg" />
+    <Content Include="Content\img\Idoko\cut.svg" />
+    <Content Include="Content\img\Idoko\dark.svg" />
+    <Content Include="Content\img\Idoko\Delete Post.svg" />
+    <Content Include="Content\img\Idoko\delete.svg" />
+    <Content Include="Content\img\Idoko\edit.svg" />
+    <Content Include="Content\img\Idoko\exit.svg" />
+    <Content Include="Content\img\Idoko\favicon.ico" />
+    <Content Include="Content\img\Idoko\gallry.svg" />
+    <Content Include="Content\img\Idoko\isfahan.jpg" />
+    <Content Include="Content\img\Idoko\like.svg" />
+    <Content Include="Content\img\Idoko\likee.svg" />
+    <Content Include="Content\img\Idoko\map.png" />
+    <Content Include="Content\img\Idoko\menu.svg" />
+    <Content Include="Content\img\Idoko\OnNotif.svg" />
+    <Content Include="Content\img\Idoko\OffNotif.svg" />
+    <Content Include="Content\img\Idoko\pot.svg" />
+    <Content Include="Content\img\Idoko\report.svg" />
+    <Content Include="Content\img\Idoko\save.svg" />
+    <Content Include="Content\img\Idoko\seting.svg" />
+    <Content Include="Content\img\Idoko\text.svg" />
+    <Content Include="Content\img\Idoko\unlike.svg" />
+    <Content Include="Content\img\Idoko\Untitled-1.png" />
+    <Content Include="Content\img\Idoko\Untitled-2.png" />
+    <Content Include="Content\img\Idoko\Untitled-4.png" />
+    <Content Include="Content\img\Idoko\upload.svg" />
+    <Content Include="Content\img\Idoko\video.svg" />
+    <Content Include="Content\img\Idoko\view.svg" />
+    <Content Include="Content\img\map\1 %282%29.png" />
+    <Content Include="Content\img\map\10.png" />
+    <Content Include="Content\img\map\11.png" />
+    <Content Include="Content\img\map\12.png" />
+    <Content Include="Content\img\map\13.png" />
+    <Content Include="Content\img\map\14.png" />
+    <Content Include="Content\img\map\15.png" />
+    <Content Include="Content\img\map\16.png" />
+    <Content Include="Content\img\map\17.png" />
+    <Content Include="Content\img\map\18.png" />
+    <Content Include="Content\img\map\19.png" />
+    <Content Include="Content\img\map\2.png" />
+    <Content Include="Content\img\map\20.png" />
+    <Content Include="Content\img\map\21.png" />
+    <Content Include="Content\img\map\22.png" />
+    <Content Include="Content\img\map\23.png" />
+    <Content Include="Content\img\map\24.png" />
+    <Content Include="Content\img\map\25.png" />
+    <Content Include="Content\img\map\26.png" />
+    <Content Include="Content\img\map\27.png" />
+    <Content Include="Content\img\map\28.png" />
+    <Content Include="Content\img\map\29.png" />
+    <Content Include="Content\img\map\3.png" />
+    <Content Include="Content\img\map\30.png" />
+    <Content Include="Content\img\map\31.png" />
+    <Content Include="Content\img\map\32.png" />
+    <Content Include="Content\img\map\4.png" />
+    <Content Include="Content\img\map\5.png" />
+    <Content Include="Content\img\map\6.png" />
+    <Content Include="Content\img\map\7.png" />
+    <Content Include="Content\img\map\8.png" />
+    <Content Include="Content\img\map\9.png" />
+    <Content Include="Content\img\map\alborz copy.png" />
+    <Content Include="Content\img\map\mapd.png" />
+    <Content Include="Content\img\map\tehran copy.png" />
+    <Content Include="Content\img\PetList\abziyan.jpg" />
+    <Content Include="Content\img\PetList\chahar payan.jpg" />
+    <Content Include="Content\img\PetList\dozistha.jpg" />
+    <Content Include="Content\img\PetList\parandeha.jpg" />
+    <Content Include="Content\img\Pet\ghazahaye heyvanat.jpg" />
+    <Content Include="Content\img\Pet\raveshhaye negahdari heyvanat.jpg" />
+    <Content Include="Content\img\Pickles and jam\kompootha.jpg" />
+    <Content Include="Content\img\Pickles and jam\morabaha.jpg" />
+    <Content Include="Content\img\Pickles and jam\sayere morabaha.jpg" />
+    <Content Include="Content\img\Pickles and jam\shoorha.jpg" />
+    <Content Include="Content\img\Pickles and jam\torshiha.jpg" />
+    <Content Include="Content\img\Taste and color\adviyeha.jpg" />
+    <Content Include="Content\img\Taste and color\chashniha.jpg" />
+    <Content Include="Content\img\Taste and color\robha.jpg" />
+    <Content Include="Content\img\Taste and color\sayere tamha.jpg" />
+    <Content Include="Content\img\Taste and color\sosha.jpg" />
+    <Content Include="Content\js\script.js" />
+    <Content Include="Content\Panelstyle\index.css" />
+    <Content Include="Content\Panelstyle\new post slide style.css" />
+    <Content Include="Content\Panelstyle\newpost grid style2.css" />
+    <Content Include="Content\Panelstyle\newpost style2.css" />
+    <Content Include="Content\Panelstyle\StyleIngredientes Pl.css" />
+    <Content Include="Content\recomand\all.css" />
+    <Content Include="Content\recomand\bootstrap.bundle.min.js" />
+    <Content Include="Content\recomand\bootstrap.rtl.min.css" />
+    <Content Include="Content\recomand\cdn.min.js" />
+    <Content Include="Content\recomand\fontgoogle.css" />
+    <Content Include="Content\recomand\ionicons.esm.js" />
+    <Content Include="Content\recomand\ionicons.js" />
+    <Content Include="Content\recomand\normalize.min.css" />
+    <Content Include="Content\recomand\parsinee.css" />
+    <Content Include="Content\recomand\profile\bootstrap.bundle.min.js" />
+    <Content Include="Content\recomand\profile\bootstrap.min.css" />
+    <Content Include="Content\recomand\profile\cropper.css" />
+    <Content Include="Content\recomand\profile\cropper.js" />
+    <Content Include="Content\recomand\profile\jquery.min.js" />
+    <Content Include="Content\recomand\reset.min.css" />
+    <Content Include="Content\style\Based on food style.css" />
+    <Content Include="Content\style\Based on the cost amount style.css" />
+    <Content Include="Content\style\Based on the cost amount style2.css" />
+    <Content Include="Content\style\Based on the desired menu style.css" />
+    <Content Include="Content\style\Based on the desired menu style2.css" />
+    <Content Include="Content\style\beautiful table style.css" />
+    <Content Include="Content\style\contact style.css" />
+    <Content Include="Content\style\ContactShowProfile style.css" />
+    <Content Include="Content\style\delicious style.css" />
+    <Content Include="Content\style\delicious style2.css" />
+    <Content Include="Content\style\delicious style3.css" />
+    <Content Include="Content\style\Diet.css" />
+    <Content Include="Content\style\edit profile style.css" />
+    <Content Include="Content\style\favorite style.css" />
+    <Content Include="Content\style\finish register Forget style.css" />
+    <Content Include="Content\style\finish register style.css" />
+    <Content Include="Content\style\foods style.css" />
+    <Content Include="Content\style\forget password.css" />
+    <Content Include="Content\style\friend.css" />
+    <Content Include="Content\style\friendShowProfile.css" />
+    <Content Include="Content\style\list Appetizer.css" />
+    <Content Include="Content\style\list delicious.css" />
+    <Content Include="Content\style\List of color flavors.css" />
+    <Content Include="Content\style\List of drinks.css" />
+    <Content Include="Content\style\List of jam pickles style.css" />
+    <Content Include="Content\style\login style.css" />
+    <Content Include="Content\style\mainpage style.css" />
+    <Content Include="Content\style\new post slide style.css" />
+    <Content Include="Content\style\newpost grid style2.css" />
+    <Content Include="Content\style\Show profile style.css" />
+    <Content Include="Content\style\Showprofile style2.css" />
+    <Content Include="Content\style\ShowPostRecipe.css" />
+    <Content Include="Content\style\newpost style.css" />
+    <Content Include="Content\style\newpost style2.css" />
+    <Content Include="Content\style\news style.css" />
+    <Content Include="Content\style\news style2 -.css" />
+    <Content Include="Content\style\notif style.css" />
+    <Content Include="Content\style\Otp Forget Style.css" />
+    <Content Include="Content\style\otp style.css" />
+    <Content Include="Content\style\pet list style.css" />
+    <Content Include="Content\style\pet list2 style.css" />
+    <Content Include="Content\style\pet style.css" />
+    <Content Include="Content\style\profile style.css" />
+    <Content Include="Content\style\profile style2.css" />
+    <Content Include="Content\style\register style.css" />
+    <Content Include="Content\style\Shoping list style.css" />
+    <Content Include="Content\style\show post style.css" />
+    <Content Include="Content\style\StyleEror.css" />
+    <Content Include="Content\style\StyleIngredientes.css" />
+    <Content Include="Content\style\Sweet dessert list style.css" />
+    <Content Include="Content\style\window style.css" />
+    <Content Include="Content\style\window style2.css" />
+    <Content Include="Global.asax" />
+    <None Include="Scripts\jquery-3.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.7.1.js" />
+    <Content Include="Scripts\jquery-3.7.1.min.js" />
+    <Content Include="Scripts\jquery-3.7.1.slim.js" />
+    <Content Include="Scripts\jquery-3.7.1.slim.min.js" />
+    <Content Include="smsir-package-icon.ico" />
+    <Content Include="smsir-package-icon.png" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405201548222_First.cs" />
+    <Compile Include="Migrations\202405201548222_First.Designer.cs">
+      <DependentUpon>202405201548222_First.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\BeautifulTableModel.cs" />
+    <Compile Include="Models\CommentLikeModel.cs" />
+    <Compile Include="Models\CommentModel.cs" />
+    <Compile Include="Models\DeliciousModel.cs" />
+    <Compile Include="Models\DirectModel.cs" />
+    <Compile Include="Models\FavoriteModel.cs" />
+    <Compile Include="Models\FirstInventoryModel.cs" />
+    <Compile Include="Models\FollowersModel.cs" />
+    <Compile Include="Models\FollowingsModel.cs" />
+    <Compile Include="Models\FoodModel.cs" />
+    <Compile Include="Models\FoodSpecifiacationModel.cs" />
+    <Compile Include="Models\I2okoDB.cs" />
+    <Compile Include="Models\IntroductionsModel.cs" />
+    <Compile Include="Models\LikeModel.cs" />
+    <Compile Include="Models\MngUserModel.cs" />
+    <Compile Include="Models\NewsModel.cs" />
+    <Compile Include="Models\PetModel.cs" />
+    <Compile Include="Models\PostModel.cs" />
+    <Compile Include="Models\RelationFIModel.cs" />
+    <Compile Include="Models\RelationNotifModel.cs" />
+    <Compile Include="Models\RelationPostModel.cs" />
+    <Compile Include="Models\RequestModel.cs" />
+    <Compile Include="Models\SecondInventoryModel.cs" />
+    <Compile Include="Models\SocialMediaModel.cs" />
+    <Compile Include="Models\ThirdInventoryModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Models\UserProfileViewModel.cs" />
+    <Compile Include="Panel\PanelController\PanelController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="Content\font\Yekan.eot" />
+    <Content Include="Content\font\Yekan.ttf" />
+    <Content Include="Content\font\Yekan.woff" />
+    <Content Include="Content\font\Yekan.woff2" />
+    <Content Include="Content\img\Idoko\star.svg" />
+    <None Include="packages.config" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\Register.cshtml" />
+    <Content Include="Views\Home\FinishRegister.cshtml" />
+    <Content Include="Views\Home\ForgetPassword.cshtml" />
+    <Content Include="Views\Home\Friend.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Newpost.cshtml" />
+    <Content Include="Views\Home\Diet.cshtml" />
+    <Content Include="Views\Home\BasedOnFood.cshtml" />
+    <Content Include="Views\Home\BasedOnTheCostAmount.cshtml" />
+    <Content Include="Views\Home\BasedOnTheDesiredMenu.cshtml" />
+    <Content Include="Views\Home\ShopingList.cshtml" />
+    <Content Include="Views\Home\EditProfile.cshtml" />
+    <Content Include="Views\Home\Window.cshtml" />
+    <Content Include="Views\Home\ListDelicious.cshtml" />
+    <Content Include="Views\Home\Foods.cshtml" />
+    <Content Include="Views\Home\ListAppetizer.cshtml" />
+    <Content Include="Views\Home\ListOfJampickles.cshtml" />
+    <Content Include="Views\Home\SweetDessertList.cshtml" />
+    <Content Include="Views\Home\ListOfDrinks.cshtml" />
+    <Content Include="Views\Home\ListOfColorFlavors.cshtml" />
+    <Content Include="Views\Home\BeautifulTable.cshtml" />
+    <Content Include="Views\Home\Pet.cshtml" />
+    <Content Include="Views\Home\PetList.cshtml" />
+    <Content Include="Views\Home\PetList2.cshtml" />
+    <Content Include="Views\Home\Otp.cshtml" />
+    <Content Include="Views\Home\Thanx.cshtml" />
+    <None Include="Properties\PublishProfiles\i2oko.pubxml" />
+    <Content Include="Views\Home\News.cshtml" />
+    <Content Include="Views\Home\FinishRegisterForget.cshtml" />
+    <Content Include="Views\Home\OtpForget.cshtml" />
+    <None Include="Properties\PublishProfiles\i2okoo.pubxml" />
+    <Content Include="Views\Home\Delicious.cshtml" />
+    <Content Include="Views\Home\Proofile.cshtml" />
+    <Content Include="Views\Home\NewPostRecipe.cshtml" />
+    <Content Include="Views\Home\NewPostRecipeIngredient.cshtml" />
+    <Content Include="Views\Home\ShowPostRecipe.cshtml" />
+    <Content Include="Views\Home\ShowProfile.cshtml" />
+    <Content Include="Views\Home\FriendShowProfile.cshtml" />
+    <Content Include="Views\Home\ContactShowProfile.cshtml" />
+    <Content Include="Views\Home\Favorite.cshtml" />
+    <Content Include="Views\Home\ShowPost.cshtml" />
+    <Content Include="Views\Home\Notif.cshtml" />
+    <Content Include="Views\Panel\Index.cshtml" />
+    <Content Include="Scripts\jquery-3.7.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.7.1.min.map" />
+    <Content Include="Views\Home\PartialCommentShoePost.cshtml" />
+    <Content Include="Views\Panel\NewPostRecipeIngredientPl.cshtml" />
+    <Content Include="Views\Panel\NewPostRecipePl.cshtml" />
+    <Content Include="Views\Panel\AddIngredientPl.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\UserMedia\" />
+    <Folder Include="Content\UserPic\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202405201548222_First.resx">
+      <DependentUpon>202405201548222_First.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50610</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44317/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,697 @@
+@font-face {
+    font-family: yekan;
+    src: url("../font/Yekan.ttf") format("truetype"), url("../font/Yekan.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body {
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../img/Idoko/Untitled-4.png") center top / 100% 100% no-repeat;
+    height: 100vh;
+}
+button,input,text,a,div{
+    font-family: "yekan" !important;
+}
+body {
+    font-family: yekan !important;
+}
+
+.r1 {
+    background: rgb(241, 247, 254);
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: rgb(1, 50, 55) 0px 0px 2em;
+    gap: 2em;
+    opacity: 0.5;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 10px 10px 10px 0px;
+}
+
+.logo{
+    width: 180px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    margin: 30px 10px 10px 0px;
+  }
+
+.UsernameLabel {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -9px 10px 10px 130px;
+    width: 100px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.Username input {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -13px 10px 10px -40px;
+    border: none;
+    border-radius: 70px;
+    text-align: center;
+    font-size: 16px;
+    padding: 4px;
+}
+
+.Username {
+    background: rgb(234, 249, 218);
+    box-shadow: rgb(1, 50, 55) 0px 0px 1em;
+    padding: 1.5em;
+    border-radius: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -150px 10px 10px 0px;
+    font-weight: bold;
+    color: rgb(1, 50, 55);
+    width: 325px;
+}
+
+.PasswordLabel {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -9px 10px 10px 130px;
+    width: 100px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.Password {
+    background: rgb(234, 249, 218);
+    box-shadow: rgb(1, 50, 55) 0px 0px 1em;
+    padding: 1.5em;
+    border-radius: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -90px 10px 10px 0px;
+    font-weight: bold;
+    color: rgb(1, 50, 55);
+    width: 325px;
+}
+
+.PasswordInput {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -13px 10px 10px -40px;
+    border: none;
+    border-radius: 70px;
+    text-align: center;
+    font-size: 16px;
+    padding: 4px;
+}
+
+input#Password {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -13px 10px 10px -40px;
+    border: none;
+    border-radius: 70px;
+    text-align: center;
+    font-size: 16px;
+    padding: 4px;
+}
+
+.login {
+    padding: 1em;
+    background: rgb(234, 249, 218);
+    color: rgb(2, 72, 30);
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: rgb(1, 50, 55) 0px 0px 1em;
+    width: 110px;
+    position: absolute;
+    margin: 100px 10px 10px -60px;
+    font-family: yekan;
+    font-size: 16px;
+}
+
+.PasswordLabel2 {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -9px 10px 10px 130px;
+    width: 100px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.Password2 {
+    background: rgb(234, 249, 218);
+    padding: 1.5em;
+    border-radius: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -30px 10px 10px 0px;
+    font-weight: bold;
+    color: rgb(1, 50, 55);
+    width: 325px;
+}
+
+.PasswordInput2 {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -13px 10px 10px -40px;
+    border: none;
+    border-radius: 70px;
+    text-align: center;
+    font-size: 16px;
+    padding: 4px;
+}
+
+.BackIcon {
+    border: none;
+    background: transparent;
+    font-size: 29px;
+    position: absolute;
+    left: 50%;
+    width: 41px;
+    transform: translate(-50%, 0%);
+    margin: -240px 0px 0px -220px;
+}
+
+.btn-secondary:hover {
+    color: rgb(1, 50, 55);
+    background-color: rgb(76, 167, 113);
+    border-color: rgb(151, 16, 43);
+}
+
+.hover-grow {
+    transition: all 0.5s ease 0s;
+}
+
+.btn-secondary:hover {
+    transform: scale(1.1);
+}
+
+.home {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    top: 2%;
+    color: rgb(76, 167, 113);
+    text-decoration: none;
+    font-size: larger;
+}
+
+.home:hover {
+    font-weight: bold;
+    color: rgb(1, 50, 55);
+}
+
+.idoko {
+    position: absolute;
+    width: 110px;
+    height: 0px;
+    font-family: Parisienne;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    text-align: center;
+    color: rgb(1, 50, 55);
+    left: 10px;
+    margin: 10px;
+    top: 10px;
+}
+
+div, button, input,a {
+    border-radius: 15px !important;
+    box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+}
+
+@media screen and (max-width: 1279px) {
+    body {
+        overflow-y: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("../img/Idoko/Untitled-2.png") center top / 100% 100% no-repeat;
+        height: 100vh;
+    }
+
+    .r1 {
+        background: rgb(241, 247, 254);
+        width: 500px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 30px;
+        box-shadow: rgb(1, 50, 55) 0px 0px 2em;
+        gap: 2em;
+        opacity: 0.5;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px 0px;
+    }
+
+    .logo{
+        width: 150px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 60px 10px 10px 0px;
+      }
+    .UsernameLabel {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -9px 10px 10px 130px;
+        width: 100px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .Username input {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -13px 10px 10px -40px;
+        border: none;
+        border-radius: 70px;
+        text-align: center;
+        font-size: 14px;
+        padding: 4px;
+    }
+
+    .Username {
+        background: rgb(234, 249, 218);
+        box-shadow: rgb(1, 50, 55) 0px 0px 1em;
+        padding: 1.5em;
+        border-radius: 40px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -140px 10px 10px 0px;
+        font-weight: bold;
+        color: rgb(1, 50, 55);
+        width: 325px;
+    }
+
+    .PasswordLabel {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -9px 10px 10px 130px;
+        width: 100px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .Password {
+        background: rgb(234, 249, 218);
+        box-shadow: rgb(1, 50, 55) 0px 0px 1em;
+        padding: 1.5em;
+        border-radius: 40px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -80px 10px 10px 0px;
+        font-weight: bold;
+        color: rgb(1, 50, 55);
+        width: 325px;
+    }
+
+    .PasswordInput {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -13px 10px 10px -40px;
+        border: none;
+        border-radius: 70px;
+        text-align: center;
+        font-size: 14px;
+        padding: 4px;
+    }
+
+    input#Password {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -13px 10px 10px -40px;
+        border: none;
+        border-radius: 70px;
+        text-align: center;
+        font-size: 14px;
+        padding: 4px;
+    }
+
+    .login {
+        padding: 1em;
+        background: rgb(234, 249, 218);
+        color: rgb(2, 72, 30);
+        border: none;
+        border-radius: 30px;
+        font-weight: 600;
+        box-shadow: rgb(1, 50, 55) 0px 0px 1em;
+        width: 110px;
+        position: absolute;
+        margin: 110px 10px 10px -55px;
+        font-family: yekan;
+        font-size: 14px;
+    }
+
+    .PasswordLabel2 {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -9px 10px 10px 130px;
+        width: 100px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .Password2 {
+        background: rgb(234, 249, 218);
+        box-shadow: rgb(1, 50, 55) 0px 0px 1em;
+        padding: 1.5em;
+        border-radius: 40px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -20px 10px 10px 0px;
+        font-weight: bold;
+        color: rgb(1, 50, 55);
+        width: 325px;
+    }
+
+    .PasswordInput2 {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -13px 10px 10px -40px;
+        border: none;
+        border-radius: 70px;
+        text-align: center;
+        font-size: 14px;
+        padding: 4px;
+    }
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        font-size: 29px;
+        position: absolute;
+        left: 50%;
+        width: 41px;
+        transform: translate(-50%, 0%);
+        margin: -240px 0px 0px -220px;
+    }
+
+    .btn-secondary:hover {
+        color: rgb(1, 50, 55);
+        background-color: rgb(76, 167, 113);
+        border-color: rgb(151, 16, 43);
+    }
+
+    .hover-grow {
+        transition: all 0.5s ease 0s;
+    }
+
+    .btn-secondary:hover {
+        transform: scale(1.1);
+    }
+
+    .home {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        top: 2%;
+        color: rgb(76, 167, 113);
+        text-decoration: none;
+        font-size: larger;
+    }
+
+    .home:hover {
+        font-weight: bold;
+        color: rgb(1, 50, 55);
+    }
+
+    .idoko {
+        position: absolute;
+        width: 110px;
+        height: 0px;
+        font-family: Parisienne;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        text-align: center;
+        color: rgb(1, 50, 55);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 5px 10px 10px 0px;
+    }
+
+    div, button, input,a {
+        border-radius: 15px !important;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        overflow-y: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("../img/Idoko/Untitled-1.png") center top / 100% 100% no-repeat;
+        height: 100vh;
+    }
+
+    .r1 {
+        background: rgb(241, 247, 254);
+        width: 270px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 30px;
+        box-shadow: rgb(1, 50, 55) 0px 0px 2em;
+        gap: 2em;
+        opacity: 0.5;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 140px 10px 10px 0px;
+    }
+    .logo{
+        width: 130px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 45px 10px 10px 0px;
+      }
+
+    .UsernameLabel {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -25px 10px 10px 0px;
+        width: 80px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .Username input {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 5px 10px 10px 0px;
+        border: none;
+        border-radius: 70px;
+        text-align: center;
+        width: 170px;
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    .Username {
+        background: rgb(234, 249, 218);
+        width: 140px;
+        padding: 2.3em;
+        border-radius: 20px;
+        color: rgb(1, 50, 55);
+        box-shadow: rgb(1, 50, 55) 0px 0px 1em;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -90px 10px 10px 0px;
+    }
+
+    .PasswordLabel {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -25px 10px 10px 0px;
+        width: 80px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .Password {
+        background: rgb(234, 249, 218);
+        width: 140px;
+        padding: 2.3em;
+        border-radius: 20px;
+        color: rgb(1, 50, 55);
+        box-shadow: rgb(1, 50, 55) 0px 0px 1em;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -10px 10px 10px 0px;
+    }
+
+    .PasswordInput {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 5px 10px 10px 0px;
+        border: none;
+        border-radius: 70px;
+        text-align: center;
+        width: 170px;
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    input#Password {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 5px 10px 10px 0px;
+        border: none;
+        border-radius: 70px;
+        text-align: center;
+        width: 170px;
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    .login {
+        padding: 1em;
+        background: rgb(234, 249, 218);
+        color: rgb(2, 72, 30);
+        border: none;
+        border-radius: 30px;
+        font-weight: 600;
+        box-shadow: rgb(1, 50, 55) 0px 0px 1em;
+        width: 110px;
+        position: absolute;
+        margin: 180px 10px 10px -50px;
+        font-family: yekan;
+        font-size: 12px;
+    }
+
+    .PasswordLabel2 {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -25px 10px 10px 0px;
+        width: 80px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .Password2 {
+        background: rgb(234, 249, 218);
+        width: 140px;
+        padding: 2.3em;
+        border-radius: 20px;
+        color: rgb(1, 50, 55);
+        box-shadow: rgb(1, 50, 55) 0px 0px 1em;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 70px 10px 10px 0px;
+    }
+
+    .PasswordInput2 {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 5px 10px 10px 0px;
+        border: none;
+        border-radius: 70px;
+        text-align: center;
+        width: 170px;
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    .btn-secondary:hover {
+        color: rgb(1, 50, 55);
+        background-color: rgb(76, 167, 113);
+        border-color: rgb(151, 16, 43);
+    }
+
+    .hover-grow {
+        transition: all 0.5s ease 0s;
+    }
+
+    .btn-secondary:hover {
+        transform: scale(1.1);
+    }
+
+    .home {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        top: 2%;
+        color: rgb(76, 167, 113);
+        text-decoration: none;
+        font-size: larger;
+    }
+
+    .home:hover {
+        font-weight: bold;
+        color: rgb(1, 50, 55);
+    }
+
+    .idoko {
+        position: absolute;
+        width: 110px;
+        height: 0px;
+        font-family: Parisienne;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 35px;
+        text-align: center;
+        color: rgb(1, 50, 55);
+        top: 620px;
+        left: 50%;
+        margin: -610px 10px 10px 0px;
+    }
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 34px;
+        margin: -130px 0px 0px -113px;
+    }
+
+    div, button, input,a {
+        border-radius: 15px !important;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+    }
+}

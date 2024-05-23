@@ -1,0 +1,123 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script nomodule src="~/Content/recomand/ionicons.js"></script>
+    <link rel="stylesheet" href="~/Content/recomand/normalize.min.css">
+    <link rel='stylesheet'
+          href='~/Content/recomand/fontgoogle.css'>
+    <link href='~/Content/recomand/parsinee.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../Content/style/Shoping list style.css">
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet'>
+    <link rel="icon" href="../Content/img/Idoko/favicon.ico">
+
+</head>
+
+<body>
+
+    <div class="rectangle r1"></div>
+    <a href="/Home/Proofile">
+        <img class="BackIcon" src="../Content/img/Idoko/back.png" />
+    </a>
+
+    <button class="send btn-secondary hover-grow">ارسال</button>
+    <div class="grid-container">
+        <section class="shop-list">
+            <div class="Div-0">
+                <p class="Row">ردیف</p>
+                <p class="Name">نام</p>
+                <p class="Amount">مقدار</p>
+                <P class="propertis">توضحیات</P>
+                <p class="price"> بازه ی هزینه</p>
+            </div>
+            <div class="">
+                <img class="Delete" src="../Content/img/Idoko/delete.svg" alt="">
+                <div class="rectangle Number"></div>
+                <input type="text" class="Amount2" />
+                <input type="text" class="Product" />
+                <input type="text" class="propertisProduct" />
+                <input type="text" class="priceProduct" />
+            </div>
+
+        </section>
+
+    </div>
+    <div class="Div-3">
+        <div class="rectangle add">+</div>
+        <p class="Item">تعداد اقلام </p>
+        <p class="Priceall">بازه ی هزینه کل</p>
+        <label class="rectangle ItemText"></label>
+        <label class="rectangle PriceallText"></label>
+        <label class="rectangle rm1"></label>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            loadDarkModeState();
+        });
+
+        // تعریف توابع مربوط به ذخیره و بازیابی وضعیت دارک مود
+        function saveDarkModeState() {
+            var darkModeState = {
+                "dark-mode": document.body.classList.contains("dark-mode"),
+                "dark-buttons": document.querySelector(".hover-grow").classList.contains("dark-button"),
+                "dark-profile": document.querySelector(".Profile").classList.contains("dark-profile"),
+                "dark-rectangles": document.querySelector(".rectangle").classList.contains("dark-rectangle"),
+                "label-darklabel": document.querySelector("label").classList.contains("darklabel"),
+                "a-darklabel": document.querySelector("a").classList.contains("darklabel"),
+                "p-darklabel": document.querySelector("p").classList.contains("darklabel")
+
+            };
+
+            localStorage.setItem("dark-mode-state", JSON.stringify(darkModeState));
+        }
+
+        function loadDarkModeState() {
+            var darkModeState = JSON.parse(localStorage.getItem("dark-mode-state")) || {};
+
+            if (darkModeState["dark-mode"]) {
+                document.body.classList.add("dark-mode");
+            }
+
+            var buttons = document.querySelectorAll(".hover-grow");
+            buttons.forEach(button => {
+                if (darkModeState["dark-buttons"]) {
+                    button.classList.add("dark-button");
+                }
+            });
+
+            //if (darkModeState["dark-profile"]) {
+            //    document.querySelector(".Profile").classList.add("dark-profile");
+            //}
+
+            var rectangles = document.querySelectorAll(".rectangle");
+            rectangles.forEach(rectangle => {
+                if (darkModeState["dark-rectangles"]) {
+                    rectangle.classList.add("dark-rectangle");
+                }
+            });
+
+            var labels = document.querySelectorAll("label,a,p");
+            labels.forEach(label => {
+                if (darkModeState["label-darklabel"] || darkModeState["a-darklabel"]) {
+                    label.classList.add("darklabel");
+                } else {
+                    label.classList.remove("darklabel");
+                }
+            });
+
+        }
+    </script>
+
+</body>
+
+</html>

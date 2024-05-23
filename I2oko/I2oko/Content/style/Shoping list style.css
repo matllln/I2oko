@@ -1,0 +1,1295 @@
+@font-face {
+    font-family: yekan;
+    src: url("../font/Yekan.ttf") format("truetype"), url("../font/Yekan.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: url(../img/Idoko/Untitled-4.png)top center no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    font-family: "yekan" !important;
+}
+button,input,text,a,div{
+    font-family: "yekan" !important;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    gap: 10px;
+    max-height: 65%;
+    overflow-y: auto;
+    position: absolute;
+    left: 50%;
+    width: 760px;
+    margin: 90px 10px 10px 5px;
+    transform: translate(-50%, 0%);
+    height: 60%;
+    max-height: 62%;
+    justify-content: center;
+}
+
+.shop-list {
+    display: grid;
+    /* grid-template-columns: repeat(3, minmax(96px, 288px)); */
+    justify-content: center;
+    grid-gap: 45px;
+    padding-top: 473px;
+    padding-right: 65px;
+    padding-left: 21px;
+    width: 100px;
+}
+
+.BackIcon {
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    position: absolute;
+    width: 40px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 45px 0px 0px -275px;
+}
+
+.Row {
+    position: absolute;
+    width: 60px;
+    color: #013237;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 130px 10px 10px 340px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.Name {
+    position: absolute;
+    width: 180px;
+    color: #013237;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 130px 10px 10px 220px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.Amount {
+    position: absolute;
+    width: 90px;
+    color: #013237;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 130px 10px 10px 75px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.propertis {
+    position: absolute;
+    width: 180px;
+    color: #013237;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 130px 10px 10px -70px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.price {
+    position: absolute;
+    width: 180px;
+    color: #013237;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 130px 10px 10px -260px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.Delete {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px #000000;
+    border-radius: 40px;
+    text-align: center;
+    color: #FF0000;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -440px 10px 10px 355px;
+    display: flex;
+    justify-content: center;
+}
+
+.Number {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 40px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -425px 10px 10px 320px;
+    color: #013237;
+    font-size: 15px;
+}
+
+.Product {
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -425px 10px 10px 200px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 15px;
+}
+
+.Amount2 {
+    position: absolute;
+    width: 90px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -425px 10px 10px 55px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 15px;
+}
+
+.propertisProduct {
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -425px 10px 10px -90px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 15px;
+}
+
+.priceProduct {
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -425px 10px 10px -280px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 15px;
+}
+
+.Delete2 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px #000000;
+    border-radius: 40px;
+    text-align: center;
+    color: #FF0000;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 185px 10px 10px 370px;
+    display: flex;
+    justify-content: center;
+}
+
+.Number2 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 40px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 195px 10px 10px 340px;
+    color: #013237;
+    font-size: 15px;
+}
+
+.Product2 {
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 195px 10px 10px 220px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 15px;
+}
+
+.Amount3 {
+    position: absolute;
+    width: 90px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 195px 10px 10px 75px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 15px;
+}
+
+.propertisProduct2 {
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 195px 10px 10px -70px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 15px;
+}
+
+.priceProduct2 {
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 195px 10px 10px -260px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 15px;
+}
+
+.add {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 40px;
+    color: #03A500;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 30px 10px 10px 326px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Item {
+    position: absolute;
+    width: 140px;
+    background: transparent;
+    font-size: 20px;
+    border: none;
+    color: rgb(1, 50, 55);
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 0px 10px 10px 120px;
+    text-align: center;
+}
+
+.Priceall {
+    position: absolute;
+    width: 180px;
+    background: transparent;
+    font-size: 20px;
+    border: none;
+    color: rgb(1, 50, 55);
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 0px 10px 10px -120px;
+    text-align: center;
+}
+
+.ItemText {
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 30px 10px 10px 120px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.PriceallText {
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 30px 10px 10px -120px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.send {
+    padding: 1em;
+    background: rgb(234, 249, 218);
+    color: rgb(2, 72, 30);
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: rgb(1 50 55) 0px 0px 1em;
+    position: absolute;
+    margin: 948px 10px 10px 0px;
+    bottom: 10px;
+    width: 90px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-family: 'yekan';
+}
+
+.Div-0 {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -115px 10px 10px -22px;
+}
+
+.Div-1 {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -97px 10px 10px -20px;
+}
+
+.Div-2 {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -105px 10px 10px -20px;
+}
+
+.Div-3 {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    bottom: 160px;
+}
+
+div, button, input {
+    border-radius: 15px !important;
+    box-shadow: rgb(1 50 55) 0px 0px 5px !important;
+}
+
+@media screen and (max-width: 1279px) {
+    .backr {
+        display: none;
+    }
+
+    body {
+        background: url(../img/Idoko/Untitled-2.png)top center no-repeat;
+        background-size: 100% 100%;
+        height: 100vh;
+        font-family: "yekan" !important;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 0fr);
+        gap: 10px;
+        max-height: 85%;
+        overflow-y: auto;
+        position: absolute;
+        left: 50%;
+        width: 565px;
+        margin: 75px 10px 10px 0px;
+        transform: translate(-50%, 0%);
+        justify-content: center;
+        height: 71%;
+        max-height: 73%;
+    }
+
+    .shop-list {
+        display: grid;
+        /* grid-template-columns: repeat(3, minmax(96px, 288px)); */
+        justify-content: center;
+        grid-gap: 50px 70px;
+        padding-top: 570px;
+        padding-right: 65px;
+        padding-left: 21px;
+        width: 100px;
+    }
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        font-size: 30px;
+        position: absolute;
+        width: 40px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 15px 10px 10px -275px;
+    }
+
+    .Row {
+        position: absolute;
+        width: 40px;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 110px 10px 10px 225px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .Name {
+        position: absolute;
+        width: 50px;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 110px 10px 10px 135px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .Amount {
+        position: absolute;
+        width: 60px;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 110px 10px 10px 35px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .propertis {
+        position: absolute;
+        width: 80px;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 110px 10px 10px -65px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .price {
+        position: absolute;
+        width: 100px;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 110px 10px 10px -200px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .Delete {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 5px #000000;
+        border-radius: 40px;
+        text-align: center;
+        color: #FF0000;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -540px 10px 10px 260px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Number {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 40px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -530px 10px 10px 225px;
+        color: #013237;
+        font-size: 14px;
+    }
+
+    .Product {
+        position: absolute;
+        width: 130px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -530px 10px 10px 135px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 14px;
+    }
+
+    .Amount2 {
+        position: absolute;
+        width: 60px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -530px 10px 10px 35px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 14px;
+    }
+
+    .propertisProduct {
+        position: absolute;
+        width: 130px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -530px 10px 10px -65px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 14px;
+    }
+
+    .priceProduct {
+        position: absolute;
+        width: 130px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -530px 10px 10px -200px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 14px;
+    }
+
+    .Delete2 {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 5px #000000;
+        border-radius: 40px;
+        text-align: center;
+        color: #FF0000;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 190px 10px 10px 255px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Number2 {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 40px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 200px 10px 10px 225px;
+        color: #013237;
+        font-size: 14px;
+    }
+
+    .Product2 {
+        position: absolute;
+        width: 130px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 200px 10px 10px 135px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 14px;
+    }
+
+    .Amount3 {
+        position: absolute;
+        width: 60px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 200px 10px 10px 35px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 14px;
+    }
+
+    .propertisProduct2 {
+        position: absolute;
+        width: 130px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 200px 10px 10px -65px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 14px;
+    }
+
+    .priceProduct2 {
+        position: absolute;
+        width: 130px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 200px 10px 10px -200px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 14px;
+    }
+
+    .add {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 40px;
+        color: #03A500;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 14px 10px 10px 225px;
+        bottom: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Item {
+        position: absolute;
+        width: 140px;
+        background: transparent;
+        font-size: 16px;
+        border: none;
+        color: rgb(1, 50, 55);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px 100px;
+        bottom: 140px;
+        text-align: center;
+    }
+
+    .Priceall {
+        position: absolute;
+        width: 180px;
+        background: transparent;
+        font-size: 16px;
+        border: none;
+        color: rgb(1, 50, 55);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px -100px;
+        bottom: 140px;
+        text-align: center;
+    }
+
+    .ItemText {
+        position: absolute;
+        width: 180px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px 100px;
+        bottom: 90px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 14px;
+    }
+
+    .PriceallText {
+        position: absolute;
+        width: 180px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px -100px;
+        bottom: 90px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .send {
+        padding: 1em;
+        background: rgb(234, 249, 218);
+        color: rgb(2, 72, 30);
+        border: none;
+        border-radius: 30px;
+        font-weight: 600;
+        box-shadow: rgb(1 50 55) 0px 0px 1em;
+        position: absolute;
+        margin: 10px 10px 10px 0px;
+        bottom: 20px;
+        width: 90px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        font-family: 'yekan';
+    }
+
+    .Div-0 {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -98px 10px 10px 0px;
+    }
+
+    .Div-1 {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -107px 10px 10px 0px;
+    }
+
+    .Div-2 {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -120px 10px 10px 0px;
+    }
+
+    .Div-3 {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        bottom: 10px;
+    }
+
+    div, button, input {
+        border-radius: 15px !important;
+        box-shadow: rgb(1 50 55) 0px 0px 5px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .backr, .Row, .Name, .Amount, .propertis, .price {
+        display: none;
+    }
+
+    body {
+        background: url(../img/Idoko/Untitled-2.png)top center no-repeat;
+        background-size: 100% 100%;
+        height: 100vh;
+        font-family: "yekan" !important;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 0fr);
+        gap: 10px;
+        max-height: 80%;
+        overflow-y: auto;
+        position: absolute;
+        left: 50%;
+        width: 340px;
+        margin: 45px 10px 10px 0px;
+        transform: translate(-50%, 0%);
+        justify-content: center;
+        height: 65%;
+        max-height: 67%;
+    }
+
+    .shop-list {
+        display: grid;
+        /* grid-template-columns: repeat(3, minmax(96px, 288px)); */
+        justify-content: center;
+        grid-gap: 80px 70px;
+        padding-top: 255px;
+        padding-right: 65px;
+        padding-left: 21px;
+        width: 100px;
+    }
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        font-size: 30px;
+        position: absolute;
+        width: 30px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px -160px;
+    }
+
+    .Delete {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 5px #000000;
+        border-radius: 40px;
+        text-align: center;
+        color: #FF0000;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -205px 10px 10px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Number {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 40px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -240px 10px 10px 0px;
+        color: #013237;
+        font-size: 12px;
+    }
+
+    .Product {
+        position: absolute;
+        width: 130px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -240px 10px 10px 90px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 12px;
+    }
+
+    .Amount2 {
+        position: absolute;
+        width: 130px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -240px 10px 10px -90px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 12px;
+    }
+
+    .propertisProduct {
+        position: absolute;
+        width: 130px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -205px 10px 10px 90px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 12px;
+    }
+
+    .priceProduct {
+        position: absolute;
+        width: 130px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -205px 10px 10px -90px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 12px;
+    }
+
+    .Delete2 {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 5px #000000;
+        border-radius: 40px;
+        text-align: center;
+        color: #FF0000;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 185px 10px 10px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Number2 {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 40px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 150px 10px 10px 0px;
+        color: #013237;
+        font-size: 12px;
+    }
+
+    .Product2 {
+        position: absolute;
+        width: 130px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 150px 10px 10px 90px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 12px;
+    }
+
+    .Amount3 {
+        position: absolute;
+        width: 130px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 150px 10px 10px -90px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 12px;
+    }
+
+    .propertisProduct2 {
+        position: absolute;
+        width: 130px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 185px 10px 10px 90px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 12px;
+    }
+
+    .priceProduct2 {
+        position: absolute;
+        width: 130px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 185px 10px 10px -90px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 12px;
+    }
+
+    .add {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 40px;
+        color: #03A500;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 520px 10px 10px 0px;
+        bottom: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Item {
+        position: absolute;
+        width: 140px;
+        background: transparent;
+        font-size: 14px;
+        border: none;
+        color: rgb(1, 50, 55);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px 90px;
+        bottom: 130px;
+        text-align: center;
+    }
+
+    .Priceall {
+        position: absolute;
+        width: 180px;
+        background: transparent;
+        font-size: 14px;
+        border: none;
+        color: rgb(1, 50, 55);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px -90px;
+        bottom: 130px;
+        text-align: center;
+    }
+
+    .ItemText {
+        position: absolute;
+        width: 130px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px 90px;
+        bottom: 90px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 12px;
+    }
+
+    .PriceallText {
+        position: absolute;
+        width: 130px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px -90px;
+        bottom: 90px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 12px;
+    }
+
+    .send {
+        padding: 1em;
+        background: rgb(234, 249, 218);
+        color: rgb(2, 72, 30);
+        border: none;
+        border-radius: 30px;
+        font-weight: 600;
+        box-shadow: rgb(1 50 55) 0px 0px 1em;
+        position: absolute;
+        margin: 10px 10px 10px 0px;
+        bottom: 20px;
+        width: 80px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        font-family: 'yekan';
+    }
+
+    .Div-1 {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -45px 10px 10px 0px;
+    }
+
+    .Div-2 {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -55px 10px 10px 0px;
+    }
+
+    .Div-3 {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        bottom: -7px;
+    }
+
+    div, button, input {
+        border-radius: 15px !important;
+        box-shadow: rgb(1 50 55) 0px 0px 5px !important;
+    }
+}

@@ -1,0 +1,568 @@
+@font-face {
+    font-family: yekan;
+    src: url("../font/Yekan.ttf") format("truetype"), url("../font/Yekan.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body {
+    background: url("../img/Idoko/Untitled-4.png")top center no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100%; 
+    font-family: "yekan" !important;
+}
+button,input,text,a,div{
+    font-family: "yekan" !important;
+}
+.BackIcon {
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    position: absolute;
+    width: 40px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 45px 0px 0px -275px;
+    background-image:url(../img/Idoko/back.png)
+
+.TitlePost {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #013237;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 90px 0px 0px -130px;
+}
+
+.TitlePostText {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 120px 0px 0px -130px;
+    border: none;
+    text-align: center;
+}
+
+.Placepost {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #013237;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 205px 0px 0px -130px;
+}
+
+.PlacepostText {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 235px 0px 0px -130px;
+    border: none;
+    text-align: center;
+}
+
+.About {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #013237;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 315px 0px 0px -130px;
+}
+
+.AboutText {
+    position: absolute;
+    max-width: 320px;
+    min-height: 160px;
+    max-height: 160px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 5px #000000;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 345px 0px 0px -130px;
+    border: none;
+    text-align: center;
+}
+
+.Img {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: transparent;
+    border: solid;
+    box-shadow: 0px 0px 30px #013237;
+    border-radius: 30px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 120px 0px 0px 210px;
+}
+
+.OPtion {
+    position: absolute;
+    width: 7px;
+    height: 31px;
+    font-weight: 400;
+    font-size: 25px;
+    color: #001D83;
+    text-shadow: 0px 0px 10px #013237;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 185px 0px 0px 350px;
+
+}
+
+.Gallry {
+    position: absolute;
+    width: 29px;
+    height: 28px;
+    font-size: 30px;
+    color: #013237;
+    text-shadow: 0px 0px 5px #013237;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 490px 0px 0px 320px;
+}
+
+.Camera {
+    position: absolute;
+    width: 29px;
+    height: 28px;
+    font-size: 30px;
+    color: #013237;
+    text-shadow: 0px 0px 5px #013237;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 490px 0px 0px 210px;
+}
+
+.File {
+    position: absolute;
+    width: 29px;
+    height: 28px;
+    font-size: 30px;
+    color: #013237;
+    text-shadow: 0px 0px 5px #013237;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 490px 0px 0px 110px;
+}
+
+.Confirm {
+    padding: 1em;
+    background: rgb(234, 249, 218);
+    color: rgb(2, 72, 30);
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: rgb(1 50 55) 0px 0px 1em;
+    position: absolute;
+    margin: 555px 10px 10px 10px;
+    width: 90px;
+    left: 50%;
+    bottom: 30px;
+    transform: translate(-50%, 0%);
+    font-family: 'yekan';
+}
+
+div,
+button,
+input,.TitlePostText,a {
+    border-radius: 15px !important;
+    box-shadow: rgb(1 50 55) 0px 0px 5px !important;
+}
+
+@media screen and (max-width: 1279px) {
+    .Background {
+        display: none;
+    }
+
+    body {
+     background: url("../img/Idoko/Untitled-2.png")top center no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-size: 100% 100%; 
+        font-family: "yekan" !important;
+    }
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        font-size: 30px;
+        position: absolute;
+        width: 40px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 15px 10px 10px -275px;
+    }
+
+    .TitlePost {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 422px 10px 10px 0px;
+        font-size: 14px;
+    }
+
+    .TitlePostText {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 450px 10px 10px 0px;
+        border: none;
+        text-align: center;
+    }
+
+    .Placepost {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 535px 10px 10px 0px;
+        font-size: 14px;
+    }
+
+    .PlacepostText {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 560px 10px 10px 0px;
+        border: none;
+        text-align: center;
+    }
+
+    .About {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 640px 10px 10px 0px;
+        font-size: 14px;
+    }
+
+    .AboutText {
+        position: absolute;
+        max-width:  275px;
+        max-height: 160px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 5px #000000;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 670px 10px 10px 0px;
+        border: none;
+    }
+
+    .Img {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: transparent;
+        border: solid;
+        box-shadow: 0px 0px 20px #013237;
+        border-radius: 20px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 80px 10px 10px 0px;
+    }
+
+    .OPtion {
+        position: absolute;
+        width: 7px;
+        height: 31px;
+        font-weight: 400;
+        font-size: 25px;
+        color: #001D83;
+        text-shadow: 0px 0px 10px #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 80px 0px 0px 145px;
+
+    }
+
+    .Gallry {
+        position: absolute;
+        width: 29px;
+        height: 28px;
+        font-size: 30px;
+        color: #013237;
+        text-shadow: 0px 0px 5px #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 130px 0px 0px 180px;
+    }
+
+    .Camera {
+        position: absolute;
+        width: 29px;
+        height: 28px;
+        font-size: 30px;
+        color: #013237;
+        text-shadow: 0px 0px 5px #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 220px 10px 10px 180px;
+    }
+
+    .File {
+        position: absolute;
+        width: 29px;
+        height: 28px;
+        font-size: 30px;
+        color: #013237;
+        text-shadow: 0px 0px 5px #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 310px 0px 0px 180px;
+    }
+
+    .Confirm {
+        padding: 1em;
+        background: rgb(234, 249, 218);
+        color: rgb(2, 72, 30);
+        border: none;
+        border-radius: 30px;
+        font-weight: 600;
+        box-shadow: rgb(1 50 55) 0px 0px 1em;
+        position: absolute;
+        margin: 10px 10px 10px 0px;
+        bottom: 20px;
+        width: 90px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        font-family: 'yekan';
+    }
+
+    div,
+    button,
+    input,.TitlePostText,a {
+        border-radius: 15px !important;
+        box-shadow: rgb(1 50 55) 0px 0px 5px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Background {
+        display: none;
+    }
+
+    body {
+ background: url("../img/Idoko/Untitled-1.png")top center no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-size: 100% 100%; 
+        font-family: "yekan" !important;
+    }
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        font-size: 30px;
+        position: absolute;
+        width: 30px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px -160px;
+    }
+
+    .TitlePost {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 280px 10px 10px 80px;
+        font-size: 12px;
+    }
+
+    .TitlePostText {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 305px 10px 10px 80px;
+        border: none;
+        text-align: center;
+    }
+
+    .Placepost {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 280px 10px 10px -80px;
+        font-size: 12px;
+    }
+
+    .PlacepostText {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 305px 10px 10px -80px;
+        border: none;
+        text-align: center;
+    }
+
+    .About {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 350px 10px 10px 0px;
+        font-size: 12px;
+    }
+
+    .AboutText {
+        position: absolute;
+        max-width: 215px;
+        max-height: 135px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 5px #000000;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 375px 10px 10px 0px;
+        border: none;
+    }
+
+    .Img {
+        position: absolute;
+        width: 225px;
+        height: 225px;
+        background: transparent;
+        border: solid;
+        box-shadow: 0px 0px 10px #013237;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 40px 10px 10px 0px;
+    }
+
+    .OPtion {
+        position: absolute;
+        width: 7px;
+        height: 31px;
+        font-weight: 400;
+        font-size: 25px;
+        color: #001D83;
+        text-shadow: 0px 0px 10px #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 40px 0px 0px 110px;
+
+    }
+
+    .Gallry {
+        position: absolute;
+        width: 25px;
+        height: 30px;
+        font-size: 30px;
+        color: #013237;
+        text-shadow: 0px 0px 5px #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 70px 0px 0px 140px;
+    }
+
+    .Camera {
+        position: absolute;
+        width: 25px;
+        height: 30px;
+        font-size: 20px;
+        color: #013237;
+        text-shadow: 0px 0px 5px #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 138px 10px 10px 140px;
+    }
+
+    .File {
+        position: absolute;
+        width: 25px;
+        height: 30px;
+        font-size: 20px;
+        color: #013237;
+        text-shadow: 0px 0px 5px #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 210px 0px 0px 140px;
+    }
+
+    .Confirm {
+        padding: 1em;
+        background: rgb(234, 249, 218);
+        color: rgb(2, 72, 30);
+        border: none;
+        border-radius: 30px;
+        font-weight: 600;
+        box-shadow: rgb(1 50 55) 0px 0px 1em;
+        position: absolute;
+        margin: 10px 10px 10px 0px;
+        bottom: 20px;
+        width: 80px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        font-family: 'yekan';
+    }
+
+    div,
+    button,
+    input,.TitlePostText,a {
+        border-radius: 15px !important;
+        box-shadow: rgb(1 50 55) 0px 0px 5px !important;
+    }
+}

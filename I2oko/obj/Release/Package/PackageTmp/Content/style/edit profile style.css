@@ -1,0 +1,2432 @@
+﻿@font-face {
+    font-family: yekan;
+    src: url("../font/Yekan.ttf") format("truetype"), url("../font/Yekan.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-size: 14px !important;
+}
+
+body {
+    background: url(../img/Idoko/Untitled-4.png)top center no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100%;
+    font-family: "yekan" !important;
+}
+
+label.labeldark {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 15px 10px 10px -350px;
+}
+
+.darklabel {
+    color: #5cedfb !important;
+}
+
+.darkimg {
+    position: absolute;
+    width: 60px;
+}
+
+.dark-button {
+    background: black !important;
+    background: black !important;
+    border: 0.25em solid transparent !important;
+    background-image: linear-gradient(#000, #000), linear-gradient(120deg, #f09 0%, #0ff 50%, #9f0 100%) !important;
+    background-origin: border-box !important;
+    background-clip: padding-box, border-box !important;
+    background-size: 200% 100% !important;
+    transition: background-position 0.8s ease-out;
+    color: #5cedfb !important;
+}
+
+
+.dark-rectangle {
+    background-color: #364d6f !important; /* تغییر رنگ rectangle ها در حالت دارک‌مود */
+}
+
+
+.dark-mode {
+    background-color: #2d1d1d !important;
+    color: darkblue;
+    background: url("../img/Idoko/1.png") center top / 100% 100% no-repeat;
+}
+
+button, input, text, a, div {
+    font-family: "yekan" !important;
+}
+
+.Profile {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background: transparent;
+    border: solid #013237 2px;
+    border-radius: 25px !important;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 50px 10px 10px 10px;
+    box-shadow: rgb(1, 50, 55) 0px 0px 10px !important;
+}
+
+.Add {
+    background: white;
+    color: rgb(2, 72, 30);
+    border: none;
+    border-radius: 15px;
+    font-weight: 600;
+    box-shadow: rgb(1 50 55) 0px 0px 10px;
+    position: absolute;
+    margin: 170px 10px 10px 10px;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.UserName {
+    position: absolute;
+    width: max-content;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(1, 50, 55);
+    font-weight: bold;
+    margin: 225px 10px 10px 260px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+}
+
+.UserNameLabel {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 255px 10px 10px 260px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border: solid #013237 1px;
+}
+
+.Name {
+    position: absolute;
+    width: max-content;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(1, 50, 55);
+    font-weight: bold;
+    margin: 225px 10px 10px 70px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+}
+
+.NameLabel {
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 255px 10px 10px 70px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+.FamilyName {
+    position: absolute;
+    width: max-content;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(1, 50, 55);
+    font-weight: bold;
+    margin: 225px 10px 10px -35px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+}
+
+.FamilyNameLabel {
+    position: absolute;
+    width: 110px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 255px 10px 10px -35px;
+    display: flex;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+.BirthDay {
+    position: absolute;
+    width: max-content;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(1, 50, 55);
+    font-weight: bold;
+    margin: 315px 10px 10px 260px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+}
+
+.BirthDayLabel {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 345px 10px 10px 260px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+.CatGory {
+    position: absolute;
+    width: max-content;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(1, 50, 55);
+    font-weight: bold;
+    margin: 405px 10px 10px 260px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+}
+
+.CatGoryLabel {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 5px #000000;
+    border-radius: 10px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 435px 10px 10px 260px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+.Sexuality {
+    position: absolute;
+    width: max-content;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(1, 50, 55);
+    font-weight: bold;
+    margin: 225px 10px 10px -240px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+}
+
+.SexualityLabel {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 5px #000000;
+    border-radius: 15px !important;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 255px 10px 10px -240px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+.Phone {
+    position: absolute;
+    width: max-content;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(1, 50, 55);
+    font-weight: bold;
+    margin: 315px 10px 10px 10px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+}
+
+.PhoneLabel {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 345px 10px 10px 10px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+.Bio {
+    position: absolute;
+    width: max-content;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(1, 50, 55);
+    font-weight: bold;
+    margin: 405px 10px 10px 10px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+}
+
+.BioLabel {
+    position: absolute;
+    min-width: 135px;
+    max-width: 135px;
+    min-height: 95px;
+    max-height: 95px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 5px #000000;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 435px 10px 10px 10px;
+    text-align: right;
+    outline: none;
+    border: none;
+    font-size: 14px !important;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 8px;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+.Email {
+    position: absolute;
+    width: max-content;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(1, 50, 55);
+    font-weight: bold;
+    margin: 315px 10px 10px -240px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+}
+
+.EmailLabel {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 345px 10px 10px -240px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+.Loction {
+    position: absolute;
+    width: max-content;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(1, 50, 55);
+    font-weight: bold;
+    margin: 405px 10px 10px -240px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+}
+
+.LoctionLabel {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 435px 10px 10px -240px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+.Record {
+    padding: 1em;
+    background: rgb(234, 249, 218);
+    color: rgb(2, 72, 30);
+    border: none;
+    border-radius: 15px;
+    font-weight: 600;
+    box-shadow: rgb(1 50 55) 0px 0px 1em;
+    position: absolute;
+    margin: 555px 10px 10px 10px;
+    width: 90px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-family: 'yekan';
+    bottom: 35px;
+}
+
+.BackIcon {
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    position: absolute;
+    width: 40px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 45px 0px 0px -275px;
+}
+
+.flipUser {
+    text-align: center;
+    width: 20px;
+    height: 25px;
+    margin: 262px 10px 10px 142px;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.panelUser {
+    display: none;
+    left: 50%;
+    width: 0;
+}
+
+#UserName {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: white;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 255px 10px 10px 260px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+.flipName {
+    text-align: center;
+    width: 20px;
+    height: 25px;
+    margin: 262px 10px 10px -108px;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.Namepanel {
+    display: none;
+    left: 50%;
+    width: 0;
+}
+
+#Name {
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    background: white;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 255px 10px 10px 70px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+#Fname {
+    position: absolute;
+    width: 110px;
+    height: 40px;
+    background: white;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 255px 10px 10px -35px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+.flipPhone {
+    text-align: center;
+    width: 20px;
+    height: 25px;
+    margin: 351px 10px 10px -108px;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.panelPhone {
+    display: none;
+    left: 50%;
+    width: 0;
+}
+
+#Phone {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: white;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 345px 10px 10px 10px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+.flipEmail {
+    text-align: center;
+    width: 20px;
+    height: 25px;
+    margin: 351px 10px 10px -360px;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.panelEmail {
+    display: none;
+    left: 50%;
+    width: 0;
+}
+
+#Email {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: white;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 345px 10px 10px -240px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+.flipBio {
+    text-align: center;
+    width: 20px;
+    height: 25px;
+    margin: 444px 10px 10px -85px;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.panelBio {
+    display: none;
+    left: 50%;
+    width: 0;
+}
+
+#Biography {
+    position: absolute;
+    background: white;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 435px 10px 10px 10px;
+    text-align: RIGHT;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    min-width: 135px;
+    max-width: 135px;
+    min-height: 95px;
+    max-height: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 8px;
+    font-size: 14px !important;
+}
+
+.flipLoction {
+    text-align: center;
+    width: 20px;
+    height: 25px;
+    margin: 444px 10px 10px -360px;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.panelLoction {
+    display: none;
+    left: 50%;
+    width: 0;
+}
+
+#Address {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: white;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 435px 10px 10px -240px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+.flipBirthDay {
+    text-align: center;
+    width: 20px;
+    height: 25px;
+    margin: 351px 10px 10px 142px;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.panelBirthDay {
+    display: none;
+    left: 50%;
+    width: 0;
+}
+
+#BirthDate {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: white;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 345px 10px 10px 260px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+.flipCateguri {
+    text-align: center;
+    width: 20px;
+    height: 25px;
+    margin: 444px 10px 10px 142px;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    display: flex;
+}
+
+div.panelCateguri {
+    display: none;
+    left: 50%;
+    width: 0;
+}
+
+#Categuri {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: white;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 435px 10px 10px 260px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+.flipSexuality {
+    text-align: center;
+    width: 20px;
+    height: 25px;
+    margin: 262px 10px 10px -360px;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.panelSexuality {
+    display: none;
+    left: 50%;
+    width: 0;
+}
+
+#Sexuality {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: white;
+    margin: 255px 10px 10px -240px;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 255px 10px 10px -240px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+#BirthDateY {
+    position: absolute;
+    width: 65px;
+    height: 40px;
+    background: white;
+    margin: 255px 10px 10px -240px;
+    border-radius: 15px 0px 0px 15px !important;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 345px 10px 10px 193px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+#BirthDateM {
+    position: absolute;
+    width: 65px;
+    height: 40px;
+    background: white;
+    margin: 255px 10px 10px -240px;
+    border-radius: 0px !important;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 345px 10px 10px 260px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+#BirthDateD {
+    position: absolute;
+    width: 65px;
+    height: 40px;
+    background: white;
+    margin: 255px 10px 10px -240px;
+    border-radius: 0px 15px 15px 0px !important;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 345px 10px 10px 327px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+div, button, input, a, label, textarea, select {
+    border-radius: 15px !important;
+    box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+}
+
+img {
+    border-radius: 15px !important;
+}
+
+.BioInput, .CatGoryInput, .BirthDayInput, GandrInput {
+    border-radius: 15px !important;
+}
+
+label, input, select {
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
+
+@media screen and (max-width: 1279px) {
+    .Panel {
+        display: none;
+    }
+
+    * {
+        font-size: 12px !important;
+    }
+
+    body {
+        background: url(../img/Idoko/Untitled-2.png)top center no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-size: 100% 100%;
+        font-family: "yekan" !important;
+    }
+
+    .dark-mode {
+        background-color: #2d1d1d !important;
+        color: darkblue;
+        background: url("../img/Idoko/2.png") center top / 100% 100% no-repeat;
+    }
+
+    button {
+        font-family: "yekan";
+    }
+
+    .Profile {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        border: solid #013237 2px;
+        background: transparent;
+        box-shadow: rgb(1 50 55) 0px 0px 0px;
+        border-radius: 25px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 70px 10px 10px 0px;
+    }
+
+    .Add {
+        background: white;
+        color: rgb(2, 72, 30);
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        box-shadow: rgb(1 50 55) 0px 0px 10px;
+        position: absolute;
+        margin: 210px 10px 10px 0px;
+        width: 30px;
+        height: 30px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .UserName {
+        position: absolute;
+        text-align: center;
+        font-size: 14px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 275px 10px 10px 140px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+
+    .UserNameLabel {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 300px 10px 10px 140px;
+        text-align: center;
+        outline: none;
+        border: none;
+        border: solid #013237 1px;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .Name {
+        position: absolute;
+        text-align: center;
+        font-size: 16px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 275px 10px 10px -79px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+
+    .NameLabel {
+        position: absolute;
+        width: 80px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 15px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 300px 10px 10px -79px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .FamilyName {
+        position: absolute;
+        text-align: center;
+        font-size: 14px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 275px 10px 10px -185px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+
+    .FamilyNameLabel {
+        position: absolute;
+        width: 110px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 300px 10px 10px -187px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 14px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .BirthDay {
+        position: absolute;
+        text-align: center;
+        font-size: 14px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 390px 10px 10px -140px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+
+    .BirthDayLabel {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 415px 10px 10px -140px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 14px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .CatGory {
+        position: absolute;
+        text-align: center;
+        font-size: 14px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 620px 10px 10px 140px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+
+    .CatGoryLabel {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 5px #000000;
+        border-radius: 15px !important;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 645px 10px 10px 140px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 14px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Sexuality {
+        position: absolute;
+        text-align: center;
+        font-size: 14px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 390px 10px 10px 140px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+
+    .SexualityLabel {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 5px #000000;
+        border-radius: 10px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 415px 10px 10px 140px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 14px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Phone {
+        position: absolute;
+        text-align: center;
+        font-size: 14px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 505px 10px 10px 140px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+
+    .PhoneLabel {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 530px 10px 10px 140px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 14px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Bio {
+        position: absolute;
+        text-align: center;
+        font-size: 14px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 715px 10px 10px 0px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+
+    .BioLabel {
+        position: absolute;
+        width: 145px;
+        height: 85px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 5px #000000;
+        border-radius: 15px !important;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 740px 10px 10px 0px;
+        text-align: right;
+        outline: none;
+        border: none;
+        font-size: 14px !important;
+        display: flex;
+        justify-content: right;
+        align-items: flex-start;
+        padding: 8px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+
+    .Email {
+        position: absolute;
+        text-align: center;
+        font-size: 14px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 505px 10px 10px -140px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+
+    .EmailLabel {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 530px 10px 10px -140px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 14px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Loction {
+        position: absolute;
+        text-align: center;
+        font-size: 14px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 620px 10px 10px -140px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+
+    .LoctionLabel {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 645px 10px 10px -140px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 14px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Record {
+        padding: 1em;
+        background: rgb(234, 249, 218);
+        color: rgb(2, 72, 30);
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        box-shadow: rgb(1 50 55) 0px 0px 1em;
+        position: absolute;
+        margin: 10px 10px 10px 0px;
+        bottom: 20px;
+        width: 90px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        font-family: 'yekan';
+    }
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        font-size: 30px;
+        position: absolute;
+        width: 40px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 15px 10px 10px -275px;
+    }
+
+    .flipUser {
+        text-align: center;
+        width: 20px;
+        height: 25px;
+        margin: 306px 10px 10px 15px;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.panelUser {
+        display: none;
+        left: 50%;
+        width: 0;
+    }
+
+    #UserName {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: white;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 15px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 300px 10px 10px 140px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    .flipName {
+        text-align: center;
+        width: 20px;
+        height: 25px;
+        margin: 306px 10px 10px -265px;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.Namepanel {
+        display: none;
+        left: 50%;
+        width: 0;
+    }
+
+    #Name {
+        position: absolute;
+        width: 80px;
+        height: 40px;
+        background: white;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 15px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 300px 10px 10px -79px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    #Fname {
+        position: absolute;
+        width: 110px;
+        height: 40px;
+        background: white;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 15px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 300px 10px 10px -188px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    .flipPhone {
+        text-align: center;
+        width: 20px;
+        height: 25px;
+        margin: 540px 10px 10px 15px;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.panelPhone {
+        display: none;
+        left: 50%;
+        width: 0;
+    }
+
+    #Phone {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: white;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 15px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 530px 10px 10px 140px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    .flipEmail {
+        text-align: center;
+        width: 20px;
+        height: 25px;
+        margin: 537px 10px 10px -265px;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.panelEmail {
+        display: none;
+        left: 50%;
+        width: 0;
+    }
+
+    #Email {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: white;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 15px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 528px 10px 10px -141px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    .flipBio {
+        text-align: center;
+        width: 20px;
+        height: 25px;
+        margin: 775px 10px 10px -100px;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.panelBio {
+        display: none;
+        left: 50%;
+        width: 0;
+    }
+
+    #Biography {
+        position: absolute;
+        background: white;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 15px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 740px 10px 10px 0px;
+        text-align: right;
+        outline: none;
+        border: none;
+        font-size: 16px;
+        min-width: 135px;
+        max-width: 135px;
+        min-height: 95px;
+        max-height: 95px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 8px;
+        font-size: 14px !important;
+    }
+
+    .flipLoction {
+        text-align: center;
+        width: 20px;
+        height: 25px;
+        margin: 653px 10px 10px -265px;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.panelLoction {
+        display: none;
+        left: 50%;
+        width: 0;
+    }
+
+    #Address {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: white;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 15px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 645px 10px 10px -138px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    .flipBirthDay {
+        text-align: center;
+        width: 20px;
+        height: 25px;
+        margin: 421px 10px 10px -265px;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.panelBirthDay {
+        display: none;
+        left: 50%;
+        width: 0;
+    }
+
+    #BirthDate {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: white;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 15px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 415px 10px 10px -143px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    .flipCateguri {
+        text-align: center;
+        width: 20px;
+        height: 25px;
+        margin: 654px 10px 10px 15px;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+    }
+
+    div.panelCateguri {
+        display: none;
+        left: 50%;
+        width: 0;
+    }
+
+    #Categuri {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: white;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 15px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 645px 10px 10px 140px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    .flipSexuality {
+        text-align: center;
+        width: 20px;
+        height: 25px;
+        margin: 424px 10px 10px 15px;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.panelSexuality {
+        display: none;
+        left: 50%;
+        width: 0;
+    }
+
+    #Sexuality {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: white;
+        margin: 255px 10px 10px -240px;
+        border-radius: 15px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 415px 10px 10px 140px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    #BirthDateY {
+        position: absolute;
+        width: 65px;
+        height: 40px;
+        background: white;
+        margin: 255px 10px 10px -240px;
+        border-radius: 15px 0px 0px 15px !important;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 415px 10px 10px -207px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    #BirthDateM {
+        position: absolute;
+        width: 65px;
+        height: 40px;
+        background: white;
+        margin: 255px 10px 10px -240px;
+        border-radius: 0px !important;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 415px 10px 10px -140px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    #BirthDateD {
+        position: absolute;
+        width: 65px;
+        height: 40px;
+        background: white;
+        margin: 255px 10px 10px -240px;
+        border-radius: 0px 15px 15px 0px !important;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 415px 10px 10px -73px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    div, button, input, a, label, textarea, select {
+        border-radius: 15px !important;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+    }
+
+    img {
+        border-radius: 15px !important;
+    }
+
+    label, input, select {
+        font-size: 14px !important;
+        font-weight: bold !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Panel {
+        display: none;
+    }
+
+    body {
+        background: url(../img/Idoko/Untitled-1.png)top center no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-size: 100% 100%;
+        font-family: "yekan" !important;
+    }
+
+    * {
+        font-size: 10px !important;
+    }
+
+    .dark-mode {
+        background-color: #2d1d1d !important;
+        color: darkblue;
+        background: url("../img/Idoko/3.png") center top / 100% 100% no-repeat;
+    }
+
+    button {
+        font-family: "yekan";
+    }
+
+    .Profile {
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        background: transparent;
+        border: solid #013237 2px;
+        box-shadow: rgb(1 50 55) 0px 0px 0px;
+        border-radius: 25px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 25px 10px 10px 0px;
+    }
+
+    .Add {
+        background: white;
+        color: rgb(2, 72, 30);
+        border: none;
+        border-radius: 40px;
+        font-weight: 600;
+        box-shadow: rgb(1 50 55) 0px 0px 10px;
+        position: absolute;
+        margin: 125px 10px 10px 0px;
+        width: 25px;
+        height: 25px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .UserName {
+        position: absolute;
+        width: 100px;
+        text-align: center;
+        font-size: 12px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 155px 10px 10px 90px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+
+    .UserNameLabel {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 180px 10px 10px 90px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 12px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Name {
+        position: absolute;
+        width: 261px;
+        text-align: center;
+        font-size: 16px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 152px 10px 10px -48px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+
+    .NameLabel {
+        position: absolute;
+        width: 60px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 15px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 180px 10px 10px -48px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .FamilyName {
+        position: absolute;
+        width: 120px;
+        text-align: center;
+        font-size: 12px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 155px 10px 10px -122px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+
+    .FamilyNameLabel {
+        position: absolute;
+        width: 80px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 180px 10px 10px -122px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 12px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .BirthDay {
+        position: absolute;
+        width: 80px;
+        text-align: center;
+        font-size: 12px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 230px 10px 10px -90px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+
+    .BirthDayLabel {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 255px 10px 10px -90px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 12px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .CatGory {
+        position: absolute;
+        width: 90px;
+        text-align: center;
+        font-size: 12px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 380px 10px 10px 90px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+
+    .CatGoryLabel {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 5px #000000;
+        border-radius: 15px !important;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 405px 10px 10px 90px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 12px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Sexuality {
+        position: absolute;
+        width: 60px;
+        text-align: center;
+        font-size: 12px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 230px 10px 10px 90px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+
+    .SexualityLabel {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 5px #000000;
+        border-radius: 5px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 255px 10px 10px 90px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 12px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Phone {
+        position: absolute;
+        width: 80px;
+        text-align: center;
+        font-size: 12px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 305px 10px 10px 90px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+
+    .PhoneLabel {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 330px 10px 10px 90px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 12px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Bio {
+        position: absolute;
+        width: 80px;
+        text-align: center;
+        font-size: 12px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 450px 10px 10px 0px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+
+    .BioLabel {
+        position: absolute;
+        width: 105px;
+        height: 75px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 5px #000000;
+        border-radius: 15px !important;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 475px 10px 10px 0px;
+        text-align: right;
+        outline: none;
+        border: none;
+        font-size: 12px !important;
+        display: flex;
+        justify-content: right;
+        align-items: flex-start;
+        padding: 8px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Email {
+        position: absolute;
+        width: 60px;
+        text-align: center;
+        font-size: 12px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 305px 10px 10px -90px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+
+    .EmailLabel {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 330px 10px 10px -90px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 12px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Loction {
+        position: absolute;
+        width: 100px;
+        text-align: center;
+        font-size: 12px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 380px 10px 10px -90px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+
+    .LoctionLabel {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 405px 10px 10px -90px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 12px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Record {
+        padding: 1em;
+        background: rgb(234, 249, 218);
+        color: rgb(2, 72, 30);
+        border: none;
+        border-radius: 30px;
+        font-weight: 600;
+        box-shadow: rgb(1 50 55) 0px 0px 1em;
+        position: absolute;
+        margin: 10px 10px 10px 0px;
+        bottom: -3px;
+        width: 80px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        font-family: 'yekan';
+    }
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        font-size: 30px;
+        position: absolute;
+        width: 30px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px -160px;
+    }
+
+    .flipUser {
+        text-align: center;
+        width: 20px;
+        height: 25px;
+        margin: 150px 10px 10px 160px;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.panelUser {
+        display: none;
+        left: 50%;
+        width: 0;
+    }
+
+    #UserName {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: white;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 15px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 180px 10px 10px 90px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    .flipName {
+        text-align: center;
+        width: 20px;
+        height: 25px;
+        margin: 150px 10px 10px -20px;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.Namepanel {
+        display: none;
+        left: 50%;
+        width: 0;
+    }
+
+    #Name {
+        position: absolute;
+        width: 60px;
+        height: 30px;
+        background: white;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 15px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 180px 10px 10px -45px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    #Fname {
+        position: absolute;
+        width: 80px;
+        height: 30px;
+        background: white;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 15px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 180px 10px 10px -122px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    .flipPhone {
+        text-align: center;
+        width: 20px;
+        height: 25px;
+        margin: 300px 10px 10px 160px;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.panelPhone {
+        display: none;
+        left: 50%;
+        width: 0;
+    }
+
+    #Phone {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: white;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 15px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 330px 10px 10px 90px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    .flipEmail {
+        text-align: center;
+        width: 20px;
+        height: 25px;
+        margin: 300px 10px 10px -20px;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.panelEmail {
+        display: none;
+        left: 50%;
+        width: 0;
+    }
+
+    #Email {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: white;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 15px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 330px 10px 10px -90px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    .flipBio {
+        text-align: center;
+        width: 20px;
+        height: 25px;
+        margin: 515px 10px 10px 95px;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.panelBio {
+        display: none;
+        left: 50%;
+        width: 0;
+    }
+
+    #Biography {
+        position: absolute;
+        background: white;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 15px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 475px 10px 10px 0px;
+        text-align: right;
+        outline: none;
+        border: none;
+        font-size: 16px;
+        min-width: 135px;
+        max-width: 135px;
+        min-height: 95px;
+        max-height: 95px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 8px;
+        font-size: 12px !important;
+    }
+
+    .flipLoction {
+        text-align: center;
+        width: 20px;
+        height: 25px;
+        margin: 375px 10px 10px -20px;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.panelLoction {
+        display: none;
+        left: 50%;
+        width: 0;
+    }
+
+    #Address {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: white;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 15px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 405px 10px 10px -90px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    .flipBirthDay {
+        text-align: center;
+        width: 20px;
+        height: 25px;
+        margin: 225px 10px 10px -20px;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.panelBirthDay {
+        display: none;
+        left: 50%;
+        width: 0;
+    }
+
+    #BirthDate {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: white;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 15px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 255px 10px 10px -90px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    .flipCateguri {
+        text-align: center;
+        width: 20px;
+        height: 25px;
+        margin: 375px 10px 10px 160px;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+    }
+
+    div.panelCateguri {
+        display: none;
+        left: 50%;
+        width: 0;
+    }
+
+    #Categuri {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: white;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 15px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 405px 10px 10px 90px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    .flipSexuality {
+        text-align: center;
+        width: 20px;
+        height: 25px;
+        margin: 225px 10px 10px 160px;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.panelSexuality {
+        display: none;
+        left: 50%;
+        width: 0;
+    }
+
+    #Sexuality {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: white;
+        margin: 255px 10px 10px -240px;
+        border-radius: 15px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 255px 10px 10px 90px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    #BirthDateY {
+        position: absolute;
+        width: 50px;
+        height: 30px;
+        background: white;
+        margin: 255px 10px 10px -240px;
+        border-radius: 15px 0px 0px 15px !important;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 255px 10px 10px -140px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    #BirthDateM {
+        position: absolute;
+        width: 46px;
+        height: 30px;
+        background: white;
+        margin: 255px 10px 10px -240px;
+        border-radius: 0px !important;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 255px 10px 10px -90px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    #BirthDateD {
+        position: absolute;
+        width: 50px;
+        height: 30px;
+        background: white;
+        margin: 255px 10px 10px -240px;
+        border-radius: 0px 15px 15px 0px !important;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 255px 10px 10px -40px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 16px;
+    }
+
+    div, button, input, a, label, textarea, select {
+        border-radius: 15px !important;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+    }
+
+    img {
+        border-radius: 15px !important;
+    }
+
+    label, input, select {
+        font-size: 12px !important;
+        font-weight: bold !important;
+    }
+}

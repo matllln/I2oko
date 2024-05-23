@@ -1,0 +1,834 @@
+﻿
+@font-face {
+    font-family: yekan;
+    src: url("../font/Yekan.ttf") format("truetype"), url("../font/Yekan.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-size: 14px !important;
+}
+
+body {
+    background: url("../img/Idoko/Untitled-4.png") center top / 100% 100% no-repeat;
+    width: 100%;
+    height: 100vh;
+    font-family: yekan !important;
+}
+
+.video-icon img {
+    width: 50px;
+    height: 50px;
+    left: 70px;
+    top: 12px;
+    border: unset !important;
+    border-radius: unset !important;
+    box-shadow: unset !important;
+    object-fit: unset !important;
+}
+
+.VideoStyle {
+    border: solid #013237 2px;
+    object-fit: cover;
+}
+
+.video-icon {
+    position: absolute;
+    top: 20%;
+    left: 78%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    box-shadow: unset !important;
+}
+
+.Pot-icon {
+    position: absolute;
+    transform: translate(-50%, 0%);
+    z-index: 1;
+    box-shadow: unset !important;
+    margin: 7px 10px 0px 35px;
+}
+
+.VideoIcon {
+    width: 50px; /* اندازه آیکون ویدیو را تنظیم کنید */
+    height: 50px;
+    /* سایر تنظیمات استایل آیکون ویدیو را اضافه کنید */
+    box-shadow: unset !important;
+}
+
+.Poticon {
+    width: 25px !important; /* اندازه آیکون ویدیو را تنظیم کنید */
+    height: 40px !important;
+    /* سایر تنظیمات استایل آیکون ویدیو را اضافه کنید */
+    box-shadow: unset !important;
+    left: 50px !important;
+    top: -5px;
+    border: unset !important;
+    border-radius: unset !important;
+    box-shadow: unset !important;
+    object-fit: unset !important;
+}
+
+.post-image video {
+    position: relative;
+    z-index: 0;
+}
+
+label.labeldark {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 15px 10px 10px -350px;
+}
+
+.darklabel {
+    color: #5cedfb !important;
+}
+
+.darkimg {
+    position: absolute;
+    width: 60px;
+}
+
+.dark-button {
+    background: black !important;
+    background: black !important;
+    border: 0.25em solid transparent !important;
+    background-image: linear-gradient(#000, #000), linear-gradient(120deg, #f09 0%, #0ff 50%, #9f0 100%) !important;
+    background-origin: border-box !important;
+    background-clip: padding-box, border-box !important;
+    background-size: 200% 100% !important;
+    transition: background-position 0.8s ease-out;
+    color: #5cedfb !important;
+}
+
+.dark-rectangle {
+    background-color: #364d6f !important; /* تغییر رنگ rectangle ها در حالت دارک‌مود */
+}
+
+.dark-profile {
+    border: 2px solid #fff; /* مثال: تغییر حاشیه تصویر پروفایل */
+}
+
+.dark-mode {
+    background-color: #2d1d1d !important;
+    color: #5cedfb;
+    background: url("../img/Idoko/1.png") center top / 100% 100% no-repeat;
+}
+
+.Post {
+    /* border: 1px solid #ddd; */
+    /* padding: 15px; */
+    /* text-align: center; */
+}
+
+.letter {
+}
+
+
+.UsernameEx {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -320px 10px 10px 395px;
+    font-size: 14px;
+    font-weight: bold;
+    width: max-content;
+}
+
+
+button, input, text, a, div {
+    font-family: "yekan" !important;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    overflow-y: auto;
+    position: absolute;
+    left: 50%;
+    width: 529px;
+    margin: 100px 10px 10px;
+    transform: translate(-50%, 0%);
+    justify-content: center;
+    height: 75%;
+    max-height: 78%;
+    border: solid #013237 1px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.BackIcon {
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    position: absolute;
+    width: 40px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 45px 0px 0px -275px;
+}
+
+.Search {
+    position: absolute;
+    width: 500px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 47px 10px 10px;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+.Windo {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 330px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    text-wrap: nowrap;
+    color: #013237;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+.Page {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 285px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    text-wrap: nowrap;
+    color: #013237;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+.Food {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 375px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    text-wrap: nowrap;
+    color: #013237;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+.Invite {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 465px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    text-wrap: nowrap;
+    color: #013237;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+.Pet {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 420px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    text-wrap: nowrap;
+    color: #013237;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+.r1 {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: transparent;
+    box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+    border-radius: 30px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -325px 10px 0px 135px;
+    border: solid #013237 2px;
+    object-fit: cover;
+}
+
+.r2 {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: transparent;
+    box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+    border-radius: 30px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -70px 10px 10px 135px;
+    border: solid #013237 2px;
+    object-fit: cover;
+}
+
+.r3 {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: transparent;
+    box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+    border-radius: 30px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -70px 10px 10px 395px;
+    border: solid #013237 2px;
+    object-fit: cover;
+}
+
+.r4 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: transparent;
+    box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+    border-radius: 30px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -290px 10px 10px 395px;
+    border: solid #013237 2px;
+}
+
+.all {
+    position: absolute;
+    margin: 0px 0px 0px 0px;
+}
+
+div, button, input {
+    border-radius: 15px !important;
+    box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+}
+
+@media screen and (max-width: 1279px) {
+    .Background {
+        display: none;
+    }
+
+    * {
+        font-size: 12px !important;
+    }
+
+    body {
+        background: url("../img/Idoko/Untitled-2.png") center top / 100% 100% no-repeat;
+        width: 100%;
+        height: 100vh;
+        font-family: yekan !important;
+    }
+
+    .dark-mode {
+        background-color: #2d1d1d !important;
+        color: darkblue;
+        background: url("../img/Idoko/2.png") center top / 100% 100% no-repeat;
+    }
+
+    .Pot-icon {
+        position: absolute;
+        transform: translate(-50%, 0%);
+        z-index: 1;
+        box-shadow: unset !important;
+        margin: 7px 10px 0px 35px;
+    }
+
+    .UsernameEx {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -305px 10px 10px 295px;
+        font-size: 14px !important;
+        font-weight: bold;
+        width: max-content;
+    }
+
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1.15fr);
+        gap: 10px;
+        max-height: 89%;
+        width: 560px;
+        height: 85%;
+        overflow-y: auto;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 75px 10px 10px 0px;
+    }
+
+    .Search {
+        position: absolute;
+        width: 500px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 18px 10px 10px 0px;
+        text-align: center;
+        border: none;
+        font-size: 14px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        font-size: 30px;
+        position: absolute;
+        width: 40px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 15px 10px 10px -275px;
+    }
+
+    .Windo {
+        position: fixed;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px !important;
+        border-radius: 15px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 110px;
+        border: none;
+        font-size: 14px;
+        bottom: 5px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Page {
+        position: fixed;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px !important;
+        border-radius: 15px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 220px;
+        border: none;
+        font-size: 14px;
+        bottom: 5px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Food {
+        position: fixed;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px !important;
+        border-radius: 15px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 0px;
+        border: none;
+        font-size: 14px;
+        bottom: 5px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Invite {
+        position: fixed;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px !important;
+        border-radius: 15px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px -220px;
+        border: none;
+        font-size: 14px;
+        bottom: 5px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Pet {
+        position: fixed;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px !important;
+        border-radius: 15px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px -110px;
+        border: none;
+        font-size: 14px;
+        bottom: 5px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .r1 {
+        position: absolute;
+        width: 220px;
+        height: 220px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 20px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -210px 10px 10px 35px;
+    }
+
+    .r2 {
+        position: absolute;
+        width: 220px;
+        height: 220px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 20px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 30px 10px 10px 35px;
+    }
+
+    .r3 {
+        position: absolute;
+        width: 220px;
+        height: 220px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 20px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 30px 10px 10px 295px;
+    }
+
+    .r4 {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 20px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -275px 10px 10px 295px;
+    }
+
+    div, button, input {
+        border-radius: 15px !important;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Background {
+        display: none;
+    }
+
+    body {
+        background: url("../img/Idoko/Untitled-1.png") center top / 100% 100% no-repeat;
+        width: 100%;
+        height: 100vh;
+        font-family: yekan !important;
+    }
+
+    * {
+        font-size: 10px !important;
+    }
+
+    .video-icon img {
+        width: 50px;
+        height: 50px;
+        left: 35px;
+        top: 5px;
+        border: unset !important;
+        border-radius: unset !important;
+        box-shadow: unset !important;
+        object-fit: unset !important;
+    }
+
+    .Pot-icon {
+        position: absolute;
+        transform: translate(-50%, 0%);
+        z-index: 1;
+        box-shadow: unset !important;
+        margin: 3px 10px 0px 0px;
+    }
+
+    .dark-mode {
+        background-color: #2d1d1d !important;
+        color: darkblue;
+        background: url("../img/Idoko/3.png") center top / 100% 100% no-repeat;
+    }
+
+
+    .UsernameEx {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 15px 10px 10px 160px;
+        font-size: 12px !important;
+        font-weight: bold;
+        width: max-content;
+    }
+
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        font-size: 30px;
+        position: absolute;
+        width: 30px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px -160px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 0.15fr);
+        gap: 10px;
+        max-height: 85%;
+        width: 345px;
+        height: 83%;
+        overflow-y: auto;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 55px 10px 10px 0px;
+    }
+
+    .Search {
+        position: absolute;
+        width: 280px;
+        height: 30px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px 0px;
+        text-align: center;
+        border: none;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Windo {
+        position: fixed;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px !important;
+        border-radius: 15px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 65px;
+        bottom: 5px;
+        border: none;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Page {
+        position: fixed;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px !important;
+        border-radius: 15px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 130px;
+        border: none;
+        bottom: 5px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Food {
+        position: fixed;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px !important;
+        border-radius: 15px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 0px;
+        border: none;
+        bottom: 5px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Invite {
+        position: fixed;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px !important;
+        border-radius: 15px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px -130px;
+        border: none;
+        bottom: 5px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Pet {
+        position: fixed;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px !important;
+        border-radius: 15px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px -65px;
+        border: none;
+        bottom: 5px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .r1 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 115px 10px 10px -5px;
+        border-radius: 15px;
+    }
+
+    .r2 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 275px 10px 10px -5px;
+    }
+
+    .r3 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 275px 10px 10px 160px;
+    }
+
+    .r4 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 35px 10px 10px 160px;
+    }
+
+
+
+    div, button, input {
+        border-radius: 15px !important;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+    }
+}

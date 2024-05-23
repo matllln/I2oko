@@ -1,0 +1,601 @@
+﻿@model I2oko.Models.CommentModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../Content/img/Idoko/favicon.ico">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.rtl.min.css"
+          integrity="sha384-beJoAY4VI2Q+5IPXjI207/ntOuaz06QYCdpWfWRv4lSFDyUSqsM0W+wiAMr2I185" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="../Content/style/show post style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.3.4/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+    @Html.ActionLink("پنجره باز", "Window", "Idoko", new { @class = "Windo hover-grow" })
+    @Html.ActionLink("صفحه من", "Proofile", "Idoko", new { @class = "Page hover-grow" })
+    @Html.ActionLink("خوشمزه ها", "Delicious", "Idoko", new { @class = "Food hover-grow" })
+    @Html.ActionLink("چه خبرا؟", "News", "Idoko", new { @class = "Invite hover-grow" })
+    @Html.ActionLink("حیوانات خانگی", "Pet", "Idoko", new { @class = "Pet hover-grow" })
+    <!-- -------------------------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------------------------- -->
+
+    <img class="rectangle r1" src="@Session["UserPicturePost"]">
+    <img class="rectangle r2" src="@Session["ImagePathPost"]" alt="Selected Image">
+    <div class="w3-container">
+        <!-- بررسی نوع فایل -->
+        @if (Session["ImagePathPost"] != null && (Path.GetExtension(Session["ImagePathPost"].ToString()).ToLower() == ".jpg" || Path.GetExtension(Session["ImagePathPost"].ToString()).ToLower() == ".png"))
+        {
+            <!-- اگر عکس باشد -->
+            <img class="rectangle r2" alt="Selected Image" src="@Session["ImagePathPost"]" style="cursor:zoom-in" onclick="openModall()">
+        }
+        else if (HttpContext.Current.Session["ImagePathPost"] != null && (Path.GetExtension(HttpContext.Current.Session["ImagePathPost"].ToString()).ToLower() == ".mp4" || Path.GetExtension(HttpContext.Current.Session["ImagePathPost"].ToString()).ToLower() == ".avi"))
+        {
+            <div>
+                <video class="rectangle r2" onclick="openModall()">
+                    <source src="@Session["ImagePathPost"]" type="video/mp4">
+                    <!-- اگر نوع ویدیو دیگری دارید، متناسب با آن عنصر <source> را تنظیم کنید -->
+                    Your browser does not support the video tag.
+                </video>
+                <img class="VideoIcon" src="~/Content/img/Idoko/video.svg" onclick="openModall()" />
+            </div>
+
+            <!-- اگر ویدیو باشد -->
+
+        }
+
+        <!-- مدال -->
+        <div id="modal01" class="w3-modal" onclick="closeModall()">
+            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+            <div class="w3-modal-content w3-animate-zoom">
+                <!-- تصویر یا ویدیو در مدال -->
+                @if (Session["ImagePathPost"] != null && (Path.GetExtension(Session["ImagePathPost"].ToString()).ToLower() == ".jpg" || Path.GetExtension(Session["ImagePathPost"].ToString()).ToLower() == ".png"))
+                {
+                    <img class="ImgModal" src="@Session["ImagePathPost"]" style="width: 400px;height: 400px;">
+                }
+                else if (Session["ImagePathPost"] != null && (Path.GetExtension(Session["ImagePathPost"].ToString()).ToLower() == ".mp4" || Path.GetExtension(Session["ImagePathPost"].ToString()).ToLower() == ".avi"))
+                {
+                    <video id="videoPlayer" controls class="ImgModal" style="width: 400px;height: 400px;">
+                        <source src="@Session["ImagePathPost"]" type="video/mp4">
+                        <!-- اگر نوع ویدیو دیگری دارید، متناسب با آن عنصر <source> را تنظیم کنید -->
+                        Your browser does not support the video tag.
+                    </video>
+                }
+            </div>
+        </div>
+    </div>
+
+    <pre class="rectangle Caption">@Html.Raw(ViewBag.TextPost)</pre>
+
+    <button id="Report" class="RepIcon">گزارش ایراد</button>
+
+    @if (ViewBag.UserNameLoginPost == ViewBag.UsernamePost)
+    {
+        <form action="/Home/PostToRemove" method="post">
+            <img src="~/Content/img/Idoko/Delete Post.svg" class="RemovePost" />
+            <p class="RemovePostText">حذف پست</p>
+            <input type="hidden" name="PostID" id="PostID" value="@ViewBag.PostID" />
+            <button class="RemovePost" type="submit"></button>
+        </form>
+    }
+
+
+
+    @if (ViewBag.PostIsSaveModel != "True")
+    {
+        <form action="/Home/FavoriteToAdd" method="post">
+            <input type="hidden" name="PostIDSave" value="@ViewBag.PostID" />
+            <button id="Save" type="submit">دوستش دارم</button>
+        </form>
+    }
+    else
+    {
+        <form action="/Home/FavoriteToRemove" method="post">
+            <input type="hidden" name="PostIDSave" value="@ViewBag.PostID" />
+            <button id="UnSave" type="submit">دوستش ندارم</button>
+        </form>
+    }
+
+
+    @if (ViewBag.PostIsLikeModel != "True")
+    {
+        <form action="/Home/LikeToAdd" method="post">
+            <input type="hidden" name="PostIDLike" value="@ViewBag.PostID" />
+            <img class="LikePost" src="~/Content/img/Idoko/like.svg">
+            <button class="LikePostButton" id="PostIDLike" type="submit"></button>
+        </form>
+    }
+    else
+    {
+        <form action="/Home/LikeToRemove" method="post">
+            <input type="hidden" name="PostIDLike" value="@ViewBag.PostID" />
+            <img class="LikePost" src="~/Content/img/Idoko/unlike.svg">
+            <button class="LikePostButton" id="PostIDUnLike" type="submit"></button>
+        </form>
+    }
+
+
+    <label class="LikeTxt">@ViewBag.PostLikeNumber</label>
+    <img class="View" src="~/Content/img/Idoko/view.svg">
+    <label class="ViewTxt">@ViewBag.ViewPostNumber</label>
+    <label class="CountCommentTxt">@ViewBag.CommentNumber</label>
+    <img class="CountComment" onclick="openModal()" src="~/Content/img/Idoko/comment.svg">
+    <div onclick="history.back()">
+        <img class="BackIcon" src="../Content/img/Idoko/back.png" alt="">
+    </div>
+    <label class="Username">@ViewBag.UsernamePost</label>
+    <div class="overlay" id="overlay"></div>
+
+    <div id="myModal" class="modal">
+        <div class="modall" id="modalContent">
+            <div class="grid-Comment" id="grid">
+                <section class="Comment-list" id="section">
+                    @if (ViewBag.Comments != null)
+                    {
+                        foreach (var comment in ViewBag.Comments)
+                        {
+                            <div class="AllComment" id="Text" comment-id="@comment.ID">
+                                <a href="@Url.Action("ShowProfile", "Home", new { userName = comment.FromUserName })">
+                                    <img class="rectangle r3" src="@comment.UserCommentPicture" />
+                                </a>
+                                <pre class="rectangle Comment">@comment.CommentText</pre>
+
+                                @if (ViewBag.UserNameLoginPost == ViewBag.UsernamePost)
+                                {
+                                    <form action="/Home/PostToRemove" method="post" id="Delete">
+                                        <img src="~/Content/img/Idoko/Delete Post.svg" class="DeleteButton" />
+                                        <input type="hidden" name="CommentDeletePostID" id="CommentDeletePostID" value="@comment.ID" />
+                                        <button class="DeleteButton" id="DeleteBtn" type="submit"></button>
+                                    </form>
+                                }
+
+                                <label class="Username2">@comment.FromUserName</label>
+                                <div class="LikeNumber">@comment.CommentPostLikeNumber</div>
+
+                                @if (!comment.CommentPostLike)
+                                {
+                                    <form action="/Home/LikeToAdd" method="post">
+                                        <input type="hidden" name="CommentPostID" value="@comment.ID" />
+                                        <img class="buttonLike" id="CommentLikeImg" src="~/Content/img/Idoko/Commentlike.svg">
+                                        <button class="buttonLike" id="CommentLike" type="submit"></button>
+                                    </form>
+                                }
+                                else
+                                {
+                                    <form action="/Home/LikeToRemove" method="post">
+                                        <input type="hidden" name="CommentPostID" value="@comment.ID" />
+                                        <img class="buttonLike" id="CommentUnLikeImg" src="~/Content/img/Idoko/Commentunlike.svg">
+                                        <button class="buttonLike" id="CommentUnLike" type="submit"></button>
+                                    </form>
+                                }
+                            </div>
+                        }
+                    }
+
+                </section>
+            </div>
+
+            <form action="/Home/ShowPost" method="post" id="commentForm">
+                <div class="container">
+                    <div class="input-group">
+                        <label class="input-group__label" for="myInput">@ViewBag.UserNameLoginPost</label>
+                        @Html.TextAreaFor(x => x.CommentText, new { @class = "input-group__input" })
+                        <img class="Commentprofile" src="@Session["UserLoginPicture"]" />
+                    </div>
+                </div>
+                <span class="close" onclick="closeModal()">&times;</span>
+                <input type="hidden" name="CommentToPostID" value="@ViewBag.PostID" />
+                <button class="Send btn-secondary hover-grow" type="submit">ارسال</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+        $(document).ready(function () {
+            // اگر محتوای تکست‌باکس تغییر کند
+            $('#commentForm textarea').on('input', function () {
+                // اگر محتوای تکست‌باکس خالی باشد
+                if ($(this).val().trim() === '') {
+                    // غیرفعال کردن دکمه ارسال
+                    $('#commentForm .Send').prop('disabled', true);
+                } else {
+                    // فعال کردن دکمه ارسال
+                    $('#commentForm .Send').prop('disabled', false);
+                }
+            });
+
+            // در ابتدا دکمه ارسال غیرفعال باشد
+            $('#commentForm .Send').prop('disabled', true);
+
+            // زمانی که دکمه ارسال کلیک شود
+            $('#commentForm .Send').click(function (event) {
+                // اگر محتوای تکست‌باکس خالی باشد
+                if ($('#commentForm textarea').val().trim() === '') {
+                    // جلوگیری از ارسال فرم
+                    event.preventDefault();
+                    alert(' میخوای هیچی رو بفرستی؟ نمیشه که ');
+                }
+            });
+        });
+
+
+        $(document).ready(function () {
+            $('#commentForm').submit(function (event) {
+                // جلوگیری از ارسال فرم
+                event.preventDefault();
+
+                // گرفتن اطلاعات فرم
+                var formData = $(this).serialize();
+
+                // ارسال درخواست Ajax برای اضافه کردن کامنت
+                $.ajax({
+                    type: 'POST',
+                    url: '/Home/ShowPost', // مسیر اکشن کنترلر برای اضافه کردن کامنت
+                    data: formData,
+                    success: function (response) {
+                        var commentHtml = '<div class="AllComment" id="Text" comment-id="' + response.Comment.ID + '">' +
+                            '<a href="/Home/ShowProfile?userName=' + response.Comment.FromUserName + '">' +
+                            '<img class="rectangle r3" src="' + response.Comment.UserCommentPicture + '" />' +
+                            '</a>' +
+                            '<label class="Username2">' + response.Comment.FromUserName + '</label>' +
+                            '<pre class="rectangle Comment">' + response.Comment.CommentText + '</pre>';
+
+                        // اضافه کردن فرم حذف کامنت به HTML کامنت جدید
+                        // این فرم فقط در صورتی که کاربر صاحب کامنت باشد، اضافه می‌شود
+                        if (response.Comment.FromUserName == response.UserNameOwnerPost) {
+                            commentHtml += '<form class="delete-form" action="/Home/PostToRemove" method="post" id="Delete">' +
+                                '<img src="/Content/img/Idoko/Delete Post.svg" class="DeleteButton" />' +
+                                '<input type="hidden" name="CommentDeletePostID" id="CommentDeletePostID" value="' + response.Comment.ID + '" />' +
+                                '<button class="DeleteButton" id="DeleteBtn" type="submit"></button>' +
+                                '</form>';
+                        }
+
+                        commentHtml +=
+                            '<img class="buttonLike" id="CommentLikeImg" src="/Content/img/Idoko/Commentlike.svg">' +
+                            '<input type="hidden" name="CommentPostID" value="' + response.Comment.ID + '" />' +
+                            '<button class="buttonLike" id="CommentLike" type="submit"></button>';
+
+                        commentHtml += '<div class="LikeNumber">' + response.Comment.CommentPostLikeNumber + '</div>';
+
+                        commentHtml += '</div>';
+
+                        // اضافه کردن HTML کامنت جدید به گرید
+                        $('#grid .Comment-list').prepend(commentHtml);
+                        $('#commentForm textarea').val('');
+                        // مقدار فعلی تعداد کامنت‌ها
+                        var currentCommentNumber = parseInt($('.CountCommentTxt').text());
+
+                        // اگر مقداری که بدست آوردیم یک عدد معتبر نبود، مقدار آن را صفر قرار دهید
+                        if (isNaN(currentCommentNumber)) {
+                            currentCommentNumber = 0;
+                        }
+
+                        // افزودن یک واحد به تعداد کامنت‌ها
+                        var newCommentNumber = currentCommentNumber + 1;
+
+                        // نمایش تعداد کامنت‌های جدید
+                        $('.CountCommentTxt').text(newCommentNumber);
+                    },
+
+                    error: function (xhr, status, error) {
+                        // در صورت بروز خطا، نمایش پیغام خطا به کاربر
+                    }
+                });
+            });
+
+            $(document).on('click', '#CommentLike', function (e) {
+                e.preventDefault();
+                var commentId = $(this).siblings('input[name="CommentPostID"]').val();
+                $.ajax({
+                    type: 'POST',
+                    url: '/Home/LikeToAdd',
+                    data: { CommentPostID: commentId },
+                    success: function (response) {
+                        var commentListSelector = '.AllComment[comment-id="' + commentId + '"]';
+                        $(commentListSelector).find('.buttonLike').attr('src', '/Content/img/Idoko/Commentunlike.svg');
+                        $(commentListSelector).find('#CommentLike').prop('id', 'CommentUnLike');
+                        // افزایش تعداد لایک‌ها
+                        var likeNumberElement = $(commentListSelector).find('.LikeNumber');
+                        var currentLikes = parseInt(likeNumberElement.text());
+                        likeNumberElement.text(currentLikes + 1);
+
+                        console.log(response.Comment.ID);
+                    },
+                });
+            });
+
+            $(document).on('click', '#CommentUnLike', function (e) {
+                e.preventDefault();
+                var commentId = $(this).siblings('input[name="CommentPostID"]').val();
+                $.ajax({
+                    type: 'POST',
+                    url: '/Home/LikeToRemove',
+                    data: { CommentPostID: commentId },
+                    success: function (response) {
+                        var commentListSelector = '.AllComment[comment-id="' + commentId + '"]';
+                        $(commentListSelector).find('.buttonLike').attr('src', '/Content/img/Idoko/Commentlike.svg');
+                        $(commentListSelector).find('#CommentUnLike').prop('id', 'CommentLike');
+                        // افزایش تعداد لایک‌ها
+                        var likeNumberElement = $(commentListSelector).find('.LikeNumber');
+                        var currentLikes = parseInt(likeNumberElement.text());
+                        likeNumberElement.text(currentLikes - 1);
+                        console.log(response.Comment.ID);
+                    },
+                });
+            });
+
+            $(document).on('click', '.DeleteButton', function (e) {
+                e.preventDefault();
+
+                var commentId = $(this).siblings('input[name="CommentDeletePostID"]').val();
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/Home/PostToRemove', // مسیر اکشن کنترلر برای حذف کامنت
+                    data: { CommentDeletePostID: commentId },
+                    success: function (response) {
+                        var commentListSelector = '.AllComment[comment-id="' + commentId + '"]';
+                        $(commentListSelector).remove();
+                        // مقدار فعلی تعداد کامنت‌ها
+                        var currentCommentNumber = parseInt($('.CountCommentTxt').text());
+
+                        // اگر مقداری که بدست آوردیم یک عدد معتبر نبود، مقدار آن را صفر قرار دهید
+                        if (isNaN(currentCommentNumber)) {
+                            currentCommentNumber = 0;
+                        }
+
+                        // افزودن یک واحد به تعداد کامنت‌ها
+                        var newCommentNumber = currentCommentNumber - 1;
+
+                        // نمایش تعداد کامنت‌های جدید
+                        $('.CountCommentTxt').text(newCommentNumber);
+                    },
+                    error: function (xhr, status, error) {
+                        // در صورت بروز خطا، نمایش پیغام خطا به کاربر
+                    }
+                });
+            });
+
+        });
+    </script>
+
+    <script>
+        $(document).on('click', '#PostIDLike', function (e) {
+            e.preventDefault();
+            var PostId = $(this).siblings('input[name="PostIDLike"]').val();
+            $.ajax({
+                type: 'POST',
+                url: '/Home/LikeToAdd',
+                data: { PostIDLike: PostId },
+                success: function (response) {
+                    // تغییر تصویر و شناسه دکمه
+                    var likeButton = $(e.target).closest('form');
+                    likeButton.find('.LikePost').attr('src', '/Content/img/Idoko/unlike.svg');
+                    likeButton.find('#PostIDLike').prop('id', 'PostIDUnLike');
+
+                    // بروزرسانی تعداد لایک‌ها
+                    var currentLikeNumber = parseInt($('.LikeTxt').text());
+                    if (isNaN(currentLikeNumber)) {
+                        currentLikeNumber = 0;
+                    }
+                    var newLikeNumber = currentLikeNumber + 1;
+                    $('.LikeTxt').text(newLikeNumber);
+
+                    console.log(response);
+                },
+            });
+        });
+
+
+        $(document).on('click', '#PostIDUnLike', function (e) {
+            e.preventDefault();
+            var PostId = $(this).siblings('input[name="PostIDLike"]').val();
+            $.ajax({
+                type: 'POST',
+                url: '/Home/LikeToRemove',
+                data: { PostIDLike: PostId },
+                success: function (response) {
+                    // تغییر تصویر و شناسه دکمه
+                    var likeButton = $(e.target).closest('form');
+                    likeButton.find('.LikePost').attr('src', '/Content/img/Idoko/like.svg');
+                    likeButton.find('#PostIDUnLike').prop('id', 'PostIDLike');
+
+                    // بروزرسانی تعداد لایک‌ها
+                    var currentLikeNumber = parseInt($('.LikeTxt').text());
+                    if (isNaN(currentLikeNumber)) {
+                        currentLikeNumber = 0;
+                    }
+                    var newLikeNumber = currentLikeNumber - 1;
+                    $('.LikeTxt').text(newLikeNumber);
+
+                    console.log(response);
+                },
+            });
+        });
+
+    </script>
+
+    <script>
+        $(document).on('click', '#Save', function (e) {
+            e.preventDefault();
+            var PostId = $(this).siblings('input[name="PostIDSave"]').val();
+            $.ajax({
+                type: 'POST',
+                url: '/Home/FavoriteToAdd',
+                data: { PostIDSave: PostId },
+                success: function (response) {
+                    // تغییر متن و شناسه دکمه
+                    var saveButton = $(e.target);
+                    saveButton.prop('id', 'UnSave');
+                    saveButton.text('دوستش ندارم');
+
+                    console.log(response);
+                },
+            });
+        });
+
+        $(document).on('click', '#UnSave', function (e) {
+            e.preventDefault();
+            var PostId = $(this).siblings('input[name="PostIDSave"]').val();
+            $.ajax({
+                type: 'POST',
+                url: '/Home/FavoriteToRemove',
+                data: { PostIDSave: PostId },
+                success: function (response) {
+                    // تغییر متن و شناسه دکمه
+                    var saveButton = $(e.target);
+                    saveButton.prop('id', 'Save');
+                    saveButton.text('دوستش دارم');
+
+                    console.log(response);
+                },
+            });
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var modal = document.getElementById('modal01');
+            var video = document.getElementById('videoPlayer');
+            var closeButton = document.querySelector('.w3-button');
+
+            closeButton.addEventListener('click', function () {
+                closeModalAndPauseVideo();
+            });
+
+            modal.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    closeModalAndPauseVideo();
+                }
+            });
+
+            function closeModalAndPauseVideo() {
+                modal.style.display = 'none';
+                if (!video.paused) {
+                    video.pause();
+                }
+            }
+        });
+    </script>
+
+    <script>
+        function openModall() {
+            document.getElementById('modal01').style.display = 'block';
+        }
+
+        function closeModall() {
+            document.getElementById('modal01').style.display = 'none';
+        }
+    </script>
+    <script>
+        // Function to open the modal and overlay
+        function openModal() {
+            // Get the modal element
+            var modal = document.getElementById('myModal');
+
+            // Get the overlay element
+            var overlay = document.getElementById('overlay');
+
+            // Display the modal and overlay
+            modal.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+
+        // Function to close the modal and overlay
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        // Close the modal and overlay if the user clicks outside the modal content
+        window.onclick = function (event) {
+            var modal = document.getElementById('myModal');
+            var overlay = document.getElementById('overlay');
+            if (event.target == overlay) {
+                modal.style.display = 'none';
+                overlay.style.display = 'none';
+            }
+        }
+
+    </script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            loadDarkModeState();
+        });
+
+        // تعریف توابع مربوط به ذخیره و بازیابی وضعیت دارک مود
+        function saveDarkModeState() {
+            var darkModeState = {
+                "dark-mode": document.body.classList.contains("dark-mode"),
+                "dark-buttons": document.querySelector(".hover-grow").classList.contains("dark-button"),
+                "dark-profile": document.querySelector(".Profile").classList.contains("dark-profile"),
+                "dark-rectangles": document.querySelector(".rectangle").classList.contains("dark-rectangle"),
+                "label-darklabel": document.querySelector("label").classList.contains("darklabel"),
+                "a-darklabel": document.querySelector("a").classList.contains("darklabel")
+            };
+
+            localStorage.setItem("dark-mode-state", JSON.stringify(darkModeState));
+        }
+
+        function loadDarkModeState() {
+            var darkModeState = JSON.parse(localStorage.getItem("dark-mode-state")) || {};
+
+            if (darkModeState["dark-mode"]) {
+                document.body.classList.add("dark-mode");
+            }
+
+            var buttons = document.querySelectorAll(".hover-grow");
+            buttons.forEach(button => {
+                if (darkModeState["dark-buttons"]) {
+                    button.classList.add("dark-button");
+                }
+            });
+
+            //if (darkModeState["dark-profile"]) {
+            //    document.querySelector(".Profile").classList.add("dark-profile");
+            //}
+
+            var rectangles = document.querySelectorAll(".rectangle");
+            rectangles.forEach(rectangle => {
+                if (darkModeState["dark-rectangles"]) {
+                    rectangle.classList.add("dark-rectangle");
+                }
+            });
+
+            // تغییر بک‌گراند .darkimg در حالت دارک مود
+            var darkMode = document.body.classList.contains("dark-mode");
+            var darkImg = document.querySelector(".darkimg");
+            // بازنشانی کلاس darklabel به لیبل و تگ a در حالت دارک مود
+            var labels = document.querySelectorAll("label,a");
+            labels.forEach(label => {
+                if (darkModeState["label-darklabel"] || darkModeState["a-darklabel"]) {
+                    label.classList.add("darklabel");
+                } else {
+                    label.classList.remove("darklabel");
+                }
+            });
+
+        }
+    </script>
+
+</body>
+</html>

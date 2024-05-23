@@ -1,0 +1,219 @@
+﻿@model I2oko.Models.PostModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../Content/img/Idoko/favicon.ico">
+
+    <link rel="stylesheet" href="../Content/style/window style.css">
+    <link rel="stylesheet" href="../Content/style/window style2.css">
+
+
+    <link rel="stylesheet" href="~/Content/recomand/all.css">
+    <link rel="stylesheet" href="~/Content/recomand/reset.min.css">
+
+    <link rel="stylesheet" href="~/Content/recomand/bootstrap.rtl.min.css"
+          integrity="sha384-beJoAY4VI2Q+5IPXjI207/ntOuaz06QYCdpWfWRv4lSFDyUSqsM0W+wiAMr2I185" crossorigin="anonymous">
+    <script src="~/Content/recomand/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"></script>
+    <script defer src="~/Content/recomand/cdn.min.js"></script>
+    <link href='~/Content/recomand/parsinee.css' rel='stylesheet'>
+    <link rel='stylesheet' href='~/Content/recomand/profile/bootstrap.min.css'>
+</head>
+<body>
+
+    @Html.ActionLink("پنجره باز", "Window", "Idoko", new { @class = "Windo hover-grow" })
+    @Html.ActionLink("صفحه من", "Proofile", "Idoko", new { @class = "Page hover-grow" })
+    @Html.ActionLink("خوشمزه ها", "Delicious", "Idoko", new { @class = "Food hover-grow" })
+    @Html.ActionLink("چه خبرا؟", "News", "Idoko", new { @class = "Invite hover-grow" })
+    @Html.ActionLink("حیوانات خانگی", "Pet", "Idoko", new { @class = "Pet hover-grow" })
+    <!-- -------------------------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------------------------- -->
+
+    @using (Html.BeginForm("Window", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="grid-container">
+            <section class="Post-list">
+                @foreach (var user in ViewBag.AllUser)
+                {
+                <div class="Post">
+                    @for (int i = 0; i < 3; i++)
+                    {
+                        if (user.LastThreePosts.Count > i)
+                        {
+                            var post = user.LastThreePosts[i];
+                            string actionName;
+                            object routeValues;
+                            if (!string.IsNullOrEmpty(post.MediaURL))
+                            {
+                                actionName = "ShowPost";
+                                routeValues = new
+                                {
+                                    PostID = post.PostID,
+                                };
+                            }
+                            else if (!string.IsNullOrEmpty(post.PictureURL))
+                            {
+                                actionName = "ShowPostRecipe";
+                                routeValues = new
+                                {
+                                    FoodID = post.FoodID,
+                                };
+                            }
+                            else
+                            {
+                                continue;
+                            }
+
+                    <a href='@Url.Action(actionName, "Home", routeValues)' class="Post">
+                        @if (!string.IsNullOrEmpty(post.PictureURL) && (post.PictureURL.EndsWith(".jpg") || post.PictureURL.EndsWith(".jpeg") || post.PictureURL.EndsWith(".png")))
+                        {
+                            <figure class="">
+                                <div class="Pot-icon">
+                                    <img class="Poticon  r@(i + 1)  " src="~/Content/img/Idoko/pot.svg" />
+                                </div>
+                                <img class="r@(i + 1)" src="@post.PictureURL" alt="User Post Image">
+                            </figure>
+
+                        }
+                        else if (!string.IsNullOrEmpty(post.MediaURL) && post.MediaURL.EndsWith(".mp4"))
+                        {
+                            <figure class="">
+                                <div class="video-icon">
+                                    <img class="VideoIcon VideoStyle r@(i + 1)" src="~/Content/img/Idoko/video.svg" />
+                                </div>
+                                <video class="VideoStyle r@(i + 1)">
+                                    <source src="@post.MediaURL" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </figure>
+
+                        }
+                        else if (!string.IsNullOrEmpty(post.MediaURL) && (post.MediaURL.EndsWith(".jpg") || post.MediaURL.EndsWith(".jpeg") || post.MediaURL.EndsWith(".png")))
+                        {
+                            <img class="r@(i + 1)" src="@post.MediaURL" alt="User Post Image">
+
+                        }
+                    </a>
+                        }
+                    }
+                    <img class="r4" src="@user.PicturePath" onclick="window.location.href='@Url.Action("ShowProfile", "Home", new { userName = user.UserName })'" />
+                    <label for="" class="UsernameEx">@user.UserName</label>
+
+                    <div class="letter"></div>
+                    <hr />
+                </div>
+                }
+            </section>
+        </div>
+
+    }
+        <button class="Search  hover-grow">جستجو کن</button>
+
+        <div onclick="window.location.href='/Home/Proofile'">
+            <img class="BackIcon" src="../Content/img/Idoko/back.png" alt="">
+        </div>
+        <script src='~/Content/recomand/profile/jquery.min.js'></script>
+
+        <script>
+            function myFunction() {
+                var element = document.body;
+                element.classList.toggle("dark-mode");
+
+                // تغییر رنگ باتن‌ها
+                var buttons = document.querySelectorAll(".hover-grow");
+                buttons.forEach(button => button.classList.toggle("dark-button"));
+
+                // تغییر رنگ تصویر پروفایل
+                var profileImg = document.querySelector(".Profile");
+                profileImg.classList.toggle("dark-profile");
+
+                // تغییر رنگ rectangle ها
+                var rectangles = document.querySelectorAll(".rectangle");
+                rectangles.forEach(rectangle => rectangle.classList.toggle("dark-rectangle"));
+
+                // افزودن کلاس darklabel به لیبل و تگ a در حالت دارک مود
+                var labels = document.querySelectorAll("label,a");
+                labels.forEach(label => label.classList.toggle("darklabel"));
+
+                // ذخیره تمام تغییرات در Local Storage
+                saveDarkModeState();
+            }
+
+            // درخواست اطلاعات از Local Storage در هنگام بارگذاری صفحه
+            document.addEventListener('DOMContentLoaded', function () {
+                loadDarkModeState();
+            });
+
+            // تعریف توابع مربوط به ذخیره و بازیابی وضعیت دارک مود
+            function saveDarkModeState() {
+                var darkModeState = {
+                    "dark-mode": document.body.classList.contains("dark-mode"),
+                    "dark-buttons": document.querySelector(".hover-grow").classList.contains("dark-button"),
+                    "dark-profile": document.querySelector(".Profile").classList.contains("dark-profile"),
+                    "dark-rectangles": document.querySelector(".rectangle").classList.contains("dark-rectangle"),
+                    "label-darklabel": document.querySelector("label").classList.contains("darklabel"),
+                    "a-darklabel": document.querySelector("a").classList.contains("darklabel")
+
+
+                };
+
+                localStorage.setItem("dark-mode-state", JSON.stringify(darkModeState));
+            }
+
+            function loadDarkModeState() {
+                var darkModeState = JSON.parse(localStorage.getItem("dark-mode-state")) || {};
+
+                if (darkModeState["dark-mode"]) {
+                    document.body.classList.add("dark-mode");
+                }
+
+                var buttons = document.querySelectorAll(".hover-grow");
+                buttons.forEach(button => {
+                    if (darkModeState["dark-buttons"]) {
+                        button.classList.add("dark-button");
+                    }
+                });
+
+                if (darkModeState["dark-profile"]) {
+                    document.querySelector(".Profile").classList.add("dark-profile");
+                }
+
+                var rectangles = document.querySelectorAll(".rectangle");
+                rectangles.forEach(rectangle => {
+                    if (darkModeState["dark-rectangles"]) {
+                        rectangle.classList.add("dark-rectangle");
+                    }
+                });
+
+                // تغییر بک‌گراند .darkimg در حالت دارک مود
+                var darkMode = document.body.classList.contains("dark-mode");
+                var darkImg = document.querySelector(".darkimg");
+
+                darkImg.style.background = darkMode ? "teal" : "";
+
+                // بازنشانی کلاس darklabel به لیبل و تگ a در حالت دارک مود
+                var labels = document.querySelectorAll("label,a");
+                labels.forEach(label => {
+                    if (darkModeState["label-darklabel"] || darkModeState["a-darklabel"]) {
+                        label.classList.add("darklabel");
+                    } else {
+                        label.classList.remove("darklabel");
+                    }
+                });
+            }
+        </script>
+
+
+
+
+    </body>
+</html>

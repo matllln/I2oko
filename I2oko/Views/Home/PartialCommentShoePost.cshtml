@@ -1,0 +1,76 @@
+﻿@model I2oko.Models.CommentModel
+
+
+
+
+@using (Html.BeginForm("ShowPost", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    <div id="myModal" class="modal">
+        <div class="" id="modalContent">
+            <div class="grid-Comment" id="grid">
+                <section class="Comment-list">
+                    @if (ViewBag.Comments != null)
+                    {
+                        foreach (var comment in ViewBag.Comments)
+                        {
+                            <div class="AllComment">
+                                <a href="@Url.Action("ShowProfile", "Home", new { userName = comment.FromUserName })">
+                                    <img class="rectangle r3" src="@comment.UserCommentPicture" />
+                                </a>
+                                <pre class="rectangle Comment">@comment.CommentText</pre>
+
+                                @if (ViewBag.UserNameLoginPost == ViewBag.UsernamePost)
+                                {
+                                    <form action="/Home/PostToRemove" method="post">
+                                        <img src="~/Content/img/Idoko/Delete Post.svg" class="DeleteButton" />
+                                        <input type="hidden" name="CommentDeletePostID" id="CommentDeletePostID" value="@comment.ID" />
+                                        <button class="DeleteButton" type="submit"></button>
+                                    </form>
+                                }
+
+                                <label class="Username2">@comment.FromUserName</label>
+                                <div class="LikeNumber">@comment.CommentPostLikeNumber</div>
+
+                                @if (!comment.CommentPostLike)
+                                {
+                                    <form action="/Home/LikeToAdd" method="post">
+                                        <input type="hidden" name="CommentPostID" id="CommentPostID" value="@comment.ID" />
+                                        <label class="LkeComment" for="CommentLike">
+                                            <img class="LkeComment" src="~/Content/img/Idoko/Commentlike.svg">
+                                        </label>
+                                        <button class="buttonLike" id="CommentLike" type="submit"></button>
+                                    </form>
+                                }
+                                else
+                                {
+                                    <form action="/Home/LikeToRemove" method="post">
+                                        <input type="hidden" name="CommentPostID" id="CommentPostID" value="@comment.ID" />
+                                        <label class="LkeComment" for="CommentUnLike">
+                                            <img class="LkeComment" type="submit" src="~/Content/img/Idoko/Commentunlike.svg">
+                                        </label>
+                                        <button class="buttonLike" id="CommentUnLike" type="submit"></button>
+                                    </form>
+                                }
+                            </div>
+                        }
+                    }
+
+                </section>
+            </div>
+
+            <form action="/Home/ShowPost" method="post">
+                <div class="container">
+                    <div class="input-group">
+                        <label class="input-group__label" for="myInput">@ViewBag.UserNameLoginPost</label>
+                        @Html.TextAreaFor(x => x.CommentText, new { @class = "input-group__input" })
+                        <img class="Commentprofile" src="@Session["UserLoginPicture"]" />
+                    </div>
+                </div>
+                <span class="close" onclick="closeModal()">&times;</span>
+                <input type="hidden" name="CommentToPostID" value="@ViewBag.PostID" />
+                <button class="Send btn-secondary hover-grow">ارسال</button>
+            </form>
+        </div>
+    </div>
+}

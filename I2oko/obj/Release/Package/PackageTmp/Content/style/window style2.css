@@ -1,0 +1,77 @@
+
+.Post-list {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(100px, 288px));
+    grid-gap: 540px 69px;
+    padding-right: 42px;
+    padding-top: 15px;
+    justify-content: center;
+    padding-top: 345px;
+}
+
+.Post {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    width: 0px;
+    height: 0px;
+    /* bottom: 330px; */
+}
+
+.Post-image {
+    margin: 0;
+}
+
+    .Post-image img {
+        width: 150px;
+        vertical-align: top;
+        height: 150px;
+        border-radius: 10px;
+    }
+
+
+@media screen and (max-width: 1279px) {
+    .Post-list {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(100px, 288px));
+        justify-content: center;
+        grid-gap: 520px 27px;
+        padding-top: 430px;
+        padding-right: 44px;
+        padding-left: 0px;
+    }
+
+    .Post-image img {
+        width: 400px;
+        vertical-align: top;
+        height: 250px;
+        border-radius: 10px;
+    }
+
+    .Post {
+        cursor: pointer;
+        position: relative;
+        display: block;
+        width: 0px;
+        height: 0px;
+        bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Post-list {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(100px, 288px));
+        justify-content: center;
+        grid-gap: 260px 65px;
+        padding-top: 95px;
+        padding-right: 60px;
+    }
+
+    .Post-image img {
+        width: 400px;
+        vertical-align: top;
+        height: 250px;
+        border-radius: 10px;
+    }
+}

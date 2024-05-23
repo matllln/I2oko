@@ -1,0 +1,490 @@
+﻿@using I2oko.Models;
+
+
+@{
+    Layout = null;
+}
+
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../Content/img/Idoko/favicon.ico">
+
+    <link rel="stylesheet" href="../Content/style/notif style.css">
+
+    <link rel="stylesheet" href="~/Content/recomand/bootstrap.rtl.min.css"
+          integrity="sha384-beJoAY4VI2Q+5IPXjI207/ntOuaz06QYCdpWfWRv4lSFDyUSqsM0W+wiAMr2I185" crossorigin="anonymous">
+    <script src="~/Content/recomand/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"></script>
+    <script defer src="~/Content/recomand/cdn.min.js"></script>
+    <link href='~/Content/recomand/parsinee.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <!--  ------------------------------------------------------- -->
+    <form action="/Home/NotifIcon" method="post">
+        <input type="hidden" name="NotifIcon" value="@ViewBag.NotifIcon" />
+        <label for="SubmitButton">
+            <img class="BackIcon" src="../Content/img/Idoko/back.png" alt="">
+        </label>
+        <button id="SubmitButton" type="submit" style="display:none;"></button>
+    </form>
+
+    <!-- -------------------------------------------------------------------------------- -->
+
+    <div class="grid-container">
+        <section class="contact-list">
+            @if (ViewBag.AllData != null)
+            {
+                foreach (var item in ViewBag.AllData)
+                {
+                    <div class="post">
+                        <div class="rectangle follow">
+                            @if (item is FollowersModel)
+                            {
+                                var follower = item as FollowersModel;
+                                <img class="P1" src="@follower.ProfilePicturePath" onclick="window.location.href='@Url.Action("ShowProfile", "Home", new { userName = follower.UserNameViewer })'">
+                                <p class="TextFollow">
+                                    <span>@follower.FollowersUserName</span><br>
+                                    جزو مخاطبانت شد
+                                </p>
+                                <p class="date">@follower.FollowersDateTime</p>
+                                if (!follower.ContactToAdd)
+                                {
+                                    <form action="/Home/Notif" method="post">
+                                        <input type="hidden" name="FollowersUserName" value="@follower.FollowersUserName" />
+                                        <button class="Back hover-grow" id="Follow" type="submit">!دوستت بشه ؟</button>
+                                    </form>
+                                }
+                                else
+                                {
+                                    <form action="/Home/Notif" method="post">
+                                        <input type="hidden" name="FollowersUserNameRemove" value="@follower.FollowersUserName" />
+                                        <button class="Back hover-grow" id="UnFollow" type="submit">!دوستت نباشه ؟</button>
+                                    </form>
+                                }
+                            }
+                            else if (item is LikeModel && (item as LikeModel).FoodID != 0)
+                            {
+                                var liker = item as LikeModel;
+                                <img class="P1" src="@liker.ProfilePicturePath" onclick="window.location.href='@Url.Action("ShowProfile", "Home", new { userName = liker.UserNameViewer })'">
+                                <p class="TextFollow">
+                                    <span>@item.UserNameViewer</span><br>
+                                    رویدادت رو پسندید
+                                </p>
+                                <p class="datelike">@liker.LikeDateTime</p>
+                                <img class="rectangle r2" src="@liker.LikeFoodPicturePath" alt="" onclick="window.location.href='@Url.Action("ShowPostRecipe", "Home", new { FoodID = liker.FoodID })'">
+                            }
+                            else if (item is LikeModel && (item as LikeModel).PostID != 0)
+                            {
+                                var liker = item as LikeModel;
+                                <img class="P1" src="@liker.ProfilePicturePath" onclick="window.location.href='@Url.Action("ShowProfile", "Home", new { userName = liker.UserNameViewer })'">
+                                <p class="TextFollow">
+                                    <span>@item.UserNameViewer</span><br>
+                                    رویدادت رو پسندید
+                                </p>
+                                <p class="datelike">@liker.LikeDateTime</p>
+                                if (liker.LikePostPicturePath.EndsWith(".jpg"))
+                                {
+                                    <img class="rectangle r2" src="@liker.LikePostPicturePath" alt="" onclick="window.location.href='@Url.Action("ShowPost", "Home", new { PostID = liker.PostID })'">
+                                }
+                                else if (liker.LikePostPicturePath.EndsWith(".mp4"))
+                                {
+                                    <video class="rectangle r2" onclick="window.location.href='@Url.Action("ShowPost", "Home", new { PostID = liker.PostID })'">
+                                        <source src="@liker.LikePostPicturePath" type="video/mp4" />
+                                    </video>
+                                }
+
+                            }
+                            else if (item is CommentLikeModel && (item as CommentLikeModel).CommentLikeID != 0)
+                            {
+                                var CommentLike = item as CommentLikeModel;
+                                <img class="P2" src="@CommentLike.CommentProfilePicturePath" onclick="window.location.href='@Url.Action("ShowProfile", "Home", new { userName = CommentLike.UserNameLiker })'">
+                                <pre class="LikeTextcoment">@CommentLike.CommentText</pre>
+                                <p class="date">@CommentLike.CommentLikeDateTime</p>
+                                if (CommentLike.CommentLikePostPicturePath != null)
+                                {
+                                    if (CommentLike.CommentLikePostPicturePath.EndsWith(".jpg"))
+                                    {
+                                        <img class="rectangle r2" src="@CommentLike.CommentLikePostPicturePath" onclick="window.location.href='@Url.Action("ShowPost", "Home", new { PostID = CommentLike.PostID })'">
+                                    }
+                                    else if (CommentLike.CommentLikePostPicturePath.EndsWith(".mp4"))
+                                    {
+                                        <video class="rectangle r2" onclick="window.location.href='@Url.Action("ShowPost", "Home", new { PostID = CommentLike.PostID })'">
+                                            <source src="@CommentLike.CommentLikePostPicturePath" type="video/mp4" />
+                                        </video>
+                                    }
+                                }
+                                else if (CommentLike.CommentLikeFoodPicturePath != null)
+                                {
+                                    <img class="rectangle r2" src="@CommentLike.CommentLikeFoodPicturePath" onclick="window.location.href='@Url.Action("ShowPostRecipe", "Home", new { FoodID = CommentLike.FoodID })'">
+                                }
+                                <p class="LikeUserNameComment">
+                                    <span>@item.UserNameLiker</span><br>
+                                    این نظرت رو دوست داشت
+                                </p>
+                            }
+
+                            else if (item is CommentModel && (item as CommentModel).CommentToPostID != 0)
+                            {
+                                var comment = item as CommentModel;
+                                <img class="P2" src="@comment.UserCommentPicture" onclick="window.location.href='@Url.Action("ShowProfile", "Home", new { userName = comment.FromUserName })'">
+                                <pre class="Textcoment">@comment.CommentText</pre>
+                                <p class="date">@comment.DateTime</p>
+
+                                if (comment.CommentToPostPicturePath.EndsWith(".jpg"))
+                                {
+                                    <img class="rectangle r2" src="@comment.CommentToPostPicturePath" onclick="window.location.href='@Url.Action("ShowPost", "Home", new { PostID = comment.CommentToPostID })'">
+                                }
+                                else if (comment.CommentToPostPicturePath.EndsWith(".mp4"))
+                                {
+                                    <video class="rectangle r2" onclick="window.location.href='@Url.Action("ShowPost", "Home", new { PostID = comment.CommentToPostID })'">
+                                        <source src="@comment.CommentToPostPicturePath" type="video/mp4" />
+                                    </video>
+                                }
+                                <p class="UserNameComment">
+                                    <span>@item.FromUserName</span><br>
+                                    برای این رویدادت نظر داد
+                                </p>
+
+                                <form action="/Home/PostToRemove" method="post">
+                                    <img src="~/Content/img/Idoko/Delete Post.svg" class="DeleteButton" />
+                                    <input type="hidden" name="CommentNotifDeletePostID" value="@comment.ID" />
+                                    <button class="DeleteButton" id="CommentDeletePostID" type="submit"></button>
+                                </form>
+
+                                <div class="LikeNumber">@comment.CommentPostLikeNumber</div>
+
+                                if (!comment.CommentPostLike)
+                                {
+                                    <form action="/Home/LikeToAdd" method="post">
+                                        <img class="buttonLike" src="~/Content/img/Idoko/Commentlike.svg">
+                                        <input type="hidden" name="CommentNotifPostID" id="CommentNotifPostID" value="@comment.ID" />
+                                        <button class="buttonLike Like-Post" type="submit" id="CommentLikePost"></button>
+                                    </form>
+                                }
+                                else
+                                {
+                                    <form action="/Home/LikeToRemove" method="post">
+                                        <img class="buttonLike" src="~/Content/img/Idoko/Commentunlike.svg">
+                                        <input type="hidden" name="CommentNotifPostID" id="CommentNotifPostID" value="@comment.ID" />
+                                        <button class="buttonLike UnLike-Post" type="submit" id="CommentUnLikePost"></button>
+                                    </form>
+                                }
+                            }
+
+                            else if (item is CommentModel && (item as CommentModel).CommentToFoodID != 0)
+                            {
+                                var comment = item as CommentModel;
+                                <img class="P2" src="@comment.UserCommentPicture" onclick="window.location.href='@Url.Action("ShowProfile", "Home", new { userName = comment.FromUserName })'">
+                                <pre class="Textcoment">@comment.CommentText</pre>
+                                <p class="date">@comment.DateTime</p>
+                                <img class="rectangle r2" src="@comment.CommentToFoodPicturePath" onclick="window.location.href='@Url.Action("ShowPostRecipe", "Home", new { FoodID = comment.CommentToFoodID })'">
+                                <p class="UserNameComment">
+                                    <span>@item.FromUserName</span><br>
+                                    برای این رویدادت نظر داد
+                                </p>
+
+                                <form action="/Home/PostToRemove" method="post" comment-id="@comment.ID">
+                                    <img src="~/Content/img/Idoko/Delete Post.svg" class="DeleteButton" />
+                                    <input type="hidden" name="CommentNotifDeleteFoodID" value="@comment.ID" />
+                                    <button class="DeleteButton" id="CommentDeleteFoodID" type="submit"></button>
+                                </form>
+
+                                <div class="LikeNumber">@comment.CommentFoodLikeNumber</div>
+
+                                if (!comment.CommentFoodLike)
+                                {
+                                    <form action="/Home/LikeToAdd" method="post">
+                                        <img class="buttonLike" src="~/Content/img/Idoko/Commentlike.svg">
+                                        <input type="hidden" name="CommentNotifFoodID" id="CommentNotifFoodID" value="@comment.ID" />
+                                        <button class="buttonLike" type="submit" id="CommentLikeFood"></button>
+                                    </form>
+                                }
+                                else
+                                {
+                                    <form action="/Home/LikeToRemove" method="post">
+                                        <img class="buttonLike" src="~/Content/img/Idoko/Commentunlike.svg">
+                                        <input type="hidden" name="CommentNotifFoodID" id="CommentNotifFoodID" value="@comment.ID" />
+                                        <button class="buttonLike" type="submit" id="CommentUnLikeFood"></button>
+                                    </form>
+                                }
+                            }
+                        </div>
+                    </div>
+                }
+            }
+        </section>
+    </div>
+
+    <script>
+        $(document).on('click', '#Follow', function (e) {
+            e.preventDefault();
+            var FollowersUserName = $(this).siblings('input[name="FollowersUserName"]').val();
+            $.ajax({
+                type: 'POST',
+                url: '/Home/Notif',
+                data: { FollowersUserName: FollowersUserName },
+                success: function (response) {
+                    var FollowButton = $(e.target);
+                    FollowButton.prop('id', 'UnFollow');
+                    FollowButton.text('!دوستت نباشه ؟');
+                    FollowButton.siblings('input[name="FollowersUserName"]').attr('name', 'FollowersUserNameRemove');
+                    console.log(response);
+                },
+            });
+        });
+
+        $(document).on('click', '#UnFollow', function (e) {
+            e.preventDefault();
+            var FollowersUserNameRemove = $(this).siblings('input[name="FollowersUserNameRemove"]').val();
+            $.ajax({
+                type: 'POST',
+                url: '/Home/Notif',
+                data: { FollowersUserNameRemove: FollowersUserNameRemove },
+                success: function (response) {
+                    var UnFollowButton = $(e.target);
+                    UnFollowButton.prop('id', 'Follow');
+                    UnFollowButton.text('!دوستت بشه ؟');
+                    UnFollowButton.siblings('input[name="FollowersUserNameRemove"]').attr('name', 'FollowersUserName');
+                    console.log(response);
+                },
+            });
+        });
+    </script>
+
+    <script>
+        $(document).on('click', '.DeleteButton', function (e) {
+            e.preventDefault();
+            var $button = $(this);
+            var $form = $button.closest('form');
+            var CommentNotifDeletePostID = $form.find('input[name="CommentNotifDeletePostID"]').val();
+            var CommentNotifDeleteFoodID = $form.find('input[name="CommentNotifDeleteFoodID"]').val();
+
+            var data = {};
+            if (CommentNotifDeletePostID) {
+                data.CommentNotifDeletePostID = CommentNotifDeletePostID;
+            } else if (CommentNotifDeleteFoodID) {
+                data.CommentNotifDeleteFoodID = CommentNotifDeleteFoodID;
+            }
+
+            $.ajax({
+                type: 'POST',
+                url: $form.attr('action'),
+                data: data,
+                success: function (response) {
+                    $button.closest('.post').remove();
+                },
+                error: function (xhr, status, error) {
+                    console.log("AJAX error:", status, error);
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $(document).on('click', '#CommentLikePost', function (e) {
+            e.preventDefault();
+            var $button = $(this);
+            var $form = $button.closest('form');
+            var commentId = $form.find('input[name="CommentNotifPostID"]').val();
+
+            $.ajax({
+                type: 'POST',
+                url: '/Home/LikeToAdd',
+                data: { CommentNotifPostID: commentId },
+                success: function (response) {
+                    // تغییر تصویر به unlike و تغییر کلاس و ID دکمه
+                    $form.find('img.buttonLike').attr('src', '/Content/img/Idoko/Commentunlike.svg');
+                    $form.find('#CommentLikePost').prop('id', 'CommentUnLikePost');
+
+                    // افزایش تعداد لایک‌ها
+                    var likeNumberElement = $form.closest('.post').find('.LikeNumber');
+                    var currentLikes = parseInt(likeNumberElement.text());
+                    likeNumberElement.text(currentLikes + 1);
+
+                    console.log("Liked Comment ID:", response.Comment.ID);
+                },
+                error: function (xhr, status, error) {
+                    console.log("AJAX error:", status, error);
+                }
+            });
+        });
+
+        $(document).on('click', '#CommentUnLikePost', function (e) {
+            e.preventDefault();
+            var $button = $(this);
+            var $form = $button.closest('form');
+            var commentId = $form.find('input[name="CommentNotifPostID"]').val();
+
+            $.ajax({
+                type: 'POST',
+                url: '/Home/LikeToRemove',
+                data: { CommentNotifPostID: commentId },
+                success: function (response) {
+                    // تغییر تصویر به like و تغییر کلاس و ID دکمه
+                    $form.find('img.buttonLike').attr('src', '/Content/img/Idoko/Commentlike.svg');
+                    $form.find('#CommentUnLikePost').prop('id', 'CommentLikePost');
+
+                    // کاهش تعداد لایک‌ها
+                    var likeNumberElement = $form.closest('.post').find('.LikeNumber');
+                    var currentLikes = parseInt(likeNumberElement.text());
+                    likeNumberElement.text(currentLikes - 1);
+
+                    console.log("Unliked Comment ID:", response.Comment.ID);
+                },
+                error: function (xhr, status, error) {
+                    console.log("AJAX error:", status, error);
+                }
+            });
+        });
+
+        $(document).on('click', '#CommentLikeFood', function (e) {
+            e.preventDefault();
+            var $button = $(this);
+            var $form = $button.closest('form');
+            var commentId = $form.find('input[name="CommentNotifFoodID"]').val();
+
+            $.ajax({
+                type: 'POST',
+                url: '/Home/LikeToAdd',
+                data: { CommentNotifFoodID: commentId },
+                success: function (response) {
+                    // تغییر تصویر به unlike و تغییر کلاس و ID دکمه
+                    $form.find('img.buttonLike').attr('src', '/Content/img/Idoko/Commentunlike.svg');
+                    $form.find('#CommentLikeFood').prop('id', 'CommentUnLikeFood');
+
+                    // افزایش تعداد لایک‌ها
+                    var likeNumberElement = $form.closest('.post').find('.LikeNumber');
+                    var currentLikes = parseInt(likeNumberElement.text());
+                    likeNumberElement.text(currentLikes + 1);
+
+                    console.log("Liked Comment ID:", response.Comment.ID);
+                },
+                error: function (xhr, status, error) {
+                    console.log("AJAX error:", status, error);
+                }
+            });
+        });
+
+        $(document).on('click', '#CommentUnLikeFood', function (e) {
+            e.preventDefault();
+            var $button = $(this);
+            var $form = $button.closest('form');
+            var commentId = $form.find('input[name="CommentNotifFoodID"]').val();
+
+            $.ajax({
+                type: 'POST',
+                url: '/Home/LikeToRemove',
+                data: { CommentNotifFoodID: commentId },
+                success: function (response) {
+                    // تغییر تصویر به like و تغییر کلاس و ID دکمه
+                    $form.find('img.buttonLike').attr('src', '/Content/img/Idoko/Commentlike.svg');
+                    $form.find('#CommentUnLikeFood').prop('id', 'CommentLikeFood');
+
+                    // کاهش تعداد لایک‌ها
+                    var likeNumberElement = $form.closest('.post').find('.LikeNumber');
+                    var currentLikes = parseInt(likeNumberElement.text());
+                    likeNumberElement.text(currentLikes - 1);
+
+                    console.log("Unliked Comment ID:", response.Comment.ID);
+                },
+                error: function (xhr, status, error) {
+                    console.log("AJAX error:", status, error);
+                }
+            });
+        });
+    </script>
+
+
+    <script>
+    function submitForm(event) {
+        event.preventDefault(); // جلوگیری از ارسال فرم به صورت پیش‌فرض
+
+        // ارسال فرم
+        var form = document.getElementById("myForm");
+        var formData = new FormData(form);
+        fetch(form.action, {
+            method: form.method,
+            body: formData
+        })
+        .then(response => {
+            // تأخیر هدایت
+            setTimeout(function() {
+                window.location.href = "@Url.Action("Profile", "Home")";
+            }, 100); // تأخیر 100 میلی‌ثانیه
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            loadDarkModeState();
+        });
+
+        // تعریف توابع مربوط به ذخیره و بازیابی وضعیت دارک مود
+        function saveDarkModeState() {
+            var darkModeState = {
+                "dark-mode": document.body.classList.contains("dark-mode"),
+                "dark-buttons": document.querySelector(".hover-grow").classList.contains("dark-button"),
+                "dark-profile": document.querySelector(".Profile").classList.contains("dark-profile"),
+                "dark-rectangles": document.querySelector(".rectangle").classList.contains("dark-rectangle"),
+                "label-darklabel": document.querySelector("label").classList.contains("darklabel"),
+                "a-darklabel": document.querySelector("a").classList.contains("darklabel")
+            };
+
+            localStorage.setItem("dark-mode-state", JSON.stringify(darkModeState));
+        }
+
+        function loadDarkModeState() {
+            var darkModeState = JSON.parse(localStorage.getItem("dark-mode-state")) || {};
+
+            if (darkModeState["dark-mode"]) {
+                document.body.classList.add("dark-mode");
+            }
+
+            var buttons = document.querySelectorAll(".hover-grow");
+            buttons.forEach(button => {
+                if (darkModeState["dark-buttons"]) {
+                    button.classList.add("dark-button");
+                }
+            });
+
+
+            var rectangles = document.querySelectorAll(".rectangle");
+            rectangles.forEach(rectangle => {
+                if (darkModeState["dark-rectangles"]) {
+                    rectangle.classList.add("dark-rectangle");
+                }
+            });
+
+            // تغییر بک‌گراند .darkimg در حالت دارک مود
+            var darkMode = document.body.classList.contains("dark-mode");
+            var darkImg = document.querySelector(".darkimg");
+            // بازنشانی کلاس darklabel به لیبل و تگ a در حالت دارک مود
+            var labels = document.querySelectorAll("label,a");
+            labels.forEach(label => {
+                if (darkModeState["label-darklabel"] || darkModeState["a-darklabel"]) {
+                    label.classList.add("darklabel");
+                } else {
+                    label.classList.remove("darklabel");
+                }
+            });
+
+        }
+    </script>
+
+</body>
+
+</html>
+
+

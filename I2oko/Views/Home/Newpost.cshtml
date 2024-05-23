@@ -1,0 +1,250 @@
+﻿@model I2oko.Models.PostModel
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../Content/img/Idoko/favicon.ico">
+
+    <link href="~/Content/style/newpost style.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/Content/recomand/bootstrap.rtl.min.css"
+          integrity="sha384-beJoAY4VI2Q+5IPXjI207/ntOuaz06QYCdpWfWRv4lSFDyUSqsM0W+wiAMr2I185" crossorigin="anonymous">
+    <script src="~/Content/recomand/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"></script>
+    <script defer src="~/Content/recomand/cdn.min.js"></script>
+    <link href='~/Content/recomand/parsinee.css' rel='stylesheet'>
+</head>
+<body>
+    <link href="~/Content/style/newpost style.css" rel="stylesheet" />
+    <!--  ------------------------------------------------------- -->
+    <a href="/Home/Proofile">
+        <img class="BackIcon" src="../Content/img/Idoko/back.png" />
+    </a>
+    <!-- -------------------------------------------------------------------------------- -->
+    @using (Html.BeginForm("Newpost", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <label class="TitlePost">:موضوع رویداد</label>
+        @Html.TextBoxFor(x => x.Subject, new { @class = "TitlePostText" })
+        <label class="Placepost">:موقعیت مکانی رویداد</label>
+        @Html.TextBoxFor(x => x.Place, new { @class = "PlacepostText" })
+        <label class="About">:درباره رویداد</label>
+        @Html.TextAreaFor(x => x.Text, new { @class = "AboutText" })
+        <div class="rectangle Img" id="preview"></div>
+        <input type="file" name="file" id="file" style="display:none;" onchange="previewFile()" accept="image/*,video/*" />
+        <label for="file">
+            <img class="Gallry" src="../Content/img/Idoko/gallry.svg" alt="">
+        </label>
+        <img class="Camera" src="~/Content/img/Idoko/camera.svg" alt="" onclick="captureVideo()">
+        <label for="file">
+            <img class="File" src="~/Content/img/Idoko/text.svg" alt="">
+        </label>
+        <input class="Confirm btn-secondary hover-grow" type="submit" value="تایید" />
+    }
+    <div id="error-message" class="error-message"></div>
+    <div class="allbtn">
+        <a href="~/Home/NewPostRecipe">   <span class="btn">خوشمزه ها</span></a>
+
+        <span class="btn btn2">خانه زیبا</span>
+        <span class="btn btn3">همسرانه</span>
+        <span class="btn btn4">مادرانه</span>
+        <span class="btn btn5">پدرانه</span>
+        <span class="btn btn6">دخترانه</span>
+        <span class="btn btn7">پسرانه</span>
+        <span class="btn btn8">حیوانات خانگی</span>
+        <span class="btn btn9">سایر</span>
+    </div>
+    <script>
+        function previewFile() {
+            var preview = document.getElementById('preview');
+            var fileInput = document.getElementById('file');
+            var file = fileInput.files[0];
+
+            // پاک کردن محتوای قبلی
+            preview.style.backgroundImage = null;
+            preview.innerHTML = null;
+
+            if (file) {
+                var reader = new FileReader();
+                reader.onloadend = function () {
+                    if (file.type.startsWith('image/')) {
+                        preview.style.backgroundImage = 'url(' + reader.result + ')';
+                    } else if (file.type.startsWith('video/')) {
+                        preview.innerHTML = '<video width="100%" height="100%" controls><source src="' + reader.result + '" type="' + file.type + '"></video>';
+                    }
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function captureVideo() {
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(function (stream) {
+                    var video = document.createElement('video');
+                    var preview = document.getElementById('preview');
+
+                    video.srcObject = stream;
+                    video.setAttribute('width', '100%');
+                    video.setAttribute('height', '100%');
+                    video.setAttribute('controls', 'true');
+
+                    // پاک کردن محتوای قبلی
+                    preview.style.backgroundImage = null;
+                    preview.innerHTML = '';
+
+                    preview.appendChild(video);
+
+                    video.play();
+                })
+                .catch(function (error) {
+                    console.error('Error accessing the camera:', error);
+                });
+        }
+    </script>
+    <script>
+        document.getElementById('file').addEventListener('change', function (e) {
+            var file = e.target.files[0];
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                document.querySelector('.rectangle.Img').style.backgroundImage = 'url(' + e.target.result + ')';
+            }
+            reader.readAsDataURL(file);
+        });
+    </script>
+    <script>
+        function addHoverEffect(button) {
+            button.addEventListener('mouseenter', function () {
+                button.classList.add('hover');
+            });
+
+            button.addEventListener('mouseleave', function () {
+                if (!button.classList.contains('active')) {
+                    button.classList.remove('hover');
+                }
+            });
+
+            button.addEventListener('click', function () {
+                buttons.forEach(function (otherButton) {
+                    if (otherButton !== button) {
+                        otherButton.classList.remove('active', 'hover');
+                        otherButton.style.backgroundColor = '';
+                    }
+                });
+
+                button.classList.add('active');
+
+                button.style.backgroundColor = 'white';
+            });
+        }
+
+        var buttons = document.querySelectorAll('.btn');
+        buttons.forEach(function (button) {
+            addHoverEffect(button);
+
+            button.addEventListener('click', function () {
+                updateDropdown(button);
+            });
+        });
+
+        function updateDropdown(button) {
+            var dropdown = document.querySelector('.TitlePostText');
+            dropdown.value = button.textContent;
+        }
+    </script>
+
+    <script>
+        function validateForm() {
+            var titlePostText = document.querySelector('.TitlePostText').value;
+            var rectangleImgStyle = document.querySelector('.rectangle.Img').style.backgroundImage;
+            var errorMessageElement = document.getElementById('error-message');
+
+            errorMessageElement.innerHTML = '';
+
+            if (titlePostText.trim() === '') {
+                errorMessageElement.innerHTML = 'لطفاً موضوع را وارد کنید.';
+                return false;
+            }
+
+            if (rectangleImgStyle === '' || rectangleImgStyle === 'none') {
+                errorMessageElement.innerHTML = 'لطفاً تصویر را انتخاب کنید.';
+                return false;
+            }
+
+            return true;
+        }
+
+        document.querySelector('.Confirm').addEventListener('click', function (e) {
+            if (!validateForm()) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            loadDarkModeState();
+        });
+
+        // تعریف توابع مربوط به ذخیره و بازیابی وضعیت دارک مود
+        function saveDarkModeState() {
+            var darkModeState = {
+                "dark-mode": document.body.classList.contains("dark-mode"),
+                "dark-buttons": document.querySelector(".hover-grow").classList.contains("dark-button"),
+                "dark-profile": document.querySelector(".Profile").classList.contains("dark-profile"),
+                "dark-rectangles": document.querySelector(".rectangle").classList.contains("dark-rectangle"),
+                "label-darklabel": document.querySelector("label").classList.contains("darklabel"),
+                "a-darklabel": document.querySelector("a").classList.contains("darklabel")
+            };
+
+            localStorage.setItem("dark-mode-state", JSON.stringify(darkModeState));
+        }
+
+        function loadDarkModeState() {
+            var darkModeState = JSON.parse(localStorage.getItem("dark-mode-state")) || {};
+
+            if (darkModeState["dark-mode"]) {
+                document.body.classList.add("dark-mode");
+            }
+
+            var buttons = document.querySelectorAll(".hover-grow");
+            buttons.forEach(button => {
+                if (darkModeState["dark-buttons"]) {
+                    button.classList.add("dark-button");
+                }
+            });
+
+
+
+            var rectangles = document.querySelectorAll(".rectangle");
+            rectangles.forEach(rectangle => {
+                if (darkModeState["dark-rectangles"]) {
+                    rectangle.classList.add("dark-rectangle");
+                }
+            });
+
+            // تغییر بک‌گراند .darkimg در حالت دارک مود
+            var darkMode = document.body.classList.contains("dark-mode");
+            var darkImg = document.querySelector(".darkimg");
+            // بازنشانی کلاس darklabel به لیبل و تگ a در حالت دارک مود
+            var labels = document.querySelectorAll("label,a");
+            labels.forEach(label => {
+                if (darkModeState["label-darklabel"] || darkModeState["a-darklabel"]) {
+                    label.classList.add("darklabel");
+                } else {
+                    label.classList.remove("darklabel");
+                }
+            });
+
+        }
+    </script>
+
+
+</body>
+</html>

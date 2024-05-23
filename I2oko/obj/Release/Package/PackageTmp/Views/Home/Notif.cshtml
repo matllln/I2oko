@@ -1,0 +1,196 @@
+﻿@using I2oko.Models;
+
+
+@{
+    Layout = null;
+}
+
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../Content/img/Idoko/favicon.ico">
+
+    <link rel="stylesheet" href="../Content/style/notif style.css">
+
+    <link rel="stylesheet" href="~/Content/recomand/bootstrap.rtl.min.css"
+          integrity="sha384-beJoAY4VI2Q+5IPXjI207/ntOuaz06QYCdpWfWRv4lSFDyUSqsM0W+wiAMr2I185" crossorigin="anonymous">
+    <script src="~/Content/recomand/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"></script>
+    <script defer src="~/Content/recomand/cdn.min.js"></script>
+    <link href='~/Content/recomand/parsinee.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!--  ------------------------------------------------------- -->
+    <form action="/Home/NotifIcon" method="post">
+            <input type="hidden" name="NotifIcon" value="@ViewBag.NotifIcon" />
+            <label for="SubmitButton">
+                <img class="BackIcon" src="../Content/img/Idoko/back.png" alt="">
+            </label>
+            <button id="SubmitButton" type="submit" style="display:none;"></button>
+    </form>
+
+    <!-- -------------------------------------------------------------------------------- -->
+    @using (Html.BeginForm("Notif", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+        <div class="grid-container">
+            <section class="contact-list">
+                @foreach (var item in ViewBag.AllData)
+                {
+                    <div class="post">
+                        <div class="rectangle follow">
+                            <img class="P1" src="@item.ProfilePicturePath" onclick="window.location.href='@Url.Action("ShowProfile", "Home", new { userName = item.UserNameViewer})'">
+                            @if (item is FollowersModel)
+                            {
+                                var follower = item as FollowersModel;
+                                <p class="TextFollow">
+                                    <span>@follower.FollowersUserName</span><br>
+                                    جزو مخاطبانت شد
+                                </p>
+                                <p class="date">@follower.FollowersDateTime</p>
+                                if (follower.ContactToAdd != true)
+                                {
+                                    <form action="/Home/Notif" method="post">
+                                        <input type="hidden" name="FollowersUserName" value="@follower.FollowersUserName" />
+                                        <button class="Back hover-grow" type="submit">!دوستت بشه ؟</button>
+                                    </form>
+                                }
+                                else
+                                {
+
+                                    <form action="/Home/Notif" method="post">
+                                        <input type="hidden" name="FollowersUserNameRemove" value="@follower.FollowersUserName" />
+                                        <button class="Back hover-grow" type="submit">!دوستت نباشه ؟</button>
+                                    </form>
+                                }
+                            }
+                            else if (!string.IsNullOrEmpty(item.LikePostPicturePath))
+                            {
+                                if (item.LikePostPicturePath.EndsWith(".mp4"))
+                                {
+                                    <video class="rectangle r2">
+                                        <source src="@item.LikePostPicturePath" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <p class="TextFollow">
+                                        <span>@item.UserNameViewer</span><br>
+                                        رویدادت رو پسندید
+                                    </p>
+                                    <p class="datelike">@item.LikeDateTime</p>
+                                }
+                                else if (item.LikePostPicturePath.EndsWith(".jpg"))
+                                {
+                                    <img class="rectangle r2" src="@item.LikePostPicturePath" alt="">
+                                    <p class="TextFollow">
+                                        <span>@item.UserNameViewer</span><br>
+                                        رویدادت رو پسندید
+                                    </p>
+                                    <p class="datelike">@item.LikeDateTime</p>
+                                }
+                            }
+                            else if (item is LikeModel && (item as LikeModel).FoodID != 0)
+                            {
+                                var liker = item as LikeModel;
+                                <p class="TextFollow">
+                                    <span>@item.UserNameViewer</span><br>
+                                    رویدادت رو پسندید
+                                </p>
+                                <p class="datelike">@liker.LikeDateTime</p>
+                                <img class="rectangle r2" src="@liker.LikeFoodPicturePath" alt="">
+                            }
+                        </div>
+                    </div>
+                }
+            </section>
+        </div>
+    }
+    <script>
+    function submitForm(event) {
+        event.preventDefault(); // جلوگیری از ارسال فرم به صورت پیش‌فرض
+
+        // ارسال فرم
+        var form = document.getElementById("myForm");
+        var formData = new FormData(form);
+        fetch(form.action, {
+            method: form.method,
+            body: formData
+        })
+        .then(response => {
+            // تأخیر هدایت
+            setTimeout(function() {
+                window.location.href = "@Url.Action("Profile", "Home")";
+            }, 100); // تأخیر 100 میلی‌ثانیه
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            loadDarkModeState();
+        });
+
+        // تعریف توابع مربوط به ذخیره و بازیابی وضعیت دارک مود
+        function saveDarkModeState() {
+            var darkModeState = {
+                "dark-mode": document.body.classList.contains("dark-mode"),
+                "dark-buttons": document.querySelector(".hover-grow").classList.contains("dark-button"),
+                "dark-profile": document.querySelector(".Profile").classList.contains("dark-profile"),
+                "dark-rectangles": document.querySelector(".rectangle").classList.contains("dark-rectangle"),
+                "label-darklabel": document.querySelector("label").classList.contains("darklabel"),
+                "a-darklabel": document.querySelector("a").classList.contains("darklabel")
+            };
+
+            localStorage.setItem("dark-mode-state", JSON.stringify(darkModeState));
+        }
+
+        function loadDarkModeState() {
+            var darkModeState = JSON.parse(localStorage.getItem("dark-mode-state")) || {};
+
+            if (darkModeState["dark-mode"]) {
+                document.body.classList.add("dark-mode");
+            }
+
+            var buttons = document.querySelectorAll(".hover-grow");
+            buttons.forEach(button => {
+                if (darkModeState["dark-buttons"]) {
+                    button.classList.add("dark-button");
+                }
+            });
+
+
+            var rectangles = document.querySelectorAll(".rectangle");
+            rectangles.forEach(rectangle => {
+                if (darkModeState["dark-rectangles"]) {
+                    rectangle.classList.add("dark-rectangle");
+                }
+            });
+
+            // تغییر بک‌گراند .darkimg در حالت دارک مود
+            var darkMode = document.body.classList.contains("dark-mode");
+            var darkImg = document.querySelector(".darkimg");
+            // بازنشانی کلاس darklabel به لیبل و تگ a در حالت دارک مود
+            var labels = document.querySelectorAll("label,a");
+            labels.forEach(label => {
+                if (darkModeState["label-darklabel"] || darkModeState["a-darklabel"]) {
+                    label.classList.add("darklabel");
+                } else {
+                    label.classList.remove("darklabel");
+                }
+            });
+
+        }
+    </script>
+
+</body>
+
+</html>
+
+

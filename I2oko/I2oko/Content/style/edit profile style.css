@@ -1,0 +1,936 @@
+@font-face {
+    font-family: yekan;
+    src: url("../font/Yekan.ttf") format("truetype"), url("../font/Yekan.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+body{
+background: url(../img/Idoko/Untitled-4.png)top center no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100%; 
+    font-family: "yekan" !important;
+}
+button,input,text,a,div{
+    font-family: "yekan" !important;
+}
+.Profile{
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background: transparent;
+    border: solid;
+    box-shadow: rgb(1 50 55) 0px 0px 30px;
+    border-radius: 25px !important;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 50px 10px 10px 10px;
+  }
+  .Add {
+    background: white;
+    color: rgb(2, 72, 30);
+    border: none;
+    border-radius: 15px;
+    font-weight: 600;
+    box-shadow: rgb(1 50 55) 0px 0px 10px;
+    position: absolute;
+    margin: 170px 10px 10px 10px;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.UserName{
+    position: absolute;
+    width: 100px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(1, 50, 55);
+    font-weight: bold;
+    margin: 225px 10px 10px 260px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+
+}
+#Session_UserName_ {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 255px 10px 10px 260px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+.FamilyName{
+    position: absolute;
+    width: 120px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(1, 50, 55);
+    font-weight: bold;
+    margin: 225px 10px 10px 10px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+}
+#Fname{
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+   
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 255px 10px 10px 10px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+  
+}
+.BirthDay{
+    position: absolute;
+    width: 80px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(1, 50, 55);
+    font-weight: bold;
+    margin: 315px 10px 10px 260px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+}
+#BirthDate {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 345px 10px 10px 260px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+.CatGory{
+    position: absolute;
+    width: 90px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(1, 50, 55);
+    font-weight: bold;
+    margin: 405px 10px 10px 260px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    
+}
+#Categuri {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 5px #000000;
+    border-radius: 10px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 435px 10px 10px 260px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+.Gandr{
+    position: absolute;
+    width: 60px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(1, 50, 55);
+    font-weight: bold;
+    margin: 225px 10px 10px -240px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+}
+#Sexuality {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 5px #000000;
+    border-radius: 15px !important;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 255px 10px 10px -240px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+.Phone{
+    position: absolute;
+    width: 80px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(1, 50, 55);
+    font-weight: bold;
+    margin: 315px 10px 10px 10px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+}
+#Session_phone_ {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 345px 10px 10px 10px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+.Bio{
+    position: absolute;
+    width: 80px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(1, 50, 55);
+    font-weight: bold;
+    margin: 405px 10px 10px 10px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+}
+#Biography {
+    position: absolute;
+    min-width: 135px;
+    max-width: 135px;
+    min-height: 95px;
+    max-height: 95px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 5px #000000;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 435px 10px 10px 10px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+.Emil{
+    position: absolute;
+    width: 60px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(1, 50, 55);
+    font-weight: bold;
+    margin: 315px 10px 10px -240px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+}
+#Email {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 346px 10px 10px -240px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+.Loction{
+    position: absolute;
+    width: 100px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(1, 50, 55);
+    font-weight: bold;
+    margin: 405px 10px 10px -240px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+}
+#Address {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: #FFF6A4;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 15px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 435px 10px 10px -240px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+.Record{
+    padding: 1em;
+    background: rgb(234, 249, 218);
+    color: rgb(2, 72, 30);
+    border: none;
+    border-radius: 15px;
+    font-weight: 600;
+    box-shadow: rgb(1 50 55) 0px 0px 1em;
+    position: absolute;
+    margin: 555px 10px 10px 10px;
+    width: 90px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-family: 'yekan';
+    bottom: 35px;
+}
+.BackIcon {
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    position: absolute;
+    width: 40px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 45px 0px 0px -275px;
+}
+div, button, input,a {
+    border-radius: 15px !important;
+    box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+}
+.BioInput,.CatGoryInput,.BirthDayInput,GandrInput{
+    border-radius: 15px !important;
+
+}
+@media screen and (max-width: 1279px){
+    .Panel {display: none;}
+    body{
+       background: url(../img/Idoko/Untitled-2.png)top center no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-size: 100% 100%; 
+        font-family: "yekan" !important;
+    }
+    button{
+        font-family: "yekan";
+    }
+    .Profile{
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        background: transparent;
+        border: solid;
+        box-shadow: rgb(1 50 55) 0px 0px 20px;
+        border-radius: 25px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 70px 10px 10px 0px;
+      }
+      .Add {
+        background: white;
+        color: rgb(2, 72, 30);
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        box-shadow: rgb(1 50 55) 0px 0px 10px;
+        position: absolute;
+        margin: 210px 10px 10px 0px;
+        width: 30px;
+        height: 30px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .UserName{
+        position: absolute;
+        width: 100px;
+        text-align: center;
+        font-size: 14px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 275px 10px 10px 140px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    
+    }
+    #Session_UserName_ {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 300px 10px 10px 140px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 14px;
+    }
+    .FamilyName{
+        position: absolute;
+        width: 120px;
+        text-align: center;
+        font-size: 14px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 275px 10px 10px -140px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+    #Fname {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 300px 10px 10px -140px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 14px;
+    }
+    .BirthDay{
+        position: absolute;
+        width: 80px;
+        text-align: center;
+        font-size: 14px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 390px 10px 10px -140px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+    #BirthDate {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 415px 10px 10px -140px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 14px;
+    }
+    .CatGory{
+        position: absolute;
+        width: 90px;
+        text-align: center;
+        font-size: 14px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 620px 10px 10px 140px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        
+    }
+    #Categuri {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 5px #000000;
+        border-radius: 15px !important;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 645px 10px 10px 140px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 14px;
+    }
+    .Gandr{
+        position: absolute;
+        width: 60px;
+        text-align: center;
+        font-size: 14px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 390px 10px 10px 140px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+    #Sexuality {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 5px #000000;
+        border-radius: 10px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 415px 10px 10px 140px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 14px;
+    }
+    .Phone{
+        position: absolute;
+        width: 80px;
+        text-align: center;
+        font-size: 14px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 505px 10px 10px 140px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+    #Session_phone_ {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 530px 10px 10px 140px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 14px;
+    }
+    .Bio{
+        position: absolute;
+        width: 80px;
+        text-align: center;
+        font-size: 14px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 715px 10px 10px 0px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+    #Biography {
+        position: absolute;
+        width: 145px;
+        height: 85px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 5px #000000;
+        border-radius: 15px !important;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 740px 10px 10px 0px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 14px;
+    }
+    .Emil{
+        position: absolute;
+        width: 60px;
+        text-align: center;
+        font-size: 14px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 505px 10px 10px -140px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+    #Email {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 530px 10px 10px -140px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 14px;
+    }
+    .Loction{
+        position: absolute;
+        width: 100px;
+        text-align: center;
+        font-size: 14px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 620px 10px 10px -140px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+    #Address {
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 10px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 645px 10px 10px -140px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 14px;
+    }
+    .Record{
+        padding: 1em;
+        background: rgb(234, 249, 218);
+        color: rgb(2, 72, 30);
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        box-shadow: rgb(1 50 55) 0px 0px 1em;
+        position: absolute;
+        margin: 10px 10px 10px 0px;
+        bottom: 20px;
+        width: 90px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        font-family: 'yekan';
+    }
+    .BackIcon {
+        border: none;
+        background: transparent;
+        font-size: 30px;
+        position: absolute;
+        width: 40px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 15px 10px 10px -275px;
+    }
+    div, button, input,a {
+        border-radius: 15px !important;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+    }
+}
+@media screen and (max-width: 600px){
+    .Panel {display: none;}
+    body{
+    background: url(../img/Idoko/Untitled-1.png)top center no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-size: 100% 100%; 
+        font-family: "yekan" !important;
+    }
+    button{
+        font-family: "yekan";
+    }
+    .Profile{
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        background: transparent;
+        border: solid;
+        box-shadow: rgb(1 50 55) 0px 0px 10px;
+        border-radius: 25px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 25px 10px 10px 0px;
+      }
+      .Add {
+        background: white;
+        color: rgb(2, 72, 30);
+        border: none;
+        border-radius: 40px;
+        font-weight: 600;
+        box-shadow: rgb(1 50 55) 0px 0px 10px;
+        position: absolute;
+        margin: 125px 10px 10px 0px;
+        width: 25px;
+        height: 25px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .UserName{
+        position: absolute;
+        width: 100px;
+        text-align: center;
+        font-size: 12px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 155px 10px 10px 90px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    
+    }
+    #Session_UserName_ {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 180px 10px 10px 90px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 12px;
+    }
+    .FamilyName{
+        position: absolute;
+        width: 120px;
+        text-align: center;
+        font-size: 12px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 155px 10px 10px -90px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+    #Fname {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 180px 10px 10px -90px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 12px;
+    }
+    .BirthDay{
+        position: absolute;
+        width: 80px;
+        text-align: center;
+        font-size: 12px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 230px 10px 10px -90px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+    #BirthDate {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 255px 10px 10px -90px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 12px;
+    }
+    .CatGory{
+        position: absolute;
+        width: 90px;
+        text-align: center;
+        font-size: 12px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 380px 10px 10px 90px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        
+    }
+    #Categuri {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 5px #000000;
+        border-radius: 15px !important;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 405px 10px 10px 90px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 12px;
+    }
+    .Gandr{
+        position: absolute;
+        width: 60px;
+        text-align: center;
+        font-size: 12px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 230px 10px 10px 90px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+    #Sexuality {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 5px #000000;
+        border-radius: 5px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 255px 10px 10px 90px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 12px;
+    }
+    .Phone{
+        position: absolute;
+        width: 80px;
+        text-align: center;
+        font-size: 12px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 305px 10px 10px 90px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+    #Session_phone_ {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 330px 10px 10px 90px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 12px;
+    }
+    .Bio{
+        position: absolute;
+        width: 80px;
+        text-align: center;
+        font-size: 12px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 450px 10px 10px 0px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+    #Biography {
+        position: absolute;
+        width: 105px;
+        height: 75px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 5px #000000;
+        border-radius: 15px !important;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 475px 10px 10px 0px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 12px;
+    }
+    .Emil{
+        position: absolute;
+        width: 60px;
+        text-align: center;
+        font-size: 12px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 305px 10px 10px -90px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+    #Email {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 330px 10px 10px -90px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 12px;
+    }
+    .Loction{
+        position: absolute;
+        width: 100px;
+        text-align: center;
+        font-size: 12px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        margin: 380px 10px 10px -90px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+    #Address {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        background: #FFF6A4;
+        box-shadow: 0px 0px 10px #000000;
+        border-radius: 5px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 405px 10px 10px -90px;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 12px;
+    }
+    .Record{
+        padding: 1em;
+        background: rgb(234, 249, 218);
+        color: rgb(2, 72, 30);
+        border: none;
+        border-radius: 30px;
+        font-weight: 600;
+        box-shadow: rgb(1 50 55) 0px 0px 1em;
+        position: absolute;
+        margin: 10px 10px 10px 0px;
+        bottom: -3px;
+        width: 80px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        font-family: 'yekan';
+    }
+    .BackIcon {
+        border: none;
+        background: transparent;
+        font-size: 30px;
+        position: absolute;
+        width: 30px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px -160px;
+    }
+    div, button, input,a {
+        border-radius: 15px !important;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+    }
+}
+

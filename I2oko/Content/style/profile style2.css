@@ -1,0 +1,114 @@
+.post-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(96px, 288px));
+    justify-content: center;
+    grid-gap: 7px 70px;
+    padding-top: 245px;
+    padding-right: 65px;
+    padding-left: 21px;
+    width: 100px;
+}
+
+.post {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    top: -229px;
+    width: 160px;
+    height: 160px;
+}
+
+.post-image {
+    margin: 0;
+}
+
+.post-image, video {
+    width: 100%;
+    vertical-align: top;
+    height: 163px;
+    border-radius: 15px;
+}
+
+.post-overlay {
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.post:hover .post-overlay {
+    display: flex;
+}
+
+.post-likes, .post-comments {
+    width: 80px;
+    margin: 5px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+
+@media screen and (max-width: 1279px) {
+    .post-list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(100px, 288px));
+        justify-content: center;
+        grid-gap: 0px 85px;
+        padding-top: 255px;
+        padding-right: 43px;
+        padding-left: 242px;
+    }
+
+    .post-image, video {
+        width: 175px;
+        vertical-align: top;
+        height: 175px;
+        border-radius: 15px;
+    }
+
+    .post {
+        cursor: pointer;
+        position: relative;
+        display: block;
+        top: -240px;
+        width: 170px;
+        height: 170px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .post-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(100px, 288px));
+        justify-content: center;
+        grid-gap: 15px 65px;
+        padding-top: 102px;
+        padding-right: 49px;
+        padding-left: 0px;
+    }
+
+    .post-image, video {
+        width: 150px;
+        vertical-align: top;
+        height: 150px;
+        border-radius: 15px;
+        object-fit: cover;
+    }
+
+    .post {
+        cursor: pointer;
+        position: relative;
+        display: block;
+        top: -89px;
+        width: 150px;
+        height: 150px;
+    }
+}

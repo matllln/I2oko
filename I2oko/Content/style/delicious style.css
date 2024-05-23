@@ -1,0 +1,921 @@
+﻿@font-face {
+    font-family: yekan;
+    src: url("../font/Yekan.ttf") format("truetype"), url("../font/Yekan.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-size: 14px !important;
+}
+
+body {
+    background: url("../img/Idoko/Untitled-4.png") center top / 100% 100% no-repeat;
+    width: 100%;
+    height: 100vh;
+    font-family: yekan !important;
+}
+
+label.labeldark {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 15px 10px 10px -350px;
+}
+
+.darklabel {
+    color: #5cedfb !important;
+    background: transparent !important;
+}
+
+.darkimg {
+    position: absolute;
+    width: 60px;
+}
+
+.dark-button {
+    background: black !important;
+    background: black !important;
+    border: 0.25em solid transparent !important;
+    background-image: linear-gradient(#000, #000), linear-gradient(120deg, #f09 0%, #0ff 50%, #9f0 100%) !important;
+    background-origin: border-box !important;
+    background-clip: padding-box, border-box !important;
+    background-size: 200% 100% !important;
+    transition: background-position 0.8s ease-out;
+    color: #5cedfb !important;
+}
+
+
+.dark-rectangle {
+    background-color: #364d6f !important; /* تغییر رنگ rectangle ها در حالت دارک‌مود */
+}
+
+
+
+.dark-mode {
+    background-color: #2d1d1d !important;
+    color: darkblue;
+    background: url("../img/Idoko/1.png") center top / 100% 100% no-repeat;
+}
+
+.highlighted {
+    fill: red !important; /* تغییر رنگ به قرمز */
+}
+
+.alborz {
+    fill: aqua;
+}
+
+button, input, text, a, div {
+    font-family: "yekan" !important;
+}
+
+.provincesList {
+    border: unset !important;
+}
+
+.BackIcon {
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    position: absolute;
+    width: 40px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 45px 0px 0px -275px;
+}
+
+.Background {
+    background: rgb(241, 247, 254);
+    width: 800px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: rgb(1, 50, 55) 0px 0px 2em;
+    gap: 2em;
+    opacity: 0.5;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 30px 10px 10px;
+}
+
+select#provinces {
+    position: absolute;
+    text-align: center;
+    border-radius: 15px 0px 0px 15px !important;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 47px 10px 10px 90px;
+    width: 170px;
+    height: 35px;
+    font-size: 14px;
+    box-shadow: rgb(1, 50, 55) 0px 0px 5px;
+    background: #FFF6A4;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+input.Record {
+    position: absolute;
+    text-align: center;
+    border-radius: 0px 15px 15px 0px !important;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    margin: 47px 10px 10px 215px !important;
+    width: 75px;
+    height: 35px;
+    font-size: 14px;
+    box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+    background: rgb(255, 246, 164);
+    color: rgb(2, 72, 30);
+    border: none;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+.Windo {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 330px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    text-wrap: nowrap;
+    color: #013237;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+.Page {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 285px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    text-wrap: nowrap;
+    color: #013237;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+.Food {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 375px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    text-wrap: nowrap;
+    color: #013237;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+.Invite {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 465px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    text-wrap: nowrap;
+    color: #013237;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+.Pet {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 420px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    text-wrap: nowrap;
+    color: #013237;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+.r1 {
+    position: absolute;
+    width: 500px;
+    height: 495px;
+    background: transparent;
+    box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 105px 10px 10px 10px;
+    border: solid #013237 1px;
+}
+
+
+
+.Catgory {
+    position: absolute;
+    width: 230px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 47px 10px 10px -120px;
+    text-align: center;
+    border: none;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+.map {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 110px 10px 10px 270px;
+    opacity: 0.35;
+}
+
+.AboutText {
+    position: absolute;
+    width: 300px;
+    height: 110px;
+    background: rgb(213, 229, 245);
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 10px;
+    left: 50%;
+    font-size: 14px !important;
+    transform: translate(-50%, 0%);
+    margin: 410px 0px 0px -415px;
+    border: none;
+    text-align: right;
+    padding: 5px;
+    border: solid #013237 1px;
+    font-weight: bold;
+    font-family: 'yekan';
+    white-space: pre-wrap;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    position: absolute;
+    top: 335px !important;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height: 15%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: .5;
+    transition: opacity .15s ease;
+}
+
+.FoodTable {
+    position: absolute;
+    border: 4px solid aliceblue;
+    border-collapse: collapse;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 525px 0px 0px -415px;
+    max-width: 300px;
+    height: 52px;
+    border-radius: 15px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 15px !important;
+    border-collapse: unset !important;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: unset !important;
+}
+
+table,
+td {
+    border: 2px solid black;
+}
+
+td {
+    padding: 5px;
+    text-align: center;
+}
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+    border-color: green !important;
+    border-style: dashed !important;
+    border-width: 2px !important;
+    border-radius: 15px !important;
+}
+
+.cls-1 {
+    fill: rgb(255, 246, 164);
+    stroke: #790000;
+}
+
+.cls-2 {
+    fill: #00bdff;
+    stroke: #0978ab;
+    stroke-linecap: round;
+}
+
+svg#iran {
+    width: 490px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 125px 0px 0px 10px;
+}
+
+
+a,
+div,
+button,
+input,
+a,
+label {
+    border-radius: 15px !important;
+    box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+}
+
+@media screen and (max-width: 1279px) {
+    .Background {
+        display: none;
+    }
+
+    * {
+        font-size: 12px !important;
+    }
+
+    body {
+        background: url("../img/Idoko/Untitled-2.png") center top / 100% 100% no-repeat;
+        width: 100%;
+        height: 100vh;
+        font-family: yekan !important;
+    }
+
+    .dark-mode {
+        background-color: #2d1d1d !important;
+        color: darkblue;
+        background: url("../img/Idoko/2.png") center top / 100% 100% no-repeat;
+    }
+
+    input.Record {
+        position: absolute;
+        text-align: center;
+        border-radius: 0px 15px 15px 0px !important;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 30px 10px 10px 190px !important;
+        width: 120px;
+        height: 35px;
+        font-size: 14px;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+        background: rgb(255, 246, 164);
+        color: rgb(2, 72, 30);
+        border: none;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    select#provinces {
+        position: absolute;
+        text-align: center;
+        border-radius: 15px 0px 0px 15px !important;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 30px 10px 10px -62px;
+        width: 380px;
+        height: 35px;
+        font-size: 14px;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px;
+    }
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        font-size: 30px;
+        position: absolute;
+        width: 40px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 15px 10px 10px -275px;
+    }
+
+    .Search {
+        position: absolute;
+        width: 500px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 18px 10px 10px 0px;
+        text-align: center;
+        border: none;
+        font-size: 14px;
+    }
+
+    .Windo {
+        position: fixed;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px !important;
+        border-radius: 15px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 110px;
+        border: none;
+        font-size: 14px;
+        bottom: 5px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Page {
+        position: fixed;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px !important;
+        border-radius: 15px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 220px;
+        border: none;
+        font-size: 14px;
+        bottom: 5px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Food {
+        position: fixed;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px !important;
+        border-radius: 15px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 0px;
+        border: none;
+        font-size: 14px;
+        bottom: 5px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Invite {
+        position: fixed;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px !important;
+        border-radius: 15px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px -220px;
+        border: none;
+        font-size: 14px;
+        bottom: 5px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Pet {
+        position: fixed;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px !important;
+        border-radius: 15px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px -110px;
+        border: none;
+        font-size: 14px;
+        bottom: 5px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .r1 {
+        position: absolute;
+        width: 550px;
+        height: 550px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 135px 10px 10px 0px;
+        border: solid #013237 1px;
+    }
+
+    .Catgory {
+        position: absolute;
+        width: 500px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 75px 10px 10px 0px;
+        text-align: center;
+        border: none;
+        font-size: 14px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .map {
+        width: 535px;
+        height: 540px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 140px 10px 10px -4px;
+    }
+
+    .AboutText {
+        position: absolute;
+        width: 268px;
+        height: 121px;
+        background: rgb(213, 229, 245);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 695px 0px 0px 140px;
+        border: none;
+        text-align: right;
+        padding: 6px;
+        font-size: 14px !important;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .FoodTable {
+        position: absolute;
+        border: 2px solid #000;
+        border-collapse: collapse;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 823px 0px 0px 140px;
+        max-width: 268px;
+        height: 52px;
+        border-radius: 15px;
+        font-size: 17px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    svg#iran {
+        width: 540px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 150px 0px 0px 0px;
+    }
+
+    a,
+    div,
+    button,
+    input,
+    a {
+        border-radius: 15px !important;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Background {
+        display: none;
+    }
+
+    * {
+        font-size: 10px !important;
+    }
+
+    body {
+        background: url("../img/Idoko/Untitled-1.png") center top / 100% 100% no-repeat;
+        width: 100%;
+        height: 100vh;
+        font-family: yekan !important;
+    }
+
+    .dark-mode {
+        background-color: #2d1d1d !important;
+        color: darkblue;
+        background: url("../img/Idoko/3.png") center top / 100% 100% no-repeat;
+    }
+
+    select#provinces {
+        position: absolute;
+        text-align: center;
+        border-radius: 15px 0px 0px 15px !important;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 20px 10px 10px -35px;
+        width: 210px;
+        height: 30px;
+        font-size: 14px;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    input.Record {
+        position: absolute;
+        text-align: center;
+        border-radius: 0px 15px 15px 0px !important;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        margin: 20px 10px 10px 106px !important;
+        width: 70px;
+        height: 30px;
+        font-size: 14px;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+        background: rgb(255, 246, 164);
+        color: rgb(2, 72, 30);
+        border: none;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        font-size: 30px;
+        position: absolute;
+        width: 30px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px -160px;
+    }
+
+    .Search {
+        position: absolute;
+        width: 280px;
+        height: 30px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px 0px;
+        text-align: center;
+        border: none;
+    }
+
+    .Windo {
+        position: fixed;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px !important;
+        border-radius: 15px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 65px;
+        bottom: 5px;
+        border: none;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Page {
+        position: fixed;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px !important;
+        border-radius: 15px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 130px;
+        border: none;
+        bottom: 5px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Food {
+        position: fixed;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px !important;
+        border-radius: 15px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 0px;
+        border: none;
+        bottom: 5px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Invite {
+        position: fixed;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px !important;
+        border-radius: 15px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px -130px;
+        border: none;
+        bottom: 5px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .Pet {
+        position: fixed;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px !important;
+        border-radius: 15px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px -65px;
+        border: none;
+        bottom: 5px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .r1 {
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        background: transparent;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 100px 10px 10px 0px;
+        border: solid #013237 1px;
+    }
+
+    .Catgory {
+        position: absolute;
+        width: 280px;
+        height: 30px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 55px 10px 10px 0px;
+        text-align: center;
+        border: none;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .map {
+        width: 340px;
+        height: 340px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 105px 10px 10px -2px;
+    }
+
+    .AboutText {
+        position: absolute;
+        width: 170px;
+        height: 75px;
+        background: rgb(213, 229, 245);
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+        border-radius: 5px;
+        left: 50%;
+        font-size: 12px;
+        transform: translate(-50%, 0%);
+        margin: 454px 0px 0px 90px;
+        text-align: right;
+        max-height: 195px;
+        font-size: 11px !important;
+        padding: 5px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .FoodTable {
+        position: absolute;
+        border: 2px solid #000;
+        border-collapse: collapse;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 533px 0px 0px 90px;
+        max-width: 170px;
+        font-size: 10px;
+        height: 55px !important;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    svg#iran {
+        width: 340px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 115px 0px 0px 0px;
+    }
+
+    div,
+    button,
+    input,
+    a {
+        border-radius: 15px !important;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+    }
+}

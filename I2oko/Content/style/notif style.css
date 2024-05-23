@@ -1,0 +1,1129 @@
+﻿@font-face {
+    font-family: yekan;
+    src: url("../font/Yekan.ttf") format("truetype"), url("../font/Yekan.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-size: 14px !important;
+}
+
+body {
+    background: url("../img/Idoko/Untitled-4.png")top center no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100%;
+    font-family: "yekan" !important;
+}
+
+.LikeNumber {
+    position: absolute;
+    width: 38px;
+    height: 25px;
+    box-shadow: none !important;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 17px 10px 10px 113px;
+    text-align: center;
+    font-size: 14px !important;
+}
+
+.DeleteButton {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-weight: 400;
+    font-size: 20px !important;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 60px 10px 10px 113px;
+    border: none;
+    background: transparent;
+    border-radius: unset !important;
+    box-shadow: unset !important;
+}
+
+.buttonLike {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    font-weight: 400;
+    font-size: 20px !important;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 0px 10px 10px 113px;
+    border: none;
+    background: transparent;
+    border-radius: unset !important;
+    box-shadow: unset !important;
+}
+
+.LkeComment {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    font-weight: 400;
+    font-size: 20px !important;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 15px 10px 10px -55px;
+}
+
+.LikeTextcoment {
+    position: absolute;
+    width: 165px;
+    height: 56px;
+    background: #e5fff0;
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 8px 10px 10px -60px;
+    text-align: right;
+    padding: 5px;
+    font-size: 12px;
+    border: solid #013237 1px;
+    direction: rtl;
+    font-family: 'yekan';
+    white-space: pre-wrap;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.LikeUserNameComment {
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    width: max-content;
+    transform: translate(-50%, 0%);
+    margin: 26px 0px 0px 77px;
+    text-align: center;
+    font-size: 9px !important;
+}
+
+.UserNameComment {
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    width: max-content;
+    transform: translate(-50%, 0%);
+    margin: 20px 0px 0px -100px;
+    text-align: center;
+    font-size: 9px !important;
+}
+
+.SubmitButton {
+    background: url(../Content/img/Idoko/back.png) no-repeat;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 45px 0px 0px -275px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 20px !important;
+    box-shadow: none !important;
+    cursor: pointer;
+}
+
+label.labeldark {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 15px 10px 10px -350px;
+}
+
+.darklabel {
+    color: #5cedfb !important;
+}
+
+.darkimg {
+    position: absolute;
+    width: 60px;
+}
+
+.dark-button {
+    background: black !important;
+    background: black !important;
+    border: 0.25em solid transparent !important;
+    background-image: linear-gradient(#000, #000), linear-gradient(120deg, #f09 0%, #0ff 50%, #9f0 100%) !important;
+    background-origin: border-box !important;
+    background-clip: padding-box, border-box !important;
+    background-size: 200% 100% !important;
+    transition: background-position 0.8s ease-out;
+    color: #5cedfb !important;
+}
+
+.dark-rectangle {
+    background-color: #364d6f !important; /* تغییر رنگ rectangle ها در حالت دارک‌مود */
+}
+
+.dark-mode {
+    background-color: #2d1d1d !important;
+    color: darkblue;
+    background: url("../img/Idoko/1.png") center top / 100% 100% no-repeat;
+}
+
+.BackIcon {
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    position: absolute;
+    width: 40px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 45px 0px 0px -275px;
+}
+
+.follow {
+    position: absolute;
+    width: 460px;
+    height: 90px;
+    border-right: 10px solid #009688;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 10px 0px 0px -3px;
+    border-left: 10px solid #009688;
+}
+
+.P1 {
+    width: 80px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 5px 0px 0px 171px;
+    border-radius: 15px;
+    height: 80px;
+    border: solid #013237 2px;
+    box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+}
+
+.P2 {
+    width: 80px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 5px 0px 0px 171px;
+    border-radius: 15px;
+    height: 80px;
+    border: solid #013237 2px;
+    box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+}
+
+.P3 {
+    width: 80px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 3px 0px 0px 171px;
+    border-radius: 15px;
+    height: 80px;
+}
+
+.TextFollow {
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    width: max-content;
+    transform: translate(-50%, 0%);
+    margin: 25px 0px 0px 30px;
+    text-align: center;
+}
+
+.Back {
+    background: rgb(255, 246, 164);
+    color: rgb(2, 72, 30);
+    border: none;
+    font-weight: 600;
+    position: absolute;
+    margin: 15px 10px 10px -150px;
+    width: 105px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-family: 'yekan';
+    height: 30px;
+    border: solid #013237 1px;
+    font-weight: bold;
+}
+
+.coment {
+    position: absolute;
+    width: 465px;
+    height: 90px;
+    border-right: 10px solid #0355d0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -91px 0px 0px 0px;
+    border-left: 5px solid #346abb;
+}
+
+.date {
+    position: absolute;
+    margin: 68px 0px 0px 20px;
+    font-weight: bold;
+    font-size: 12px !important;
+}
+
+.Pp1 {
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 14px 0px 0px 219px;
+}
+
+.Pp2 {
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 14px 0px 0px 219px;
+}
+
+.TextCom {
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 18px 0px 0px 37px;
+}
+
+.like {
+    position: absolute;
+    width: 465px;
+    height: 90px;
+    border-right: 10px solid #0355d0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -182px 0px 0px 0px;
+    border-left: 5px solid;
+}
+
+.Ppp1 {
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 14px 0px 0px 219px;
+}
+
+.Ppp2 {
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 14px 0px 0px 219px;
+}
+
+.LikeCom {
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 18px 0px 0px 37px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 0fr);
+    gap: 10px;
+    overflow-y: auto;
+    position: absolute;
+    left: 50%;
+    width: 500px;
+    margin: 96px 10px 10px 0px;
+    transform: translate(-50%, 0%);
+    justify-content: center;
+    height: 74%;
+    max-height: 77%;
+    border: solid #013237 1px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.contact-list {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(96px, 288px));
+    justify-content: center;
+    grid-gap: 105px 78px;
+    padding-top: 125px;
+    padding-right: 0px;
+    padding-left: 300px;
+    width: 155px;
+    position: absolute;
+}
+
+.r1 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin: 20px 0px 0px 170px;
+}
+
+.r2 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin: 10px 0px 0px 20px;
+    background: darkblue;
+    color: brown;
+    border: solid #013237 2px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+}
+
+
+.likec {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 35px 0px 0px 30px;
+    font-weight: bold;
+}
+
+.datelike {
+    position: absolute;
+    margin: 68px 0px 0px 20px;
+    font-weight: bold;
+}
+
+.post {
+    cursor: pointer;
+    display: block;
+    top: -89px;
+    width: 0px;
+    /* height: 1px; */
+    position: relative;
+    top: -110px;
+}
+
+.Textcoment {
+    position: absolute;
+    width: 145px;
+    height: 73px;
+    background: #e5fff0;
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 9px 10px 10px 23px;
+    text-align: right;
+    padding: 5px;
+    font-size: 12px;
+    border: solid #013237 1px;
+    direction: rtl;
+    font-family: 'yekan';
+    /* For non-WebKit browsers */
+    /* For WebKit browsers */
+    /* For non-WebKit browsers */
+    /* For WebKit browsers */
+    white-space: pre-wrap; /* For wrapping long lines */
+    /* این برای ایجاد نوار اسکرول عمودی می‌باشد */
+    /* این خط برای تنظیم عرض نوار اسکرول است */
+    /* این برای ایجاد نوار اسکرول عمودی می‌باشد */
+    /* این خط برای تنظیم عرض نوار اسکرول است */
+    overflow-y: scroll; /* این برای ایجاد نوار اسکرول عمودی می‌باشد */
+    scrollbar-width: none; /* این خط برای تنظیم عرض نوار اسکرول است */
+}
+
+div, button, input {
+    border-radius: 15px !important;
+    box-shadow: rgb(1 50 55) 0px 0px 5px !important;
+}
+
+@media screen and (max-width: 1279px) {
+    body {
+        background: url("../img/Idoko/Untitled-2.png")top center no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-size: 100% 100%;
+        font-family: "yekan" !important;
+    }
+
+    * {
+        font-size: 12px !important;
+    }
+
+    .LikeNumber {
+        position: absolute;
+        width: 37px;
+        height: 26px;
+        box-shadow: none !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 17px 10px 10px 112px;
+        text-align: center;
+        font-size: 14px !important;
+    }
+
+    .DeleteButton {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        font-weight: 400;
+        font-size: 20px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 60px 10px 10px 112px;
+        border: none;
+        background: transparent;
+        border-radius: unset !important;
+        box-shadow: unset !important;
+    }
+
+    .buttonLike {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        font-weight: 400;
+        font-size: 20px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 112px;
+    }
+
+    .LkeComment {
+        position: absolute;
+        font-weight: 400;
+        font-size: 25px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 7px 10px 10px -28px;
+    }
+
+    .LikeTextcoment {
+        position: absolute;
+        width: 165px;
+        height: 56px;
+        background: #e5fff0;
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 8px 10px 10px -60px;
+        text-align: right;
+        padding: 5px;
+        font-size: 12px;
+        border: solid #013237 1px;
+        direction: rtl;
+        font-family: 'yekan';
+        white-space: pre-wrap;
+        overflow-y: scroll;
+        scrollbar-width: none;
+    }
+
+    .LikeUserNameComment {
+        font-weight: bold;
+        position: absolute;
+        left: 50%;
+        width: max-content;
+        transform: translate(-50%, 0%);
+        margin: 26px 0px 0px 77px;
+        font-size: 9px !important;
+        text-align: center;
+    }
+
+    .UserNameComment {
+        font-weight: bold;
+        position: absolute;
+        left: 50%;
+        width: max-content;
+        transform: translate(-50%, 0%);
+        margin: 20px 0px 0px -100px;
+        text-align: center;
+        font-size: 9px !important;
+    }
+
+    .dark-mode {
+        background-color: #2d1d1d !important;
+        color: darkblue;
+        background: url("../img/Idoko/2.png") center top / 100% 100% no-repeat;
+    }
+
+    .Background {
+        display: none;
+    }
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        font-size: 30px;
+        position: absolute;
+        width: 40px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 15px 10px 10px -275px;
+    }
+
+    .follow {
+        position: absolute;
+        width: 465px;
+        height: 90px;
+        border-right: 10px solid #009688;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        /* margin: 10px 0px 0px 0px; */
+        border-left: 10px solid #009688;
+    }
+
+    .P1 {
+        width: 80px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 5px 0px 0px 170px;
+        border-radius: 15px;
+        height: 80px;
+    }
+
+    .P2 {
+        width: 80px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 5px 0px 0px 170px;
+        border-radius: 15px;
+        height: 80px;
+    }
+
+    .P3 {
+        width: 80px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 3px 0px 0px 171px;
+        border-radius: 15px;
+        height: 80px;
+    }
+
+    .TextFollow {
+        font-weight: bold;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 27px 0px 0px 40px;
+    }
+
+    .Back {
+        border: none;
+        font-weight: 600;
+        position: absolute;
+        margin: 20px 10px 10px -160px;
+        width: 95px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        font-family: 'yekan';
+        height: 30px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .coment {
+        position: absolute;
+        width: 465px;
+        height: 90px;
+        border-right: 10px solid #0355d0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -91px 0px 0px 0px;
+        border-left: 5px solid #346abb;
+    }
+
+    .date {
+        position: absolute;
+        margin: 68px 0px 0px 20px;
+        font-weight: bold;
+    }
+
+    .Pp1 {
+        width: 50px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 14px 0px 0px 219px;
+    }
+
+    .Pp2 {
+        width: 50px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 14px 0px 0px 219px;
+    }
+
+    .TextCom {
+        font-weight: bold;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 18px 0px 0px 37px;
+    }
+
+    .like {
+        position: absolute;
+        width: 465px;
+        height: 90px;
+        border-right: 10px solid #0355d0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -182px 0px 0px 0px;
+        border-left: 5px solid;
+    }
+
+    .Ppp1 {
+        width: 50px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 14px 0px 0px 219px;
+    }
+
+    .Ppp2 {
+        width: 50px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 14px 0px 0px 219px;
+    }
+
+    .LikeCom {
+        font-weight: bold;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 18px 0px 0px 37px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 0fr);
+        gap: 10px;
+        overflow-y: auto;
+        position: absolute;
+        left: 50%;
+        width: 500px;
+        margin: 96px 10px 10px 0px;
+        transform: translate(-50%, 0%);
+        justify-content: center;
+        height: 74%;
+        max-height: 77%;
+    }
+
+    .contact-list {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(96px, 288px));
+        justify-content: center;
+        grid-gap: 105px 78px;
+        padding-top: 295px;
+        padding-right: 68px;
+        padding-left: 300px;
+        width: 155px;
+    }
+
+    .r1 {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        margin: 20px 0px 0px 170px;
+    }
+
+    .r2 {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        margin: 10px 0px 0px 20px;
+        background: darkblue;
+        color: brown;
+    }
+
+
+    .likec {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 40px 0px 0px 40px;
+        font-weight: bold;
+    }
+
+    .datelike {
+        position: absolute;
+        margin: 68px 0px 0px 20px;
+        font-weight: bold;
+    }
+
+    .post {
+        cursor: pointer;
+        display: block;
+        top: -89px;
+        width: 0px;
+        /* height: 1px; */
+        position: relative;
+        top: -280px;
+    }
+
+    .Textcoment {
+        font-weight: bold;
+        position: absolute;
+        left: 50%;
+        width: 145px;
+        height: 73px;
+        margin: 9px 10px 10px 23px;
+        transform: translate(-50%, 0%);
+    }
+
+    div, button, input {
+        border-radius: 15px !important;
+        box-shadow: rgb(1 50 55) 0px 0px 5px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background: url("../img/Idoko/Untitled-2.png")top center no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-size: 100% 100%;
+        font-family: "yekan" !important;
+    }
+
+    * {
+        font-size: 10px !important;
+    }
+
+    .LikeNumber {
+        position: absolute;
+        width: 32px;
+        height: 23px;
+        box-shadow: none !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 16px 10px 10px 53px;
+        text-align: center;
+        font-size: 12px !important;
+    }
+
+    .DeleteButton {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        font-weight: 400;
+        font-size: 20px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 54px 10px 10px -97px;
+        border: none;
+        background: transparent;
+        border-radius: unset !important;
+        box-shadow: unset !important;
+    }
+
+    .buttonLike {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        font-weight: 400;
+        font-size: 20px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 53px;
+    }
+
+    .LkeComment {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        font-weight: 400;
+        font-size: 20px !IMPORTANT;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 28.5px 10px 10px -20px;
+    }
+
+    .LikeTextcoment {
+        position: absolute;
+        width: 130px;
+        height: 48px;
+        background: #e5fff0;
+        box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 7px 10px 10px -3px;
+        text-align: right;
+        padding: 5px;
+        font-size: 12px;
+        border: solid #013237 1px;
+        direction: rtl;
+        font-family: 'yekan';
+        white-space: pre-wrap;
+        overflow-y: scroll;
+        scrollbar-width: none;
+    }
+
+    .LikeUserNameComment {
+        font-weight: bold;
+        position: absolute;
+        left: 50%;
+        width: max-content;
+        transform: translate(-50%, 0%);
+        margin: 57px 0px 0px 17px;
+        text-align: right;
+        font-size: 9px !important;
+    }
+
+    .UserNameComment {
+        font-weight: bold;
+        position: absolute;
+        left: 50%;
+        width: max-content;
+        transform: translate(-50%, 0%);
+        margin: 57px 0px 0px 17px;
+        text-align: right;
+        font-size: 9px !important;
+    }
+
+    .dark-mode {
+        background-color: #2d1d1d !important;
+        color: darkblue;
+        background: url("../img/Idoko/3.png") center top / 100% 100% no-repeat;
+    }
+
+    .Background {
+        display: none;
+    }
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        font-size: 30px;
+        position: absolute;
+        width: 30px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px -160px;
+    }
+
+    .follow {
+        position: absolute;
+        width: 329px;
+        height: 90px;
+        border-right: 10px solid #009688;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        /* margin: 10px 0px 0px 0px; */
+        border-left: 10px solid #009688;
+    }
+
+    .P1 {
+        width: 80px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 5px 0px 0px 110px;
+        border-radius: 15px;
+        height: 80px;
+    }
+
+    .P2 {
+        width: 80px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 5px 0px 0px 110px;
+        border-radius: 15px;
+        height: 80px;
+    }
+
+    .P3 {
+        width: 80px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 3px 0px 0px 110px;
+        border-radius: 15px;
+        height: 80px;
+    }
+
+    .TextFollow {
+        font-weight: bold;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 28px 0px 0px 17px;
+        font-size: 9px !important;
+    }
+
+    .Back {
+        position: absolute;
+        margin: 25px 10px 10px -109px;
+        width: 80px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        font-family: 'yekan';
+        height: 25px;
+        border: solid #013237 1px;
+        font-weight: bold;
+    }
+
+    .coment {
+        position: absolute;
+        width: 465px;
+        height: 90px;
+        border-right: 10px solid #0355d0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -91px 0px 0px 0px;
+        border-left: 5px solid #346abb;
+    }
+
+    .date {
+        position: absolute;
+        margin: 70px 0px 0px 7px;
+        font-weight: bold;
+        font-size: 10px !important;
+    }
+
+    .Pp1 {
+        width: 50px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 14px 0px 0px 219px;
+    }
+
+    .Pp2 {
+        width: 50px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 14px 0px 0px 219px;
+    }
+
+    .TextCom {
+        font-weight: bold;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 18px 0px 0px 37px;
+    }
+
+    .like {
+        position: absolute;
+        width: 465px;
+        height: 90px;
+        border-right: 10px solid #0355d0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -182px 0px 0px 0px;
+        border-left: 5px solid;
+    }
+
+    .Ppp1 {
+        width: 50px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 14px 0px 0px 219px;
+    }
+
+    .Ppp2 {
+        width: 50px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 14px 0px 0px 219px;
+    }
+
+    .LikeCom {
+        font-weight: bold;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 18px 0px 0px 37px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 0fr);
+        gap: 10px;
+        overflow-y: auto;
+        position: absolute;
+        left: 50%;
+        width: 350px;
+        margin: 50px 10px 10px 0px;
+        transform: translate(-50%, 0%);
+        justify-content: center;
+        height: 88%;
+        max-height: 88.5%;
+    }
+
+    .contact-list {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(96px, 288px));
+        justify-content: center;
+        grid-gap: 105px 78px;
+        padding-top: 310px;
+        padding-right: 80px;
+        padding-left: 225px;
+        width: 155px;
+    }
+
+    .r1 {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        margin: 25px 0px 0px 120px;
+    }
+
+    .r2 {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        margin: 6px 0px 0px 5px;
+        background: darkblue;
+        color: brown;
+    }
+
+
+    .likec {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 40px 0px 0px 10px;
+        font-weight: bold;
+    }
+
+    .datelike {
+        position: absolute;
+        margin: 70px 0px 0px 7px;
+        font-weight: bold;
+        font-size: 10px !important;
+    }
+
+    .post {
+        cursor: pointer;
+        display: block;
+        top: -89px;
+        width: 0px;
+        /* height: 1px; */
+        position: relative;
+        top: -300px;
+    }
+
+    .Textcoment {
+        font-weight: bold;
+        position: absolute;
+        left: 50%;
+        height: 48px;
+        width: 130px;
+        transform: translate(-50%, 0%);
+        margin: 6px 0px 0px -27px;
+    }
+
+    div, button, input {
+        border-radius: 15px !important;
+        box-shadow: rgb(1 50 55) 0px 0px 5px !important;
+    }
+}

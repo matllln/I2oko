@@ -1,0 +1,148 @@
+﻿@model I2oko.Models.FavoriteModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../Content/img/Idoko/favicon.ico">
+
+    <link rel="stylesheet" href="../Content/style/favorite style.css">
+    <link rel="stylesheet" href="../Content/style/favorite style2.css">
+
+
+    <link rel="stylesheet" href="~/Content/recomand/bootstrap.rtl.min.css"
+          integrity="sha384-beJoAY4VI2Q+5IPXjI207/ntOuaz06QYCdpWfWRv4lSFDyUSqsM0W+wiAMr2I185" crossorigin="anonymous">
+    <script src="~/Content/recomand/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"></script>
+    <script defer src="~/Content/recomand/cdn.min.js"></script>
+    <link href='~/Content/recomand/parsinee.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!--  ------------------------------------------------------- -->
+    <a href="/Home/Proofile">
+        <img class="BackIcon" src="../Content/img/Idoko/back.png" />
+    </a>
+    <!-- -------------------------------------------------------------------------------- -->
+    @using (Html.BeginForm("Favorite", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <!-- .................................................................. -->
+        <div class="grid-container">
+            <section class="fav-list">
+                @foreach (var post in ViewBag.PostDetails)
+                {
+                    <a href="@Url.Action("ShowPost", "Home", new { 
+                                    PostID = post.PostID,
+                         })">
+
+                        @if (!string.IsNullOrEmpty(post.MediaURL) && (post.MediaURL.EndsWith(".jpg") || post.MediaURL.EndsWith(".jpeg") || post.MediaURL.EndsWith(".png")))
+                        {
+                            <figure class="fav-image">
+                                <div>
+                                    <img class="r1" src="@post.MediaURL" alt="User Post Image">
+                                    <p class="Username">@post.UserName</p>
+                                </div>
+                            
+                            </figure>
+                        }
+                        else if (!string.IsNullOrEmpty(post.MediaURL) && post.MediaURL.EndsWith(".mp4"))
+                        {
+                            <figure class="fav-image">
+                                <div>
+                                    <div class="video-icon">
+                                        <img class="VideoIcon" src="~/Content/img/Idoko/video.svg" />
+                                    </div>
+                                    <video class="VideoStyle">
+                                        <source src="@post.MediaURL" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <p class="Username">@post.UserName</p>
+                                </div>
+                            
+                            </figure>
+                        }
+                    </a>
+                }
+
+                @foreach (var post in ViewBag.FoodDetails)
+                {
+                    <a href="@Url.Action("ShowPostRecipe", "Home", new {
+                                    FoodID = post.FoodID,
+                               })">
+                        <figure class="fav-image">
+                            <div>
+                                <div class="video-icon">
+                                    <img class="VideoIcon" src="~/Content/img/Idoko/pot.svg" />
+                                </div>
+                                <img class=" r1" src="@post.PictureURL" alt="">
+                                <p class="Username">@post.UserName</p>
+                            </div>
+                        </figure>
+                    </a>
+                }
+            </section>
+        </div>
+                    
+    }
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            loadDarkModeState();
+        });
+
+        // تعریف توابع مربوط به ذخیره و بازیابی وضعیت دارک مود
+        function saveDarkModeState() {
+            var darkModeState = {
+                "dark-mode": document.body.classList.contains("dark-mode"),
+                "dark-buttons": document.querySelector(".hover-grow").classList.contains("dark-button"),
+                "dark-profile": document.querySelector(".Profile").classList.contains("dark-profile"),
+                "dark-rectangles": document.querySelector(".rectangle").classList.contains("dark-rectangle")
+            };
+
+            localStorage.setItem("dark-mode-state", JSON.stringify(darkModeState));
+        }
+
+        function loadDarkModeState() {
+            var darkModeState = JSON.parse(localStorage.getItem("dark-mode-state")) || {};
+
+            if (darkModeState["dark-mode"]) {
+                document.body.classList.add("dark-mode");
+            }
+
+            var buttons = document.querySelectorAll(".hover-grow");
+            buttons.forEach(button => {
+                if (darkModeState["dark-buttons"]) {
+                    button.classList.add("dark-button");
+                }
+            });
+
+            //if (darkModeState["dark-profile"]) {
+            //    document.querySelector(".Profile").classList.add("dark-profile");
+            //}
+
+            var rectangles = document.querySelectorAll(".rectangle");
+            rectangles.forEach(rectangle => {
+                if (darkModeState["dark-rectangles"]) {
+                    rectangle.classList.add("dark-rectangle");
+                }
+            });
+
+            // تغییر بک‌گراند .darkimg در حالت دارک مود
+            var darkMode = document.body.classList.contains("dark-mode");
+            var darkImg = document.querySelector(".darkimg");
+            // بازنشانی کلاس darklabel به لیبل و تگ a در حالت دارک مود
+
+        }
+    </script>
+</body>
+
+</html>
+

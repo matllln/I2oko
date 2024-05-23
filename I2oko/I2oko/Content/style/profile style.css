@@ -1,0 +1,1432 @@
+@font-face {
+    font-family: yekan;
+    src: url("../font/Yekan.ttf") format("truetype"), url("../font/Yekan.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: url("../img/Idoko/Untitled-4.png") center top / 100% 100% no-repeat;
+    width: 100%;
+    height: 100vh;
+    font-family: yekan !important;
+}
+button,input,text,a,div{
+    font-family: "yekan" !important;
+}
+.Headr {
+    position: absolute;
+    width: 500px;
+    height: 120px;
+    background: rgb(51, 91, 44);
+    box-shadow: rgb(1, 50, 55) 0px 0px 30px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 80px 10px 10px;
+}
+
+.HeadrRight {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgb(51, 91, 44);
+    box-shadow: rgb(1, 50, 55) 0px 0px 30px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 82px 10px 10px 340px;
+}
+
+.HeadrLeft {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgb(51, 91, 44);
+    box-shadow: rgb(1, 50, 55) 0px 0px 30px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 82px 10px 10px -320px;
+}
+
+.Profile {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: transparent;
+    box-shadow: rgb(1, 50, 55) 0px 0px 30px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 35px 10px 10px;
+    border: solid;
+    border-radius: 25px !important;
+}
+
+.logo {
+    width: 120px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 82px 10px 10px 340px;
+}
+
+.Search {
+    position: absolute;
+    width: 500px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 208px 10px 10px;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+}
+
+.Newpost {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 285px 10px 10px -320px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px;
+    color: #013237;
+    text-wrap: nowrap;
+}
+
+.Favorite {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 330px 10px 10px -320px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px;
+    color: #013237;
+    text-wrap: nowrap;
+}
+
+.Diet {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 375px 10px 10px -320px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px;
+    color: #013237;
+    text-wrap: nowrap;
+}
+
+.List {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 420px 10px 10px -320px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px;
+    color: #013237;
+    text-wrap: nowrap;
+}
+
+.Edit {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 465px 10px 10px -320px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px;
+    color: #013237;
+    text-wrap: nowrap;
+}
+
+.Windo {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 285px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px;
+    color: #013237;
+    text-wrap: nowrap;
+}
+
+.Page {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 330px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px;
+    color: #013237;
+    text-wrap: nowrap;
+}
+
+.Food {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 375px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px;
+    color: #013237;
+    text-wrap: nowrap;
+}
+
+.Invite {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 420px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px;
+    color: #013237;
+    text-wrap: nowrap;
+}
+
+.Pet {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgb(255, 246, 164);
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 465px 10px 10px 340px;
+    border: none;
+    font-size: 16px;
+    font-family: yekan;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px;
+    color: #013237;
+    text-wrap: nowrap;
+}
+
+.Notif {
+    position: absolute;
+    background: transparent;
+    height: 25px;
+    border: none;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 130px 10px 10px 240px;
+}
+
+.Exit {
+    position: absolute;
+    background: transparent;
+    border: none;
+    height: 25px;
+    width: 25px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 165px 10px 10px 240px;
+    color: transparent;
+}
+
+.Seting {
+    position: absolute;
+    background: transparent;
+    height: 25px;
+    border: none;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 90px 10px 10px 240px;
+}
+
+.Friends {
+    position: absolute;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgb(234, 249, 231);
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 100px 10px 10px -90px;
+}
+
+.FriendsLabel {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 100px 10px 10px -90px;
+}
+
+.Audiences {
+    position: absolute;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgb(234, 249, 231);
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 100px 10px 10px -143px;
+}
+
+.Post {
+    position: absolute;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgb(234, 249, 231);
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 100px 10px 10px -195px;
+}
+
+.r1 {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: transparent;
+    box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 10px 10px 10px 0px;
+    border: solid;
+}
+
+.r2 {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: transparent;
+    box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 10px 10px 10px 170px;
+    border: solid;
+}
+
+.r3 {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: transparent;
+    box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 10px 10px 10px -170px;
+    border: solid;
+}
+
+.r4 {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: transparent;
+    box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 180px 10px 10px 0px;
+    border: solid;
+}
+
+.r5 {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: transparent;
+    box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 180px 10px 10px 170px;
+    border: solid;
+}
+
+.r6 {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: transparent;
+    box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 180px 10px 10px -170px;
+    border: solid;
+}
+
+.FriendsPanel {
+    position: absolute;
+    width: 45px;
+    height: 20px;
+    background: transparent;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 120px 10px 10px -90px;
+    text-align: center;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AudiencesPanel {
+    position: absolute;
+    width: 45px;
+    height: 20px;
+    background: transparent;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 120px 10px 10px -142px;
+    text-align: center;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.PostPanel {
+    position: absolute;
+    width: 45px;
+    height: 20px;
+    background: transparent;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 120px 10px 10px -195px;
+    text-align: center;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Username {
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    background: transparent;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 162px 10px 10px;
+    text-align: center;
+    color: rgb(234, 249, 231);
+    padding: 10px;
+    font-size: 14px;
+}
+
+.Bio {
+    position: absolute;
+    width: 130px;
+    height: 90px;
+    background: transparent;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 95px 10px 10px 150px;
+    text-align: right;
+    padding: 8px;
+    font-size: 14px;
+    color: rgb(234, 249, 231);
+}
+
+.Catgory {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background: transparent;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 157px 10px 10px -140px;
+    text-align: center;
+    color: rgb(234, 249, 231);
+    padding: 9px;
+    font-size: 14px;
+}
+
+.TextDay {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background: transparent;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 87px 10px 10px -320px;
+    border: solid;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    gap: 10px;
+    overflow-y: auto;
+    position: absolute;
+    left: 50%;
+    width: 515px;
+    margin: 254px 10px 10px;
+    transform: translate(-50%, 0%);
+    justify-content: center;
+    height: 54%;
+    max-height: 60%;
+}
+
+div, button, input, a {
+    border-radius: 15px !important;
+    box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+}
+
+@media screen and (max-width: 1279px) {
+
+    .HeadrLeft,
+    .HeadrRight,
+    .TextDay,
+    .logo,
+    .Background {
+        display: none;
+    }
+
+    body {
+        background: url("../img/Idoko/Untitled-2.png") center top / 100% 100% no-repeat;
+        width: 100%;
+        height: 100vh;
+        font-family: yekan !important;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1.15fr);
+        gap: 10px;
+        max-height: 72%;
+        width: 560px;
+        height: 65%;
+        overflow-y: auto;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 270px 10px 10px 0px;
+    }
+
+    .Headr {
+        position: absolute;
+        width: 550px;
+        height: 110px;
+        background: rgb(51, 91, 44);
+        box-shadow: rgb(1, 50, 55) 0px 0px 20px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 60px 10px 10px 0px;
+    }
+
+    .Profile {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        border: solid;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 25px 10px 10px 0px;
+        border-radius: 25px !important;
+    }
+
+    .Search {
+        position: absolute;
+        width: 540px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 225px 10px 10px 0px;
+        text-align: center;
+        border: none;
+        font-size: 14px;
+    }
+
+    .Newpost {
+        position: absolute;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 180px 10px 10px 0px;
+        border: none;
+        font-size: 14px;
+    }
+
+    .Favorite {
+        position: absolute;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 180px 10px 10px -110px;
+        border: none;
+        font-size: 14px;
+    }
+
+    .Diet {
+        position: absolute;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 180px 10px 10px 110px;
+        border: none;
+        font-size: 14px;
+    }
+
+    .List {
+        position: absolute;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 180px 10px 10px 220px;
+        border: none;
+        font-size: 14px;
+    }
+
+    .Edit {
+        position: absolute;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 180px 10px 10px -220px;
+        border: none;
+        font-size: 14px;
+    }
+
+    .Windo {
+        position: absolute;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 110px;
+        border: none;
+        font-size: 14px;
+        bottom: 5px;
+    }
+
+    .Page {
+        position: absolute;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 220px;
+        border: none;
+        font-size: 14px;
+        bottom: 5px;
+    }
+
+    .Food {
+        position: absolute;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 0px;
+        border: none;
+        font-size: 14px;
+        bottom: 5px;
+    }
+
+    .Invite {
+        position: absolute;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px -220px;
+        border: none;
+        font-size: 14px;
+        bottom: 5px;
+    }
+
+    .Pet {
+        position: absolute;
+        width: 100px;
+        height: 35px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px -110px;
+        border: none;
+        font-size: 14px;
+        bottom: 5px;
+    }
+
+    .Notif {
+        position: absolute;
+        background: transparent;
+        height: 25px;
+        border: none;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 103px 10px 10px 250px;
+    }
+
+    .Exit {
+        position: absolute;
+        background: transparent;
+        height: 25px;
+        border: none;
+        width: 25px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 135px 10px 10px 250px;
+    }
+
+    .Seting {
+        position: absolute;
+        background: transparent;
+        height: 25px;
+        border: none;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 70px 10px 10px 250px;
+    }
+
+    .Friends {
+        position: absolute;
+        font-size: 12px;
+        line-height: 15px;
+        color: rgb(234, 249, 231);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 75px 10px 10px -103px;
+    }
+
+    .Audiences {
+        position: absolute;
+        font-size: 12px;
+        line-height: 15px;
+        color: rgb(234, 249, 231);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 75px 10px 10px -160px;
+    }
+
+    .Post {
+        position: absolute;
+        font-size: 12px;
+        line-height: 15px;
+        color: rgb(234, 249, 231);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 75px 10px 10px -220px;
+    }
+
+    .r1 {
+        position: absolute;
+        width: 170px;
+        height: 170px;
+        background: transparent;
+        border: solid;
+        box-shadow: rgb(1, 50, 55) 0px 0px 20px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -90px 10px 10px 0px;
+    }
+
+    .r2 {
+        position: absolute;
+        width: 170px;
+        height: 170px;
+        background: transparent;
+        border: solid;
+        box-shadow: rgb(1, 50, 55) 0px 0px 20px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -90px 10px 10px 185px;
+    }
+
+    .r3 {
+        position: absolute;
+        width: 170px;
+        height: 170px;
+        background: transparent;
+        border: solid;
+        box-shadow: rgb(1, 50, 55) 0px 0px 20px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -90px 10px 10px -185px;
+    }
+
+    .r4 {
+        position: absolute;
+        width: 170px;
+        height: 170px;
+        background: transparent;
+        border: solid;
+        box-shadow: rgb(1, 50, 55) 0px 0px 20px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 190px 10px 10px 0px;
+    }
+
+    .r5 {
+        position: absolute;
+        width: 170px;
+        height: 170px;
+        background: transparent;
+        border: solid;
+        box-shadow: rgb(1, 50, 55) 0px 0px 20px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 190px 10px 10px 185px;
+    }
+
+    .r6 {
+        position: absolute;
+        width: 170px;
+        height: 170px;
+        background: transparent;
+        border: solid;
+        box-shadow: rgb(1, 50, 55) 0px 0px 20px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 190px 10px 10px -185px;
+    }
+
+    .FriendsPanel {
+        position: absolute;
+        width: 40px;
+        height: 20px;
+        background: transparent;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 95px 10px 10px -103px;
+    }
+
+    .AudiencesPanel {
+        position: absolute;
+        width: 40px;
+        height: 20px;
+        background: transparent;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 95px 10px 10px -160px;
+    }
+
+    .PostPanel {
+        position: absolute;
+        width: 40px;
+        height: 20px;
+        background: transparent;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 95px 10px 10px -220px;
+    }
+
+    .Username {
+        position: absolute;
+        width: 100px;
+        height: 30px;
+        background: transparent;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 132px 10px 10px 0px;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .Bio {
+        position: absolute;
+        width: 140px;
+        height: 80px;
+        background: transparent;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 75px 10px 10px 150px;
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    .Catgory {
+        position: absolute;
+        width: 120px;
+        height: 30px;
+        background: transparent;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 125px 10px 10px -160px;
+        font-size: 14px;
+        padding: 9px;
+    }
+
+    div, button, input, a {
+        border-radius: 15px !important;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .HeadrLeft,
+    .HeadrRight,
+    .TextDay,
+    .logo,
+    .Background {
+        display: none;
+    }
+
+    body {
+        background: url("../img/Idoko/Untitled-1.png") center top / 100% 100% no-repeat;
+        width: 100%;
+        height: 100vh;
+        font-family: yekan !important;
+    }
+
+    .Headr {
+        position: absolute;
+        width: 330px;
+        height: 90px;
+        background: rgb(51, 91, 44);
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 40px 10px 10px 0px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 0.15fr);
+        gap: 10px;
+        max-height: 65%;
+        width: 345px;
+        height: 59%;
+        overflow-y: auto;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 215px 10px 10px 0px;
+    }
+
+    .Profile {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background: transparent;
+        border: solid;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 15px 10px 10px 0px;
+        border-radius: 25px !important;
+    }
+
+    .Search {
+        position: absolute;
+        width: 320px;
+        height: 30px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 175px 10px 10px 0px;
+        text-align: center;
+        border: none;
+    }
+
+    .Newpost {
+        position: absolute;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 140px 10px 10px 0px;
+        border: none;
+    }
+
+    .Favorite {
+        position: absolute;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 140px 10px 10px -65px;
+        border: none;
+    }
+
+    .Diet {
+        position: absolute;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 140px 10px 10px 65px;
+        border: none;
+    }
+
+    .List {
+        position: absolute;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 140px 10px 10px 130px;
+        border: none;
+    }
+
+    .Edit {
+        position: absolute;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 140px 10px 10px -130px;
+        border: none;
+    }
+
+    .Windo {
+        position: absolute;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 65px;
+        bottom: 5px;
+        border: none;
+    }
+
+    .Page {
+        position: absolute;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 130px;
+        border: none;
+        bottom: 5px;
+    }
+
+    .Food {
+        position: absolute;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 0px;
+        border: none;
+        bottom: 5px;
+    }
+
+    .Invite {
+        position: absolute;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px -130px;
+        border: none;
+        bottom: 5px;
+    }
+
+    .Pet {
+        position: absolute;
+        width: 60px;
+        height: 25px;
+        font-size: 9px;
+        background: rgb(255, 246, 164);
+        box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px -65px;
+        border: none;
+        bottom: 5px;
+    }
+
+    .Notif {
+        position: absolute;
+        background: transparent;
+        height: 20px;
+        border: none;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 15px 10px 10px 100px;
+    }
+
+    .Exit {
+        position: absolute;
+        background: transparent;
+        height: 20px;
+        border: none;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 15px 10px 10px 65px;
+        width: 20px;
+    }
+
+    .Seting {
+        position: absolute;
+        background: transparent;
+        height: 20px;
+        border: none;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 15px 10px 10px 135px;
+    }
+
+    .Friends {
+        position: absolute;
+        font-size: 10px;
+        line-height: 15px;
+        color: rgb(234, 249, 231);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 45px 10px 10px -60px;
+    }
+
+    .Audiences {
+        position: absolute;
+        font-size: 10px;
+        line-height: 15px;
+        color: rgb(234, 249, 231);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 45px 10px 10px -100px;
+    }
+
+    .Post {
+        position: absolute;
+        font-size: 10px;
+        line-height: 15px;
+        color: rgb(234, 249, 231);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 45px 10px 10px -140px;
+    }
+
+    .r1 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        border: solid;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px 0px;
+    }
+
+    .r2 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        border: solid;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px 110px;
+    }
+
+    .r3 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        border: solid;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px -110px;
+    }
+
+    .r4 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        border: solid;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 115px 10px 10px 0px;
+    }
+
+    .r5 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        border: solid;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 115px 10px 10px -110px;
+    }
+
+    .r6 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        border: solid;
+        box-shadow: rgb(1, 50, 55) 0px 0px 10px;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 115px 10px 10px 110px;
+    }
+
+    .FriendsPanel {
+        position: absolute;
+        width: 30px;
+        height: 20px;
+        background: transparent;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 65px 10px 10px -60px;
+        font-size : 8px;
+    }
+
+    .AudiencesPanel {
+        position: absolute;
+        width: 30px;
+        height: 20px;
+        background: transparent;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 65px 10px 10px -99px;
+        font-size: 8px;
+    }
+
+    .PostPanel {
+        position: absolute;
+        width: 30px;
+        height: 20px;
+        background: transparent;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 65px 10px 10px -140px;
+        font-size: 8px;
+    }
+
+    .Username {
+        position: absolute;
+        width: 80px;
+        height: 25px;
+        background: transparent;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 100px 10px 10px 0px;
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .Bio {
+        position: absolute;
+        width: 100px;
+        height: 70px;
+        background: transparent;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 50px 10px 10px 100px;
+        font-size: 11px;
+        padding: 5px;
+    }
+
+    .Catgory {
+        position: absolute;
+        width: 80px;
+        height: 25px;
+        background: transparent;
+        border-radius: 5px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 95px 10px 10px -100px;
+        font-size: 11px;
+        padding: 8px;
+    }
+
+
+    div, button, input, a {
+        border-radius: 15px !important;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+    }
+}

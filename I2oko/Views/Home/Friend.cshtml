@@ -1,0 +1,162 @@
+﻿@model I2oko.Models.FollowingsModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../Content/img/Idoko/favicon.ico">
+
+    <link rel="stylesheet" href="../Content/style/friend.css">
+
+    <link rel="stylesheet" href="~/Content/recomand/bootstrap.rtl.min.css"
+          integrity="sha384-beJoAY4VI2Q+5IPXjI207/ntOuaz06QYCdpWfWRv4lSFDyUSqsM0W+wiAMr2I185" crossorigin="anonymous">
+    <script src="~/Content/recomand/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"></script>
+    <script defer src="~/Content/recomand/cdn.min.js"></script>
+    <link href='~/Content/recomand/parsinee.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+    @Html.ActionLink("پنجره باز", "Window", "Idoko", new { @class = "Windo hover-grow" })
+    @Html.ActionLink("صفحه من", "Proofile", "Idoko", new { @class = "Page hover-grow" })
+    @Html.ActionLink("خوشمزه ها", "Delicious", "Idoko", new { @class = "Food hover-grow" })
+    @Html.ActionLink("چه خبرا؟", "News", "Idoko", new { @class = "Invite hover-grow" })
+    @Html.ActionLink("حیوانات خانگی", "Pet", "Idoko", new { @class = "Pet hover-grow" })
+    <!-- -------------------------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------------------------- -->
+
+        <div class="grid-container">
+            <section class="friend-list">
+                @foreach (var user in ViewBag.Followings)
+                {
+                <div class="Following" Following="@user.FollowingsUserName">
+                    <a href="@Url.Action("ShowProfile", "Home", new { username = user.FollowingsUserName })">
+                        <div class="profile-picture">
+                            <img class="r1" src="@user.ProfilePicturePath" alt="Profile Picture">
+                        </div>
+                    </a>
+
+                    <div class="user-details">
+                        <span class="Username">@user.FollowingsUserName</span>
+
+                        @using (Html.BeginForm("Friend", "Home", FormMethod.Post))
+                        {
+                            <input type="hidden" name="FollowingsUserName" value="@user.FollowingsUserName" />
+                            <button type="submit" class="Remove hover-grow">حذف از دوستان</button>
+                        }
+
+                        @using (Html.BeginForm("BlockUser", "Home", FormMethod.Post))
+                        {
+                            <input type="hidden" name="FollowingsUserName" value="@user.FollowingsUserName" />
+                            <button type="submit" class="Block hover-grow">مسدود کردن</button>
+                        }
+
+                    </div>
+                </div>
+                }
+            </section>
+        </div>
+
+
+        <button class="Search  hover-grow">جستجو کن</button>
+    
+
+    <div onclick="window.location.href='/Home/Proofile'">
+        <img class="BackIcon" src="../Content/img/Idoko/back.png" alt="">
+    </div>
+
+    <script>
+        $(document).on('click', '.Remove', function (e) {
+            e.preventDefault();
+
+            var form = $(this).closest('form');
+            var FollowingsUserName = form.find('input[name="FollowingsUserName"]').val();
+
+            $.ajax({
+                type: 'POST',
+                url: '/Home/Friend',
+                data: { FollowingsUserName: FollowingsUserName },
+                success: function (response) {
+                    var FollowingSelector = '.Following[Following="' + FollowingsUserName + '"]';
+                    $(FollowingSelector).remove();
+                    console.log(response);
+                },
+                error: function (xhr, status, error) {
+                    // در صورت بروز خطا، نمایش پیغام خطا به کاربر
+                    console.error("Error: " + error);
+                }
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            loadDarkModeState();
+        });
+
+        // تعریف توابع مربوط به ذخیره و بازیابی وضعیت دارک مود
+        function saveDarkModeState() {
+            var darkModeState = {
+                "dark-mode": document.body.classList.contains("dark-mode"),
+                "dark-buttons": document.querySelector(".hover-grow").classList.contains("dark-button"),
+                "dark-profile": document.querySelector(".Profile").classList.contains("dark-profile"),
+                "dark-rectangles": document.querySelector(".rectangle").classList.contains("dark-rectangle"),
+                "label-darklabel": document.querySelector("label").classList.contains("darklabel"),
+                "a-darklabel": document.querySelector("a").classList.contains("darklabel")
+            };
+
+            localStorage.setItem("dark-mode-state", JSON.stringify(darkModeState));
+        }
+
+        function loadDarkModeState() {
+            var darkModeState = JSON.parse(localStorage.getItem("dark-mode-state")) || {};
+
+            if (darkModeState["dark-mode"]) {
+                document.body.classList.add("dark-mode");
+            }
+
+            var buttons = document.querySelectorAll(".hover-grow");
+            buttons.forEach(button => {
+                if (darkModeState["dark-buttons"]) {
+                    button.classList.add("dark-button");
+                }
+            });
+
+            //if (darkModeState["dark-profile"]) {
+            //    document.querySelector(".Profile").classList.add("dark-profile");
+            //}
+
+            var rectangles = document.querySelectorAll(".rectangle");
+            rectangles.forEach(rectangle => {
+                if (darkModeState["dark-rectangles"]) {
+                    rectangle.classList.add("dark-rectangle");
+                }
+            });
+
+            // تغییر بک‌گراند .darkimg در حالت دارک مود
+            var darkMode = document.body.classList.contains("dark-mode");
+            var darkImg = document.querySelector(".darkimg");
+            // بازنشانی کلاس darklabel به لیبل و تگ a در حالت دارک مود
+            var labels = document.querySelectorAll("label,a");
+            labels.forEach(label => {
+                if (darkModeState["label-darklabel"] || darkModeState["a-darklabel"]) {
+                    label.classList.add("darklabel");
+                } else {
+                    label.classList.remove("darklabel");
+                }
+            });
+
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,888 @@
+﻿@font-face {
+    font-family: yekan;
+    src: url("../font/Yekan.ttf") format("truetype"), url("../font/Yekan.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    font-size: 14px !important;
+}
+body {
+    background: url("../img/Idoko/Untitled-4.png")top center no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100%;
+    font-family: "yekan" !important;
+}
+label.labeldark {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 15px 10px 10px -350px;
+}
+.darklabel {
+    color: #5cedfb !important;
+}
+.darkimg {
+    position: absolute;
+    width: 60px;
+}
+
+.dark-button {
+    background: black !important;
+    background: black !important;
+    border: 0.25em solid transparent !important;
+    background-image: linear-gradient(#000, #000), linear-gradient(120deg, #f09 0%, #0ff 50%, #9f0 100%) !important;
+    background-origin: border-box !important;
+    background-clip: padding-box, border-box !important;
+    background-size: 200% 100% !important;
+    transition: background-position 0.8s ease-out;
+    color: #5cedfb !important;
+}
+
+
+.dark-rectangle {
+    background-color: #364d6f !important; /* تغییر رنگ rectangle ها در حالت دارک‌مود */
+}
+
+.dark-mode {
+    background-color: #2d1d1d !important;
+    color: darkblue;
+    background: url("../img/Idoko/1.png") center top / 100% 100% no-repeat;
+}
+.post-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 288px));
+    justify-content: center;
+    grid-gap: 16px 72px;
+    padding-top: 103px;
+    padding-right: 33px;
+}
+
+.BackIcon {
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    position: absolute;
+    width: 40px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 45px 0px 0px -275px;
+}
+
+
+.r1 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: transparent;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 45px 10px 10px 180px;
+    border: solid;
+}
+
+.r2 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: transparent;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 45px 10px 10px 0px;
+    border: solid;
+}
+
+.r3 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: transparent;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 45px 10px 10px -180px;
+    border: solid;
+}
+
+.r4 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: transparent;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 210px 10px 10px 180px;
+    border: solid;
+}
+
+.r5 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: transparent;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 210px 10px 10px 0px;
+    border: solid;
+}
+
+.r6 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: transparent;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 210px 10px 10px -180px;
+    border: solid;
+}
+
+.headr {
+    position: absolute;
+    font-size: 20px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    color: #013237;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 40px 10px 10px 0px;
+}
+
+.AmountLabel {
+    position: absolute;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #013237;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 95px 10px 10px 120px;
+}
+
+.Amount {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    background: #FFF6A4;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 120px 10px 10px 120px;
+    border-radius: 5px;
+    text-align: center;
+    border-color: transparent;
+}
+
+.MealLabel {
+    position: absolute;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #013237;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 95px 10px 10px 0px;
+}
+
+.Meal {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    background: #FFF6A4;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 120px 10px 10px 0px;
+    border-radius: 5px;
+    text-align: center;
+    border-color: transparent;
+}
+
+.NumberLabel {
+    position: absolute;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #013237;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 95px 10px 10px -120px;
+}
+
+.Number {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    background: #FFF6A4;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 120px 10px 10px -120px;
+    border-radius: 5px;
+    text-align: center;
+    border-color: transparent;
+}
+
+.FoodLabel {
+    position: absolute;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #013237;
+    left: 50%;
+    width: 40px;
+    font-weight: bold;
+    transform: translate(-50%, 0%);
+    margin: 10px 10px 10px 0px;
+}
+
+
+
+.Idoko {
+    position: absolute;
+    width: 153px;
+    height: 57px;
+    background: rgb(234, 249, 218) ;
+    color: rgb(2, 72, 30) ;
+    border-color: transparent !important;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 550px 10px 10px 0px;
+    bottom: 20px;
+}
+
+.Filter {
+    position: absolute;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #013237;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 95px 10px 10px 290px;
+}
+
+a, div, button, input, a {
+    border-radius: 15px !important;
+    box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    gap: 10px;
+    overflow-y: auto;
+    position: absolute;
+    left: 50%;
+    width: 600px;
+    margin: 170px 10px 10px;
+    transform: translate(-50%, 0%);
+    justify-content: center;
+    height: 63%;
+    max-height: 66%;
+}
+
+@media screen and (max-width: 1279px) {
+    body {
+        background: url("../img/Idoko/Untitled-2.png")top center no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-size: 100% 100%;
+        font-family: "yekan" !important;
+    }
+    * {
+        font-size: 12px !important;
+    }
+    .dark-mode {
+        background-color: #2d1d1d !important;
+        color: darkblue;
+        background: url("../img/Idoko/2.png") center top / 100% 100% no-repeat;
+    }
+    .Background {
+        display: none;
+    }
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        font-size: 30px;
+        position: absolute;
+        width: 40px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 15px 10px 10px -275px;
+    }
+
+    .r1 {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        background: transparent;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 55px 10px 10px 170px;
+        border: solid;
+    }
+
+    .r2 {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        background: transparent;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 55px 10px 10px 0px;
+        border: solid;
+    }
+
+    .r3 {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        background: transparent;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 55px 10px 10px -170px;
+        border: solid;
+    }
+
+    .r4 {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        background: transparent;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 220px 10px 10px 170px;
+        border: solid;
+    }
+
+    .r5 {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        background: transparent;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 220px 10px 10px 0px;
+        border: solid;
+    }
+
+    .r6 {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        background: transparent;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 220px 10px 10px -170px;
+        border: solid;
+    }
+
+    .headr {
+        position: absolute;
+        font-size: 20px;
+        width: 70%;
+        line-height: 24px;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 25px 10px 10px 0px;
+    }
+
+    .AmountLabel {
+        position: absolute;
+        font-size: 15px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 80px 10px 10px 120px;
+    }
+
+    .Amount {
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        background: #FFF6A4;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 105px 10px 10px 120px;
+        border-color: transparent;
+    }
+
+    .MealLabel {
+        position: absolute;
+        font-size: 15px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 80px 10px 10px 0px;
+    }
+
+    .Meal {
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        background: #FFF6A4;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 105px 10px 10px 0px;
+        border-color: transparent;
+    }
+
+    .NumberLabel {
+        position: absolute;
+        font-size: 15px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 80px 10px 10px -120px;
+    }
+
+    .Number {
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        background: #FFF6A4;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 105px 10px 10px -120px;
+        border-color: transparent;
+    }
+
+    .FoodLabel {
+        position: absolute;
+        font-size: 19px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        font-weight: bold;
+        width: 60px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 13px 10px 10px 22px;
+    }
+
+    .Label2 {
+        position: absolute;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 30px 10px 10px 0px;
+    }
+
+    .Label3 {
+        position: absolute;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 30px 10px 10px -170px;
+    }
+
+    .Label4 {
+        position: absolute;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 195px 10px 10px 175px;
+    }
+
+    .Label5 {
+        position: absolute;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 195px 10px 10px 0px;
+    }
+
+    .Label6 {
+        position: absolute;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 195px 10px 10px -170px;
+    }
+
+    .Idoko {
+        position: absolute;
+        width: 153px;
+        height: 57px;
+        background: #FFFFE0;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 885px 10px 10px 0px;
+    }
+
+    .Filter {
+        position: absolute;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 75px 10px 10px -235px;
+    }
+
+    a, div, button, input, a {
+        border-radius: 15px !important;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1.15fr);
+        gap: 10px;
+        overflow-y: auto;
+        position: absolute;
+        left: 50%;
+        width: 526px;
+        margin: 165px 10px 10px 0px;
+        transform: translate(-50%, 0%);
+        justify-content: center;
+        height: 72%;
+        max-height: 74%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background: url("../img/Idoko/Untitled-2.png")top center no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-size: 100% 100%;
+        font-family: "yekan" !important;
+    }
+    * {
+        font-size: 10px !important;
+    }
+    .dark-mode {
+        background-color: #2d1d1d !important;
+        color: darkblue;
+        background: url("../img/Idoko/3.png") center top / 100% 100% no-repeat;
+    }
+    .Background {
+        display: none;
+    }
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        font-size: 30px;
+        position: absolute;
+        width: 30px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px -160px;
+    }
+
+    .r1 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 40px 10px 10px 115px;
+        border: solid;
+    }
+
+    .r2 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 40px 10px 10px 0px;
+        border: solid;
+    }
+
+    .r3 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 40px 10px 10px -115px;
+        border: solid;
+    }
+
+    .r4 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 180px 10px 10px 115px;
+        border: solid;
+    }
+
+    .r5 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 180px 10px 10px 0px;
+        border: solid;
+    }
+
+    .r6 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 180px 10px 10px -115px;
+        border: solid;
+    }
+
+    .headr {
+        position: absolute;
+        font-size: 15px;
+        width: 80%;
+        line-height: 24px;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 12px 10px 10px 0px;
+    }
+
+    .AmountLabel {
+        position: absolute;
+        font-size: 15px;
+        line-height: 18px;
+        width: 68px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 80px 10px 10px 118px;
+    }
+
+    .Amount {
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        background: #FFF6A4;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        border-color: transparent;
+        margin: 105px 10px 10px 120px;
+    }
+
+    .MealLabel {
+        position: absolute;
+        font-size: 15px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 80px 10px 10px 0px;
+    }
+
+    .Meal {
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        background: #FFF6A4;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        border-color: transparent;
+        margin: 105px 10px 10px 0px;
+    }
+
+    .NumberLabel {
+        position: absolute;
+        font-size: 15px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 80px 10px 10px -120px;
+    }
+
+    .Number {
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        background: #FFF6A4;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 105px 10px 10px -120px;
+        border-color: transparent;
+    }
+
+    .FoodLabel {
+        position: absolute;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px 17px;
+    }
+
+    .Label2 {
+        position: absolute;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 15px 10px 10px 0px;
+    }
+
+    .Label3 {
+        position: absolute;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 15px 10px 10px -115px;
+    }
+
+    .Label4 {
+        position: absolute;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 155px 10px 10px 115px;
+    }
+
+    .Label5 {
+        position: absolute;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 155px 10px 10px 0px;
+    }
+
+    .Label6 {
+        position: absolute;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 155px 10px 10px -115px;
+    }
+
+    .Idoko {
+        position: absolute;
+        width: 153px;
+        height: 57px;
+        background: #FFFFE0;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 565px 10px 10px 0px;
+    }
+
+    .Filter {
+        position: absolute;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #013237;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 40px 10px 10px 0px;
+    }
+
+    a, div, button, input, a {
+        border-radius: 15px !important;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 0.15fr);
+        gap: 10px;
+        overflow-y: auto;
+        position: absolute;
+        left: 50%;
+        width: 344px;
+        margin: 160px 10px 10px 0px;
+        transform: translate(-50%, 0%);
+        justify-content: center;
+        height: 60%;
+        max-height: 71%;
+    }
+}

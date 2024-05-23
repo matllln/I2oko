@@ -1,0 +1,302 @@
+﻿@model I2oko.Models.FoodModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../Content/img/Idoko/favicon.ico">
+
+    <link rel="stylesheet" href="../Content/style/newpost style2.css">
+    <link rel="stylesheet" href="../Content/style/newpost grid style2.css">
+    <link rel="stylesheet" href="../Content/style/new post slide style.css">
+
+    <link rel="stylesheet" href="~/Content/recomand/bootstrap.rtl.min.css"
+          integrity="sha384-beJoAY4VI2Q+5IPXjI207/ntOuaz06QYCdpWfWRv4lSFDyUSqsM0W+wiAMr2I185" crossorigin="anonymous">
+    <script src="~/Content/recomand/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"></script>
+    <script defer src="~/Content/recomand/cdn.min.js"></script>
+    <link href='~/Content/recomand/parsinee.css' rel='stylesheet'>
+</head>
+
+<body>
+
+
+    <!--  ------------------------------------------------------- -->
+    <div onclick="history.back()">
+        <img class="BackIcon" src="../Content/img/Idoko/back.png" alt="">
+    </div>
+    <!-- -------------------------------------------------------------------------------- -->
+    @using (Html.BeginForm("NewPostRecipe", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+
+    {
+        <div class="wrapper">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="50000">
+                        <div class="first">
+                            <label class="SubjectFood">:موضوع</label>
+                            <div> @Html.EnumDropDownListFor(x => x.Subject) </div>
+
+                            <label class="Placepost">:موقعیت مکانی رویداد</label>
+                            @Html.TextBoxFor(x => x.OriginalityPlace, new { @class = "PlacepostText" })
+
+
+                            <label class="KhoshmazehNameLabel">:نام خوشمزه</label>
+                            @Html.TextBoxFor(x => x.Name, new { @class = "KhoshmazehName" })
+
+                            <label class="Count1">1/7</label>
+                        </div>
+                        <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="500000000">
+
+                        <div class="Second">
+                            <label class="Count2">2/7</label>
+
+
+                            <div class="rectangle Img" id="imgDiv"></div>
+                            <img class="Gallry" src="../Content/img/Idoko/gallry.svg" alt="">
+                            <img class="Camera" src="../Content/img/Idoko/camera.svg" alt="">
+
+                            <input type="file" name="file" id="file" style="display:none;" accept="image/*" onchange="displayImage(this)" />
+                            <label for="file">
+                                <img class="File" src="~/Content/img/Idoko/text.svg" alt="">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="500000000">
+
+                        <div class="Thired">
+                            <label class="Count2">3/7</label>
+
+
+                            <div class="rectangle Video">
+                                <video id="videoPlayer" width="400" controls>
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <img class="Gallry" src="../Content/img/Idoko/gallry.svg" alt="">
+                            <img class="Camera" src="../Content/img/Idoko/camera.svg" alt="">
+
+                            <input type="file" name="videoFile" id="videoFile" style="display:none;" accept="video/*" />
+                            <label for="videoFile">
+                                <img class="File" src="~/Content/img/Idoko/text.svg" alt="">
+                            </label>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="500000000">
+                        <div class="Fourth">
+                            <label class="Count2">4/7</label>
+
+                            <label class="about">داستان این خوشمزه</label>
+                            @Html.TextAreaFor(x => x.Biography, new { @class = "aboutlabel" })
+                            <label class="aboutpokht">نکات این خوشمزه</label>
+                            @Html.TextAreaFor(x => x.Points, new { @class = "aboutlabelpokht" })
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-item" data-bs-interval="500000000">
+                        <div class="Fifth">
+                            <label class="Count2">5/7</label>
+                            <div class="Second-info">
+                                <label class="info">اطلاعات این خوشمزه</label>
+                                <label for="Hardship" class="Hardship">درجه سختی : </label>
+                                @Html.EnumDropDownListFor(x => x.HardshipLevel, new { @class = "HardshipList" })
+                                <label for="intensity" class="time">زمان آماده شدن : </label>
+                                @Html.EnumDropDownListFor(x => x.CookingTimeHour, new { @class = "timeListh" })
+                                @Html.EnumDropDownListFor(x => x.CookingTimeMinute, new { @class = "timeListm" })
+
+                                <label for="intensity" class="Number"> مناسب برای چند نفر : </label>
+                                @Html.EnumDropDownListFor(x => x.people, new { @class = "NumberList" })
+                            </div>
+
+                        </div>
+                        <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="500000000">
+                        <div class="Sixth">
+                            <label class="materials">مواد مورد نیاز این خوشمزه</label>
+                            <label class="Count2">6/7</label>
+                            <iframe id="dz" src="~/Home/NewPostRecipeIngredient"></iframe>
+
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-item" data-bs-interval="500000000">
+                        <div class="Seventh">
+                            <label class="Count2">7/7</label>
+
+                            <label class="Aboutde">مراحل پخت</label>
+                            @Html.TextAreaFor(x => x.Recipe, new { @class = "RawTxtfourth" })
+                            <input class="Confirm btn-secondary hover-grow" type="submit" value="ثبت رسپی" />
+
+                            <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">
+                        </div>
+
+                    </div>
+                </div><button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                              data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button><button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                                 data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    }
+    <script>
+        function displayImage(input) {
+            var imgDiv = document.getElementById('imgDiv');
+            var file = input.files[0];
+
+            if (file) {
+                var imageURL = URL.createObjectURL(file);
+                imgDiv.style.backgroundImage = 'url(' + imageURL + ')';
+            }
+        }
+    </script>
+    <script>
+        function displayVideo(input) {
+            var videoPlayer = document.getElementById('videoPlayer');
+            var file = input.files[0];
+
+            if (file) {
+                var videoURL = URL.createObjectURL(file);
+                videoPlayer.src = videoURL;
+                videoPlayer.style.display = 'block';
+            }
+        }
+    </script>
+    <script>
+        document.getElementById('videoFile').addEventListener('change', function (e) {
+            var file = e.target.files[0];
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                var videoPlayer = document.getElementById('videoPlayer');
+                var source = document.createElement('source');
+                source.src = e.target.result;
+                source.type = 'video/mp4'; // فرضاً ویدیو با فرمت MP4 است
+                videoPlayer.innerHTML = ''; // حذف همه منابع ویدیوها
+                videoPlayer.appendChild(source);
+                videoPlayer.load(); // بارگذاری مجدد ویدیو
+            }
+            reader.readAsDataURL(file);
+        });
+    </script>
+    <script>
+        document.getElementById('videoFile').addEventListener('change', function (e) {
+            var file = e.target.files[0];
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                document.querySelector('.rectangle.Video').style.backgroundImage = 'url(' + e.target.result + ')';
+            }
+            reader.readAsDataURL(file);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            loadDarkModeState();
+        });
+
+        // تعریف توابع مربوط به ذخیره و بازیابی وضعیت دارک مود
+        function saveDarkModeState() {
+            var darkModeState = {
+                "dark-mode": document.body.classList.contains("dark-mode"),
+                "dark-buttons": document.querySelector(".hover-grow").classList.contains("dark-button"),
+                "dark-profile": document.querySelector(".Profile").classList.contains("dark-profile"),
+                "dark-rectangles": document.querySelector(".rectangle").classList.contains("dark-rectangle"),
+                "label-darklabel": document.querySelector("label").classList.contains("darklabel"),
+                "a-darklabel": document.querySelector("a").classList.contains("darklabel")
+            };
+
+            localStorage.setItem("dark-mode-state", JSON.stringify(darkModeState));
+        }
+
+        function loadDarkModeState() {
+            var darkModeState = JSON.parse(localStorage.getItem("dark-mode-state")) || {};
+
+            if (darkModeState["dark-mode"]) {
+                document.body.classList.add("dark-mode");
+            }
+
+            var buttons = document.querySelectorAll(".hover-grow");
+            buttons.forEach(button => {
+                if (darkModeState["dark-buttons"]) {
+                    button.classList.add("dark-button");
+                }
+            });
+
+
+
+            var rectangles = document.querySelectorAll(".rectangle");
+            rectangles.forEach(rectangle => {
+                if (darkModeState["dark-rectangles"]) {
+                    rectangle.classList.add("dark-rectangle");
+                }
+            });
+
+            // تغییر بک‌گراند .darkimg در حالت دارک مود
+            var darkMode = document.body.classList.contains("dark-mode");
+            var darkImg = document.querySelector(".darkimg");
+            // بازنشانی کلاس darklabel به لیبل و تگ a در حالت دارک مود
+            var labels = document.querySelectorAll("label,a");
+            labels.forEach(label => {
+                if (darkModeState["label-darklabel"] || darkModeState["a-darklabel"]) {
+                    label.classList.add("darklabel");
+                } else {
+                    label.classList.remove("darklabel");
+                }
+            });
+
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+
+    <script>
+        $('.carousel-control-next').on('click', function () {
+            // اگر در صفحه 6 هستید
+            if ($('.active').find('.Count2').text() === '6/7') {
+                // دسترسی به iframe با استفاده از شناسه
+                var iframe = document.getElementById('dz');
+
+                // اگر iframe وجود داشته باشد
+                if (iframe) {
+                    // دسترسی به مستند داخلی iframe
+                    var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+                    // دسترسی به دکمه با شناسه "Ingredient" درون iframe
+                    var ingredientButton = iframeDocument.getElementById('Ingredient');
+
+                    // اگر دکمه وجود داشته باشد
+                    if (ingredientButton) {
+                        // کلیک بر روی دکمه
+                        $(ingredientButton).click();
+                    } else {
+                        console.error("خطا: دکمه با شناسه 'Ingredient' یافت نشد.");
+                    }
+                } else {
+                    console.error("خطا: iframe با شناسه 'dz' یافت نشد.");
+                }
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
+

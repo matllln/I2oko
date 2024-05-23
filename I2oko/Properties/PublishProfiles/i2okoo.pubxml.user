@@ -1,0 +1,841 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\matllln\Desktop\New folder (2)</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>04/16/2020 21:38:42</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>04/16/2020 21:38:56</publishTime>
+    </File>
+    <File Include="bin/I2oko.dll">
+      <publishTime>10/01/2023 12:55:02</publishTime>
+    </File>
+    <File Include="bin/IPE.SmsIrClient.dll">
+      <publishTime>08/21/2022 11:24:58</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>09/05/2018 17:10:50</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>04/12/2022 00:39:46</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/17/2021 23:33:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/27/2016 22:50:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>05/28/2022 05:11:54</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>05/28/2022 05:12:20</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>05/28/2022 05:12:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>05/28/2022 05:12:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>05/28/2022 05:12:16</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>05/28/2022 05:12:50</publishTime>
+    </File>
+    <File Include="Content/font/Yekan.eot">
+      <publishTime>08/31/2023 15:05:18</publishTime>
+    </File>
+    <File Include="Content/font/Yekan.ttf">
+      <publishTime>08/31/2023 15:05:18</publishTime>
+    </File>
+    <File Include="Content/font/Yekan.woff">
+      <publishTime>08/31/2023 15:05:18</publishTime>
+    </File>
+    <File Include="Content/font/Yekan.woff2">
+      <publishTime>08/31/2023 15:05:18</publishTime>
+    </File>
+    <File Include="Content/img/Appetizers and salads/ashha.jpg">
+      <publishTime>08/31/2023 15:05:18</publishTime>
+    </File>
+    <File Include="Content/img/Appetizers and salads/booraniha.jpg">
+      <publishTime>08/31/2023 15:05:18</publishTime>
+    </File>
+    <File Include="Content/img/Appetizers and salads/esnakha.jpg">
+      <publishTime>08/31/2023 15:05:18</publishTime>
+    </File>
+    <File Include="Content/img/Appetizers and salads/ordovha.jpg">
+      <publishTime>08/31/2023 15:05:18</publishTime>
+    </File>
+    <File Include="Content/img/Appetizers and salads/pooreha.jpg">
+      <publishTime>08/31/2023 15:05:18</publishTime>
+    </File>
+    <File Include="Content/img/Appetizers and salads/saladha.jpg">
+      <publishTime>08/31/2023 15:05:18</publishTime>
+    </File>
+    <File Include="Content/img/Appetizers and salads/sayer saladha.jpg">
+      <publishTime>08/31/2023 15:05:18</publishTime>
+    </File>
+    <File Include="Content/img/Appetizers and salads/soopha.jpg">
+      <publishTime>08/31/2023 15:05:18</publishTime>
+    </File>
+    <File Include="Content/img/Beautiful tables/sofreye farangi.jpg">
+      <publishTime>08/31/2023 15:05:18</publishTime>
+    </File>
+    <File Include="Content/img/Beautiful tables/sofreye irani.jpg">
+      <publishTime>08/31/2023 15:05:18</publishTime>
+    </File>
+    <File Include="Content/img/Beverages/daghhaye irani.jpg">
+      <publishTime>08/31/2023 15:05:18</publishTime>
+    </File>
+    <File Include="Content/img/Beverages/esmootiha.jpg">
+      <publishTime>08/31/2023 15:05:18</publishTime>
+    </File>
+    <File Include="Content/img/Beverages/kafe noosh.jpg">
+      <publishTime>08/31/2023 15:05:18</publishTime>
+    </File>
+    <File Include="Content/img/Beverages/sayere nooshidaniha.jpg">
+      <publishTime>08/31/2023 15:05:18</publishTime>
+    </File>
+    <File Include="Content/img/Beverages/sharbatha.jpg">
+      <publishTime>08/31/2023 15:05:18</publishTime>
+    </File>
+    <File Include="Content/img/Beverages/tarkibiha.jpg">
+      <publishTime>08/31/2023 15:05:18</publishTime>
+    </File>
+    <File Include="Content/img/DelisiousList/deser va shirini.jpg">
+      <publishTime>08/31/2023 15:05:18</publishTime>
+    </File>
+    <File Include="Content/img/DelisiousList/ghazaha.jpg">
+      <publishTime>08/31/2023 15:05:18</publishTime>
+    </File>
+    <File Include="Content/img/DelisiousList/nooshidaniha.jpg">
+      <publishTime>08/31/2023 15:05:18</publishTime>
+    </File>
+    <File Include="Content/img/DelisiousList/pishghaza va salad.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/DelisiousList/sofre arayi.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/DelisiousList/tam va rang.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/DelisiousList/torshi va moraba.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/Desserts and sweets/bastaniha.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/Desserts and sweets/desere farangi.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/Desserts and sweets/desere irani.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/Desserts and sweets/keykha.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/Desserts and sweets/sayere deserha.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/Desserts and sweets/shiriniha.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/Desserts and sweets/zheleha.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/Diet/bar asase mavade ghazayi.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/Diet/bar asase meghdar hazine.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/Diet/bar asase menoye delkhah.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/Diet/bar asase noe rezhim.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/Fav/dokhtarane.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/Fav/hamsarane.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/Fav/khaneye ziba.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/Fav/madarane.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/Fav/pedarane.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/Fav/pesarane.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/Fav/sayer.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/FoodList/bergerha.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/FoodList/beryanha.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/FoodList/daryayiha.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/FoodList/dolmeha.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/FoodList/espagetiha.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/FoodList/esteikha.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/FoodList/ghazahaye fori.jpg">
+      <publishTime>08/31/2023 15:05:20</publishTime>
+    </File>
+    <File Include="Content/img/FoodList/ghazahaye koodak.jpg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/FoodList/kababha.jpg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/FoodList/khoreshha.jpg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/FoodList/koofteha.jpg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/FoodList/kookooha.jpg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/FoodList/kotletha.jpg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/FoodList/lazaniyaha.jpg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/FoodList/pitzaha.jpg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/FoodList/poloha.jpg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/FoodList/sandevichha.jpg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/FoodList/sayere ghazaha.jpg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/FoodList/sokhariha.jpg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/FoodList/tah chinha.jpg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/FoodList/tilitha.jpg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/Idoko/1.pngArtboard 1%404x.png">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/Idoko/add.svg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/Idoko/azar.jpg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/Idoko/back.png">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/Idoko/camera.svg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/Idoko/delete.svg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/Idoko/edit.svg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/Idoko/exit.svg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/Idoko/favicon.ico">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/Idoko/file.svg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/Idoko/gallry.svg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/Idoko/isfahan.jpg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/Idoko/likee.svg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/Idoko/map.png">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/Idoko/menu.svg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/Idoko/seting.svg">
+      <publishTime>08/31/2023 15:05:22</publishTime>
+    </File>
+    <File Include="Content/img/Idoko/Untitled-1.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/Idoko/Untitled-2.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/Idoko/Untitled-4.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/Idoko/upload.svg">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/1 %282%29.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/10.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/11.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/12.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/13.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/14.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/15.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/16.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/17.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/18.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/19.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/2.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/20.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/21.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/22.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/23.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/24.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/25.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/26.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/27.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/28.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/29.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/3.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/30.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/31.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/32.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/4.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/5.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/6.png">
+      <publishTime>08/31/2023 15:05:24</publishTime>
+    </File>
+    <File Include="Content/img/map/7.png">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/img/map/8.png">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/img/map/9.png">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/img/map/alborz copy.png">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/img/map/mapd.png">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/img/map/tehran copy.png">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/img/Pet/ghazahaye heyvanat.jpg">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/img/Pet/raveshhaye negahdari heyvanat.jpg">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/img/PetList/abziyan.jpg">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/img/PetList/chahar payan.jpg">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/img/PetList/dozistha.jpg">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/img/PetList/parandeha.jpg">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/img/Pickles and jam/kompootha.jpg">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/img/Pickles and jam/morabaha.jpg">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/img/Pickles and jam/sayere morabaha.jpg">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/img/Pickles and jam/shoorha.jpg">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/img/Pickles and jam/torshiha.jpg">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/img/Taste and color/adviyeha.jpg">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/img/Taste and color/chashniha.jpg">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/img/Taste and color/robha.jpg">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/img/Taste and color/sayere tamha.jpg">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/img/Taste and color/sosha.jpg">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/js/script.js">
+      <publishTime>09/19/2023 14:01:58</publishTime>
+    </File>
+    <File Include="Content/recomand/all.css">
+      <publishTime>09/17/2023 12:17:54</publishTime>
+    </File>
+    <File Include="Content/recomand/bootstrap.bundle.min.js">
+      <publishTime>09/17/2023 11:56:54</publishTime>
+    </File>
+    <File Include="Content/recomand/bootstrap.rtl.min.css">
+      <publishTime>09/17/2023 11:56:54</publishTime>
+    </File>
+    <File Include="Content/recomand/cdn.min.js">
+      <publishTime>09/17/2023 11:56:54</publishTime>
+    </File>
+    <File Include="Content/recomand/fontgoogle.css">
+      <publishTime>09/17/2023 11:42:52</publishTime>
+    </File>
+    <File Include="Content/recomand/ionicons.esm.js">
+      <publishTime>09/17/2023 11:42:52</publishTime>
+    </File>
+    <File Include="Content/recomand/ionicons.js">
+      <publishTime>09/17/2023 11:42:54</publishTime>
+    </File>
+    <File Include="Content/recomand/normalize.min.css">
+      <publishTime>09/17/2023 11:42:54</publishTime>
+    </File>
+    <File Include="Content/recomand/parsinee.css">
+      <publishTime>09/17/2023 11:42:54</publishTime>
+    </File>
+    <File Include="Content/recomand/reset.min.css">
+      <publishTime>09/17/2023 12:17:54</publishTime>
+    </File>
+    <File Include="Content/style/Based on food style.css">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/style/Based on the cost amount style.css">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/style/Based on the cost amount style2.css">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/style/Based on the desired menu style.css">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/style/Based on the desired menu style2.css">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/style/beautiful table style.css">
+      <publishTime>09/18/2023 10:44:38</publishTime>
+    </File>
+    <File Include="Content/style/contact style.css">
+      <publishTime>09/18/2023 10:45:04</publishTime>
+    </File>
+    <File Include="Content/style/delicious style.css">
+      <publishTime>09/18/2023 10:45:32</publishTime>
+    </File>
+    <File Include="Content/style/delicious style2.css">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/style/delicious style3.css">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/style/Diet.css">
+      <publishTime>08/31/2023 15:05:26</publishTime>
+    </File>
+    <File Include="Content/style/edit profile style.css">
+      <publishTime>09/23/2023 19:16:15</publishTime>
+    </File>
+    <File Include="Content/style/favorite style.css">
+      <publishTime>09/30/2023 13:12:40</publishTime>
+    </File>
+    <File Include="Content/style/favorite style2.css">
+      <publishTime>08/31/2023 15:05:28</publishTime>
+    </File>
+    <File Include="Content/style/finish register Forget style.css">
+      <publishTime>09/30/2023 13:17:28</publishTime>
+    </File>
+    <File Include="Content/style/finish register style.css">
+      <publishTime>09/30/2023 12:08:16</publishTime>
+    </File>
+    <File Include="Content/style/foods style.css">
+      <publishTime>09/18/2023 11:19:42</publishTime>
+    </File>
+    <File Include="Content/style/forget password.css">
+      <publishTime>09/27/2023 22:53:51</publishTime>
+    </File>
+    <File Include="Content/style/friend.css">
+      <publishTime>09/18/2023 10:48:36</publishTime>
+    </File>
+    <File Include="Content/style/list Appetizer.css">
+      <publishTime>09/18/2023 11:21:30</publishTime>
+    </File>
+    <File Include="Content/style/list delicious.css">
+      <publishTime>09/18/2023 11:17:10</publishTime>
+    </File>
+    <File Include="Content/style/List of color flavors.css">
+      <publishTime>09/18/2023 11:21:44</publishTime>
+    </File>
+    <File Include="Content/style/List of drinks.css">
+      <publishTime>09/18/2023 11:22:14</publishTime>
+    </File>
+    <File Include="Content/style/List of jam pickles style.css">
+      <publishTime>09/18/2023 11:15:28</publishTime>
+    </File>
+    <File Include="Content/style/login style.css">
+      <publishTime>09/30/2023 12:14:41</publishTime>
+    </File>
+    <File Include="Content/style/mainpage style.css">
+      <publishTime>09/18/2023 10:56:52</publishTime>
+    </File>
+    <File Include="Content/style/new post slide style.css">
+      <publishTime>09/14/2023 20:33:36</publishTime>
+    </File>
+    <File Include="Content/style/newpost grid style2.css">
+      <publishTime>09/14/2023 20:34:36</publishTime>
+    </File>
+    <File Include="Content/style/newpost style.css">
+      <publishTime>09/11/2023 02:43:32</publishTime>
+    </File>
+    <File Include="Content/style/newpost style2.css">
+      <publishTime>09/14/2023 20:32:44</publishTime>
+    </File>
+    <File Include="Content/style/news style.css">
+      <publishTime>09/18/2023 10:58:12</publishTime>
+    </File>
+    <File Include="Content/style/news style2 -.css">
+      <publishTime>09/17/2023 13:02:28</publishTime>
+    </File>
+    <File Include="Content/style/notif style.css">
+      <publishTime>09/18/2023 11:02:30</publishTime>
+    </File>
+    <File Include="Content/style/Otp Forget Style.css">
+      <publishTime>09/30/2023 19:37:46</publishTime>
+    </File>
+    <File Include="Content/style/otp style.css">
+      <publishTime>09/30/2023 19:37:50</publishTime>
+    </File>
+    <File Include="Content/style/pet list style.css">
+      <publishTime>09/18/2023 10:59:00</publishTime>
+    </File>
+    <File Include="Content/style/pet list2 style.css">
+      <publishTime>09/18/2023 10:59:16</publishTime>
+    </File>
+    <File Include="Content/style/pet style.css">
+      <publishTime>09/18/2023 10:59:36</publishTime>
+    </File>
+    <File Include="Content/style/profile style.css">
+      <publishTime>09/30/2023 18:28:26</publishTime>
+    </File>
+    <File Include="Content/style/profile style2.css">
+      <publishTime>08/31/2023 15:05:28</publishTime>
+    </File>
+    <File Include="Content/style/register style.css">
+      <publishTime>09/30/2023 01:38:36</publishTime>
+    </File>
+    <File Include="Content/style/Shoping list style.css">
+      <publishTime>08/31/2023 15:05:28</publishTime>
+    </File>
+    <File Include="Content/style/show post style.css">
+      <publishTime>09/18/2023 11:00:14</publishTime>
+    </File>
+    <File Include="Content/style/StyleEror.css">
+      <publishTime>08/31/2023 15:05:28</publishTime>
+    </File>
+    <File Include="Content/style/Sweet dessert list style.css">
+      <publishTime>09/18/2023 11:00:36</publishTime>
+    </File>
+    <File Include="Content/style/window style.css">
+      <publishTime>09/18/2023 11:00:46</publishTime>
+    </File>
+    <File Include="Content/style/window style2.css">
+      <publishTime>08/31/2023 15:05:28</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>06/11/2023 07:03:28</publishTime>
+    </File>
+    <File Include="smsir-package-icon.ico">
+      <publishTime>09/20/2023 14:19:37</publishTime>
+    </File>
+    <File Include="smsir-package-icon.png">
+      <publishTime>09/20/2023 14:19:36</publishTime>
+    </File>
+    <File Include="Views/Home/BasedOnFood.cshtml">
+      <publishTime>09/17/2023 11:59:36</publishTime>
+    </File>
+    <File Include="Views/Home/BasedOnTheCostAmount.cshtml">
+      <publishTime>09/17/2023 11:59:30</publishTime>
+    </File>
+    <File Include="Views/Home/BasedOnTheDesiredMenu.cshtml">
+      <publishTime>09/17/2023 11:59:58</publishTime>
+    </File>
+    <File Include="Views/Home/BeautifulTable.cshtml">
+      <publishTime>09/17/2023 12:56:38</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>09/17/2023 12:57:50</publishTime>
+    </File>
+    <File Include="Views/Home/Delicious.cshtml">
+      <publishTime>09/17/2023 12:58:02</publishTime>
+    </File>
+    <File Include="Views/Home/Diet.cshtml">
+      <publishTime>09/17/2023 12:09:12</publishTime>
+    </File>
+    <File Include="Views/Home/EditProfile.cshtml">
+      <publishTime>09/24/2023 16:09:56</publishTime>
+    </File>
+    <File Include="Views/Home/Favorite.cshtml">
+      <publishTime>09/17/2023 12:09:30</publishTime>
+    </File>
+    <File Include="Views/Home/FinishRegister.cshtml">
+      <publishTime>09/28/2023 14:35:56</publishTime>
+    </File>
+    <File Include="Views/Home/FinishRegisterForget.cshtml">
+      <publishTime>09/30/2023 12:50:17</publishTime>
+    </File>
+    <File Include="Views/Home/Foods.cshtml">
+      <publishTime>09/17/2023 12:58:18</publishTime>
+    </File>
+    <File Include="Views/Home/ForgetPassword.cshtml">
+      <publishTime>09/28/2023 03:14:11</publishTime>
+    </File>
+    <File Include="Views/Home/Friend.cshtml">
+      <publishTime>09/17/2023 12:58:24</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>09/17/2023 12:10:38</publishTime>
+    </File>
+    <File Include="Views/Home/ListAppetizer.cshtml">
+      <publishTime>09/17/2023 12:58:30</publishTime>
+    </File>
+    <File Include="Views/Home/ListDelicious.cshtml">
+      <publishTime>09/17/2023 12:58:34</publishTime>
+    </File>
+    <File Include="Views/Home/ListOfColorFlavors.cshtml">
+      <publishTime>09/17/2023 12:58:40</publishTime>
+    </File>
+    <File Include="Views/Home/ListOfDrinks.cshtml">
+      <publishTime>09/17/2023 12:58:46</publishTime>
+    </File>
+    <File Include="Views/Home/ListOfJampickles.cshtml">
+      <publishTime>09/17/2023 12:58:50</publishTime>
+    </File>
+    <File Include="Views/Home/Login.cshtml">
+      <publishTime>09/30/2023 19:49:27</publishTime>
+    </File>
+    <File Include="Views/Home/Newpost.cshtml">
+      <publishTime>09/17/2023 12:13:06</publishTime>
+    </File>
+    <File Include="Views/Home/Newpost2.cshtml">
+      <publishTime>09/17/2023 12:49:16</publishTime>
+    </File>
+    <File Include="Views/Home/News.cshtml">
+      <publishTime>09/17/2023 13:00:18</publishTime>
+    </File>
+    <File Include="Views/Home/Notif.cshtml">
+      <publishTime>09/17/2023 12:38:18</publishTime>
+    </File>
+    <File Include="Views/Home/Otp.cshtml">
+      <publishTime>09/25/2023 23:44:16</publishTime>
+    </File>
+    <File Include="Views/Home/OtpForget.cshtml">
+      <publishTime>09/27/2023 23:13:41</publishTime>
+    </File>
+    <File Include="Views/Home/Pet.cshtml">
+      <publishTime>09/17/2023 12:59:18</publishTime>
+    </File>
+    <File Include="Views/Home/PetList.cshtml">
+      <publishTime>09/17/2023 12:59:22</publishTime>
+    </File>
+    <File Include="Views/Home/PetList2.cshtml">
+      <publishTime>09/17/2023 12:59:32</publishTime>
+    </File>
+    <File Include="Views/Home/Proofile.cshtml">
+      <publishTime>09/30/2023 13:09:24</publishTime>
+    </File>
+    <File Include="Views/Home/Register.cshtml">
+      <publishTime>09/25/2023 22:35:39</publishTime>
+    </File>
+    <File Include="Views/Home/ShopingList.cshtml">
+      <publishTime>09/17/2023 11:50:36</publishTime>
+    </File>
+    <File Include="Views/Home/ShowPost.cshtml">
+      <publishTime>09/17/2023 12:59:50</publishTime>
+    </File>
+    <File Include="Views/Home/SweetDessertList.cshtml">
+      <publishTime>09/17/2023 12:59:56</publishTime>
+    </File>
+    <File Include="Views/Home/Thanx.cshtml">
+      <publishTime>09/17/2023 12:24:08</publishTime>
+    </File>
+    <File Include="Views/Home/Window.cshtml">
+      <publishTime>09/17/2023 13:00:06</publishTime>
+    </File>
+    <File Include="Views/web.config">
+      <publishTime>08/31/2023 15:05:44</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/01/2023 12:55:09</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

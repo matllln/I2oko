@@ -1,0 +1,160 @@
+﻿@model I2oko.Models.UserModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebProg.io</title>
+    <link rel="icon" href="../Content/img/Idoko/favicon.ico">
+    <script nomodule src="~/Content/recomand/ionicons.js"></script>
+    <link rel="stylesheet" href="~/Content/recomand/normalize.min.css">
+    <link rel='stylesheet'
+          href='~/Content/recomand/fontgoogle.css'>
+    <link href='~/Content/recomand/parsinee.css' rel='stylesheet'>
+    <link rel="stylesheet" href="~/Content/style/finish register Forget style.css">
+</head>
+<body>
+
+    <div class="rectangle r1"></div>
+    <img class="logo" src="../Content/img/Idoko/1.pngArtboard 1@4x.png">
+
+    @using (Html.BeginForm())
+    {
+
+
+        <div class="Phonee">
+            <label class="PhoneeLable" for="email"> شماره تلفن ثبت شده </label>
+            <div class="sec-2">
+                <label class="PhoneLabel"> @Session["Phone"] </label>
+            </div>
+        </div>
+        <div class="Password">
+            <label class="PasswordLabel" for="Password">گذرواژه جدید</label>
+            <div class="sec-2">
+                @Html.PasswordFor(x => x.Password)
+            </div>
+        </div>
+        <div class="Password2">
+            <label class="PasswordLabel2" for="Password"> تکرار گذرواژه جدید </label>
+            <div class="sec-2">
+                <input type="password" id="Password2" />
+            </div>
+        </div>
+        <input id="login" class="login btn-secondary hover-grow" type="submit" value="تایید" />
+    }
+    <label id="Valid" class="Valid"> @ViewBag.UserName </label>
+    <div onclick="history.back()">
+        <img class="BackIcon" src="../Content/img/Idoko/back.png" alt="">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"></script>
+    <script>
+
+        var passwordInput = document.getElementById("Password");
+        var confirmPasswordInput = document.getElementById("Password2");
+        var checkPasswordButton = document.getElementById("login");
+        var passwordMatchMessage = document.getElementById("Valid");
+
+        passwordInput.addEventListener("input", checkPasswordMatch);
+        confirmPasswordInput.addEventListener("input", checkPasswordMatch);
+
+        function checkPasswordMatch() {
+            var password = passwordInput.value;
+            var confirmPassword = confirmPasswordInput.value;
+            var regex = /^[^\s]+$/;
+
+            if (password.trim() !== "" || confirmPassword.trim() !== "") {
+                if (regex.test(password) && regex.test(confirmPassword)) {
+                    if (password === confirmPassword) {
+                        passwordMatchMessage.textContent = "پسورد‌ها مطابقت دارن";
+                        passwordMatchMessage.style.color = "green";
+                        checkPasswordButton.disabled = false;
+                    } else {
+                        passwordMatchMessage.textContent = "!پسورد‌ها مطابقت ندارن";
+                        passwordMatchMessage.style.color = "red";
+                        checkPasswordButton.disabled = true;
+                    }
+                } else {
+                    passwordMatchMessage.textContent = "";
+                    passwordMatchMessage.style.color = "red";
+                    checkPasswordButton.disabled = true;
+                }
+            } else {
+                passwordMatchMessage.textContent = "";
+                checkPasswordButton.disabled = true;
+            }
+        }
+
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            loadDarkModeState();
+        });
+
+        // تعریف توابع مربوط به ذخیره و بازیابی وضعیت دارک مود
+        function saveDarkModeState() {
+            var darkModeState = {
+                "dark-mode": document.body.classList.contains("dark-mode"),
+                "dark-buttons": document.querySelector(".hover-grow").classList.contains("dark-button"),
+                "dark-profile": document.querySelector(".Profile").classList.contains("dark-profile"),
+                "dark-rectangles": document.querySelector(".rectangle").classList.contains("dark-rectangle"),
+                "label-darklabel": document.querySelector("label").classList.contains("darklabel"),
+                "a-darklabel": document.querySelector("a").classList.contains("darklabel")
+            };
+
+            localStorage.setItem("dark-mode-state", JSON.stringify(darkModeState));
+        }
+
+        function loadDarkModeState() {
+            var darkModeState = JSON.parse(localStorage.getItem("dark-mode-state")) || {};
+
+            if (darkModeState["dark-mode"]) {
+                document.body.classList.add("dark-mode");
+            }
+
+            var buttons = document.querySelectorAll(".hover-grow");
+            buttons.forEach(button => {
+                if (darkModeState["dark-buttons"]) {
+                    button.classList.add("dark-button");
+                }
+            });
+
+            //if (darkModeState["dark-profile"]) {
+            //    document.querySelector(".Profile").classList.add("dark-profile");
+            //}
+
+            var rectangles = document.querySelectorAll(".rectangle");
+            rectangles.forEach(rectangle => {
+                if (darkModeState["dark-rectangles"]) {
+                    rectangle.classList.add("dark-rectangle");
+                }
+            });
+
+            // تغییر بک‌گراند .darkimg در حالت دارک مود
+            var darkMode = document.body.classList.contains("dark-mode");
+            var darkImg = document.querySelector(".darkimg");
+            // بازنشانی کلاس darklabel به لیبل و تگ a در حالت دارک مود
+            var labels = document.querySelectorAll("label,a");
+            labels.forEach(label => {
+                if (darkModeState["label-darklabel"] || darkModeState["a-darklabel"]) {
+                    label.classList.add("darklabel");
+                } else {
+                    label.classList.remove("darklabel");
+                }
+            });
+
+        }
+    </script>
+
+</body>
+</html>
+

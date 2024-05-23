@@ -1,0 +1,166 @@
+﻿@model I2oko.Models.UserModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script nomodule src="~/Content/recomand/ionicons.js"></script>
+    <link rel="stylesheet" href="~/Content/recomand/normalize.min.css">
+    <link rel='stylesheet'
+          href='~/Content/recomand/fontgoogle.css'>
+    <link href='~/Content/recomand/parsinee.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../Content/style/edit profile style.css">
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="icon" href="../Content/img/Idoko/favicon.ico">
+
+</head>
+
+<body>
+    <div class="rectangle Background"></div>
+    <a href="/Home/Proofile">
+        <img class="BackIcon" src="../Content/img/Idoko/back.png" />
+    </a>
+
+    @using (Html.BeginForm("EditProfile", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <img class="Profile" src="@Session["userpic"]" />
+        <p class="UserName">نام کاربری</p>
+        <label class="UserNameLabel"> @Session["UserName"] </label>
+        <p class="Name">نام</p>
+        <label class="NameLabel"> @Session["Name"] </label>
+        <p class="FamilyName">نام خانوادگی</p>
+        <label class="FamilyNameLabel"> @Session["Fname"] </label>
+        <p class="BirthDay">تاریخ تولد</p>
+        <label class="BirthDayLabel"> @Session["BirthDateD"] / @Session["BirthDateM"] / @Session["BirthDateY"]</label>
+        <p class="CatGory">زمینه فعالیت</p>
+        <label class="CatGoryLabel"> @Session["Categuri"] </label>
+        <p class="Sexuality">جنسیت</p>
+        <label class="SexualityLabel"> @Session["Sexuality"] </label>
+        <p class="Phone">شماره تلفن</p>
+        <label class="PhoneLabel"> @Session["Phone"] </label>
+        <p class="Bio">بیو گرافی</p>
+        <labalarea class="BioLabel"> @Html.Raw(Session["Biography"]) </labalarea>
+        <p class="Email">ایمیل</p>
+        <label class="EmailLabel"> @Session["Email"] </label>
+        <p class="Loction">موقعیت مکانی</p>
+        <label class="LoctionLabel"> @Session["Address"] </label>
+
+        <img class="flipUser" src="../Content/img/Idoko/free_icon_1.svg" alt="">
+        <div class="panelUser">
+            @Html.TextBoxFor(x => x.UserName)
+        </div>
+        <img class="flipName" src="../Content/img/Idoko/free_icon_1.svg" alt="">
+        <div class="Namepanel">
+            @Html.TextBoxFor(x => x.Name)
+            @Html.TextBoxFor(x => x.Fname)
+        </div>
+        <img class="flipPhone" src="../Content/img/Idoko/free_icon_1.svg" alt="">
+        <div class="panelPhone">
+            @Html.TextBoxFor(x => x.Phone)
+        </div>
+        <img class="flipEmail" src="../Content/img/Idoko/free_icon_1.svg" alt="">
+        <div class="panelEmail">
+            @Html.TextBoxFor(x => x.Email)
+        </div>
+        <img class="flipBio" src="../Content/img/Idoko/free_icon_1.svg" alt="">
+        <div class="panelBio">
+            @Html.TextAreaFor(x => x.Biography)
+        </div>
+        <img class="flipLoction" src="../Content/img/Idoko/free_icon_1.svg" alt="">
+        <div class="panelLoction">
+            @Html.TextBoxFor(x => x.Address)
+        </div>
+        <img class="flipBirthDay" src="../Content/img/Idoko/free_icon_1.svg" alt="">
+        <div class="panelBirthDay">
+            <div> @Html.EnumDropDownListFor(x => x.BirthDateY) </div>
+            <div> @Html.EnumDropDownListFor(x => x.BirthDateM) </div>
+            <div> @Html.EnumDropDownListFor(x => x.BirthDateD) </div>
+
+        </div>
+        <img class="flipCateguri" src="../Content/img/Idoko/free_icon_1.svg" alt="">
+        <div class="panelCateguri">
+            <div> @Html.EnumDropDownListFor(x => x.Categuri) </div>
+        </div>
+        <img class="flipSexuality" src="../Content/img/Idoko/free_icon_1.svg" alt="">
+        <div class="panelSexuality">
+
+            <div> @Html.EnumDropDownListFor(x => x.Sexuality) </div>
+        </div>
+        <input class="Record btn-secondary hover-grow" type="submit" value="ثبت" />
+
+
+    }
+    <div class="rectangle rm1"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous"></script>
+
+    <script src='~/Content/recomand/profile/jquery.min.js'></script>
+    <script src="~/Content/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            loadDarkModeState();
+        });
+
+        // تعریف توابع مربوط به ذخیره و بازیابی وضعیت دارک مود
+        function saveDarkModeState() {
+            var darkModeState = {
+                "dark-mode": document.body.classList.contains("dark-mode"),
+                "dark-buttons": document.querySelector(".hover-grow").classList.contains("dark-button"),
+                "dark-profile": document.querySelector(".Profile").classList.contains("dark-profile"),
+                "dark-rectangles": document.querySelector(".rectangle").classList.contains("dark-rectangle"),
+                "p-darklabel": document.querySelector("p").classList.contains("darklabel")
+
+
+            };
+
+            localStorage.setItem("dark-mode-state", JSON.stringify(darkModeState));
+        }
+
+        function loadDarkModeState() {
+            var darkModeState = JSON.parse(localStorage.getItem("dark-mode-state")) || {};
+
+            if (darkModeState["dark-mode"]) {
+                document.body.classList.add("dark-mode");
+            }
+
+            var buttons = document.querySelectorAll(".hover-grow");
+            buttons.forEach(button => {
+                if (darkModeState["dark-buttons"]) {
+                    button.classList.add("dark-button");
+                }
+            });
+
+            //if (darkModeState["dark-profile"]) {
+            //    document.querySelector(".Profile").classList.add("dark-profile");
+            //}
+
+            var rectangles = document.querySelectorAll(".rectangle");
+            rectangles.forEach(rectangle => {
+                if (darkModeState["dark-rectangles"]) {
+                    rectangle.classList.add("dark-rectangle");
+                }
+            });
+
+            var labels = document.querySelectorAll("p");
+            labels.forEach(label => {
+                if (darkModeState["label-darklabel"]) {
+                    label.classList.add("darklabel");
+                } else {
+                    label.classList.remove("darklabel");
+                }
+            });
+
+
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,387 @@
+﻿@font-face {
+    font-family: yekan;
+    src: url("../font/Yekan.ttf") format("truetype"), url("../font/Yekan.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+* {
+    font-size: 14px !important;
+}
+body {
+    background: url("../img/Idoko/Untitled-4.png") center top / 100% 100% no-repeat;
+    width: 100%;
+    height: 100vh;
+    font-family: yekan !important;
+}
+.darklabel {
+    color: #5cedfb !important;
+}
+label.labeldark {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 15px 10px 10px -350px;
+}
+
+.darkimg {
+    position: absolute;
+    width: 60px;
+}
+
+.dark-button {
+    background: black !important;
+    border: 0.25em solid transparent;
+    background-image: linear-gradient(#000, #000), linear-gradient(120deg, #f09 0%, #0ff 50%, #9f0 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-size: 200% 100%;
+    transition: background-position 0.8s ease-out;
+    color: #5cedfb !important;
+}
+
+.dark-rectangle {
+    background-color: #364d6f !important; /* تغییر رنگ rectangle ها در حالت دارک‌مود */
+}
+.dark-mode {
+    background-color: #2d1d1d !important;
+    color: darkblue;
+    background: url("../img/Idoko/1.png") center top / 100% 100% no-repeat;
+}
+button,input,text,a,div{
+    font-family: "yekan" !important;
+}
+.Background {
+    background: rgb(241, 247, 254);
+    width: 800px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: rgb(1, 50, 55) 0px 0px 2em;
+    gap: 2em;
+    opacity: 0.5;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 30px 10px 10px;
+}
+
+.headr {
+    position: absolute;
+    font-size: 20px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    color: rgb(1, 50, 55);
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 55px 10px 10px 0px;
+}
+
+.BackIcon {
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    position: absolute;
+    width: 40px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 45px 0px 0px -275px;
+}
+
+.r1 {
+    position: absolute;
+    width: 350px;
+    height: 190px;
+    background: transparent;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 110px 10px 10px 0px;
+    border: solid black;
+
+}
+
+
+.Add {
+    padding: 1em;
+    width: 50px;
+    height: 50px;
+    background: rgb(217, 217, 217);
+    border: none;
+    font-weight: 600;
+    position: absolute;
+    margin: 550px 10px 10px 0px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 20px;
+}
+
+.FoodLabel {
+    position: absolute;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgb(1, 50, 55);
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 307px 10px 10px 61px;
+    font-weight: bold;
+    width: 200px;
+}
+
+.AppetizerLabel {
+    position: absolute;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgb(1, 50, 55);
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 420px 10px 10px 0px;
+    font-weight: bold;
+}
+
+a,div, button, input,a {
+    border-radius: 15px !important;
+    box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    gap: 10px;
+    overflow-y: auto;
+    position: absolute;
+    left: 50%;
+    width: 615px;
+    margin: 91px 10px 10px 0px;
+    transform: translate(-50%, 0%);
+    justify-content: center;
+    height: 73%;
+    max-height: 75%;
+}
+
+@media screen and (max-width: 1279px) {
+    .Background {
+        display: none;
+    }
+    * {
+        font-size: 12px !important;
+    }
+    body {
+        background: url("../img/Idoko/Untitled-2.png") center top / 100% 100% no-repeat;
+        width: 100%;
+        height: 100vh;
+        font-family: yekan !important;
+    }
+
+    .headr {
+        position: absolute;
+        font-size: 20px;
+        width: 100%;
+        line-height: 24px;
+        align-items: center;
+        text-align: center;
+        color: rgb(1, 50, 55);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 25px 10px 10px 0px;
+    }
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        font-size: 30px;
+        position: absolute;
+        width: 40px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 15px 10px 10px -275px;
+    }
+
+    .r1 {
+        position: absolute;
+        width: 400px;
+        height: 250px;
+        background: transparent;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 30px 10px 10px 25px;
+    }
+
+
+
+    .Add {
+        padding: 1em;
+        width: 50px;
+        height: 50px;
+        background: rgb(217, 217, 217);
+        border: none;
+        font-weight: 600;
+        position: absolute;
+        margin: 885px 10px 10px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .FoodLabel {
+        position: absolute;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: rgb(1, 50, 55);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 301px 10px 10px 98px;
+    }
+
+    .AppetizerLabel {
+        position: absolute;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: rgb(1, 50, 55);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 435px 10px 10px 5px;
+    }
+
+    a,div, button, input,a {
+        border-radius: 15px !important;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 0fr);
+        gap: 10px;
+        overflow-y: auto;
+        position: absolute;
+        left: 50%;
+        width: 526px;
+        margin: 65px 10px 10px 0px;
+        transform: translate(-50%, 0%);
+        justify-content: center;
+        height: 82%;
+        max-height: 84%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Background {
+        display: none;
+    }
+    * {
+        font-size: 10px !important;
+    }
+    body {
+        background: url("../img/Idoko/Untitled-1.png") center top / 100% 100% no-repeat;
+        width: 100%;
+        height: 100vh;
+        font-family: yekan !important;
+    }
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        font-size: 30px;
+        position: absolute;
+        width: 30px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px -160px;
+    }
+
+    .headr {
+        position: absolute;
+        font-size: 15px;
+        width: 69%;
+        line-height: 24px;
+        align-items: center;
+        text-align: center;
+        color: rgb(1, 50, 55);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 12px 10px 10px 0px;
+    }
+
+    .r1 {
+        position: absolute;
+        width: 300px;
+        height: 150px;
+        background: transparent;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 25px 10px 10px 0px;
+    }
+
+
+    .FoodLabel {
+        position: absolute;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: rgb(1, 50, 55);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 186px 10px 10px 73px;
+    }
+
+    .AppetizerLabel {
+        position: absolute;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: rgb(1, 50, 55);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 285px 10px 10px 5px;
+    }
+
+    .Add {
+        padding: 1em;
+        width: 50px;
+        height: 50px;
+        background: rgb(217, 217, 217);
+        border: none;
+        font-weight: 600;
+        position: absolute;
+        margin: 565px 10px 10px 0px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    a,div, button, input,a {
+        border-radius: 15px !important;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 0fr);
+        gap: 10px;
+        overflow-y: auto;
+        position: absolute;
+        left: 50%;
+        width: 344px;
+        margin: 55px 10px 10px 0px;
+        transform: translate(-50%, 0%);
+        justify-content: center;
+        height: 77%;
+        max-height: 79%;
+    }
+}

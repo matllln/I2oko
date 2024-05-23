@@ -1,0 +1,472 @@
+@font-face {
+    font-family: yekan;
+    src: url("../font/Yekan.ttf") format("truetype"), url("../font/Yekan.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    user-select: none;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../img/Idoko/Untitled-4.png") center top / 100% 100% no-repeat;
+    height: 100vh;
+    font-family: yekan !important;
+}
+button,input,text,a,div{
+    font-family: "yekan" !important;
+}
+.r1 {
+    background: rgb(241, 247, 254);
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: rgb(1, 50, 55) 0px 0px 2em;
+    gap: 2em;
+    opacity: 0.5;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 10px 10px 10px 0px;
+}
+
+.logo {
+    width: 180px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    margin: 30px 10px 10px 0px;
+}
+
+.BackIcon {
+    border: none;
+    background: transparent;
+    font-size: 29px;
+    position: absolute;
+    left: 50%;
+    width: 41px;
+    transform: translate(-50%, 0%);
+    margin: -240px 0px 0px -220px;
+}
+
+.Number {
+    background: rgb(234, 249, 218);
+    box-shadow: rgb(1, 50, 55) 0px 0px 1em;
+    padding: 2.5em;
+    border-radius: 30px;
+    color: rgb(76, 167, 113);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 10px 10px 10px 0px;
+    font-family: yekan;
+    width: 230px;
+}
+
+input#Phone {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 5px 10px 10px 0px;
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius: 70px;
+    padding: 4px;
+    font-size: 16px;
+}
+
+.NumberLabel {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -30px 10px 10px 0px;
+    color: rgb(1, 50, 55);
+    width: 240px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.Send {
+    padding: 1em;
+    background: rgb(234, 249, 218);
+    color: rgb(2, 72, 30);
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: rgb(1, 50, 55) 0px 0px 1em;
+    width: 180px;
+    place-self: center;
+    position: absolute;
+    margin: 100px 10px 10px -90px;
+    font-family: yekan;
+    font-size: 16px;
+    left: 50%;
+}
+
+.btn-secondary:hover {
+    color: rgb(1, 50, 55);
+    background-color: rgb(76, 167, 113);
+    border-color: rgb(151, 16, 43);
+}
+
+.hover-grow {
+    transition: all 0.5s ease 0s;
+}
+
+.btn-secondary:hover {
+    transform: scale(1.1);
+}
+
+.home:hover {
+    font-weight: bold;
+    color: rgb(1, 50, 55);
+}
+
+h2 {
+    position: absolute;
+    font-size: 16px;
+    text-align: center;
+    margin: -240px -3px 10px 0px;
+    width: 210px;
+}
+
+input#Phone {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 4px 10px 10px 10px;
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius: 70px;
+    padding: 4px;
+    font-size: 16px;
+}
+
+.idoko {
+    position: absolute;
+    width: 110px;
+    height: 0px;
+    font-family: Parisienne;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    text-align: center;
+    color: rgb(1, 50, 55);
+    left: 10px;
+    margin: 10px;
+    top: 10px;
+}
+
+div, button, input, a {
+    border-radius: 15px !important;
+    box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+}
+
+@media screen and (max-width: 1279px) {
+    body {
+        overflow-y: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("../img/Idoko/Untitled-2.png") center top / 100% 100% no-repeat;
+        height: 100vh;
+    }
+
+    .r1 {
+        background: rgb(241, 247, 254);
+        width: 500px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 30px;
+        box-shadow: rgb(1, 50, 55) 0px 0px 2em;
+        gap: 2em;
+        opacity: 0.5;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px 0px;
+    }
+
+    .logo {
+        width: 150px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 60px 10px 10px 0px;
+    }
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        font-size: 29px;
+        position: absolute;
+        left: 50%;
+        width: 41px;
+        transform: translate(-50%, 0%);
+        margin: -240px 0px 0px -220px;
+    }
+
+    .Number {
+        background: rgb(234, 249, 218);
+        box-shadow: rgb(1, 50, 55) 0px 0px 1em;
+        padding: 2.5em;
+        border-radius: 30px;
+        color: rgb(76, 167, 113);
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px 0px;
+        font-family: yekan;
+        width: 230px;
+    }
+
+    input#Phone {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 5px 10px 10px 0px;
+        text-align: center;
+        outline: none;
+        border: none;
+        border-radius: 70px;
+        padding: 4px;
+        font-size: 14px;
+    }
+
+    .NumberLabel {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -30px 10px 10px 0px;
+        color: rgb(1, 50, 55);
+        width: 200px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .Send {
+        padding: 1em;
+        background: rgb(234, 249, 218);
+        color: rgb(2, 72, 30);
+        border: none;
+        border-radius: 30px;
+        font-weight: 600;
+        box-shadow: rgb(1, 50, 55) 0px 0px 1em;
+        width: 180px;
+        place-self: center;
+        position: absolute;
+        margin: 110px 10px 10px -90px;
+        font-family: yekan;
+        font-size: 14px;
+    }
+
+    .btn-secondary:hover {
+        color: rgb(1, 50, 55);
+        background-color: rgb(76, 167, 113);
+        border-color: rgb(151, 16, 43);
+    }
+
+    .hover-grow {
+        transition: all 0.5s ease 0s;
+    }
+
+    .btn-secondary:hover {
+        transform: scale(1.1);
+    }
+
+    .home:hover {
+        font-weight: bold;
+        color: rgb(1, 50, 55);
+    }
+
+    h2 {
+        position: absolute;
+        color: rgb(1, 50, 55);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -240px 10px 10px 0px;
+        font-family: yekan;
+        width: 180px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .idoko {
+        position: absolute;
+        width: 110px;
+        height: 0px;
+        font-family: Parisienne;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        text-align: center;
+        color: rgb(1, 50, 55);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 5px 10px 10px 0px;
+    }
+
+    div, button, input, a {
+        border-radius: 15px !important;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        overflow-y: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("../img/Idoko/Untitled-1.png") center top / 100% 100% no-repeat;
+        height: 100vh;
+    }
+
+    .r1 {
+        background: rgb(241, 247, 254);
+        width: 270px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 30px;
+        box-shadow: rgb(1, 50, 55) 0px 0px 2em;
+        gap: 2em;
+        opacity: 0.5;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 140px 10px 10px 0px;
+    }
+
+    .logo {
+        width: 130px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 45px 10px 10px 0px;
+    }
+
+    .Number {
+        background: rgb(234, 249, 218);
+        width: 140px;
+        padding: 2.3em;
+        border-radius: 20px;
+        color: rgb(1, 50, 55);
+        box-shadow: rgb(1, 50, 55) 0px 0px 1em;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 110px 10px 10px 0px;
+    }
+
+    input#Phone {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 55px 10px 10px 0px;
+        text-align: center;
+        outline: none;
+        border: none;
+        border-radius: 70px;
+        padding: 4px;
+        font-size: 12px;
+    }
+
+    .NumberLabel {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -25px 10px 10px 0px;
+        color: rgb(1, 50, 55);
+        width: 170px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    .Send {
+        padding: 1em;
+        background: rgb(234, 249, 218);
+        color: rgb(2, 72, 30);
+        border: none;
+        border-radius: 30px;
+        font-weight: 600;
+        box-shadow: rgb(1, 50, 55) 0px 0px 1em;
+        width: 150px;
+        text-align: center;
+        position: absolute;
+        margin: 150px 10px 10px -75px;
+        font-family: yekan;
+        font-size: 12px;
+    }
+
+    .btn-secondary:hover {
+        color: rgb(1, 50, 55);
+        background-color: rgb(76, 167, 113);
+        border-color: rgb(151, 16, 43);
+    }
+
+    .hover-grow {
+        transition: all 0.5s ease 0s;
+    }
+
+    .btn-secondary:hover {
+        transform: scale(1.1);
+    }
+
+    .home:hover {
+        font-weight: bold;
+        color: rgb(1, 50, 55);
+    }
+
+    h2 {
+        position: absolute;
+        color: rgb(1, 50, 55);
+        font-size: 12px;
+        width: 160px;
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -100px 10px 10px 0px;
+        font-family: yekan;
+    }
+
+    .idoko {
+        position: absolute;
+        width: 110px;
+        height: 0px;
+        font-family: Parisienne;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 35px;
+        text-align: center;
+        color: rgb(1, 50, 55);
+        top: 620px;
+        left: 50%;
+        margin: -610px 10px 10px 0px;
+    }
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 34px;
+        margin: -130px 0px 0px -113px;
+    }
+
+    div, button, input, a {
+        border-radius: 15px !important;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+    }
+}

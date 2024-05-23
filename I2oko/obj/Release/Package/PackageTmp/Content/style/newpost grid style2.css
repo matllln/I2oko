@@ -1,0 +1,109 @@
+﻿.fav-listneed {
+    display: grid;
+    justify-content: center;
+    grid-gap: 46px 69px;
+    padding-top: 350px;
+    padding-right: 42px;
+}
+
+.fav-list {
+    display: grid;
+    justify-content: center;
+    grid-gap: 0px 69px;
+    padding-top: 70px;
+    padding-right: 42px;
+}
+
+.fav {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    top: -89px;
+    width: 160px;
+    height: 160px;
+}
+
+.fav-image {
+    margin: 0;
+}
+
+    .fav-image img {
+        width: 150px;
+        vertical-align: top;
+        height: 150px;
+        border-radius: 10px;
+    }
+
+
+@media screen and (max-width: 1279px) {
+    .fav-list {
+        display: grid;
+        justify-content: center;
+        grid-gap: 0px 27px;
+        padding-top: 250px;
+        padding-left: 0px;
+    }
+
+    .fav-image img {
+        width: 400px;
+        vertical-align: top;
+        height: 250px;
+        border-radius: 10px;
+        width: 100px;
+    }
+
+    button.carousel-control-prev {
+        right: 405px !important;
+        margin: 400px 0px 0px 0px;
+    }
+
+    button.carousel-control-next {
+        left: 405px !important;
+        margin: 400px 0px 0px 0px;
+    }
+
+    .fav-listneed {
+        display: grid;
+        justify-content: center;
+        grid-gap: 0px 69px;
+        padding-top: 391px;
+        padding-right: 42px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .fav-list {
+        display: grid;
+        justify-content: center;
+        grid-gap: 34px 65px;
+        padding-top: 220px;
+        padding-right: 60px;
+        width: 100px;
+    }
+
+    .fav-image img {
+        width: 400px;
+        vertical-align: top;
+        height: 250px;
+        border-radius: 10px;
+        width: 100px;
+    }
+
+    .fav-listneed {
+        display: grid;
+        justify-content: center;
+        grid-gap: 33px 69px;
+        padding-top: 391px;
+        padding-right: 42px;
+    }
+
+    button.carousel-control-prev {
+        left: 15px !important;
+        margin: 160px 0px 0px 0px;
+    }
+
+    button.carousel-control-next {
+        left: 265px !important;
+        margin: 160px 0px 0px 0px;
+    }
+}

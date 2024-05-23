@@ -1,0 +1,766 @@
+﻿@model I2oko.Models.RelationFIModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>NewPostRecipeIngredient</title>
+    <link rel="stylesheet" href="~/Content/style/StyleIngredientes.css">
+
+
+    <meta charset="UTF-8">
+    <script nomodule src="~/Content/recomand/ionicons.js"></script>
+    <link rel="stylesheet" href="~/Content/recomand/normalize.min.css">
+    <link rel='stylesheet'
+          href='~/Content/recomand/fontgoogle.css'>
+    <link href='~/Content/recomand/parsinee.css' rel='stylesheet'>
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="icon" href="../Content/img/Idoko/favicon.ico">
+
+</head>
+<body>
+
+    @using (Html.BeginForm("NewPostRecipeIngredient", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="grid-container list">
+            <section class="fav-listneed">
+                <div class="Raw">
+                    <div class="rectangle shoplist">
+                        <img class="shoplistImg" src="~/Content/img/Idoko/cart.svg" alt="">
+                    </div>
+                    <div class="rectangle caltable">
+                        <img class="caltableImg" src="~/Content/img/Idoko/kcal.svg" alt="">
+                    </div>
+                    <div class="rectangle add">
+                        <img class="AddImg" src="~/Content/img/Idoko/add.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="RawDiv2">
+                    <input class="RawTxt" id="searchBox" type="text" oninput="searchFunction()">
+                    <ul id="resultList"></ul>
+                    <input class="RawTxt2" type="text">
+                    <div class="RawListBox">
+                        <select class="Rawlist">
+                            <option value="1">عدد</option>
+                            <option value="2"> حبه</option>
+                            <option value="3"> بسته</option>
+                            <option value="4"> گرم</option>
+                            <option value="5"> کیلو </option>
+                            <option value="6"> لیوان </option>
+                            <option value="7"> پیمانه</option>
+                            <option value="8"> قاشق چای خوری</option>
+                            <option value="9"> قاشق مربا خوری</option>
+                            <option value="10"> قاشق غذا خوری </option>
+                            <option value="11"> به مقدار لازم</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="RawDiv2">
+                    <input class="RawTxt" type="text">
+                    <input class="RawTxt2" type="text">
+                    <div class="RawListBox">
+                        <select class="Rawlist">
+                            <option value="1">عدد</option>
+                            <option value="2"> حبه</option>
+                            <option value="3"> بسته</option>
+                            <option value="4"> گرم</option>
+                            <option value="5"> کیلو </option>
+                            <option value="6"> لیوان </option>
+                            <option value="7"> پیمانه</option>
+                            <option value="8"> قاشق چای خوری</option>
+                            <option value="9"> قاشق مربا خوری</option>
+                            <option value="10"> قاشق غذا خوری </option>
+                            <option value="11"> به مقدار لازم</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="RawDiv2">
+                    <input class="RawTxt" type="text">
+                    <input class="RawTxt2" type="text">
+                    <div class="RawListBox">
+                        <select class="Rawlist">
+                            <option value="1">عدد</option>
+                            <option value="2"> حبه</option>
+                            <option value="3"> بسته</option>
+                            <option value="4"> گرم</option>
+                            <option value="5"> کیلو </option>
+                            <option value="6"> لیوان </option>
+                            <option value="7"> پیمانه</option>
+                            <option value="8"> قاشق چای خوری</option>
+                            <option value="9"> قاشق مربا خوری</option>
+                            <option value="10"> قاشق غذا خوری </option>
+                            <option value="11"> به مقدار لازم</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <a href="~Home/BeautifulTable.cshtml">    <input class="Confirm btn-secondary hover-grow" id="Ingredient" type="submit" /></a>
+    }
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            loadDarkModeState();
+        });
+
+        // تعریف توابع مربوط به ذخیره و بازیابی وضعیت دارک مود
+        function saveDarkModeState() {
+            var darkModeState = {
+                "dark-mode": document.body.classList.contains("dark-mode"),
+                "dark-buttons": document.querySelector(".hover-grow").classList.contains("dark-button"),
+                "dark-profile": document.querySelector(".Profile").classList.contains("dark-profile"),
+                "dark-rectangles": document.querySelector(".rectangle").classList.contains("dark-rectangle"),
+                "label-darklabel": document.querySelector("label").classList.contains("darklabel"),
+                "a-darklabel": document.querySelector("a").classList.contains("darklabel")
+            };
+
+            localStorage.setItem("dark-mode-state", JSON.stringify(darkModeState));
+        }
+
+        function loadDarkModeState() {
+            var darkModeState = JSON.parse(localStorage.getItem("dark-mode-state")) || {};
+
+            if (darkModeState["dark-mode"]) {
+                document.body.classList.add("dark-mode");
+            }
+
+            var buttons = document.querySelectorAll(".hover-grow");
+            buttons.forEach(button => {
+                if (darkModeState["dark-buttons"]) {
+                    button.classList.add("dark-button");
+                }
+            });
+
+            //if (darkModeState["dark-profile"]) {
+            //    document.querySelector(".Profile").classList.add("dark-profile");
+            //}
+
+            var rectangles = document.querySelectorAll(".rectangle");
+            rectangles.forEach(rectangle => {
+                if (darkModeState["dark-rectangles"]) {
+                    rectangle.classList.add("dark-rectangle");
+                }
+            });
+
+            // تغییر بک‌گراند .darkimg در حالت دارک مود
+            var darkMode = document.body.classList.contains("dark-mode");
+            var darkImg = document.querySelector(".darkimg");
+            // بازنشانی کلاس darklabel به لیبل و تگ a در حالت دارک مود
+            var labels = document.querySelectorAll("label,a");
+            labels.forEach(label => {
+                if (darkModeState["label-darklabel"] || darkModeState["a-darklabel"]) {
+                    label.classList.add("darklabel");
+                } else {
+                    label.classList.remove("darklabel");
+                }
+            });
+
+        }
+    </script>
+    <script>
+        function searchFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById('searchBox');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById('resultList');
+            li = ul.getElementsByTagName('li');
+
+            for (i = 0; i < li.length; i++) {
+                a = li[i];
+                if (filter && a.innerHTML.toUpperCase().startsWith(filter)) {
+                    li[i].style.display = '';
+                } else {
+                    li[i].style.display = 'none';
+                }
+            }
+
+            if (!filter) {
+                ul.style.display = 'none';
+            } else {
+                ul.style.display = 'block';
+            }
+        }
+
+        function selectItem(item) {
+            document.getElementById('searchBox').value = item.innerHTML;
+            document.getElementById('resultList').style.display = 'none';
+        }
+        var options = [
+            "نخود",
+            "لوبیا قرمز",
+            "لوبیا سفید",
+            "لوبیا چیتی",
+            "لوبیا کپسولی",
+            "لوبیا چشم بلبلی",
+            "لوبیا سبز",
+            "لوبیا سیاه",
+            "عدس",
+            "ماش",
+            "لپه",
+            "برگه زرد آلو",
+            "برگه هلو",
+            "برگه کیوی",
+            "سیب خشک",
+            "گیلاس خشک",
+            "آلو خشک",
+            "گلابی خشک",
+            "قیسی خشک",
+            "انجیر خشک",
+            "دانه انار خشک",
+            "توت خشک",
+            "آلبالو خشک",
+            "زرشک",
+            "نخودچی",
+            "نخودچی فرایند شده",
+            "عناب",
+            "مویز",
+            "کشمش تیزابی",
+            "کشمش پلویی",
+            "کشمش سبز",
+            "گردو",
+            "مغز هسته زردآلو",
+            "مغز هسته هلو",
+            "مغز بخورک",
+            "مغز بادام",
+            "بادام زمینی",
+            "بادام هندی",
+            "فندق",
+            "قیسی",
+            "خرما مضافتی",
+            "خرما کبکاب",
+            "خرما پیارم",
+            "خرما زاهدی",
+            "پسته خام",
+            "پسته شور",
+            "آلو بخارا",
+            "تخمه آفتابگردان",
+            "تخمه هندوانه",
+            "تخمه خربزه",
+            "تخمه جابانی (ژاپنی)",
+            "تخمه کدو",
+            "تخمه طالبی",
+            "شیر کم چرب",
+            "شیر پر چرب",
+            "شیر گیاهی",
+            "شیر کنف (شاهدانه)",
+            "شیر جو دوسر",
+            "شیر بادام",
+            "شیر نارگیل",
+            "شیر گاو",
+            "شیر سویا",
+            "شیر شتر",
+            "شیر الاغ",
+            "شیر بز",
+            "شیر گوسفند",
+            "ماست کم چرب",
+            "ماست پر چرب",
+            "ماست چکیده",
+            "ماست کفیر",
+            "ماست یونانی",
+            "ماست پروبیوتیک",
+            "ماست اسکایر یا ایسلندی",
+            "ماست منجمد",
+            "ماست گیاهی",
+            "ماست خامه ای",
+            "ماست بدون لاکتوز",
+            "پنیر لیقوان",
+            "پنیر تالش",
+            "پنیر کوزه ای",
+            "پنیر خیکی یا  پوستی",
+            "پنیر فتا",
+            "پنیر سفید کم چرب",
+            "پنیر خامه ای",
+            "پنیر لاکتیکی",
+            "پنیر پیتزا",
+            "پنیر پارمزان",
+            "پنیر چدار",
+            "پنیر گودا",
+            "پنیر موتزارلا (موزارلا)",
+            "کره حیوانی",
+            "کره مارگارین",
+            "کره پسته",
+            "کره بادام زمینی",
+            "کره گردو",
+            "کره تخم آفتابگردان",
+            "کره فندق",
+            "کره زیتون",
+            "دوغ گازدار",
+            "دوغ بدون گاز",
+            "دوغ پر چرب",
+            "دوغ کم چرب",
+            "خامه لخته شده",
+            "شیر خامه",
+            "خامه فریشه",
+            "خامه غلیظ",
+            "خامه دوبل",
+            "خامه ویپنگ",
+            "خامه سبک",
+            "خامه صبحانه",
+            "چای",
+            "قهوه",
+            "کاکایو",
+            "شکلات صبحانه",
+            "بستنی",
+            "کرم کارامل",
+            "ژله",
+            "کشک پاستوریزه",
+            "کشک زرد",
+            "کشک خشک",
+            "کشک سویا",
+            "سر شیر",
+            "عسل گون",
+            "عسل آویشن",
+            "عسل اقاقیا",
+            "عسل آفتابگردان",
+            "عسل سیاهدانه",
+            "عسل مرکبات",
+            "عسل کنار",
+            "عسل یونجه",
+            "عسل کلزا",
+            "عسل شکر تیغال",
+            "عسل گشنیز",
+            "عسل زرشک",
+            "عسل زول",
+            "عسل کلپوره",
+            "عسل لعل کوهستان",
+            "عسل اکالیپتوس",
+            "عسل شبدر",
+            "عسل شوید",
+            "عسل پنبه",
+            "عسل زعفران",
+            "عسل برازمبل",
+            "عسل سماق",
+            "عسل نمدار",
+            "عسل خارشتر",
+            "عسل ترنجبین",
+            "عسل کنجد",
+            "عسل عناب",
+            "عسل پنج انگشت",
+            "عسل رازیانه",
+            "عسل جاشیر",
+            "عسل فرفیون",
+            "عسل بلوط",
+            "عسل کهور",
+            "عسل چند گیاه",
+            "ارده",
+            "شیره انگور",
+            "شیره خرما",
+            "شیره انجیر",
+            "شیره توت",
+            "شیره سیب",
+            "شیره چغندر",
+            "شیره کشمش",
+            "شیره خرمالو",
+            "گوشت گاو",
+            "گوشت گوساله",
+            "گوشت گوسفند",
+            "گوشت بره",
+            "گوشت بز",
+            "گوشت شتر",
+            "گوشت آهو",
+            "گوشت شتر مرغ",
+            "گوشت مرغ",
+            "گوشت بلدرچین",
+            "گوشت غاز",
+            "گوشت کبک",
+            "ماهی آزاد (سالمون)",
+            "ماهی سفید",
+            "اردک ماهی",
+            "ماهی ازون برون",
+            "ماهی سوف",
+            "ماهی سیم",
+            "ماهی کپور",
+            "ماهی کفال",
+            "ماهی کولمه",
+            "ماهی کولی",
+            "ماهی قزل آلا",
+            "شک ماهی (هرنیگ)",
+            "ماهی کلیکا",
+            "ماهی شیر",
+            "ماهی قباد",
+            "ماهی شوریده",
+            "ماهی سرخو",
+            "ماهی سنگسر",
+            "ماهی حلوا سفید",
+            "ماهی حلوا سیاه",
+            "کوسه ماهی",
+            "ماهی راشگو",
+            "ماهی سوکلا (سکن)",
+            "ماهی شانک صورتی",
+            "ماهی صافی",
+            "ماهی کفشک",
+            "شاه میگو",
+            "میگو ببری",
+            "میگو موزی",
+            "میگو سفید",
+            "میگو سفید هندی",
+            "میگو سرتیز",
+            "میگو ببری سیاه (مونودون)",
+            "خرچنگ (لابستر)",
+            "صدف اویستر",
+            "صدف دو کفه ای",
+            "صدف ملوک",
+            "اشپل",
+            "خاویار",
+            "سوسیس گوشت",
+            "سوسیس فرانکفورت",
+            "سوسیس آلمانی",
+            "سوسیس کراکف",
+            "سوسیس شکاری",
+            "سوسیس هات داگ",
+            "سوسیس کوکتل",
+            "سوسیس بلغاری",
+            "سوسیس چریتسو (چوریزو)",
+            "سوسیس جالاپنو",
+            "سوسیس کابانوسی",
+            "سوسیس انگشتی",
+            "کالباس گیاهی (وگاس)",
+            "کالباس سالامی",
+            "کالباس مرغ و قارچ",
+            "کالباس مرغ",
+            "کالباس خشک",
+            "کالباس مرغ دودی اسپایسی",
+            "کالباس لیونر",
+            "کالباس خشک دانمارکی",
+            "کالباس پپرونی",
+            "ژامبون گوشت",
+            "ژامبون مرغ",
+            "ژامبون بوقلمون",
+            "ژامبون مخلوط",
+            "بیکن",
+            "بیف جرکی",
+            "سویا",
+            "تخم مرغ",
+            "تخم شترمرغ",
+            "تخم اردک",
+            "تخم بوقلمون",
+            "تخم بلدرچین",
+            "تخم غاز",
+            "تخم قرقاول",
+            "تخم کبوتر",
+            "تخم پنگوئن",
+            "جو دو سر کامل",
+            "گندم کامل",
+            "چاودار سبوس دار",
+            "گندم سیاه",
+            "بلغور گندم",
+            "جو کامل",
+            "اسپلد",
+            "کینوا",
+            "برنج قهوه ای",
+            "برنج سفید",
+            "ذرت",
+            "ذرت بو داده",
+            "نان لواش",
+            "نان بربری",
+            "نان تافتون",
+            "نان سنگک",
+            "نان باگت",
+            "نان تست",
+            "نان سبوس دار",
+            "رشته سوپ",
+            "رشته پلو",
+            "رشته آش",
+            "نودالیت",
+            "ماکارونی",
+            "ماکارونی سبوس دار",
+            "پاستا",
+            "لازانیا",
+            "کنسرو نخود فرنگی",
+            "کنسرو ذرت شیرین",
+            "کنسرو لوبیا چیتی با قارچ",
+            "کنسرو لوبیا چیتی",
+            "کنسرو مخلوط سبزیجات",
+            "کنسرو عدسی",
+            "کنسرو مایع ماکارانی",
+            "کنسرو ماهی تن",
+            "کنسرو رب گوجه",
+            "کنسرو قارچ",
+            "کمپوت توت فرنگی",
+            "کمپوت کیوی",
+            "کمپوت شلیل",
+            "کمپوت انجیر",
+            "کمپوت موز",
+            "کمپوت انبه",
+            "کمپوت آلو",
+            "کمپوت آلبالو",
+            "کمپوت هلو",
+            "کمپوت زردآلو",
+            "کمپوت گلابی",
+            "کمپوت گیلاس",
+            "کمپوت آناناس",
+            "کمپوت آلویه ورا",
+            "کمپوت میوه های استوایی",
+            "کمپوت سیب",
+            "آنغوزه",
+            "آویشن",
+            "انیسون",
+            "برگ بو",
+            "پاپریکا",
+            "تخم شنبلیله",
+            "تخم شوید",
+            "تخم گشنیز",
+            "تمر هندی",
+            "جوز هندی",
+            "خردل",
+            "خولنجان",
+            "دارچین",
+            "رازیانه",
+            "زردچوبه",
+            "زرشک",
+            "زعفران",
+            "زنجبیل",
+            "زیره",
+            "زیره سبز",
+            "سماق",
+            "سیاه دانه",
+            "بهار فلفل (فلفل بهار)",
+            "فلفل سفید",
+            "فلفل سیاه",
+            "فلفل قرمز",
+            "فلفل انبه",
+            "کاری",
+            "کنجد",
+            "گراماسالا",
+            "گلپر",
+            "گلرنگ",
+            "گل محمدی",
+            "میخک صد پر",
+            "نمک خوراکی",
+            "واسابی",
+            "وانیل",
+            "بکینگ پودر",
+            "هل سبز",
+            "هل سفید",
+            "هل سیاه",
+            "پودر سیر",
+            "قدومه",
+            "ثعلب",
+            "بیدمشک",
+            "کاهو",
+            "شکر قهوه ای",
+            "بهار نارنج",
+            "مرزه",
+            "ترخون",
+            "ریحان",
+            "تره",
+            "نعنا",
+            "جعفری",
+            "ترب",
+            "تربچه",
+            "پیازچه",
+            "شاهی",
+            "گشنیز",
+            "سیرچه (سیر سبز)",
+            "شنبلیله",
+            "اسفناج",
+            "پونه",
+            "پونه کوهی (اورگانو)",
+            "کرفس",
+            "رزماری",
+            "شوید",
+            "کاکوتی",
+            "موسیر",
+            "سنبل هندی",
+            "بادمجان قلمی",
+            "بادمجان دلمه ای",
+            "باقالا",
+            "بامیه",
+            "پیاز",
+            "چقندر",
+            "خیار سالادی",
+            "خیار درختی",
+            "خیار ابوجهل",
+            "شلغم",
+            "سیب زمینی",
+            "فلفل سبز",
+            "فلفل دلمه ای",
+            "قارچ",
+            "کاهو",
+            "کاهو پیچ",
+            "کدو سبز",
+            "کدو حلوایی",
+            "کلم بروکلی",
+            "کلم قمری",
+            "گل کلم",
+            "کنگر",
+            "گوجه فرنگی",
+            "لوبیا",
+            "نخود فرنگی",
+            "هویج",
+            "غوره",
+            "لیمو ترش",
+            "لیمو عمانی",
+            "انار",
+            "اختری (کوکبی)",
+            "ازگیل",
+            "آسرولا",
+            "آلبالو",
+            "آلو برقانی",
+            "آلو قطره طلا",
+            "آلو",
+            "آلو شابلون",
+            "آلوکک (گیلاس خود رو)",
+            "آناناس",
+            "انبه",
+            "انجیر",
+            "انگور",
+            "آواکادو",
+            "بادام",
+            "بالنگ",
+            "بلوبری",
+            "بلوط",
+            "به",
+            "پاپایا (خربزه درختی)",
+            "پرتقال",
+            "خرمالو",
+            "پورنج",
+            "تپورنج",
+            "ترگیل (منگوستین)",
+            "ترنج",
+            "تمشک",
+            "توت فرنگی",
+            "توت",
+            "چشالو",
+            "چنار",
+            "چیکو",
+            "خارگیل",
+            "خربزه",
+            "دارابی (پومیلو)",
+            "زغال اخته",
+            "زالزالک",
+            "زرد آلو",
+            "زرگیل (لانگست)",
+            "زیتون",
+            "سرخالو (لیچی)",
+            "سنجد",
+            "سیب",
+            "شاه توت",
+            "شفتالو",
+            "شلیل",
+            "طالبی",
+            "قیسی",
+            "کمبوزه",
+            "کنار",
+            "کیوی",
+            "گرمک",
+            "گریپ فرود",
+            "گلابی",
+            "گواوا",
+            "گوجه سبز",
+            "گیلاس",
+            "لایچی",
+            "لیمو شیرین",
+            "مژکی",
+            "موز",
+            "ملون",
+            "میوه اژدها (دراگون)",
+            "میوه نان",
+            "نارگیل",
+            "نارنج",
+            "نارنگی",
+            "هلو",
+            "هندوانه",
+            "چاقاله بادام",
+            "آب لیمو ترش",
+            "آب غوره",
+            "سرکه سیاه چینی",
+            "سرکه برنج",
+            "سرکه مالت",
+            "سرکه سیب",
+            "سرکه نیشکر",
+            "سرکه کشمش",
+            "سرکه خرما",
+            "سرکه عسل",
+            "سرکه بالزامیک",
+            "سرکه سفید",
+            "سرکه نارگیل",
+            "سرکه کیوی",
+            "گلاب",
+            "روغن سرخ کردنی",
+            "روغن پخت و پز",
+            "روغن ذرت",
+            "روغن کنجد",
+            "روغن نارگیل",
+            "روغن زیتون",
+            "روغن آفتابگردان",
+            "روغن کلزا",
+            "روغن کانولا",
+            "روغن ارده کنجد",
+            "روغن سویا",
+            "روغن پنبه دانه",
+            "روغن پالم",
+            "روغن بادام",
+            "روغن کرچک",
+            "روغن گلرنگ",
+            "روغن گردو",
+            "روغن بادام زمینی",
+            "روغن فندق",
+            "روغن خردل",
+            "روغن شاهدانه",
+            "روغن آووکادو",
+            "عرق نعنا",
+            "عرق کاسنی",
+            "عرق بهار نارنج",
+            "عرق بیدمشک",
+            "عرق آویشن",
+            "عرق شاه طره (شاطره)",
+            "عرق خار شتر",
+            "عرق اسطوخودوس",
+            "عرق اسفناج",
+            "عرق اکالیپتوس",
+            "عرق بابونه",
+            "عرق بادرنجبویه",
+            "عرق برگ چنار",
+            "عرق برگ زیتون",
+            "عرق برگ گردو",
+            "عرق بومادران",
+            "عرق بید",
+            "عرق پونه",
+            "عرق چهل گیاه",
+            "عرق دارچین",
+            "عرق رازیانه",
+            "عرق ریحان",
+            "عرق زعفران",
+            "عرق زنجبیل",
+            "عرق زنیان",
+            "عرق زیره",
+            "عرق شبدر",
+            "عرق شنبلیله",
+            "عرق شوید",
+            "عرق شیرین بیان",
+            "عرق کاکوتی",
+            "عرق کرفس",
+            "عرق کیالک",
+            "عرق گاوزبان",
+            "عرق گزنه",
+            "عرق گشنیز",
+            "عرق گل ختمی",
+            "عرق گل گاوزبان",
+            "عرق مرزه",
+            "عرق میخک",
+            "عرق نسترن",
+            "عرق هل",
+            "عرق یونجه"
+        ];
+        var ul = document.getElementById('resultList');
+
+        options.forEach(function (option) {
+            var li = document.createElement('li');
+            li.appendChild(document.createTextNode(option));
+            li.onclick = function () {
+                selectItem(this);
+            };
+            ul.appendChild(li);
+        });
+    </script>
+
+
+
+</body>
+</html>

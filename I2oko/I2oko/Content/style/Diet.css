@@ -1,0 +1,348 @@
+@font-face {
+    font-family: yekan;
+    src: url("../font/Yekan.ttf") format("truetype"), url("../font/Yekan.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body{
+   background: url("../img/Idoko/Untitled-4.png")top center no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100%; 
+    font-family: "yekan" !important;
+
+  }
+  button,input,text,a,div{
+    font-family: "yekan" !important;
+}
+  a {
+    color: black;
+    text-decoration: underline;
+}
+  .BackIcon{
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    position: absolute;
+    width: 40px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 45px 0px 0px -275px;
+}
+.r1{
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    box-shadow: rgb(1 50 55) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 135px 10px 10px -135px;
+}
+.r2{
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    background: transparent;
+    box-shadow: rgb(1 50 55) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 135px 10px 10px 135px;
+}
+.r3{
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    background: transparent;
+    box-shadow: rgb(1 50 55) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 350px 10px 10px 135px;
+}
+.r4{
+    position: absolute;
+    height: 200px;
+    background: transparent;
+    box-shadow: rgb(1 50 55) 0px 0px 10px;
+    border-radius: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 350px 10px 10px -135px;
+    width: 250px;
+}
+.Diet {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 200px;
+  }
+  .Diet-image img {
+    width: 250px;
+    vertical-align: top;
+    height: 200px;
+    border-radius: 15px;
+    border: solid black;
+  }
+  
+  .Diet-overlay {
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center; 
+    color: white;
+    text-align: center;
+  }
+  .Diet:hover .Diet-overlay {
+    display: flex;
+  }
+  div, button, input,a {
+    border-radius: 15px !important;
+    box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+}
+@media screen and (max-width: 1279px){
+    body {
+       background: url("../img/Idoko/Untitled-2.png")top center no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-size: 100% 100%; 
+        font-family: "yekan" !important;
+  
+    }
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 0.15fr);
+        gap: 10px;
+        max-height: 90%;
+        height: 85%;
+        width: 520px;
+        overflow-y: auto;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 75px 10px 10px 0px;
+    }
+  .Background{display: none;}
+  .BackIcon {
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    position: absolute;
+    width: 40px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 15px 10px 10px -275px;
+}
+.r1 {
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    background: transparent;
+    box-shadow: rgb(1 50 55) 0px 0px 10px;
+    border-radius: 1px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 30px 10px 10px 0px;
+
+}
+.r2 {
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    background: transparent;
+    box-shadow: rgb(1 50 55) 0px 0px 10px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 310px 10px 10px 0px;
+}
+
+.r3 {
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    background: transparent;
+    box-shadow: rgb(1 50 55) 0px 0px 10px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 585px 10px 10px 0px;
+}
+.r4 {
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    background: transparent;
+    box-shadow: rgb(1 50 55) 0px 0px 10px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 860px 10px 10px 0px;
+}
+.Diet {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    width: 400px;
+    height: 250px;
+  }
+  .Diet-image img {
+  border-radius: 15px;
+    vertical-align: top;
+    width: 400px;
+    height: 250px;
+  }
+  
+  .Diet-overlay {
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center; 
+    color: white;
+    text-align: center;
+  }
+  .Diet:hover .Diet-overlay {
+    display: flex;
+  }
+  div, button, input,a {
+    border-radius: 15px !important;
+    box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+}
+}
+@media screen and (max-width: 600px){
+    body {
+        background: url("../img/Idoko/Untitled-2.png")top center no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-size: 100% 100%; 
+        font-family: "yekan" !important;
+  
+    }
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+  .Background{display: none;}
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 0.15fr);
+    gap: 10px;
+    max-height: 90%;
+    height: 85%;
+    width: 320px;
+    overflow-y: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 55px 10px 10px 0px;
+}
+.BackIcon {
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    position: absolute;
+    width: 30px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 10px 10px 10px -160px;
+}
+.r1 {
+    position: absolute;
+    width: 300px;
+    height: 180px;
+    background: transparent;
+    box-shadow: rgb(1 50 55) 0px 0px 10px;
+    border-radius: 5px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 20px 10px 10px 0px;
+
+}
+.r2 {
+    position: absolute;
+    width: 300px;
+    height: 180px;
+    background: transparent;
+    box-shadow: rgb(1 50 55) 0px 0px 10px;
+    border-radius: 5px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 225px 10px 10px 0px;
+}
+.r3 {
+    position: absolute;
+    width: 300px;
+    height: 180px;
+    background: transparent;
+    box-shadow: rgb(1 50 55) 0px 0px 10px;
+    border-radius: 5px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 430px 10px 10px 0px;
+}
+.r4 {
+    position: absolute;
+    width: 300px;
+    height: 180px;
+    background: transparent;
+    box-shadow: rgb(1 50 55) 0px 0px 10px;
+    border-radius: 5px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 635px 10px 10px 0px;
+}
+.Diet {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    width: 300px;
+    height: 180px;
+  }
+  .Diet-image img {
+    width: 300px;
+    vertical-align: top;
+    height: 180px;
+    border-radius: 15px;
+  }
+  
+  .Diet-overlay {
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center; 
+    color: white;
+    text-align: center;
+  }
+  .Diet:hover .Diet-overlay {
+    display: flex;
+  }
+  div, button, input,a {
+    border-radius: 15px !important;
+    box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+}
+}
+
+

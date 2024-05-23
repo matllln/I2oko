@@ -1,0 +1,117 @@
+﻿@model I2oko.Models.PostModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../Content/img/Idoko/favicon.ico">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.rtl.min.css"
+          integrity="sha384-beJoAY4VI2Q+5IPXjI207/ntOuaz06QYCdpWfWRv4lSFDyUSqsM0W+wiAMr2I185" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="../Content/style/favorite style.css">
+    <link rel="stylesheet" href="../Content/style/favorite style2.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet'>
+
+    <script defer src="https://unpkg.com/alpinejs@3.3.4/dist/cdn.min.js"></script>
+</head>
+
+<body>
+
+    <!--  ------------------------------------------------------- -->
+    <a href="/Home/Proofile">
+        <img class="BackIcon" src="~/Content/img/back.png" />
+    </a>   
+    <!-- -------------------------------------------------------------------------------- -->
+
+
+    <button class="Add btn-secondary hover-grow">افزودن</button>
+    <!-- .................................................................. -->
+    <div class="grid-container">
+        <section class="fav-list">
+            <a href="" class="fav ">
+                <figure class="fav-image">
+                    <img src="../Content/img/Fav/khoshmazeha.jpg" alt="">
+                </figure>
+                <div class="fav-overlay">
+                    <label for="">خوشمزه ها</label>
+                </div>
+            </a>
+            <a href="" class="fav ">
+                <figure class="fav-image">
+                    <img src="../Content/img/Fav/khaneye ziba.jpg" alt="">
+                </figure>
+                <div class="fav-overlay">
+                    <label class=" ">خانه زیبا</label>
+                </div>
+            </a>
+
+            <a href="" class="fav ">
+                <figure class="fav-image">
+                    <img src="../Content/img/Fav/hamsarane.jpg" alt="">
+                </figure>
+                <div class="fav-overlay">
+                    <label class=" ">همسرانه</label>
+                </div>
+            </a>
+            <a href="" class="fav ">
+                <figure class="fav-image">
+                    <img src="../Content/img/Fav/madarane.jpg" alt="">
+                </figure>
+
+                <div class="fav-overlay">
+                    <label class=" ">مادرانه</label>
+                </div>
+            </a>
+
+            <a href="" class="fav ">
+                <figure class="fav-image">
+                    <img src="../Content/img/Fav/pedarane.jpg" alt="">
+                </figure>
+                <div class="fav-overlay">
+                    <label class=" ">پدرانه</label>
+                </div>
+            </a>
+            <a href="" class="fav ">
+                <figure class="fav-image">
+                    <img src="../Content/img/Fav/dokhtarane.jpg" alt="">
+                </figure>
+                <div class="fav-overlay">
+                    <label class=" ">دخترانه</label>
+                </div>
+            </a>
+            <a href="" class="fav ">
+                <figure class="fav-image">
+                    <img src="../Content/img/Fav/pesarane.jpg" alt="">
+                </figure>
+                <div class="fav-overlay">
+                    <label class=" ">پسرانه</label>
+                </div>
+            </a>
+            <a href="" class="fav ">
+                <figure class="fav-image">
+                    <img src="../Content/img/Fav/sayer.jpg" alt="">
+                </figure>
+                <img class="menu-item1" src="../Content/img/Idoko/delete.svg" alt="">
+                <img class="menu-item2" src="../Content/img/Idoko/edit.svg" alt="">
+                <div class="fav-overlay">
+                    <label class=" ">سایر</label>
+                </div>
+            </a>
+        </section>
+    </div>
+</body>
+
+</html>

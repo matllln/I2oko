@@ -1,0 +1,680 @@
+
+
+@font-face {
+    font-family: yekan;
+    src: url("../font/Yekan.ttf") format("truetype"), url("../font/Yekan.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    user-select: none;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/Idoko/Untitled-4.png) top center no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+}
+
+button, input, text, a, div {
+    font-family: "yekan" !important;
+}
+
+body {
+    font-family: "yekan" !important;
+}
+
+/* .h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ */
+
+
+
+.r1 {
+    background: #f1f7fe;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: 0 0 2em #013237;
+    gap: 2em;
+    opacity: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 10px 10px 10px 10px;
+}
+
+.UserName {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -13px 10px 10px -40px;
+    border: none;
+    border-radius: 70px;
+    text-align: center;
+    font-size: 16px;
+    padding: 4px;
+}
+
+.logo {
+    width: 180px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    margin: 30px 30px 1px 1px;
+}
+
+.UserNameLabel {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -9px 10px 10px 130px;
+    width: 80px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.UserName {
+    background: rgb(234, 249, 218);
+    box-shadow: rgb(1 50 55) 0px 0px 1em;
+    padding: 1.5em;
+    border-radius: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -155px 10px 10px;
+    font-weight: bold;
+    color: rgb(1, 50, 55);
+    width: 325px;
+}
+
+    .UserName input {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -13px 10px 10px -40px;
+        border: none;
+        border-radius: 70px;
+        text-align: center;
+        font-size: 16px;
+        padding: 4px;
+    }
+
+.PasswordLabel {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -80px 10px 10px 140px;
+    width: 80px;
+    z-index: 1;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.Pass {
+    background: rgb(234, 249, 218);
+    box-shadow: rgb(1 50 55) 0px 0px 1em;
+    padding: 1.5em;
+    border-radius: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: -90px 10px 10px 10px;
+    font-weight: bold;
+    color: rgb(1, 50, 55);
+    width: 325px;
+}
+
+    .Pass input {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -13px 10px 10px -40px;
+        border: none;
+        border-radius: 70px;
+        text-align: center;
+        font-size: 16px;
+        padding: 4px;
+    }
+
+.login {
+    padding: 1em;
+    background: rgb(234, 249, 218);
+    color: rgb(2, 72, 30);
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: rgb(1 50 55) 0px 0px 1em;
+    width: 110px;
+    position: absolute;
+    margin: 70px 10px 10px -45px;
+    font-family: yekan;
+    font-size: 16px;
+}
+
+.RememberMe {
+    text-align: center;
+    position: absolute;
+    font-size: 18px;
+    left: 50%;
+    transform: translate(-50%, 174%);
+    margin: -25px 10px 10px 10px;
+    color: #013237;
+    font-weight: bold;
+    width: 100px;
+    font-size: 16px;
+}
+
+.Checkbox {
+    box-sizing: border-box;
+    padding: 0px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 10px 10px 10px -45px;
+}
+
+.Singup {
+    background-color: transparent;
+    text-decoration: none;
+    color: rgb(2, 72, 30);
+    position: absolute;
+    margin: 168px 10px 10px -175px;
+    font-weight: bold;
+    width: 70px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.forgetp {
+    background-color: transparent;
+    text-decoration: none;
+    color: rgb(2, 72, 30);
+    position: absolute;
+    margin: 168px 1px 1px -35px;
+    font-weight: bold;
+    width: 230px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.BackIcon {
+    border: none;
+    background: transparent;
+    font-size: 29px;
+    position: absolute;
+    left: 50%;
+    width: 41px;
+    transform: translate(-50%, 0%);
+    margin: -240px 0px 0px -210px;
+}
+
+.btn-secondary:hover {
+    color: #013237;
+    background-color: #4CA771;
+    border-color: #97102b;
+}
+
+.hover-grow {
+    transition: all 0.5s;
+}
+
+.btn-secondary:hover {
+    transform: scale(1.1);
+}
+
+.home:hover {
+    font-weight: bold;
+    color: #013237;
+}
+
+.idoko {
+    position: absolute;
+    width: 110px;
+    height: 0px;
+    font-family: Parisienne;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    text-align: center;
+    color: rgb(1, 50, 55);
+    left: 10px;
+    margin: 10px 10px 10px 10px;
+    top: 10px;
+}
+
+div, button, input, a {
+    border-radius: 15px !important;
+    box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+}
+
+@media screen and (max-width: 1279px) {
+    body {
+        user-select: none;
+        overflow-y: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(../img/Idoko/Untitled-2.png) top center no-repeat;
+        background-size: 100% 100%;
+        height: 100vh;
+    }
+
+    .r1 {
+        background: #f1f7fe;
+        width: 500px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 30px;
+        box-shadow: 0 0 2em #013237;
+        gap: 2em;
+        opacity: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 10px 10px 10px 10px;
+    }
+
+    .logo {
+        width: 150px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 60px 10px 10px;
+    }
+
+    .UserNameLabel {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -7px 10px 10px 120px;
+        width: 70px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .UserName {
+        background: #EAF9DA;
+        box-shadow: 0 0 1em #013237;
+        padding: 1.5em;
+        border-radius: 42px;
+        color: #013237;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -140px 10px 10px 10px;
+        font-weight: bold;
+        width: 300px;
+    }
+
+        .UserName input {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            margin: -13px 10px 10px -40px;
+            border: none;
+            border-radius: 70px;
+            text-align: center;
+            font-size: 16px;
+            padding: 4px;
+        }
+
+    .PasswordLabel {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -63px 10px 10px 130px;
+        width: 70px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .Password input {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -13px 10px 10px -40px;
+        border: none;
+        border-radius: 70px;
+        text-align: center;
+        font-size: 16px;
+        padding: 4px;
+    }
+
+    .Pass {
+        background: rgb(234, 249, 218);
+        box-shadow: rgb(1 50 55) 0px 0px 1em;
+        padding: 1.5em;
+        border-radius: 40px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -80px 10px 10px 10px;
+        font-weight: bold;
+        color: rgb(1, 50, 55);
+        width: 300px;
+    }
+
+    .login {
+        padding: 1em;
+        background: #EAF9DA;
+        color: #02481e;
+        border: none;
+        border-radius: 30px;
+        font-weight: 600;
+        box-shadow: 0 0 1em #013237;
+        width: 110px;
+        position: absolute;
+        margin: 70px 10px 10px -55px;
+        font-size: 14px;
+    }
+
+    .RememberMe {
+        text-align: center;
+        position: absolute;
+        font-size: 18px;
+        left: 50%;
+        transform: translate(-50%, 174%);
+        margin: -10px 1px 1px 1px;
+        color: #013237;
+        font-size: 14px;
+        width: 80px;
+    }
+
+    .Checkbox {
+        box-sizing: border-box;
+        padding: 0px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 20px 10px 10px -50px;
+    }
+
+    .Singup {
+        background-color: transparent;
+        text-decoration: none;
+        color: rgb(2, 72, 30);
+        position: absolute;
+        font-size: 18px;
+        margin: 165px 1px 1px -190px;
+        width: 70px;
+        font-size: 14px;
+    }
+
+    .forgetp {
+        background-color: transparent;
+        text-decoration: none;
+        color: rgb(2, 72, 30);
+        font-size: 18px;
+        position: absolute;
+        margin: 165px 1px 1px -30px;
+        width: 200px;
+        font-size: 14px;
+    }
+
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        font-size: 29px;
+        position: absolute;
+        left: 50%;
+        width: 41px;
+        transform: translate(-50%, 0%);
+        margin: -240px 0px 0px -210px;
+    }
+
+
+    .idoko {
+        position: absolute;
+        width: 110px;
+        height: 0px;
+        font-family: Parisienne;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        text-align: center;
+        color: rgb(1, 50, 55);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 5px 10px 10px 10px;
+    }
+
+    div, button, input, a {
+        border-radius: 15px !important;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background: url(../img/Idoko/Untitled-1.png)top center no-repeat;
+        height: 100vh;
+        width: 100%;
+        background-size: 100% 100%;
+    }
+
+    .r1 {
+        background: rgb(241, 247, 254);
+        width: 270px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 30px;
+        box-shadow: rgb(1 50 55) 0px 0px 2em;
+        gap: 2em;
+        opacity: 0.5;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 140px 10px 10px 0px;
+    }
+
+    .logo {
+        width: 130px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 45px 10px 10px 0px;
+    }
+
+    .UserNameLabel {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -25px 10px 10px 0px;
+        width: 70px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .UserName {
+        background: rgb(234, 249, 218);
+        width: 140px;
+        padding: 2.3em;
+        border-radius: 20px;
+        color: rgb(1, 50, 55);
+        box-shadow: rgb(1 50 55) 0px 0px 1em;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -90px 1px 1px;
+    }
+
+        .UserName input {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            margin: 5px 10px 10px 0px;
+            border: none;
+            border-radius: 70px;
+            text-align: center;
+            width: 170px;
+            font-size: 12px;
+            padding: 4px;
+        }
+
+    .PasswordLabel {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 0px 10px 10px 0px;
+        width: 70px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+
+    .Password input {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 5px 10px 10px 0px;
+        border: none;
+        border-radius: 70px;
+        text-align: center;
+        width: 170px;
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    .Pass {
+        background: rgb(234, 249, 218);
+        width: 140px;
+        padding: 2.3em;
+        border-radius: 20px;
+        color: rgb(1, 50, 55);
+        box-shadow: rgb(1 50 55) 0px 0px 1em;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: -10px 1px 1px;
+    }
+
+    .login {
+        padding: 0.8em;
+        background: rgb(234, 249, 218);
+        color: rgb(2, 72, 30);
+        border: none;
+        border-radius: 30px;
+        font-weight: 600;
+        box-shadow: rgb(1 50 55) 0px 0px 1em;
+        width: 70px;
+        margin: 125px 10px 10px -35px;
+        font-size: 12px;
+    }
+
+    .RememberMe {
+        text-align: center;
+        position: absolute;
+        font-size: 16px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 90px 1px 1px;
+        color: rgb(1, 50, 55);
+        font-weight: bold;
+        width: 70px;
+        font-size: 12px;
+    }
+
+    .Checkbox {
+        box-sizing: border-box;
+        padding: 0px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 90px 10px 10px -45px;
+    }
+
+    .Singup {
+        background-color: transparent;
+        text-decoration: none;
+        color: rgb(2, 72, 30);
+        position: absolute;
+        font-size: 16px;
+        margin: 220px 10px 10px 0px;
+        font-weight: bold;
+        width: 60px;
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        font-size: 12px;
+    }
+
+    .forgetp {
+        background-color: transparent;
+        text-decoration: none;
+        color: rgb(2, 72, 30);
+        font-size: 16px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin: 185px 10px 10px 0px;
+        font-weight: bold;
+        width: 180px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .BackIcon {
+        border: none;
+        background: transparent;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 34px;
+        margin: -130px 0px 0px -115px;
+    }
+
+    .arrow {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        transition: all 0.5s ease 0s;
+        overflow: hidden;
+        background-color: rgb(192, 230, 186);
+        position: absolute;
+        border: rgb(1, 50, 55);
+        border-radius: 100%;
+        box-shadow: rgb(1 50 55) 0em 0em 0.5em;
+        margin: -220px 425px 1px 200px;
+    }
+
+
+    .idoko {
+        position: absolute;
+        width: 110px;
+        height: 0px;
+        font-family: Parisienne;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 35px;
+        text-align: center;
+        color: rgb(1, 50, 55);
+        top: 620px;
+        left: 50%;
+        margin: -610px 10px 10px 0px;
+    }
+
+    div, button, input, a {
+        border-radius: 15px !important;
+        box-shadow: rgb(1, 50, 55) 0px 0px 5px !important;
+    }
+}
